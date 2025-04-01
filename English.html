@@ -23,7 +23,10 @@
                       <span style="color: rgb(0, 0, 153);"> التسجيل</span></a>
                       &nbsp; &nbsp; &nbsp;
                    
-      
+                      <span style="text-decoration: underline;">
+                    </span><a style="color: rgb(0, 0, 153);" href="Application Form.html">Application Form
+                      <span style="color: rgb(0, 0, 153);"> استمارة الطلب</span></a>
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                     
                  
       
@@ -87,6 +90,15 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>نموذج طلب دراسة اللغة الإنجليزية</title>
+            <style>
+                body {
+                    text-align: center;
+                }
+                form {
+                    display: inline-block;
+                    text-align: right;
+                }
+            </style>
         </head>
         <body>
             <h1>نموذج طلب دراسة اللغة الإنجليزية</h1>
@@ -94,37 +106,37 @@
             <form>
                 <h2>1- تفاصيل الطالب</h2>
                 <label for="firstName">الاسم الأول:</label>
-                <input type="text" id="firstName" name="firstName"></p>
+                <input type="text" id="firstName" name="firstName"><br>
                 
                 <label for="familyName">اسم العائلة:</label>
-                <input type="text" id="familyName" name="familyName"></p>
+                <input type="text" id="familyName" name="familyName"><br>
                 
                 <label for="dob">تاريخ الميلاد (يوم/شهر/سنة):</label>
-                <input type="text" id="dob" name="dob"></p>
+                <input type="text" id="dob" name="dob"><br>
                 
                 <label for="gender">الجنس:</label>
                 <select id="gender" name="gender">
                     <option value="M">ذكر</option>
                     <option value="F">أنثى</option>
-                </select></p>
+                </select><br>
                 
                 <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" name="email"></p>
+                <input type="email" id="email" name="email"><br>
                 
                 <label for="nationality">الجنسية:</label>
-                <input type="text" id="nationality" name="nationality"></p>
+                <input type="text" id="nationality" name="nationality"><br>
                 
                 <label for="mobile">رقم الهاتف المحمول:</label>
-                <input type="text" id="mobile" name="mobile"></p>
+                <input type="text" id="mobile" name="mobile"><br>
                 
                 <label for="passport">رقم جواز السفر:</label>
-                <input type="text" id="passport" name="passport"></p>
+                <input type="text" id="passport" name="passport"><br>
                 
                 <label for="uploadPassport">تحميل جواز السفر:</label>
-                <input type="file" id="uploadPassport" name="uploadPassport"></p>
+                <input type="file" id="uploadPassport" name="uploadPassport"><br>
                 
                 <label for="address">العنوان في بلد الإقامة:</label>
-                <textarea id="address" name="address"></textarea></p>
+                <textarea id="address" name="address"></textarea><br>
                 
                 <h2>اختيار الدورة:</h2>
                 <select id="course" name="course">
@@ -135,18 +147,18 @@
                     <option value="Cambridge Preparation 30">التحضير لامتحانات كامبريدج 30*</option>
                     <option value="One-to-one tuition">دروس فردية</option>
                     <option value="Academic Year Programme">برنامج السنة الأكاديمية</option>
-                </select></p>
+                </select><br>
                 
                 <label for="courseStartDate">تاريخ بدء الدورة (يجب أن يكون يوم اثنين):</label>
-                <input type="date" id="courseStartDate" name="courseStartDate"></p>
+                <input type="date" id="courseStartDate" name="courseStartDate"><br>
                 
                 <label for="courseEndDate">تاريخ انتهاء الدورة (يجب أن يكون يوم جمعة):</label>
-                <input type="date" id="courseEndDate" name="courseEndDate"></p>
+                <input type="date" id="courseEndDate" name="courseEndDate"><br>
                 
                 <h2>2- الإقامة:</h2>
                 <label>هل تحتاج إلى إقامة؟</label>
                 <input type="radio" id="accommodationYes" name="accommodation" value="Yes">نعم
-                <input type="radio" id="accommodationNo" name="accommodation" value="No">لا</p>
+                <input type="radio" id="accommodationNo" name="accommodation" value="No">لا<br>
                 
                 <select id="accommodationType" name="accommodationType">
                     <option value="Homestay Standard">إقامة مع عائلة (قياسية)</option>
@@ -154,48 +166,47 @@
                     <option value="Homestay Executive">إقامة مع عائلة (تنفيذية) (حسب التوافر)</option>
                     <option value="University Residence">إقامة جامعية (من يوليو حتى منتصف أغسطس فقط)</option>
                     <option value="Homestay Twin Room">غرفة مزدوجة مع عائلة (متاحة فقط لطالبين يأتون معًا)</option>
-                </select></p>
+                </select><br>
                 
                 <label>هل لديك حيوانات أليفة؟</label>
                 <input type="radio" id="petsYes" name="pets" value="Yes">نعم
-                <input type="radio" id="petsNo" name="pets" value="No">لا</p>
+                <input type="radio" id="petsNo" name="pets" value="No">لا<br>
                 
                 <label>هل لديك أطفال؟</label>
                 <input type="radio" id="childrenYes" name="children" value="Yes">نعم
-                <input type="radio" id="childrenNo" name="children" value="No">لا</p>
+                <input type="radio" id="childrenNo" name="children" value="No">لا<br>
                 
                 <h2>3- نقل المطار</h2>
                 <label>هل تحتاج إلى نقل من المطار عند الوصول؟</label>
                 <input type="radio" id="arrivalTransferYes" name="arrivalTransfer" value="Yes">نعم
-                <input type="radio" id="arrivalTransferNo" name="arrivalTransfer" value="No">لا</p>
+                <input type="radio" id="arrivalTransferNo" name="arrivalTransfer" value="No">لا<br>
                 
                 <label for="arrivalAirport">اسم مطار الوصول:</label>
-                <input type="text" id="arrivalAirport" name="arrivalAirport"></p>
+                <input type="text" id="arrivalAirport" name="arrivalAirport"><br>
                 
                 <label for="arrivalFlight">رقم الرحلة:</label>
-                <input type="text" id="arrivalFlight" name="arrivalFlight"></p>
+                <input type="text" id="arrivalFlight" name="arrivalFlight"><br>
                 
                 <label for="arrivalTime">وقت وصول الرحلة:</label>
-                <input type="time" id="arrivalTime" name="arrivalTime"></p>
+                <input type="time" id="arrivalTime" name="arrivalTime"><br>
                 
                 <label>هل تحتاج إلى نقل إلى المطار عند المغادرة؟</label>
                 <input type="radio" id="departureTransferYes" name="departureTransfer" value="Yes">نعم
-                <input type="radio" id="departureTransferNo" name="departureTransfer" value="No">لا</p>
+                <input type="radio" id="departureTransferNo" name="departureTransfer" value="No">لا<br>
                 
                 <label for="departureAirport">اسم مطار المغادرة:</label>
-                <input type="text" id="departureAirport" name="departureAirport"></p>
+                <input type="text" id="departureAirport" name="departureAirport"><br>
                 
                 <label for="departureFlight">رقم الرحلة:</label>
-                <input type="text" id="departureFlight" name="departureFlight"></p>
+                <input type="text" id="departureFlight" name="departureFlight"><br>
                 
                 <label for="departureTime">وقت مغادرة الرحلة:</label>
-                <input type="time" id="departureTime" name="departureTime"></p>
+                <input type="time" id="departureTime" name="departureTime"><br>
                 
                 <label for="pickupTime">وقت الاستقبال:</label>
-                <input type="time" id="pickupTime" name="pickupTime"></p>
+                <input type="time" id="pickupTime" name="pickupTime"><br>
                 
                 <button type="submit">إرسال</button>
             </form>
         </body>
-        </html>
-        
+    </html>
