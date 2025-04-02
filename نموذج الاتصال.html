@@ -97,13 +97,15 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            // التحقق من صحة المدخلات
-            if (firstName && lastName && phone && country && email && message) {
-                alert(`تم إرسال الرسالة من ${firstName} ${lastName} (${email} - ${phone}, ${country}): ${message}`);
-            } else {
-                alert('يرجى ملء جميع الحقول المطلوبة.');
-            }
-        });
-    </script>
+                           // التحقق من صحة المدخلات
+                    if (firstName && lastName && phone && country && email && message) {
+                        // إرسال البيانات إلى البريد الإلكتروني
+                        const mailtoLink = `mailto:education.ecs@yahoo.com?subject=رسالة من ${firstName} ${lastName}&body=رقم الهاتف: ${phone}%0Aالدولة: ${country}%0Aالبريد الإلكتروني: ${email}%0Aالرسالة: ${message}`;
+                        window.location.href = mailtoLink;
+                    } else {
+                        alert('يرجى ملء جميع الحقول المطلوبة.');
+                    }
+                });
+            </script>
 </body>
 </html>
