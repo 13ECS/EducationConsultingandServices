@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -11,12 +10,11 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
-            direction: rtl; /* تغيير اتجاه الكتابة إلى اليمين */
         }
         .container {
             max-width: 600px;
             margin: auto;
-            background: #fff;
+            background: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,88 +22,101 @@
         h2 {
             text-align: center;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group textarea {
+        input, select, textarea {
             width: 100%;
             padding: 10px;
+            margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
         }
-        .form-group button {
+        button {
             background-color: #5cb85c;
             color: white;
-            padding: 10px;
             border: none;
-            border-radius: 4px;
+            padding: 10px;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
         }
-        .form-group button:hover {
+        button:hover {
             background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>نموذج الاتصال</h2>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="firstName">الاسم الأول:</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">اللقب:</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">رقم الهاتف:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="country">الدولة:</label>
-                <input type="text" id="country" name="country" required>
-            </div>
-            <div class="form-group">
-                <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">الرسالة:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">إرسال</button>
-            </div>
-        </form>
-        <div class="form-group">
-            <a href="index.html">العودة إلى الصفحة الرئيسية</a>
-        </div>
-    </div>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const phone = document.getElementById('phone').value;
-            const country = document.getElementById('country').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
 
-                           // التحقق من صحة المدخلات
-                    if (firstName && lastName && phone && country && email && message) {
-                        // إرسال البيانات إلى البريد الإلكتروني
-                        const mailtoLink = `mailto:education.ecs@yahoo.com?subject=رسالة من ${firstName} ${lastName}&body=رقم الهاتف: ${phone}%0Aالدولة: ${country}%0Aالبريد الإلكتروني: ${email}%0Aالرسالة: ${message}`;
-                        window.location.href = mailtoLink;
-                    } else {
-                        alert('يرجى ملء جميع الحقول المطلوبة.');
-                    }
-                });
-            </script>
+<div class="container">
+    <h2>نموذج الاتصال</h2>
+    <form action="send_email.php" method="POST">
+        <input type="text" name="full_name" placeholder="الاسم الكامل" required>
+        <input type="date" name="dob" required>
+        <select name="country" required>
+            <option value="Libya">ليبيا</option>
+            <option value="Oman">عمان</option>
+            <option value="Saudi Arabia">السعودية</option>
+            <option value="UAE">الإمارات</option>
+            <option value="Kuwait">الكويت</option>
+            <option value="Baheria">البحرية</option>
+            <option value="Jordan">الأردن</option>
+            <option value="Lebanon">لبنان</option>
+            <option value="Tunisia">تونس</option>
+            <option value="Yeman">اليمن</option>
+            <option value="Sudan">السودان</option>
+            <option value="Egypt">مصر</option>
+            <option value="Algeria">الجزائر</option>
+            <option value="Iraq">العراق</option>
+            <option value="Syria">سوريا</option>
+            <option value="Morocco">المغرب</option>
+            <option value="Qatar">قطر</option>
+        </select>
+        <input type="text" name="phone" placeholder="رقم الهاتف مع رمز الدولة" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <select name="course" required>
+            <option value="">اختر الدورة</option>
+            <option value="اللغة الإنجليزية">اللغة الإنجليزية</option>
+            <option value="بكالوريوس">بكالوريوس</option>
+            <option value="ماجستير">ماجستير</option>
+            <option value="دكتوراه">دكتوراه</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="رسالة"></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+</div>
+
 </body>
 </html>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $full_name = htmlspecialchars(trim($_POST['full_name']));
+    $dob = htmlspecialchars(trim($_POST['dob']));
+    $country = htmlspecialchars(trim($_POST['country']));
+    $phone = htmlspecialchars(trim($_POST['phone']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $course = htmlspecialchars(trim($_POST['course']));
+    $message = htmlspecialchars(trim($_POST['message']));
+
+    // تحقق من أن البريد الإلكتروني صحيح
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        http_response_code(400);
+        echo "البريد الإلكتروني غير صحيح.";
+        exit;
+    }
+
+    // إعداد البريد الإلكتروني
+    $to = "education.ecs@yahoo.com";
+    $subject = "نموذج الاتصال من $full_name";
+    $body = "الاسم الكامل: $full_name\nتاريخ الميلاد: $dob\nالدولة: $country\nرقم الهاتف: $phone\nالبريد الإلكتروني: $email\nالدورة: $course\nالرسالة: $message";
+    $headers = "From: $email";
+
+    // إرسال البريد الإلكتروني
+    if (mail($to, $subject, $body, $headers)) {
+        echo "تم إرسال الرسالة بنجاح.";
+    } else {
+        echo "حدث خطأ أثناء إرسال الرسالة.";
+    }
+} else {
+    http_response_code(405);
+    echo "الطريقة المحددة غير مسموح بها ضد هذه المورد.";
+}
+?>
