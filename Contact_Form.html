@@ -1,5 +1,4 @@
-# Code Refactored
-```html
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -10,26 +9,107 @@
 
     <form action="https://formsubmit.co/education.ecs@yahoo.com" method="POST">
         <input type="hidden" name="_subject" value="بريد إلكتروني جديد!">
-        <input type="text" name="name" placeholder="الاسم الكامل" required>
-        <input type="email" name="email" placeholder="عنوان البريد الإلكتروني" required>
         <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
-        <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
+        
+        <fieldset>
+            <legend>تفاصيل الاتصال</legend>
+            <p>
+                <label for="contact_title">العنوان:</label>
+                <select name="contact_title" id="contact_title" class="combo" required>
+                    <option value="choose">اختر...</option>
+                    <option value="mrs">مدام</option>
+                    <option value="mr">سيد</option>
+                    <option value="dr">دكتور</option>
+                </select>
+            </p>
+            <p>
+                <label for="contact_firstname">الاسم الأول:</label>
+                <input name="contact_firstname" id="contact_firstname" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_familyname">اسم العائلة:</label>
+                <input name="contact_familyname" id="contact_familyname" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_street">الشارع:</label>
+                <input name="contact_street" id="contact_street" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_postalcode">الرمز البريدي:</label>
+                <input name="contact_postalcode" id="contact_postalcode" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_city">المدينة:</label>
+                <input name="contact_city" id="contact_city" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_country">الدولة:</label>
+                <select name="contact_country" id="contact_country" class="combo" required>
+                    <option value="choose">اختر...</option>
+                    <option value="Libya">ليبيا</option>
+                    <option value="Oman">عمان</option>
+                    <option value="Saudi Arabia">السعودية</option>
+                    <option value="UAE">الإمارات</option>
+                    <option value="Kuwait">الكويت</option>
+                    <option value="Baheria">البحرية</option>
+                    <option value="Jordan">الأردن</option>
+                    <option value="Lebanon">لبنان</option>
+                    <option value="Tunisia">تونس</option>
+                    <option value="Yeman">اليمن</option>
+                    <option value="Sudan">السودان</option>
+                    <option value="Egypt">مصر</option>
+                    <option value="Algeria">الجزائر</option>
+                    <option value="Iraq">العراق</option>
+                    <option value="Syria">سوريا</option>
+                    <option value="Morocco">المغرب</option>
+                    <option value="Qatar">قطر</option>
+                </select>
+            </p>
+            <p>
+                <label for="contact_phone">الهاتف:</label>
+                <input name="contact_phone" id="contact_phone" class="field" type="text" required>
+            </p>
+            <p>
+                <label for="contact_email">البريد الإلكتروني:</label>
+                <input name="contact_email" id="contact_email" class="field" type="email" required>
+            </p>
+            <p>
+                <label for="contact_url">الموقع الإلكتروني:</label>
+                <input name="contact_url" id="contact_url" class="field" type="url">
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>تفاصيل الرسالة</legend>
+            <p>
+                <label for="subject">الموضوع:</label>
+                <select id="subject" name="subject" required>
+                    <option value="1">اختر...</option>
+                    <option value="1">اللغة الإنجليزية</option>
+                    <option value="2">بكالوريوس</option>
+                    <option value="3">ماجستير</option>
+                    <option value="4">دكتوراه</option>
+                </select>
+            </p>
+            <p>
+                <label for="contact_urgency">يرجى الرد:</label>
+                <select name="contact_urgency" id="contact_urgency" class="combo" required>
+                    <option value="choose">اختر...</option>
+                    <option value="today">في أقرب وقت اليوم</option>
+                    <option value="tomorrow">في أقرب وقت غدًا</option>
+                    <option value="twodays">في أقرب وقت خلال يومين</option>
+                    <option value="threedays">في أقرب وقت خلال ثلاثة أيام</option>
+                    <option value="week">في أقرب وقت خلال أسبوع</option>
+                    <option value="month">في أقرب وقت خلال شهر</option>
+                </select>
+            </p>
+            <p>
+                <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
+            </p>
+        </fieldset>
         
         <button type="submit">إرسال</button>
     </form>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="utf-8">
-    <title>صفحة الشكر</title>
-</head>
-<body>
-
-    <h1>شكراً لك!</h1>
 
 </body>
 </html>
