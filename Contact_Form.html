@@ -1,111 +1,141 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="utf-8">
     <title>نموذج الاتصال</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            direction: rtl;
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0; /* إضافة لون خلفية */
+        }
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        fieldset {
+            border: 1px solid #ccc; /* إضافة حدود للـ fieldset */
+            margin-bottom: 15px;
+            padding: 10px; /* إضافة حشوة للـ fieldset */
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px; /* إضافة حشوة للنص داخل الـ legend */
+            background-color: #f9f9f9; /* لون خلفية للنص */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-
+    <form> <input value="Go back Home!" onclick="history.back()" type="button">
+    </form>
     <form action="https://formsubmit.co/education.ecs@yahoo.com" method="POST">
         <input type="hidden" name="_subject" value="بريد إلكتروني جديد!">
         <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
         
         <fieldset>
             <legend>تفاصيل الاتصال</legend>
-            <p>
-                <label for="contact_title">العنوان:</label>
-                <select name="contact_title" id="contact_title" class="combo" required>
-                    <option value="choose">اختر...</option>
-                    <option value="mrs">مدام</option>
-                    <option value="mr">سيد</option>
-                    <option value="dr">دكتور</option>
-                </select>
-            </p>
-            <p>
-                <label for="contact_firstname">الاسم الأول:</label>
-                <input name="contact_firstname" id="contact_firstname" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_familyname">اسم العائلة:</label>
-                <input name="contact_familyname" id="contact_familyname" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_street">الشارع:</label>
-                <input name="contact_street" id="contact_street" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_postalcode">الرمز البريدي:</label>
-                <input name="contact_postalcode" id="contact_postalcode" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_city">المدينة:</label>
-                <input name="contact_city" id="contact_city" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_country">الدولة:</label>
-                <select name="contact_country" id="contact_country" class="combo" required>
-                    <option value="choose">اختر...</option>
-                    <option value="Libya">ليبيا</option>
-                    <option value="Oman">عمان</option>
-                    <option value="Saudi Arabia">السعودية</option>
-                    <option value="UAE">الإمارات</option>
-                    <option value="Kuwait">الكويت</option>
-                    <option value="Baheria">البحرية</option>
-                    <option value="Jordan">الأردن</option>
-                    <option value="Lebanon">لبنان</option>
-                    <option value="Tunisia">تونس</option>
-                    <option value="Yeman">اليمن</option>
-                    <option value="Sudan">السودان</option>
-                    <option value="Egypt">مصر</option>
-                    <option value="Algeria">الجزائر</option>
-                    <option value="Iraq">العراق</option>
-                    <option value="Syria">سوريا</option>
-                    <option value="Morocco">المغرب</option>
-                    <option value="Qatar">قطر</option>
-                </select>
-            </p>
-            <p>
-                <label for="contact_phone">الهاتف:</label>
-                <input name="contact_phone" id="contact_phone" class="field" type="text" required>
-            </p>
-            <p>
-                <label for="contact_email">البريد الإلكتروني:</label>
-                <input name="contact_email" id="contact_email" class="field" type="email" required>
-            </p>
-            <p>
-                <label for="contact_url">الموقع الإلكتروني:</label>
-                <input name="contact_url" id="contact_url" class="field" type="url">
-            </p>
+            <label for="contact_title">العنوان:</label>
+            <select name="contact_title" id="contact_title" required>
+                <option value="choose">اختر...</option>
+                <option value="mrs">مدام</option>
+                <option value="mr">سيد</option>
+                <option value="dr">دكتور</option>
+            </select>
+            
+            <label for="contact_firstname">الاسم الأول:</label>
+            <input name="contact_firstname" id="contact_firstname" type="text" required>
+           
+            <label for="contact_familyname">اسم العائلة:</label>
+            <input name="contact_familyname" id="contact_familyname" type="text" required>
+            
+            <label for="contact_city">المدينة:</label>
+            <input name="contact_city" id="contact_city" type="text" required>
+            
+            <label for="contact_country">الدولة:</label>
+            <select name="contact_country" id="contact_country" required>
+                <option value="choose">اختر...</option>
+                <option value="Libya">ليبيا</option>
+                <option value="Oman">عمان</option>
+                <option value="Saudi Arabia">السعودية</option>
+                <option value="UAE">الإمارات</option>
+                <option value="Kuwait">الكويت</option>
+                <option value="Baheria">البحرية</option>
+                <option value="Jordan">الأردن</option>
+                <option value="Lebanon">لبنان</option>
+                <option value="Tunisia">تونس</option>
+                <option value="Yeman">اليمن</option>
+                <option value="Sudan">السودان</option>
+                <option value="Egypt">مصر</option>
+                <option value="Algeria">الجزائر</option>
+                <option value="Iraq">العراق</option>
+                <option value="Syria">سوريا</option>
+                <option value="Morocco">المغرب</option>
+                <option value="Qatar">قطر</option>
+            </select>
+            
+            <label for="contact_phone">الهاتف:</label>
+            <input name="contact_phone" id="contact_phone" type="text" required>
+  
+            <label for="contact_whatsapp">واتساب:</label>
+            <input name="contact_whatsapp" id="contact_whatsapp" type="text" required>
+            
+            <label for="contact_email">البريد الإلكتروني:</label>
+            <input name="contact_email" id="contact_email" type="email" required>
         </fieldset>
         
         <fieldset>
             <legend>تفاصيل الرسالة</legend>
-            <p>
-                <label for="subject">الموضوع:</label>
-                <select id="subject" name="subject" required>
-                    <option value="1">اختر...</option>
-                    <option value="1">اللغة الإنجليزية</option>
-                    <option value="2">بكالوريوس</option>
-                    <option value="3">ماجستير</option>
-                    <option value="4">دكتوراه</option>
-                </select>
-            </p>
-            <p>
-                <label for="contact_urgency">يرجى الرد:</label>
-                <select name="contact_urgency" id="contact_urgency" class="combo" required>
-                    <option value="choose">اختر...</option>
-                    <option value="today">في أقرب وقت اليوم</option>
-                    <option value="tomorrow">في أقرب وقت غدًا</option>
-                    <option value="twodays">في أقرب وقت خلال يومين</option>
-                    <option value="threedays">في أقرب وقت خلال ثلاثة أيام</option>
-                    <option value="week">في أقرب وقت خلال أسبوع</option>
-                    <option value="month">في أقرب وقت خلال شهر</option>
-                </select>
-            </p>
-            <p>
-                <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
-            </p>
+            <label for="subject">الموضوع:</label>
+            <select id="subject" name="subject" required>
+                <option value="1">اختر...</option>
+                <option value="1">اللغة الإنجليزية</option>
+                <option value="2">بكالوريوس</option>
+                <option value="3">ماجستير</option>
+                <option value="4">دكتوراه</option>
+            </select>
+            
+            <label for="contact_urgency">يرجى الرد:</label>
+            <select name="contact_urgency" id="contact_urgency" required>
+                <option value="choose">اختر...</option>
+                <option value="today">في أقرب وقت اليوم</option>
+                <option value="tomorrow">في أقرب وقت غدًا</option>
+                <option value="twodays">في أقرب وقت خلال يومين</option>
+                <option value="threedays">في أقرب وقت خلال ثلاثة أيام</option>
+                <option value="week">في أقرب وقت خلال أسبوع</option>
+                <option value="month">في أقرب وقت خلال شهر</option>
+            </select>
+            
+            <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
         </fieldset>
         
         <button type="submit">إرسال</button>
