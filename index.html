@@ -1,23 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Contact_Form</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: lift; /* Centering the content horizontally */
+            align-items: right; /* Centering the content vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        .sidebar {
+            width: 185px;
+            background-color: #370a9f;
+            color: white;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: none;
+            background-color: #444;
+        }
+        .dropdown a {
+            padding-left: 30px;
+        }
+        .dropdown-btn {
+            cursor: pointer;
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
 
-        <form action="https://formsubmit.co/education.ecs@yahoo.com" method="POST">
-            <input type="hidden" name="_subject" value="New email woooo!">
-            <input type="email" name="email" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
-            <input type="text" name="message" placeholder="write your message here" required>
-           
-            <button type="submit">Send</button>
-       </form>
+<div class="sidebar">
+    <a href="#">Education Consulting and Services </p>الاستشارات والخدمات التعليمية</a></p>
+    <a href="About.html">About</a>
+    <div class="dropdown-btn">Programs</div>
+    <div class="dropdown">
+        <a href="الأيلتس.html">IELTS  الأيلتس </a>
+        <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
+        <a href="BSc.html">BSc  بكالوريوس </a>
+        <a href="MSc.html">MSc   ماجستير</a>
+        <a href="PhD.html">PhD   الدكتوراه </a>
+    </div>
+    <a href="News.html">News</a>
+    <a href="Information.html">Information</a>
+    <a href="mailto:education.ecs@yahoo.com">Send Email</a>
+    <a href="Sign UP.html">Sign Up</a>
+    <a href="contact.html">Contact</a>
+    <a href="Contact_Form.html">Contact</a>
+    <a href="Application Form.html">Application Form</a>
+    <a href="نموذج الاتصال.html">نموذج الاتصال</a>
+    <a href="نموذج التسجيل.html">نموذج التسجيل</a>
+</div>
+<img src="ECS.jpg" alt="EC&S" style="margin-center: 250px;">
+<img src="home.jpg" alt="EC&S" style="margin-center:250px;"></p>
 
 
-
-    </body>
-
+<script>
+    document.querySelector('.dropdown-btn').addEventListener('click', function() {
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
+</body>
 </html>
