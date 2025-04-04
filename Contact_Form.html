@@ -53,6 +53,14 @@
         button:hover {
             background-color: #45a049;
         }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .row div {
+            width: 48%; /* عرض كل حقل */
+        }
     </style>
 </head>
 <body>
@@ -64,7 +72,7 @@
         
         <fieldset>
             <legend>تفاصيل الاتصال</legend>
-            <label for="contact_title">العنوان:</label>
+           
             <select name="contact_title" id="contact_title" required>
                 <option value="choose">اختر...</option>
                 <option value="mrs">مدام</option>
@@ -72,42 +80,57 @@
                 <option value="dr">دكتور</option>
             </select>
             
-            <label for="contact_firstname">الاسم الأول:</label>
-            <input name="contact_firstname" id="contact_firstname" type="text" required>
-           
-            <label for="contact_familyname">اسم العائلة:</label>
-            <input name="contact_familyname" id="contact_familyname" type="text" required>
+            <div class="row">
+                <div>
+                    <label for="contact_firstname">الاسم الأول:</label>
+                    <input name="contact_firstname" id="contact_firstname" type="text" required>
+                </div>
+                <div>
+                    <label for="contact_familyname">اسم العائلة:</label>
+                    <input name="contact_familyname" id="contact_familyname" type="text" required>
+                </div>
+            </div>
             
-            <label for="contact_city">المدينة:</label>
-            <input name="contact_city" id="contact_city" type="text" required>
+            <div class="row">
+                <div>
+                    <label for="contact_city">المدينة:</label>
+                    <input name="contact_city" id="contact_city" type="text" required>
+                </div>
+                <div>
+                    <label for="contact_country">الدولة:</label>
+                    <select name="contact_country" id="contact_country" required>
+                        <option value="choose">اختر...</option>
+                        <option value="Libya">ليبيا</option>
+                        <option value="Oman">عمان</option>
+                        <option value="Saudi Arabia">السعودية</option>
+                        <option value="UAE">الإمارات</option>
+                        <option value="Kuwait">الكويت</option>
+                        <option value="Baheria">البحرية</option>
+                        <option value="Jordan">الأردن</option>
+                        <option value="Lebanon">لبنان</option>
+                        <option value="Tunisia">تونس</option>
+                        <option value="Yeman">اليمن</option>
+                        <option value="Sudan">السودان</option>
+                        <option value="Egypt">مصر</option>
+                        <option value="Algeria">الجزائر</option>
+                        <option value="Iraq">العراق</option>
+                        <option value="Syria">سوريا</option>
+                        <option value="Morocco">المغرب</option>
+                        <option value="Qatar">قطر</option>
+                    </select>
+                </div>
+            </div>
             
-            <label for="contact_country">الدولة:</label>
-            <select name="contact_country" id="contact_country" required>
-                <option value="choose">اختر...</option>
-                <option value="Libya">ليبيا</option>
-                <option value="Oman">عمان</option>
-                <option value="Saudi Arabia">السعودية</option>
-                <option value="UAE">الإمارات</option>
-                <option value="Kuwait">الكويت</option>
-                <option value="Baheria">البحرية</option>
-                <option value="Jordan">الأردن</option>
-                <option value="Lebanon">لبنان</option>
-                <option value="Tunisia">تونس</option>
-                <option value="Yeman">اليمن</option>
-                <option value="Sudan">السودان</option>
-                <option value="Egypt">مصر</option>
-                <option value="Algeria">الجزائر</option>
-                <option value="Iraq">العراق</option>
-                <option value="Syria">سوريا</option>
-                <option value="Morocco">المغرب</option>
-                <option value="Qatar">قطر</option>
-            </select>
-            
-            <label for="contact_phone">الهاتف:</label>
-            <input name="contact_phone" id="contact_phone" type="text" required>
-  
-            <label for="contact_whatsapp">واتساب:</label>
-            <input name="contact_whatsapp" id="contact_whatsapp" type="text" required>
+            <div class="row">
+                <div>
+                    <label for="contact_phone">الهاتف:</label>
+                    <input name="contact_phone" id="contact_phone" type="text" required>
+                </div>
+                <div>
+                    <label for="contact_whatsapp">واتساب:</label>
+                    <input name="contact_whatsapp" id="contact_whatsapp" type="text" required>
+                </div>
+            </div>
             
             <label for="contact_email">البريد الإلكتروني:</label>
             <input name="contact_email" id="contact_email" type="email" required>
