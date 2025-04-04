@@ -1,113 +1,121 @@
-<!DOCTYPE 
-<html><head>
-  <tr>
-    <td style="vertical-align: top;">
-   
-      <span style="text-decoration: underline;">
-      </span><a style="color: rgb(0, 0, 153);" href="index.html">Home
-      <span style="color: rgb(0, 0, 153);"> الرئيسية</span></a>
-        &nbsp; &nbsp; &nbsp; &nbsp; 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل</title>
+    <style>
+        body {
+            color: #000;
+            background-color: #99FFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #000099;
+            text-decoration: none;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            margin: 0 15px;
+        }
+        form {
+            text-align: center;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+        input[type="text"], input[type="email"], input[type="submit"], select {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #000099;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #000078;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="Sign UP.html">التسجيل</a>
+        <a href="Application Form.html">استمارة الطلب</a>
+        <a href="contact.html">اتصال</a>
+        <a href="English.html">الإنكليزية</a>
+        <a href="الأيلتس.html">الأيلتس</a>
+        <a href="BSc.html">بكالوريوس</a>
+        <a href="MSc.html">ماجستير</a>
+        <a href="PhD.html">دكتوراه</a>
+        <a href="News.html">اخبار</a>
+        <a href="Information.html">معلومات</a>
+    </div>
 
-        <span style="text-decoration: underline;">
-        </span><a style="color: rgb(0, 0, 153);" href="Sign UP.html">Sign UP
-          <span style="color: rgb(0, 0, 153);"> التسجيل</span></a>
-          &nbsp; &nbsp; &nbsp; &nbsp; 
+    <div>
+        <form method="post" action="https://formsubmit.co/education.ecs@yahoo.com">
+            <input type="hidden" name="_subject" value="بريد إلكتروني جديد!">
+            <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" name="textEmail" required>
+            <label for="firstName">الاسم الأول</label>
+            <input type="text" name="textFirstName" required>
+            <label for="lastName">اسم العائلة</label>
+            <input type="text" name="textLastName" required>
+            <label for="phone">الهاتف</label>
+            <input type="text" name="textPhone" required>
+            <label for="contact_whatsapp">واتساب:</label>
+            <input name="contact_whatsapp" id="contact_whatsapp" class="field" type="text" required>
+            
+            <select name="contact_country" id="contact_country" class="combo" required>
+                <option value="choose">اختر...</option>
+                <option value="Libya">ليبيا</option>
+                <option value="Oman">عمان</option>
+                <option value="Saudi Arabia">السعودية</option>
+                <option value="UAE">الإمارات</option>
+                <option value="Kuwait">الكويت</option>
+                <option value="Baheria">البحرية</option>
+                <option value="Jordan">الأردن</option>
+                <option value="Lebanon">لبنان</option>
+                <option value="Tunisia">تونس</option>
+                <option value="Yeman">اليمن</option>
+                <option value="Sudan">السودان</option>
+                <option value="Egypt">مصر</option>
+                <option value="Algeria">الجزائر</option>
+                <option value="Iraq">العراق</option>
+                <option value="Syria">سوريا</option>
+                <option value="Morocco">المغرب</option>
+                <option value="Qatar">قطر</option>
+            </select>
+            <label for="subject">الموضوع:</label>
+            <select id="subject" name="subject" required>
+                <option value="1">اختر...</option>
+                <option value="1">اللغة الإنجليزية</option>
+                <option value="2">بكالوريوس</option>
+                <option value="3">ماجستير</option>
+                <option value="4">دكتوراه</option>
+            </select>
 
-          <span style="text-decoration: underline;">
-          </span><a style="color: rgb(0, 0, 153);" href="Application Form.html">Application Form
-            <span style="color: rgb(0, 0, 153);"> استمارة الطلب</span></a>
-            &nbsp; &nbsp; &nbsp;
+            <label for="dob">تاريخ الميلاد:</label>
+            <input type="date" name="dob" id="dob" required>
 
-     </a><a target="_blank" style="color: rgb(0, 0, 153);" 
-      href="contact.html">contact
-      <span style="font-weight: bold;">اتصال</span></a>
-      <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-         &nbsp; &nbsp; &nbsp; &nbsp; 
-
-        </span><a style="color: rgb(0, 0, 153);" href="English.html">English
-          <span style="font-weight: bold;">الإنكليزية</span></a>
-          <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-                &nbsp; &nbsp;
-    </span><a style="color: rgb(0, 0, 153);" href="الأيلتس.html">IELTS
-      <span style="font-weight: bold;">الأيلتس</span></a>
-      <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-
-    </span><a style="color: rgb(0, 0, 153);" href="BSc.html">BSc
-      <span style="font-weight: bold;"> بكالوريوس </span></a>
-      <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-             
-             &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-
-</span><a style="color: rgb(0, 0, 153);" href="MSc.html">MSc
-<span style="font-weight: bold;">ماجستير</span></a>
-<span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-      
-      &nbsp; &nbsp;&nbsp;
-
-</span><span style="color: rgb(0, 0, 153);">&nbsp;
-</span><a style="color: rgb(0, 0, 153);" href="PhD.html">PhD</a>
-<span style="font-weight: bold; color: rgb(0, 0, 153);"><a href="PhD.html">دكتوراه</span></a>
-</span><span style="color: rgb(0, 0, 153);">
-
-&nbsp; &nbsp; &nbsp;&nbsp; 
-</span><a style="color: rgb(0, 0, 153);" href="News.html">News
-<span style="font-weight: bold;">اخبار</span></a>
-<span style="color: rgb(0, 0, 153);"> 
-&nbsp; &nbsp;
-     <a href="Information.html">Informationمعلومات</a>
-     &nbsp; &nbsp; &nbsp; 
-</td></p></br>
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>Sign UP</title>
-  
-</head><body style="color: rgb(0, 0, 0); background-color: rgb(153, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
-<div style="text-align: center;">
-<form method="post" action="www.sacoie.com" name="Sign UP">Sing UP<br>
-  <br>
-  <br>
-Email<br>
-  <input name="textEmail"><br>
-  <br>
-First Name<br>
-  <input name="textFirstName"><br>
-  <br>
-Last Name<br>
-  <input name="textLastName"><br>
-  <br>
-Phone<br>
-  <input name="textPhone"><br>
-  <br>
-Country<br>
-  <input name="textCountry"><br>
-  <br>
-Company<br>
-  <input name="textCompany"><br>
-  <br>
-Job Title<br>
-  <input name="textJobTitle"><br>
-  <br>
-Email Lists<br>
-  <input name="Email Lists" value="General Interest" type="checkbox">General
-Interest<br>
-  <input name="Email Lists" value="SACOIE" type="checkbox">SACOIE&nbsp;
-&nbsp; &nbsp; &nbsp; <br>
-&nbsp; Anniversary&nbsp; <br>
-  <input name="textAnniversary" value="DD/MM/YYYY"><br>
-  <input name="Sign UP" value="Sign UP" type="submit"><br>
-  <br>
-  <br>
-<!-- Begin Constant Contact Inline Form Code -->
-<!-- End Constant Contact Inline Form Code --><br>
-  <br>
-  <br>
-  <br>
-  
-
-</div>
-
-<!-- Begin Constant Contact Active Forms -->
-<script> var _ctct_m = "7684f120b558d0069db394b57912f03a"; </script>
-<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async="" defer="defer"></script>
-<!-- End Constant Contact Active Forms -->
-</body></html>
+            <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
+            <input type="submit" value="التسجيل">
+        </form>
+    </div>
+</body>
+</html>
