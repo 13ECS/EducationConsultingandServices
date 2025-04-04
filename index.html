@@ -1,6 +1,7 @@
-
+# الكود المعاد هيكلته
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: lift; /* Centering the content horizontally */
-            align-items: right; /* Centering the content vertically */
-            height: 100vh; /* Full viewport height */
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
         }
         .sidebar {
             width: 185px;
@@ -45,35 +46,45 @@
         img {
             max-width: 50%;
             height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .content {
+            margin-left: 220px; /* إضافة مساحة بين الشريط الجانبي والمحتوى */
+            padding: 20px; /* إضافة حشوة للمحتوى */
         }
     </style>
 </head>
 <body>
 
 <div class="sidebar">
-    <a href="#">Education Consulting and Services </p>الاستشارات والخدمات التعليمية</a></p>
-    <a href="About.html">About</a>
-    <div class="dropdown-btn">Programs</div>
+    <a href="#">الاستشارات والخدمات التعليمية</a>
+    <a href="About.html">حول</a>
+    <div class="dropdown-btn">البرامج</div>
     <div class="dropdown">
         <a href="الأيلتس.html">IELTS  الأيلتس </a>
         <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
-        <a href="BSc.html">BSc  بكالوريوس </a>
-        <a href="MSc.html">MSc   ماجستير</a>
-        <a href="PhD.html">PhD   الدكتوراه </a>
+        <a href="BSc.html">بكالوريوس</a>
+        <a href="MSc.html">ماجستير</a>
+        <a href="PhD.html">دكتوراه</a>
     </div>
-    <a href="News.html">News</a>
-    <a href="Information.html">Information</a>
-    <a href="mailto:education.ecs@yahoo.com">Send Email</a>
-    <a href="Sign UP.html">Sign Up</a>
-    <a href="contact.html">Contact</a>
-    <a href="Contact_Form.html">Contact_Form</a>
-    <a href="Application Form.html">Application Form</a>
+    <a href="News.html">الأخبار</a>
+    <a href="Information.html">المعلومات</a>
+    <a href="mailto:education.ecs@yahoo.com">إرسال بريد إلكتروني</a>
+    <a href="Sign UP.html">التسجيل</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="Contact_Form.html">نموذج الاتصال</a>
     <a href="نموذج الاتصال.html">نموذج الاتصال</a>
     <a href="نموذج التسجيل.html">نموذج التسجيل</a>
 </div>
-<img src="ECS.jpg" alt="EC&S" style="margin-center: 250px;">
-<img src="home.jpg" alt="EC&S" style="margin-center:250px;"></p>
 
+<div class="content">
+    <h1>تحليل التعليم العالي في المملكة المتحدة</h1>
+    <p>في وكالتنا، نلتزم التزامًا راسخًا بمبدأ أن الوصول إلى تعليم عالي الجودة يجب أن يتجاوز الحواجز الجغرافية والاجتماعية والاقتصادية، وخاصةً للأفراد الذين يتطلعون إلى تحقيق طموحاتهم الأكاديمية في المملكة المتحدة. وتماشيًا مع هذه الرؤية، نقدم مجموعة شاملة من الإرشادات والخدمات المجانية المصممة خصيصًا للطلاب الدوليين الذين يواجهون صعوبات عملية القبول.</p>
+    <p>تشمل خبرتنا مجموعة واسعة من المسارات التعليمية، بما في ذلك دورات اللغة الإنجليزية المرموقة ومجموعة متنوعة من برامج البكالوريوس والماجستير والدكتوراه المتاحة في كليات وجامعات مرموقة في جميع أنحاء المملكة المتحدة. نحن نتفهم التحديات التي يواجهها الطلاب المحتملون، ونحرص على تزويدهم بالأدوات والمعلومات اللازمة لاتخاذ قرارات مستنيرة بشأن مستقبلهم التعليمي، مما يعزز بيئة أكاديمية أكثر شمولًا.</p>
+    <p>لا تقتصر الدراسة في بريطانيا على توفير تعليم عالمي المستوى للطلاب فحسب، بل تُتيح لهم أيضًا فرصة لا مثيل لها للانغماس في نسيج غني من الثقافات والتاريخ الذي يُميز هذه الأمة النابضة بالحياة. تشتهر جامعات المملكة المتحدة بدقتها الأكاديمية وتميزها، حيث تُقدم مؤهلات تحظى بتقدير كبير ومعترف بها عالميًا، مما يُعزز فرص توظيف الخريجين وآفاقهم في سوق عمل يشهد منافسة متزايدة.</p>
+    <p>علاوة على ذلك، تفتخر هذه المؤسسات بمجموعة واسعة من التخصصات الأكاديمية، يُقدمها جميعًا مُعلمون ذوو خبرة يُضيفون ثروة من المعرفة والخبرة إلى تعليمهم. تُثري الخبرة العملية المُتاحة لطلاب البكالوريوس بدوام كامل من خلال فرص العمل بدوام جزئي المُتاحة بموجب لوائح تأشيرة الطالب، مما يسمح لهم باكتساب رؤى ومهارات قيّمة أثناء إقامتهم ودراستهم في المملكة المتحدة، وبالتالي توسيع آفاقهم الشخصية والمهنية.</p>
+</div>
 
 <script>
     document.querySelector('.dropdown-btn').addEventListener('click', function() {
