@@ -66,9 +66,9 @@
 </head>
 <body>
     <form>
-        <input value="Go back Home!" onclick="history.back()" type="button">
+        <input value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
     </form>
-    <form action="https://formsubmit.co/education.ecs@yahoo.com" method="POST">
+    <form action="https://formsubmit.co/education.ecs@yahoo.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="بريد إلكتروني جديد!">
         <input type="hidden" name="_next" value="https://education-c-s.com/شكرا لكم على إكمال النموذج👍.html">
         
@@ -159,9 +159,10 @@
                 <option value="week">في أقرب وقت خلال أسبوع</option>
                 <option value="month">في أقرب وقت خلال شهر</option>
             </select>
-           <label for="uploadFiles">اختر ملف:</label>
-<input type="file" id="uploadFiles" name="uploadFiles" accept=".pdf,.doc,.jpg,.jpeg,.png" required>
-<p>يرجى اختيار ملف من الأنواع التالية: PDF، DOC، JPG، JPEG، PNG.</p>
+            <label for="uploadFiles">اختر ملف:</label>
+            <input type="file" id="uploadFiles" name="uploadFiles" accept=".pdf,.doc,.jpg,.jpeg,.png" required>
+            
+          
             <input type="text" name="message" placeholder="اكتب رسالتك هنا" required>
         </fieldset>
         
