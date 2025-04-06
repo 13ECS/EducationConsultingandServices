@@ -1,10 +1,19 @@
-https://education-c-s.com/Matt-Fontes/S<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تواصل معنا عبر الواتساب</title>
     <style>
+        body {
+          
+            display: flex;
+            justify-content: center; /* توسيط المحتوى أفقياً */
+            align-items: center; /* توسيط المحتوى عمودياً */
+            height: 100vh; /* ارتفاع الصفحة بالكامل */
+            margin: 0; /* إزالة الهوامش الافتراضية */
+            font-family: Arial, sans-serif; /* نوع الخط */
+        }
         .whatsapp-button {
             background-color: #25D366; /* لون زر الواتساب */
             color: white; /* لون النص */
@@ -14,6 +23,7 @@ https://education-c-s.com/Matt-Fontes/S<!DOCTYPE html>
             font-size: 16px; /* حجم الخط */
             cursor: pointer; /* شكل المؤشر عند المرور */
             text-decoration: none; /* إزالة التسطير */
+            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
         }
         .whatsapp-button:hover {
             background-color: #128C7E; /* لون الزر عند المرور */
@@ -21,20 +31,8 @@ https://education-c-s.com/Matt-Fontes/S<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <h1>مرحبًا بكم في موقعي</h1>
-    <p>للاتصال بي، يمكنك استخدام الرقم التالي:</p>
-    <a href="https://wa.me/+447926947705" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
+<h1>مرحبًا بكم في موقعي</h></p>     
 
-    <script>
-        function call() {
-            var number = document.querySelector("input[name=tel]").value;
-            window.open("tel:" + number);
-        }
-    </script>
-    <form>
-        <label>أدخل رقم الهاتف الذي تريد الاتصال به:</label>
-        <input type="tel" name="tel" />
-        <input type="submit" onclick="call(); return false;" value="اتصل" />
-    </form>
+    <a href="https://wa.me/+447926947705" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
 </body>
 </html>
