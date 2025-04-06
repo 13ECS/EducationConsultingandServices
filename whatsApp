@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا عبر الواتساب</title>
+    <style>
+        .whatsapp-button {
+            background-color: #25D366; /* لون زر الواتساب */
+            color: white; /* لون النص */
+            padding: 10px 20px; /* مساحة داخلية */
+            border: none; /* بدون حدود */
+            border-radius: 5px; /* زوايا دائرية */
+            font-size: 16px; /* حجم الخط */
+            cursor: pointer; /* شكل المؤشر عند المرور */
+            text-decoration: none; /* إزالة التسطير */
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* لون الزر عند المرور */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
+
+    <script>
+        // يمكنك إضافة أي وظائف جافا سكريبت إضافية هنا إذا لزم الأمر
+    </script>
+</body>
+</html>
