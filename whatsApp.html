@@ -19,12 +19,27 @@
             background-color: #128C7E; /* لون الزر عند المرور */
         }
     </style>
+        <h1>مرحبًا بكم في موقعي</h1>
+    <p>للاتصال بي، يمكنك استخدام الرقم التالي:</p>
+
 </head>
 <body>
-    <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
+    <a href="https://wa.me/+447926947705" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
 
     <script>
         // يمكنك إضافة أي وظائف جافا سكريبت إضافية هنا إذا لزم الأمر
+        <script>
+  function call() {
+    var number = document.querySelector("input[name=tel]").value
+    window.open("tel:" + 447926947705)
+  }
+</script>
+<form>
+  <a>Enter the phone number, what you want to call</a>
+  <input type="tel" name="tel" />
+  <input type="submit" onclick="call();return false;" value="Call" />
+</form>
+
     </script>
 </body>
 </html>
