@@ -57,6 +57,34 @@
             font-size: 18px; /* حجم الخط للنصوص */
             margin: 5px 0; /* مسافة بين الفقرات */
         }
+        
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .home-button, .whatsapp-button {
+                width: 80%; /* عرض الأزرار يكون 80% من عرض الشاشة */
+                font-size: 14px; /* تقليل حجم الخط للأزرار */
+            }
+            .contact-info h1 {
+                font-size: 20px; /* تقليل حجم الخط للعناوين */
+            }
+            .contact-info p {
+                font-size: 16px; /* تقليل حجم الخط للنصوص */
+            }
+        }
+        
+        /* Media query for very small devices */
+        @media (max-width: 480px) {
+            .home-button, .whatsapp-button {
+                width: 90%; /* عرض الأزرار يكون 90% من عرض الشاشة */
+                font-size: 12px; /* تقليل حجم الخط للأزرار */
+            }
+            .contact-info h1 {
+                font-size: 18px; /* تقليل حجم الخط للعناوين */
+            }
+            .contact-info p {
+                font-size: 14px; /* تقليل حجم الخط للنصوص */
+            }
+        }
     </style>
 </head>
 <body>
