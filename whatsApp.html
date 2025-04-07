@@ -33,6 +33,18 @@
         }
         .home-button {
             margin-bottom: 20px; /* إضافة مسافة أسفل الزر */
+            background-color: #008CBA; /* لون زر العودة إلى الصفحة الرئيسية */
+            color: white; /* لون النص */
+            padding: 10px 20px; /* مساحة داخلية */
+            border: none; /* بدون حدود */
+            border-radius: 5px; /* زوايا دائرية */
+            font-size: 16px; /* حجم الخط */
+            cursor: pointer; /* شكل المؤشر عند المرور */
+            text-decoration: none; /* إزالة التسطير */
+            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
+        }
+        .home-button:hover {
+            background-color: #005f73; /* لون الزر عند المرور */
         }
         .contact-info {
             text-align: center; /* توسيط النص */
@@ -48,9 +60,7 @@
     </style>
 </head>
 <body>
-    <form>
-        <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
-    </form>
+    <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
     <h1>مرحبًا بكم في موقعي</h1>    
     <a href="https://wa.me/+447926947705" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
     <div class="contact-info">
