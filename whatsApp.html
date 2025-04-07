@@ -16,7 +16,7 @@
             background-color: #f4f4f4; /* لون خلفية الصفحة */
             background-size: cover; /* لضمان تغطية الخلفية لكامل الصفحة */
         }
-        .whatsapp-button {
+        .whatsapp-button, .call-button {
             background-color: #25D366; /* لون زر الواتساب */
             color: white; /* لون النص */
             padding: 10px 20px; /* مساحة داخلية */
@@ -27,8 +27,9 @@
             text-decoration: none; /* إزالة التسطير */
             transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
             margin: 10px 0; /* إضافة مسافة بين الأزرار */
+            display: inline-block; /* عرض الأزرار بشكل كتلة مستقلة */
         }
-        .whatsapp-button:hover {
+        .whatsapp-button:hover, .call-button:hover {
             background-color: #128C7E; /* لون الزر عند المرور */
         }
         .home-button {
@@ -60,7 +61,7 @@
         
         /* Media query for mobile devices */
         @media (max-width: 768px) {
-            .home-button, .whatsapp-button {
+            .home-button, .whatsapp-button, .call-button {
                 width: 80%; /* عرض الأزرار يكون 80% من عرض الشاشة */
                 font-size: 14px; /* تقليل حجم الخط للأزرار */
             }
@@ -74,7 +75,7 @@
         
         /* Media query for very small devices */
         @media (max-width: 480px) {
-            .home-button, .whatsapp-button {
+            .home-button, .whatsapp-button, .call-button {
                 width: 90%; /* عرض الأزرار يكون 90% من عرض الشاشة */
                 font-size: 12px; /* تقليل حجم الخط للأزرار */
             }
@@ -91,6 +92,7 @@
     <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
     <h1>مرحبًا بكم في موقعي</h1>    
     <a href="https://wa.me/+447926947705" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
+    <a href="tel:+447926947705" class="call-button">اتصل بنا</a>
     <div class="contact-info">
         <h1>الاستشارات والخدمات التعليمية (EC&S)</h1>
         <p><strong>المدير التنفيذي:</strong> <span class="emoji">👨‍💼</span> اسم المدير التنفيذي</p>
