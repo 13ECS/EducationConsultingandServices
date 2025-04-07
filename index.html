@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -12,17 +11,15 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            height: 100vh;
+            flex-direction: column; /* Use column layout for mobile */
         }
         .sidebar {
-            width: 185px;
+            width: 100%;
             background-color: #370a9f;
             color: white;
-            position: fixed;
-            height: 100%;
-            padding-top: 20px;
+            position: relative;
+            height: auto;
+            padding: 20px 0;
         }
         .sidebar a {
             padding: 10px 15px;
@@ -44,31 +41,49 @@
             cursor: pointer;
         }
         img {
-            max-width: 50%;
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
         }
         .content {
-            margin-left: 220px; /* إضافة مساحة بين الشريط الجانبي والمحتوى */
-            padding: 20px; /* إضافة حشوة للمحتوى */
+            padding: 20px;
+            text-align: right;
+        }
+        @media (min-width: 600px) {
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .sidebar {
+                width: 185px;
+                position: fixed;
+                height: 100%;
+            }
+            .content {
+                margin-left: 220px;
+            }
+        }
+        @media (min-width: 992px) {
+            .container {
+                width: 60%;
+            }
         }
     </style>
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '823fbbe557e19bf68b4bb29e860bb820d40182ed';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-</script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '823fbbe557e19bf68b4bb29e860bb820d40182ed';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+    <noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 </head>
 <body>
-
 <div class="sidebar">
     <a href="#">الاستشارات والخدمات التعليمية</a>
     <a href="About.html">حول</a>
@@ -86,17 +101,15 @@ window.smartsupp||(function(d) {
     <a href="التسجيل.html">التسجيل</a>
     <a href="contact.html">contact us</a>
     <a href="Contact_Form.html">نموذج الاتصال</a>     
-     <a href="whatsApp.html">whatsApp</a>
+    <a href="whatsApp.html">whatsApp</a>
 </div>
-<div class="content" style="text-align: right;">
+<div class="content">
     <h1>تحليل التعليم العالي في المملكة المتحدة</h1>
-    <p>في وكالتنا، نلتزم التزامًا راسخًا بمبدأ أن الوصول إلى تعليم عالي الجودة يجب أن يتجاوز الحواجز الجغرافية والاجتماعية والاقتصادية، وخاصةً للأفراد الذين يتطلعون إلى تحقيق طموحاتهم الأكاديمية في المملكة المتحدة. وتماشيًا مع هذه الرؤية، نقدم مجموعة شاملة من الإرشادات والخدمات المجانية المصممة خصيصًا للطلاب الدوليين الذين يواجهون صعوبات عملية القبول.</p>
-    <p>تشمل خبرتنا مجموعة واسعة من المسارات التعليمية، بما في ذلك دورات اللغة الإنجليزية المرموقة ومجموعة متنوعة من برامج البكالوريوس والماجستير والدكتوراه المتاحة في كليات وجامعات مرموقة في جميع أنحاء المملكة المتحدة. نحن نتفهم التحديات التي يواجهها الطلاب المحتملون، ونحرص على تزويدهم بالأدوات والمعلومات اللازمة لاتخاذ قرارات مستنيرة بشأن مستقبلهم التعليمي، مما يعزز بيئة أكاديمية أكثر شمولًا.</p>
-    <p>لا تقتصر الدراسة في بريطانيا على توفير تعليم عالمي المستوى للطلاب فحسب، بل تُتيح لهم أيضًا فرصة لا مثيل لها للانغماس في نسيج غني من الثقافات والتاريخ الذي يُميز هذه الأمة النابضة بالحياة. تشتهر جامعات المملكة المتحدة بدقتها الأكاديمية وتميزها، حيث تُقدم مؤهلات تحظى بتقدير كبير ومعترف بها عالميًا، مما يُعزز فرص توظيف الخريجين وآفاقهم في سوق عمل يشهد منافسة متزايدة.</p>
-    <p>علاوة على ذلك، تفتخر هذه المؤسسات بمجموعة واسعة من التخصصات الأكاديمية، يُقدمها جميعًا مُعلمون ذوو خبرة يُضيفون ثروة من المعرفة والخبرة إلى تعليمهم. تُثري الخبرة العملية المُتاحة لطلاب البكالوريوس بدوام كامل من خلال فرص العمل بدوام جزئي المُتاحة بموجب لوائح تأشيرة الطالب، مما يسمح لهم باكتساب رؤى ومهارات قيّمة أثناء إقامتهم ودراستهم في المملكة المتحدة، وبالتالي توسيع آفاقهم الشخصية والمهنية.</p>
+    <p>في وكالتنا، نلتزم التزامًا راسخًا بمبدأ أن الوصول إلى تعليم عالي الجودة يجب أن يتجاوز الحواجز الجغرافية.</p>
+    <p>تشمل خبرتنا مجموعة واسعة من المسارات التعليمية، بما في ذلك دورات اللغة الإنجليزية المرموقة ومجموعة متنوعة من البرامج الأكاديمية.</p>
+    <p>لا تقتصر الدراسة في بريطانيا على توفير تعليم عالمي المستوى للطلاب فحسب، بل تُتيح لهم أيضًا فرصة لا مثيل لها لتجربة ثقافة غنية ومتنوعة.</p>
+    <p>علاوة على ذلك، تفتخر هذه المؤسسات بمجموعة واسعة من التخصصات الأكاديمية، يُقدمها جميعًا مُعلمون ذوو خبرة واسعة في مجالاتهم.</p>
 </div>
- 
-
 <script>
     document.querySelector('.dropdown-btn').addEventListener('click', function() {
         const dropdown = document.querySelector('.dropdown');
