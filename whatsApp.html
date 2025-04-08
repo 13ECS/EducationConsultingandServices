@@ -23,8 +23,8 @@
             justify-content: space-between;
         }
         .image-left, .image-right {
-            width: 30%; /* Increase this value to make the images larger */
-            max-width: 300px; /* Set a maximum width for the images */
+            width: 30%;
+            max-width: 300px;
         }
         .content {
             flex: 1;
@@ -119,12 +119,16 @@
             <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
             <h1>مرحبًا بكم في موقعي</h1>
             <div class="form-container">
-                <form>
-                    <h2>Contact Us</h2>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">Send Message</button>
+                <form action="https://formspree.io/f/mnnpokej" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message" required></textarea>
+                    </label>
+                    <button type="submit">Send</button>
                 </form>
             </div>
             <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
