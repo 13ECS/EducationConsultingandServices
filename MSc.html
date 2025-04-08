@@ -11,6 +11,8 @@
             padding: 0;
             background-color: #f7f7f4;
             color: #000;
+            text-align: right;
+            direction: rtl;
         }
         .navbar {
             text-align: center;
@@ -34,34 +36,9 @@
         h2 {
             color: #2835c3;
         }
-        .resource-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .resource-list li {
-            margin: 10px 0;
-        }
-        .resource-list a {
-            color: #003399;
-            text-decoration: none;
-        }
-        .resource-list a:hover {
-            text-decoration: underline;
-        }
-        .sidebar {
-            background-color: #99ffff;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .sidebar dd {
-            margin: 10px 0;
-        }
-        .sidebar dd a {
-            color: #003399;
-            text-decoration: none;
-        }
-        .sidebar dd a:hover {
-            text-decoration: underline;
+        ol {
+            direction: rtl;
+            list-style-type: decimal;
         }
         .contact-info {
             text-align: center;
@@ -80,11 +57,43 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+        .contact-form {
+            text-align: right;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background-color: #242424;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #444;
+        }
         footer {
             text-align: center;
             padding: 20px;
             background-color: #242424;
             color: white;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -105,34 +114,6 @@
     </div>
 
     <div class="container">
-        <h2>Education Consulting and Services</h2>
-
-        <div class="sidebar">
-            <dl>
-                <dd><strong>مواقع تهم الطالب</strong></dd>
-                <dd><a href="https://www.bl.uk/" target="_blank">المكتبة البريطانية</a></dd>
-                <dd><a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-students" target="_blank">مدارس اللغة المعتمدة من الهوم أوفيس</a></dd>
-                <dd><a href="http://www.rae.ac.uk/" target="_blank">تصنيف الجامعات البريطانية</a></dd>
-                <dd><a href="https://tfl.gov.uk/plan-a-journey/" target="_blank">مواصلات لندن</a></dd>
-                <dd><a href="http://www.heathrow.com/" target="_blank">مطار هيثرو</a></dd>
-                <dd><a href="https://www.birminghamairport.co.uk/" target="_blank">مطار برمينغهام</a></dd>
-                <dd><a href="https://www.ucas.com/ucas/undergraduate/choosing-course/how-choose-between-undergraduate-courses-and-unis" target="_blank">مواقع الجامعات البريطانية</a></dd>
-                <dd><a href="https://www.rafmuseum.org.uk/london/" target="_blank">متاحف مجانية في لندن</a></dd>
-                <dd><a href="https://tfl.gov.uk/maps/bus" target="_blank">خريطة حافلة لندن</a></dd>
-                <dd><a href="https://youtu.be/TK9H0sI4wiw?t=5" target="_blank">متحف لندن للعلوم</a></dd>
-                <dd><a href="http://ntclibya.org.uk/" target="_blank">سفارة ليبيا – لندن</a></dd>
-                <dd><a href="http://ntclibya.org.uk/co/" target="_blank">الشؤون القنصلية – لندن</a></dd>
-                <dd><a href="http://culturalaffairs.libyanembassy.org/ar/" target="_blank">الملحقية الثقافية – لندن</a></dd>
-                <dd><a href="http://cadublin.libyanembassy.org/" target="_blank">الملحقية الثقافية – دبلن</a></dd>
-                <dd><a href="http://highereducation.gov.ly/" target="_blank">وزارة التعليم العالى و البحث العلمى</a></dd>
-                <dd><a href="http://www.tve.gov.ly/ar/index.aspx" target="_blank">الهيئة الوطنية للتعليم التقني والفني</a></dd>
-                <dd><a href="https://www.virgintrains.co.uk/" target="_blank">قطارات فيرجن</a></dd>
-                <dd><a href="https://alison.com/" target="_blank">دورة تعليمية في مجالات مختلفة</a></dd>
-                <dd><a href="http://www.jurn.org/#gsc.tab=0" target="_blank">ملايين المقالات البحثية والرسائل الكاملة في مختلف التخصصات</a></dd>
-                <dd><a href="http://www.urop.uci.edu/frame_surp_sample_proposals.html" target="_blank">صفحة تعرض امثلة لبعض المقترحات البحثية الجاهزة</a></dd>
-            </dl>
-        </div>
-
         <h1>المطلوب لقبول ماجستير</h1>
         <ol>
             <li>نسخة من جواز السفر.</li>
@@ -151,6 +132,22 @@
         <h1>بدون شهادة إيلتس درجة نهاية يكون قبول مشروط</h1>
     </div>
 
+    <div class="contact-form">
+        <h2>اتصل بنا</h2>
+        <form action="contact.php" method="post">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+
     <div class="contact-info">
         <p>Email: <a href="mailto:info@education-c-s.com">info@education-c-s.com</a></p>
         <p>Phone: 02046203041</p>
@@ -159,6 +156,10 @@
             <a href="https://www.twitter.com" target="_blank">X</a>,
             <a href="https://www.instagram.com" target="_blank">Instagram</a>
         </p>
+    </div>
+
+    <div class="image-container">
+        <img src="students.jpg" alt="وصف الصورة" style="max-width: 100%;">
     </div>
 
     <footer>
