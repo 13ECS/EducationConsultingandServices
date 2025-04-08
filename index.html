@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Consulting and Services/ الاستشارات والخدمات التعليمية <img src="ESCL.png" alt="ESCL" /></title>
-    <img src="ESCL.png" alt="ESCL">
+    <title>Education Consulting and Services/ الاستشارات والخدمات التعليمية</title>
     <meta name="google-site-verification" content="9RrjeBh9Zsa8n9N_FzFBL8z4QAC_LaFqIoH_w-Y8KPc" />
     <style>
         body {
@@ -12,15 +11,16 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* استخدام تخطيط عمودي للهواتف المحمولة */
+            flex-direction: row; /* Use row layout */
         }
         .sidebar {
-            width: 100%;
+            width: 20%;
             background-color: #370a9f;
             color: white;
             position: relative;
-            height: auto;
+            height: 100vh;
             padding: 20px 0;
+            text-align: center; /* Center align the logo */
         }
         .sidebar a {
             padding: 10px 15px;
@@ -41,11 +41,17 @@
         .dropdown-btn {
             cursor: pointer;
         }
-        img {
-            max-width: 100%;
+        .logo-container {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4; /* Background color for the logo container */
+        }
+        .logo-container img.logo {
+            max-width: 200px; /* Set a maximum width for the logo */
             height: auto;
-            display: block;
-            margin: 0 auto;
         }
         .content {
             padding: 20px;
@@ -85,37 +91,40 @@
     <noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 </head>
 <body>
-<div class="sidebar">
-    <a href="#">الاستشارات والخدمات التعليمية</a>
-    <a href="About.html">حول</a>
-    <div class="dropdown-btn">البرامج</div>
-    <div class="dropdown">
-        <a href="الأيلتس.html">IELTS  الأيلتس </a>
-        <a href="Video_IELTS.html">Video_IELTS </a>
-        <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
-        <a href="BSc.html">بكالوريوس</a>
-        <a href="MSc.html">ماجستير</a>
-        <a href="PhD.html">دكتوراه</a>
+    <div class="sidebar">
+        <a href="#">الاستشارات والخدمات التعليمية</a>
+        <a href="About.html">حول</a>
+        <div class="dropdown-btn">البرامج</div>
+        <div class="dropdown">
+            <a href="الأيلتس.html">IELTS  الأيلتس </a>
+            <a href="Video_IELTS.html">Video_IELTS </a>
+            <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
+            <a href="BSc.html">بكالوريوس</a>
+            <a href="MSc.html">ماجستير</a>
+            <a href="PhD.html">دكتوراه</a>
+        </div>
+        <a href="News.html">الأخبار</a>
+        <a href="Information.html">المعلومات</a>
+        <a href="التسجيل.html">التسجيل</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="Contact_Form.html">نموذج الاتصال</a>     
+        <a href="whatsApp.html">واتساب</a>
     </div>
-    <a href="News.html">الأخبار</a>
-    <a href="Information.html">المعلومات</a>
-    <a href="التسجيل.html">التسجيل</a>
-    <a href="contact.html">اتصل بنا</a>
-    <a href="Contact_Form.html">نموذج الاتصال</a>     
-    <a href="whatsApp.html">واتساب</a>
-</div>
-<div class="content">
-    <h1>تحليل التعليم العالي في المملكة المتحدة</h1>
-    <p>في وكالتنا، نلتزم التزامًا راسخًا بمبدأ أن الوصول إلى تعليم عالي الجودة يجب أن يتجاوز الحواجز الجغرافية.</p>
-    <p>تشمل خبرتنا مجموعة واسعة من المسارات التعليمية، بما في ذلك دورات اللغة الإنجليزية المرموقة ومجموعة متنوعة من البرامج الأكاديمية.</p>
-    <p>لا تقتصر الدراسة في بريطانيا على توفير تعليم عالمي المستوى للطلاب فحسب، بل تُتيح لهم أيضًا فرصة لا مثيل لها لتجربة ثقافة غنية ومتنوعة.</p>
-    <p>علاوة على ذلك، تفتخر هذه المؤسسات بمجموعة واسعة من التخصصات الأكاديمية، يُقدمها جميعًا مُعلمون ذوو خبرة واسعة في مجالاتهم.</p>
-</div>
-<script>
-    document.querySelector('.dropdown-btn').addEventListener('click', function() {
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-</script>
+    <div class="logo-container">
+        <img src="ESCL.png" alt="Logo" class="logo" />
+    </div>
+    <div class="content">
+        <h1>تحليل التعليم العالي في المملكة المتحدة</h1>
+        <p>في وكالتنا، نلتزم التزامًا راسخًا بمبدأ أن الوصول إلى تعليم عالي الجودة يجب أن يتجاوز الحواجز الجغرافية.</p>
+        <p>تشمل خبرتنا مجموعة واسعة من المسارات التعليمية، بما في ذلك دورات اللغة الإنجليزية المرموقة ومجموعة متنوعة من برامج البكالوريوس والماجستير والدكتوراه.</p>
+        <p>لا تقتصر الدراسة في بريطانيا على توفير تعليم عالمي المستوى للطلاب فحسب، بل تُتيح لهم أيضًا فرصة لا مثيل لها للتواصل مع ثقافات متنوعة وتطوير مهارات شخصية ومهنية فريدة.</p>
+        <p>علاوة على ذلك، تفتخر هذه المؤسسات بمجموعة واسعة من التخصصات الأكاديمية، يُقدمها جميعًا مُعلمون ذوو خبرة وكفاءة عالية.</p>
+    </div>
+    <script>
+        document.querySelector('.dropdown-btn').addEventListener('click', function() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
