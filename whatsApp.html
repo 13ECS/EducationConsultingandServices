@@ -3,92 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا عبر الواتساب<img src="ESCL.png" alt="ESCL" /></title>
+    <title>تواصل معنا عبر الواتساب</title>
     <style>
         body {
             display: flex;
-            flex-direction: column; /* تغيير الاتجاه إلى عمودي */
-            justify-content: center; /* توسيط المحتوى أفقياً */
-            align-items: center; /* توسيط المحتوى عمودياً */
-            height: 100vh; /* ارتفاع الصفحة بالكامل */
-            margin: 0; /* إزالة الهوامش الافتراضية */
-            font-family: Arial, sans-serif; /* نوع الخط */
-            background-color: #f4f4f4; /* لون خلفية الصفحة */
-            background-size: cover; /* لضمان تغطية الخلفية لكامل الصفحة */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-size: cover;
         }
-        .whatsapp-button, .call-button {
-            background-color: #25D366; /* لون زر الواتساب */
-            color: white; /* لون النص */
-            padding: 10px 20px; /* مساحة داخلية */
-            border: none; /* بدون حدود */
-            border-radius: 5px; /* زوايا دائرية */
-            font-size: 16px; /* حجم الخط */
-            cursor: pointer; /* شكل المؤشر عند المرور */
-            text-decoration: none; /* إزالة التسطير */
-            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
-            margin: 10px 0; /* إضافة مسافة بين الأزرار */
-            display: inline-block; /* عرض الأزرار بشكل كتلة مستقلة */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+        }
+        .image-left, .image-right {
+            width: 35%; /* عرض الصور */
+        }
+        .whatsapp-button, .call-button, .home-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+            display: inline-block;
         }
         .whatsapp-button:hover, .call-button:hover {
-            background-color: #128C7E; /* لون الزر عند المرور */
+            background-color: #128C7E;
         }
         .home-button {
-            margin-bottom: 20px; /* إضافة مسافة أسفل الزر */
-            background-color: #008CBA; /* لون زر العودة إلى الصفحة الرئيسية */
-            color: white; /* لون النص */
-            padding: 10px 20px; /* مساحة داخلية */
-            border: none; /* بدون حدود */
-            border-radius: 5px; /* زوايا دائرية */
-            font-size: 16px; /* حجم الخط */
-            cursor: pointer; /* شكل المؤشر عند المرور */
-            text-decoration: none; /* إزالة التسطير */
-            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
+            background-color: #008CBA;
         }
         .home-button:hover {
-            background-color: #005f73; /* لون الزر عند المرور */
+            background-color: #005f73;
         }
         .contact-info {
-            text-align: center; /* توسيط النص */
-            margin-top: 20px; /* إضافة مسافة أعلى المعلومات */
+            text-align: center;
+            margin-top: 20px;
         }
         .contact-info h1 {
-            font-size: 24px; /* حجم الخط للعناوين */
+            font-size: 24px;
         }
         .contact-info p {
-            font-size: 18px; /* حجم الخط للنصوص */
-            margin: 5px 0; /* مسافة بين الفقرات */
+            font-size: 18px;
+            margin: 5px 0;
         }
-        
-        /* Media query for mobile devices */
         @media (max-width: 768px) {
             .home-button, .whatsapp-button, .call-button {
-                width: 80%; /* عرض الأزرار يكون 80% من عرض الشاشة */
-                font-size: 14px; /* تقليل حجم الخط للأزرار */
+                width: 80%;
+                font-size: 14px;
             }
             .contact-info h1 {
-                font-size: 20px; /* تقليل حجم الخط للعناوين */
+                font-size: 20px;
             }
             .contact-info p {
-                font-size: 16px; /* تقليل حجم الخط للنصوص */
+                font-size: 16px;
             }
         }
-        
-        /* Media query for very small devices */
         @media (max-width: 480px) {
             .home-button, .whatsapp-button, .call-button {
-                width: 90%; /* عرض الأزرار يكون 90% من عرض الشاشة */
-                font-size: 12px; /* تقليل حجم الخط للأزرار */
+                width: 90%;
+                font-size: 12px;
             }
             .contact-info h1 {
-                font-size: 18px; /* تقليل حجم الخط للعناوين */
+                font-size: 18px;
             }
             .contact-info p {
-                font-size: 14px; /* تقليل حجم الخط للنصوص */
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <img src="ECS-Word.jpg" alt="ECS-Word" class="image-left" />
+        <img src="coffee.jpg" alt="coffee" class="image-right" />
+    </div>
     <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
     <h1>مرحبًا بكم في موقعي</h1>    
     <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
