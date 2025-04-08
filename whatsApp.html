@@ -3,116 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا عبر الواتساب<img src="ESCL.png" alt="ESCL" /></title>
+    <title>تواصل معنا عبر الواتساب</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
             display: flex;
-            flex-direction: column; /* تغيير الاتجاه إلى عمودي */
-            justify-content: center; /* توسيط المحتوى أفقياً */
-            align-items: center; /* توسيط المحتوى عمودياً */
-            height: 100vh; /* ارتفاع الصفحة بالكامل */
-            margin: 0; /* إزالة الهوامش الافتراضية */
-            font-family: Arial, sans-serif; /* نوع الخط */
-            background-color: #f4f4f4; /* لون خلفية الصفحة */
-            background-size: cover; /* لضمان تغطية الخلفية لكامل الصفحة */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+        }
+        .image-left, .image-right {
+            width: 20%;
+        }
+        .content {
+            flex: 1;
+            margin: 0 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #005f73;
         }
         .whatsapp-button, .call-button {
-            background-color: #25D366; /* لون زر الواتساب */
-            color: white; /* لون النص */
-            padding: 10px 20px; /* مساحة داخلية */
-            border: none; /* بدون حدود */
-            border-radius: 5px; /* زوايا دائرية */
-            font-size: 16px; /* حجم الخط */
-            cursor: pointer; /* شكل المؤشر عند المرور */
-            text-decoration: none; /* إزالة التسطير */
-            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
-            margin: 10px 0; /* إضافة مسافة بين الأزرار */
-            display: inline-block; /* عرض الأزرار بشكل كتلة مستقلة */
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+            display: inline-block;
         }
         .whatsapp-button:hover, .call-button:hover {
-            background-color: #128C7E; /* لون الزر عند المرور */
+            background-color: #128C7E;
         }
         .home-button {
-            margin-bottom: 20px; /* إضافة مسافة أسفل الزر */
-            background-color: #008CBA; /* لون زر العودة إلى الصفحة الرئيسية */
-            color: white; /* لون النص */
-            padding: 10px 20px; /* مساحة داخلية */
-            border: none; /* بدون حدود */
-            border-radius: 5px; /* زوايا دائرية */
-            font-size: 16px; /* حجم الخط */
-            cursor: pointer; /* شكل المؤشر عند المرور */
-            text-decoration: none; /* إزالة التسطير */
-            transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
+            margin-bottom: 20px;
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
         .home-button:hover {
-            background-color: #005f73; /* لون الزر عند المرور */
+            background-color: #005f73;
         }
         .contact-info {
-            text-align: center; /* توسيط النص */
-            margin-top: 20px; /* إضافة مسافة أعلى المعلومات */
+            text-align: center;
+            margin-top: 20px;
         }
         .contact-info h1 {
-            font-size: 24px; /* حجم الخط للعناوين */
+            font-size: 24px;
         }
         .contact-info p {
-            font-size: 18px; /* حجم الخط للنصوص */
-            margin: 5px 0; /* مسافة بين الفقرات */
+            font-size: 18px;
+            margin: 5px 0;
         }
-        
-        /* Media query for mobile devices */
         @media (max-width: 768px) {
-            .home-button, .whatsapp-button, .call-button {
-                width: 80%; /* عرض الأزرار يكون 80% من عرض الشاشة */
-                font-size: 14px; /* تقليل حجم الخط للأزرار */
+            .image-left, .image-right {
+                display: none;
             }
-            .contact-info h1 {
-                font-size: 20px; /* تقليل حجم الخط للعناوين */
-            }
-            .contact-info p {
-                font-size: 16px; /* تقليل حجم الخط للنصوص */
-            }
-        }
-        
-        /* Media query for very small devices */
-        @media (max-width: 480px) {
-            .home-button, .whatsapp-button, .call-button {
-                width: 90%; /* عرض الأزرار يكون 90% من عرض الشاشة */
-                font-size: 12px; /* تقليل حجم الخط للأزرار */
-            }
-            .contact-info h1 {
-                font-size: 18px; /* تقليل حجم الخط للعناوين */
-            }
-            .contact-info p {
-                font-size: 14px; /* تقليل حجم الخط للنصوص */
+            .content {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
- <div class="container">
+    <div class="container">
         <img src="ECS-Word.jpg" alt="ECS-Word" class="image-left" />
+        <div class="content">
+            <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
+            <h1>مرحبًا بكم في موقعي</h1>
+            <div class="form-container">
+                <form>
+                    <h2>Contact Us</h2>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
+            <a href="tel:+447914792205" class="call-button">اتصل بنا</a>
+            <div class="contact-info">
+                <h1>الاستشارات والخدمات التعليمية (EC&S)</h1>
+                <p><strong>المدير التنفيذي:</strong> <span class="emoji">👨‍💼</span> اسم المدير التنفيذي</p>
+                <p><strong>فايبر:</strong> <span class="emoji">📱</span>00447914792205</p>
+                <p><strong>إيمو:</strong> <span class="emoji">📞</span>00447914792205</p>
+                <p><strong>واتساب:</strong> <span class="emoji">💬</span>00447914792205</p>
+                <p><strong>سيجنال:</strong> <span class="emoji">📲</span>00447914792205</p>
+                <p><strong>تيليجرام:</strong> <span class="emoji">📩</span>00447914792205</p>
+                <p><strong>لينكد إن:</strong> <span class="emoji">🔗</span> Tawfig Tamer</p>
+                <p><strong>إنستغرام:</strong> <span class="emoji">📸</span> tawfig5011</p>
+                <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> info@education-c-s.com</p>
+                <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> t.services@dr.com</p>
+                <p><strong>البريد الإلكتروني الثاني:</strong> <span class="emoji">📧</span> education.ecs@yahoo.com</p>
+                <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> offerstudent@yahoo.co.uk</p>
+                <p><strong>موقع الويب:</strong> <span class="emoji">🌐</span> <a href="https://education-c-s.com">education-c-s.com</a></p>
+                <p><strong>العنوان:</strong> <span class="emoji">🏠</span> coventry-UK</p>
+            </div>
+        </div>
         <img src="coffee.jpg" alt="coffee" class="image-right" />
-    </div>
-     <input class="home-button" value="العودة إلى الصفحة الرئيسية!" onclick="history.back()" type="button">
-    <h1>مرحبًا بكم في موقعي</h1>    
-    <a href="https://wa.me/+447914792205" class="whatsapp-button" target="_blank">تواصل معنا عبر الواتساب</a>
-    <a href="tel:+447914792205" class="call-button">اتصل بنا</a>
-    <div class="contact-info">
-        <h1>الاستشارات والخدمات التعليمية (EC&S)</h1>
-        <p><strong>المدير التنفيذي:</strong> <span class="emoji">👨‍💼</span> اسم المدير التنفيذي</p>
-        <p><strong>فايبر:</strong> <span class="emoji">📱</span>00447914792205</p>
-        <p><strong>إيمو:</strong> <span class="emoji">📞</span>00447914792205</p>
-        <p><strong>واتساب:</strong> <span class="emoji">💬</span>00447914792205</p>
-        <p><strong>سيجنال:</strong> <span class="emoji">📲</span>00447914792205</p>
-        <p><strong>تيليجرام:</strong> <span class="emoji">📩</span>00447914792205</p>
-        <p><strong>لينكد إن:</strong> <span class="emoji">🔗</span> Tawfig Tamer</p>
-        <p><strong>إنستغرام:</strong> <span class="emoji">📸</span> tawfig5011</p>
-        <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> info@education-c-s.com</p>
-        <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> t.services@dr.com</p>
-        <p><strong>البريد الإلكتروني الثاني:</strong> <span class="emoji">📧</span> education.ecs@yahoo.com</p>
-        <p><strong>البريد الإلكتروني:</strong> <span class="emoji">📧</span> offerstudent@yahoo.co.uk</p>
-        <p><strong>موقع الويب:</strong> <span class="emoji">🌐</span> <a href="https://education-c-s.com">education-c-s.com</a></p>
-        <p><strong>العنوان:</strong> <span class="emoji">🏠</span> coventry-UK</p>
     </div>
 </body>
 </html>
