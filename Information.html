@@ -4,101 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موارد تعليمية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f4;
+            color: #000;
+        }
+        .navbar {
+            text-align: center;
+            background-color: #242424;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #2835c3;
+        }
+        .resource-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .resource-list li {
+            margin: 10px 0;
+        }
+        .resource-list a {
+            color: #003399;
+            text-decoration: none;
+        }
+        .resource-list a:hover {
+            text-decoration: underline;
+        }
+        .sidebar {
+            background-color: #99ffff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .sidebar dd {
+            margin: 10px 0;
+        }
+        .sidebar dd a {
+            color: #003399;
+            text-decoration: none;
+        }
+        .sidebar dd a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f2f4f4;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #003399;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #242424;
+            color: white;
+        }
+    </style>
 </head>
-<body style="color: rgb(0, 0, 0); background-color: rgb(247, 247, 244);" alink="#000099" link="#000099" vlink="#990099">
-    <table style="text-align: center; width: 1650px; margin-left: auto; margin-right: auto; background-color: rgb(242, 244, 244); height: 32px;" border="1" cellpadding="1" cellspacing="2">
-        <tbody>
-            <tr>
-                <td style="vertical-align: top;">
-                   
-                    <a style="color: rgb(0, 0, 153);" href="index.html">Home <span style="color: rgb(0, 0, 153);"> الرئيسية</span></a>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<body>
 
-                    <span style="text-decoration: underline;">
-              </span><a style="color: rgb(0, 0, 153);" href="التسجيل.html">Sign UP
-                <span style="color: rgb(0, 0, 153);">التسجيل</span></a>
-                      &nbsp; &nbsp; &nbsp;
-
-                      <span style="text-decoration: underline;">
-                    </span><a style="color: rgb(0, 0, 153);" href="Application Form.html">Application Form
-                      <span style="color: rgb(0, 0, 153);"> استمارة الطلب</span></a>
-                      &nbsp; &nbsp; &nbsp;
-
-                    <a target="_blank" style="color: rgb(0, 0, 153);" href="contact.html">contact <span style="font-weight: bold;">اتصال</span></a>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                    <a style="color: rgb(0, 0, 153);" href="English.html">English <span style="font-weight: bold;">الإنكليزية</span></a>
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                    <a style="color: rgb(0, 0, 153);" href="الأيلتس.html">IELTS <span style="font-weight: bold;">الأيلتس</span></a>
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                    <a style="color: rgb(0, 0, 153);" href="BSc.html">BSc <span style="font-weight: bold;"> بكالوريوس </span></a>
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                    <a style="color: rgb(0, 0, 153);" href="MSc.html">MSc <span style="font-weight: bold;">ماجستير</span></a>
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                    <a style="color: rgb(0, 0, 153);" href="PhD.html">PhD <span style="font-weight: bold;">دكتوراه</span></a>
-                    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
-                    <a style="color: rgb(0, 0, 153);" href="News.html">News <span style="font-weight: bold;">اخبار</span></a>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
-                    <a href="Information.html">Informationمعلومات</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div style="text-align: center;">
-        <big style="color: rgb(40, 53, 195);"><span style="font-weight: bold;">
-            <span style="text-decoration: underline;"><h2>Education Consulting and Services</h2></span>
-        </span></big>
-        <br>
+    <div class="navbar">
+        <a href="index.html">Home <span>الرئيسية</span></a>
+        <a href="التسجيل.html">Sign UP <span>التسجيل</span></a>
+        <a href="Application Form.html">Application Form <span>استمارة الطلب</span></a>
+        <a href="contact.html" target="_blank">Contact <span>اتصال</span></a>
+        <a href="English.html">English <span>الإنكليزية</span></a>
+        <a href="الأيلتس.html">IELTS <span>الأيلتس</span></a>
+        <a href="BSc.html">BSc <span>بكالوريوس</span></a>
+        <a href="MSc.html">MSc <span>ماجستير</span></a>
+        <a href="PhD.html">PhD <span>دكتوراه</span></a>
+        <a href="News.html">News <span>اخبار</span></a>
+        <a href="Information.html">Information <span>معلومات</span></a>
     </div>
-    <br>
-    <table style="text-align: left; width: 450px; margin-left: auto; margin-right: 0px; color: rgb(0, 0, 153);" border="1" cellpadding="2" cellspacing="2">
-        <caption style="caption-side: bottom;"><br></caption>
-        <tbody align="right">
-            <tr>
-                <td style="vertical-align: top; background-color: rgb(153, 255, 255);">
-                    <dl>
-                        <dd><font style="font-weight: bold; text-decoration: underline;" size="+2">مواقع تهم الطالب<br></font></dd></p>
-                        <dd><a href="https://www.bl.uk/" target="_blank">المكتبة البريطانية</a></dd></p>
-                        <dd><a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-students" target="_blank">مدارس اللغة المعتمدة من الهوم أوفيس</a></dd></p>
-                        <dd><a href="http://www.rae.ac.uk/" target="_blank">تصنيف الجامعات البريطانية</a></dd></p>
-                        <dd><a href="https://tfl.gov.uk/plan-a-journey/" target="_blank">مواصلات لندن</a></dd></p>
-                        <dd><a href="http://www.heathrow.com/" target="_blank">مطار هيثرو</a></dd></p>
-                        <dd><a href="https://www.birminghamairport.co.uk/" target="_blank">برمينغهام مطار</a></dd></p>
-                        <dd><a href="https://www.ucas.com/ucas/undergraduate/choosing-course/how-choose-between-undergraduate-courses-and-unis" target="_blank">مواقع الجامعات البريطانية</a></dd></p>
-                        <dd><a href="https://www.rafmuseum.org.uk/london/" target="_blank">متاحف مجانية في لندن</a></dd></p>
-                        <dd><a href="https://tfl.gov.uk/maps/bus" target="_blank">خريطة حافلة لندن</a></dd></p>
-                        <dd><a href="https://youtu.be/TK9H0sI4wiw?t=5" target="_blank">متحف لندن للعلوم</a></dd></p>
-                        <dd><a href="http://ntclibya.org.uk/" target="_blank">سفارة ليبيا – لندن</a></dd></p>
-                        <dd><a href="http://ntclibya.org.uk/co/" target="_blank">الشؤون القنصلية – لندن</a></dd></p>
-                        <dd><a href="http://culturalaffairs.libyanembassy.org/ar/" target="_blank">الملحقية الثقافية – لندن</a></dd></p>
-                        <dd><a href="http://cadublin.libyanembassy.org/" target="_blank">الملحقية الثقافية – دبلن</a></dd></p>
-                        <dd><a href="http://highereducation.gov.ly/" target="_blank">وزارة التعليم العالى و البحث العلمى</a></dd></p>
-                        <dd style="color: rgb(51, 51, 255);"><a href="http://www.tve.gov.ly/ar/index.aspx" target="_blank">الهيئة الوطنية للتعليم التقني والفني</a></dd></p>
-                        <dd><a href="https://www.virgintrains.co.uk/?gclid=Cj0KCQjw_o7NBRDgARIsAKvAgt3KW14hZvdqm3QgE6i9E_ajVwXt-1tcsibPxUS-82YaMumOzeusJ7YaApLuEALw_wcB&amp;gclsrc=aw.ds" target="_blank">قطار بريطانيا</a></dd></p>
-                        <dd><a href="https://alison.com/" target="_blank"><span style="color: rgb(0, 0, 153);">دورة تعليمية في مجالات مختلفة</span></a></dd></p>
-                        <dd><a href="http://www.jurn.org/#gsc.tab=0" target="_blank">ملايين المقالات البحثية والرسائل الكاملة في مختلف التخصصات مجانا<br></a></dd></p>
-                        <dd><a style="color: rgb(0, 0, 153);" href="http://www.urop.uci.edu/frame_surp_sample_proposals.html" target="_blank">صفحة تعرض امثلة للبعض المقترحات البحثي الجاهزة</a></dd></p>
-                    </dl>
-                    <a href="http://www.urop.uci.edu/frame_surp_sample_proposals.html" target="_blank">صفحة تعرض امثلة للبعض المقترحات البحثية الجاهزة ,والمفيدة لمرحلة الدكتوراه<br><br>&nbsp; <br></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <img src="office.jpg" alt=" office " style="position: absolute; left: 20; top: 50%;">
-    <h1>موارد تعليمية مفيدة</h1></p>
-    <ul>
-        <h2><li><a href="http://paperity.org/">محرك رائع يبحث في 1,104,024 ورقة بحثية و3,022 مجلة</a></li></h2></p>
-        <li><a href="https://manaraa.com/post/2182">مجاناً تحميل رسائل ماجستير ودكتوراه PDF</a></li></p>
-        <li><a href="http://elllo.org/">لتعلم اللغة الانجليزية , أحد أفضل المواقع لتعلم مهارة الاستماع وزيادة المفردات</a></li></p>
-        <li><a href="https://www.pdfescape.com/windows/">موقع متخصص في تعديل ملفات ، إذا كان لديك ملف تريد إعادة تدويره أو قص وترتيب صفحاته ونحوها من الخدمات</a></li></p>
-        <li><a href="https://www.edmodo.com/">أحسن وسيلة للتعاون الافتراضي الذي يجعل الشبكات الاجتماعية مفيدة للأغراض التربوية و التعليمية</a></li></p>
-        <li><a href="https://education.weebly.com/">هو أداة رقمية مجانية تمكن المدرسين من إنشاء مدونات لفصولهم الدراسية ومواقع الكترونية</a></li></p>
-        <li><a href="http://www.besttimetogo.com/">موقع يخبرك افضل وقت لزيارة اي بلد أو مدينة ترغب في السفر لها وحالة طقسها بالتفصيل</a></li></p>
-        <li><a href="https://www.ntu.ac.uk/research/find-a-phd-project/projects/architecture-design-built-environment/smart-preservation-of-archaeological-heritage-in-the-middle-east">تمويل كامل منحة الدكتوراه تحت إشرافي في "بحوث التراث العالمي" في جامعة نوتنغهام ترينت</a></li></p>
-        <li><a href="https://www.firstinmath.com/">برنامج آخر لتعلم الرياضيات عن بعد و بطريقة مشوقة</a></li></p>
-        <li><a href="http://rawgraphs.io/">موقع رائع يحول أي ملف اكسل إلى رسوم بيانية</a></li></p>
-        <li><a href="https://www.refseek.com/">محرك بحث مفيد يبحث في أكثر من مليار وثيقة علمية</a></li></p>
-        <li><a href="https://www.checkforplagiarism.net/free-checking">موقع مهم للكشف عن الانتحال العلمي</a></li></p>
-    </ul>
+
+    <div class="container">
+        <h2>Education Consulting and Services</h2>
+
+        <div class="sidebar">
+            <dl>
+                <dd><strong>مواقع تهم الطالب</strong></dd>
+                <dd><a href="https://www.bl.uk/" target="_blank">المكتبة البريطانية</a></dd>
+                <dd><a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-students" target="_blank">مدارس اللغة المعتمدة من الهوم أوفيس</a></dd>
+                <dd><a href="http://www.rae.ac.uk/" target="_blank">تصنيف الجامعات البريطانية</a></dd>
+                <dd><a href="https://tfl.gov.uk/plan-a-journey/" target="_blank">مواصلات لندن</a></dd>
+                <dd><a href="http://www.heathrow.com/" target="_blank">مطار هيثرو</a></dd>
+                <dd><a href="https://www.birminghamairport.co.uk/" target="_blank">مطار برمينغهام</a></dd>
+                <dd><a href="https://www.ucas.com/ucas/undergraduate/choosing-course/how-choose-between-undergraduate-courses-and-unis" target="_blank">مواقع الجامعات البريطانية</a></dd>
+                <dd><a href="https://www.rafmuseum.org.uk/london/" target="_blank">متاحف مجانية في لندن</a></dd>
+                <dd><a href="https://tfl.gov.uk/maps/bus" target="_blank">خريطة حافلة لندن</a></dd>
+                <dd><a href="https://youtu.be/TK9H0sI4wiw?t=5" target="_blank">متحف لندن للعلوم</a></dd>
+                <dd><a href="http://ntclibya.org.uk/" target="_blank">سفارة ليبيا – لندن</a></dd>
+                <dd><a href="http://ntclibya.org.uk/co/" target="_blank">الشؤون القنصلية – لندن</a></dd>
+                <dd><a href="http://culturalaffairs.libyanembassy.org/ar/" target="_blank">الملحقية الثقافية – لندن</a></dd>
+                <dd><a href="http://cadublin.libyanembassy.org/" target="_blank">الملحقية الثقافية – دبلن</a></dd>
+                <dd><a href="http://highereducation.gov.ly/" target="_blank">وزارة التعليم العالى و البحث العلمى</a></dd>
+                <dd><a href="http://www.tve.gov.ly/ar/index.aspx" target="_blank">الهيئة الوطنية للتعليم التقني والفني</a></dd>
+                <dd><a href="https://www.virgintrains.co.uk/" target="_blank">قطارات فيرجن</a></dd>
+                <dd><a href="https://alison.com/" target="_blank">دورة تعليمية في مجالات مختلفة</a></dd>
+                <dd><a href="http://www.jurn.org/#gsc.tab=0" target="_blank">ملايين المقالات البحثية والرسائل الكاملة في مختلف التخصصات</a></dd>
+                <dd><a href="http://www.urop.uci.edu/frame_surp_sample_proposals.html" target="_blank">صفحة تعرض امثلة لبعض المقترحات البحثية الجاهزة</a></dd>
+            </dl>
+        </div>
+
+        <h1>موارد تعليمية مفيدة</h1>
+        <ul class="resource-list">
+            <li><a href="http://paperity.org/">محرك رائع يبحث في 1,104,024 ورقة بحثية و3,022 مجلة</a></li>
+            <li><a href="https://manaraa.com/post/2182">مجاناً تحميل رسائل ماجستير ودكتوراه PDF</a></li>
+            <li><a href="http://elllo.org/">لتعلم اللغة الانجليزية , أحد أفضل المواقع لتعلم مهارة الاستماع وزيادة المفردات</a></li>
+            <li><a href="https://www.pdfescape.com/windows/">موقع متخصص في تعديل ملفات ، إذا كان لديك ملف تريد إعادة تدويره أو قص وترتيب صفحاته</a></li>
+            <li><a href="https://www.edmodo.com/">أحسن وسيلة للتعاون الافتراضي الذي يجعل الشبكات الاجتماعية مفيدة للأغراض التربوية</a></li>
+            <li><a href="https://education.weebly.com/">هو أداة رقمية مجانية تمكن المدرسين من إنشاء مدونات لفصولهم الدراسية ومواقع الكترونية</a></li>
+            <li><a href="http://www.besttimetogo.com/">موقع يخبرك افضل وقت لزيارة اي بلد أو مدينة ترغب في السفر لها وحالة طقسها بالتفصيل</a></li>
+            <li><a href="https://www.ntu.ac.uk/research/find-a-phd-project/projects/architecture-design-built-environment/smart-preservation-of-archaeological-heritage-in-the-middle-east">تمويل مشاريع الدكتوراه</a></li>
+            <li><a href="https://www.firstinmath.com/">برنامج آخر لتعلم الرياضيات عن بعد و بطريقة مشوقة</a></li>
+            <li><a href="http://rawgraphs.io/">موقع رائع يحول أي ملف اكسل إلى رسوم بيانية</a></li>
+            <li><a href="https://www.refseek.com/">محرك بحث مفيد يبحث في أكثر من مليار وثيقة علمية</a></li>
+            <li><a href="https://www.checkforplagiarism.net/free-checking">موقع مهم للكشف عن الانتحال العلمي</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-info">
+        <p>Email: <a href="mailto:info@education-c-s.com">info@education-c-s.com</a></p>
+        <p>Phone: 02046203041</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>,
+            <a href="https://www.twitter.com" target="_blank">X</a>,
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2025 Education Consulting and Services
+    </footer>
+
 </body>
 </html>
