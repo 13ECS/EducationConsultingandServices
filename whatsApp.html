@@ -13,16 +13,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         .container {
             width: 100%;
             max-width: 1200px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         .image-left, .image-right {
             width: 20%;
+            max-width: 200px;
         }
         .content {
             flex: 1;
@@ -84,6 +86,7 @@
             text-decoration: none;
             transition: background-color 0.3s;
             margin-bottom: 20px;
+            display: inline-block;
         }
         .home-button:hover {
             background-color: #005f73;
