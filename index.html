@@ -11,38 +11,67 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row; /* Use row layout */
+            flex-direction: column; /* Use column layout */
         }
-        .sidebar {
-            width: 20%;
+        .topbar {
+            width: 100%;
             background-color: #370a9f;
             color: white;
-            position: relative;
-            height: 100vh;
-            padding: 20px 0;
-            text-align: center; /* Center align the logo */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .sidebar a {
+        .topbar .logo {
+            max-width: 150px;
+            height: auto;
+        }
+        .topbar nav {
+            display: flex;
+            gap: 10px;
+        }
+        .topbar nav a {
             padding: 10px 15px;
             text-decoration: none;
             color: white;
-            display: block;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        .sidebar a:hover {
+        .topbar nav a:hover {
             background-color: #575757;
         }
         .dropdown {
             display: none;
             background-color: #444;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .dropdown a {
-            padding-left: 30px;
+            padding: 10px 15px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #575757;
         }
         .dropdown-btn {
             cursor: pointer;
+            position: relative;
+        }
+        .dropdown-btn:hover .dropdown {
+            display: block;
         }
         .logo-container {
-            width: 80%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,14 +90,6 @@
             .container {
                 width: 80%;
                 margin: 0 auto;
-            }
-            .sidebar {
-                width: 185px;
-                position: fixed;
-                height: 100%;
-            }
-            .content {
-                margin-left: 220px;
             }
         }
         @media (min-width: 992px) {
@@ -91,24 +112,29 @@
     <noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 </head>
 <body>
-    <div class="sidebar">
-        <a href="#">الاستشارات والخدمات التعليمية</a>
-        <a href="About.html">حول</a>
-        <div class="dropdown-btn">البرامج</div>
-        <div class="dropdown">
-            <a href="الأيلتس.html">IELTS  الأيلتس </a>
-            <a href="Video_IELTS.html">Video_IELTS </a>
-            <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
-            <a href="BSc.html">بكالوريوس</a>
-            <a href="MSc.html">ماجستير</a>
-            <a href="PhD.html">دكتوراه</a>
-        </div>
-        <a href="News.html">الأخبار</a>
-        <a href="Information.html">المعلومات</a>
-        <a href="التسجيل.html">التسجيل</a>
-        <a href="contact.html">اتصل بنا</a>
-        <a href="Contact_Form.html">نموذج الاتصال</a>     
-        <a href="whatsApp.html">واتساب</a>
+    <div class="topbar">
+        <img src="ESCL.png" alt="Logo" class="logo" />
+        <nav>
+            <a href="#">الاستشارات والخدمات التعليمية</a>
+            <a href="About.html">حول</a>
+            <div class="dropdown-btn">
+                البرامج
+                <div class="dropdown">
+                    <a href="الأيلتس.html">IELTS  الأيلتس </a>
+                    <a href="Video_IELTS.html">Video_IELTS </a>
+                    <a href="English.html">نموذج طلب دراسة اللغة الإنجليزية</a>
+                    <a href="BSc.html">بكالوريوس</a>
+                    <a href="MSc.html">ماجستير</a>
+                    <a href="PhD.html">دكتوراه</a>
+                </div>
+            </div>
+            <a href="News.html">الأخبار</a>
+            <a href="Information.html">المعلومات</a>
+            <a href="التسجيل.html">التسجيل</a>
+            <a href="contact.html">اتصل بنا</a>
+            <a href="Contact_Form.html">نموذج الاتصال</a>
+            <a href="whatsApp.html">واتساب</a>
+        </nav>
     </div>
     <div class="logo-container">
         <img src="ESCL.png" alt="Logo" class="logo" />
