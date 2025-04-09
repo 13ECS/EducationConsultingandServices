@@ -111,11 +111,11 @@
 
         /* Contact Form Styles */
         form {
-            background-color: #f9f9f9;
+            background-color: #f0f8ff; /* Light blue background */
             padding: 20px;
-            border: 1px solid #ddd;
+            border: 2px solid #4682b4; /* Steel blue border */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             margin: 20px auto;
         }
@@ -127,19 +127,26 @@
             color: #333;
         }
 
+        form input[type="text"],
         form input[type="email"],
         form input[type="file"] {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #4682b4; /* Steel blue border */
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
         }
 
+        form input:focus {
+            outline: none;
+            border-color: #5c9dc8; /* Lighter blue for focus */
+            box-shadow: 0 0 5px #5c9dc8;
+        }
+
         form button {
-            background-color: #2835c3;
+            background-color: #4682b4; /* Steel blue */
             color: #fff;
             font-size: 18px;
             padding: 10px 20px;
@@ -150,7 +157,21 @@
         }
 
         form button:hover {
-            background-color: #1f2ca5;
+            background-color: #5c9dc8; /* Lighter steel blue on hover */
+        }
+
+        /* Flexbox for Contact Form and Image */
+        .contact-container {
+            display: flex;
+            flex-direction: row-reverse; /* Ensures image is on the right */
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-container img {
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -197,23 +218,30 @@
         <h2>قبول مشروط</h2>
         <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول [...]</p>
 
-        <!-- Contact Form -->
+        <!-- Contact Form and Image -->
         <h2>اتصل بنا</h2>
-        <form
-          action="https://formspree.io/f/xkgjkojv"
-          method="POST"
-          enctype="multipart/form-data"
-        >
-            <label>
-                بريدك الإلكتروني:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                الملف الخاص بك:
-                <input type="file" name="upload" required>
-            </label>
-            <button type="submit">إرسال</button>
-        </form>
+        <div class="contact-container">
+            <form
+              action="https://formspree.io/f/xkgjkojv"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+                <label>
+                    اسمك:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    بريدك الإلكتروني:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    الملف الخاص بك:
+                    <input type="file" name="upload" required>
+                </label>
+                <button type="submit">إرسال</button>
+            </form>
+            <img src="students7.jpg" alt="صورة 7">
+        </div>
     </div>
 
     <footer>
