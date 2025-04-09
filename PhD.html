@@ -12,27 +12,31 @@
             padding: 0;
             background-color: #f7f7f4;
             color: #000;
-            text-align: right;
-            direction: rtl;
             display: flex;
+            flex-direction: row-reverse; /* Reverses the layout to place the sidebar on the right */
+            align-items: flex-start;
         }
 
         /* Sidebar for Images */
         .image-sidebar {
-            width: 25%;
-            padding: 20px;
+            width: 200px;
+            padding: 10px;
             background-color: #eaeaea;
+            position: sticky; /* Keeps images fixed at the top */
+            top: 0;
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Adds scrolling if images exceed height */
         }
 
         .image-sidebar img {
             width: 100%;
             height: auto;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Content Area */
+        /* Main Content */
         .content {
             flex: 1;
             padding: 20px;
