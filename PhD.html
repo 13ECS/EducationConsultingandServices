@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المطلوب لقبول ماجستير</title>
+    <title>المطلوب لقبول الدكتوراه</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,176 +15,148 @@
             text-align: right;
             direction: rtl;
         }
-        .navbar {
-            text-align: center;
+
+        /* Header Styles */
+        header {
             background-color: #242424;
-            padding: 10px;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
-        .navbar a {
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
             transition: color 0.3s ease;
         }
-        .navbar a:hover {
+
+        nav a:hover {
             color: #ffcc00;
         }
+
+        /* Content Container */
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 20px;
         }
-        h1, h2 {
+
+        h2 {
             color: #2835c3;
+            margin-top: 30px;
         }
+
         ol {
-            direction: rtl;
             list-style-type: decimal;
             padding-left: 20px;
         }
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #f2f4f4;
-            padding: 15px;
-            border-top: 1px solid #ccc;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .contact-info a {
-            color: #003399;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .contact-info a:hover {
-            color: #ff6600;
-        }
-        .contact-form {
-            text-align: right;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form label {
-            display: block;
+
+        ol li {
             margin-bottom: 10px;
-            font-weight: bold;
         }
-        .contact-form input,
-        .contact-form textarea {
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .image-gallery img {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .contact-form button {
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Styles */
+        footer {
             background-color: #242424;
             color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .contact-form button:hover {
-            background-color: #444;
-        }
-        footer {
             text-align: center;
             padding: 20px;
-            background-color: #242424;
-            color: white;
+            margin-top: 30px;
         }
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
+
+        footer p {
+            margin: 0;
         }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <a href="index.html">Home <span>الرئيسية</span></a>
-        <a href="التسجيل.html">Sign UP <span>التسجيل</span></a>
-        <a href="Application Form.html">Application Form <span>استمارة الطلب</span></a>
-        <a href="contact.html" target="_blank">Contact <span>اتصال</span></a>
-        <a href="English.html">English <span>الإنكليزية</span></a>
-        <a href="الأيلتس.html">IELTS <span>الأيلتس</span></a>
-        <a href="BSc.html">BSc <span>بكالوريوس</span></a>
-        <a href="MSc.html">MSc <span>ماجستير</span></a>
-        <a href="PhD.html">PhD <span>دكتوراه</span></a>
-        <a href="News.html">News <span>اخبار</span></a>
-        <a href="Information.html">Information <span>معلومات</span></a>
-    </div>
+    <header>
+        <h1>المطلوب لقبول الدكتوراه</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="التسجيل.html">التسجيل</a>
+            <a href="Application Form.html">استمارة الطلب</a>
+            <a href="contact.html">اتصال</a>
+            <a href="MSc.html">ماجستير</a>
+            <a href="BSc.html">بكالوريوس</a>
+        </nav>
+    </header>
 
     <div class="container">
-        <h1>المطلوب لقبول ماجستير</h1>
+        <h2>المستندات المطلوبة</h2>
         <ol>
-            <li>نسخة من جواز السفر.</li>
-            <li>شهادة البكالوريوس.</li>
-            <li>كشف درجات البكالوريوس.</li>
-            <li>شهادات اللغة الإنجليزية إذا كانت متوفرة.</li>
-            <li>عدد 2 تزكية أكاديمية.</li>
-            <li>سيرة ذاتية.</li>
-            <li>رسالة دعم مالي إذا كانت متوفرة.</li>
-            <li>شهادة خبرة.</li>
+            <li>نسخة من جواز السفر</li>
+            <li>شهادتا البكالوريوس والماجستير</li>
+            <li>كشف درجات البكالوريوس</li>
+            <li>كشف درجات الماجستير</li>
+            <li>شهادات اللغة الإنجليزية</li>
+            <li>عدد 2 تزكية أكاديمية</li>
+            <li>سيرة ذاتية</li>
+            <li>رسالة دعم مالي إذا توجد عندك</li>
+            <li>مقترح البحث</li>
+            <li>شهادة خبرة</li>
         </ol>
-        <h2>القبول المشروط</h2>
-        <p>ما هو القبول المشروط؟</p>
-        <p>يبدأ الطالب بالدراسة الأكاديمية بعد استيفاء جميع الشروط المذكورة في ورقة القبول، مع ملاحظة أن القبول يعتمد على تحقيق هذه الشروط.</p>
-        <h2>IELTS</h2>
-        <h1>بدون شهادة إيلتس درجة نهاية يكون قبول مشروط</h1>
-    </div>
 
-    <div class="contact-form">
-        <h2>اتصل بنا</h2>
-        <form action="https://formspree.io/f/mnnpokej" method="POST" enctype="multipart/form-data">
-            <label>
-                الاسم:
-                <input type="text" name="name" placeholder="أدخل اسمك" required>
-            </label>
-            <label>
-                البريد الإلكتروني:
-                <input type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
-            </label>
-            <label>
-                الملف:
-                <input type="file" name="upload" required>
-            </label>
-            <button type="submit">إرسال</button>
-        </form>
-    </div>
+        <h2>قبول مشروط</h2>
+        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول الجامعي الذي يُقدَّم للطلاب مع وجود متطلبات معينة يجب استيفاؤها.</p>
 
-    <div class="contact-info">
-        <p>Email: <a href="mailto:info@education-c-s.com">info@education-c-s.com</a></p>
-        <p>Phone: 02046203041</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>,
-            <a href="https://www.twitter.com" target="_blank">X</a>,
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        </p>
-    </div>
-
-    <div class="image-container">
-        <img src="students.jpg" alt="طلاب يدرسون" style="max-width: 100%;">
+        <!-- Image Gallery -->
+        <h2>معرض الصور</h2>
+        <div class="image-gallery">
+            <img src="students3.jpg" alt="صورة 3">
+            <img src="students4.jpg" alt="صورة 4">
+            <img src="students5.jpg" alt="صورة 5">
+            <img src="students9.jpg" alt="صورة 9">
+            <img src="students10.jpg" alt="صورة 10">
+            <img src="students11.jpg" alt="صورة 11">
+            <img src="students8.jpg" alt="صورة 8">
+        </div>
     </div>
 
     <footer>
-        &copy; 2025 Education Consulting and Services
+        <p>&copy; 2025 <a href="https://github.com/13ECS/EducationConsultingandServices">Education Consulting and Services</a></p>
     </footer>
-
 </body>
 </html>
