@@ -14,48 +14,32 @@
             color: #000;
             text-align: right;
             direction: rtl;
+            display: flex;
         }
 
-        /* Header Styles */
-        header {
-            background-color: #242424;
-            color: #fff;
+        /* Sidebar for Images */
+        .image-sidebar {
+            width: 25%;
             padding: 20px;
-            text-align: center;
+            background-color: #eaeaea;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
+        .image-sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        /* Content Container */
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        /* Content Area */
+        .content {
+            flex: 1;
             padding: 20px;
         }
 
-        h2 {
+        h1, h2 {
             color: #2835c3;
-            margin-top: 30px;
         }
 
         ol {
@@ -67,28 +51,6 @@
             margin-bottom: 10px;
         }
 
-        /* Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Footer Styles */
         footer {
             background-color: #242424;
             color: #fff;
@@ -112,20 +74,20 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>المطلوب لقبول الدكتوراه</h1>
-        <nav>
-            <a href="index.html">الرئيسية</a>
-            <a href="التسجيل.html">التسجيل</a>
-            <a href="Application Form.html">استمارة الطلب</a>
-            <a href="contact.html">اتصال</a>
-            <a href="MSc.html">ماجستير</a>
-            <a href="BSc.html">بكالوريوس</a>
-        </nav>
-    </header>
+    <!-- Sidebar for Images -->
+    <div class="image-sidebar">
+        <img src="students3.jpg" alt="صورة 3">
+        <img src="students4.jpg" alt="صورة 4">
+        <img src="students5.jpg" alt="صورة 5">
+        <img src="students9.jpg" alt="صورة 9">
+        <img src="students10.jpg" alt="صورة 10">
+        <img src="students11.jpg" alt="صورة 11">
+        <img src="students8.jpg" alt="صورة 8">
+    </div>
 
-    <div class="container">
-        <h2>المستندات المطلوبة</h2>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>المطلوب لقبول الدكتوراه</h1>
         <ol>
             <li>نسخة من جواز السفر</li>
             <li>شهادتا البكالوريوس والماجستير</li>
@@ -141,18 +103,6 @@
 
         <h2>قبول مشروط</h2>
         <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول الجامعي الذي يُقدَّم للطلاب مع وجود متطلبات معينة يجب استيفاؤها.</p>
-
-        <!-- Image Gallery -->
-        <h2>معرض الصور</h2>
-        <div class="image-gallery">
-            <img src="students3.jpg" alt="صورة 3">
-            <img src="students4.jpg" alt="صورة 4">
-            <img src="students5 (1).jpg" alt="صورة 5">
-            <img src="students9.jpg" alt="صورة 9">
-            <img src="students10.jpg" alt="صورة 10">
-            <img src="students11.jpg" alt="صورة 11">
-            <img src="students8.jpg" alt="صورة 8">
-        </div>
     </div>
 
     <footer>
