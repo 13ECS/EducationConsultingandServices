@@ -13,8 +13,40 @@
             background-color: #f7f7f4;
             color: #000;
             display: flex;
-            flex-direction: row-reverse; /* Reverses the layout to place the sidebar on the right */
+            flex-direction: row-reverse; /* Keeps sidebar on the right */
             align-items: flex-start;
+        }
+
+        /* Header Menu */
+        header {
+            width: 100%;
+            background-color: #242424;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav a:hover {
+            background-color: #ffcc00;
+            border-radius: 5px;
         }
 
         /* Sidebar for Images */
@@ -22,7 +54,7 @@
             width: 200px;
             padding: 10px;
             background-color: #eaeaea;
-            position: sticky; /* Keeps images fixed at the top */
+            position: sticky;
             top: 0;
             height: 100vh; /* Full viewport height */
             overflow-y: auto; /* Adds scrolling if images exceed height */
@@ -40,6 +72,7 @@
         .content {
             flex: 1;
             padding: 20px;
+            margin-top: 60px; /* Offset for fixed header */
         }
 
         h1, h2 {
@@ -78,6 +111,18 @@
     </style>
 </head>
 <body>
+    <!-- Header Menu -->
+    <header>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="التسجيل.html">التسجيل</a>
+            <a href="Application Form.html">استمارة الطلب</a>
+            <a href="contact.html">اتصال</a>
+            <a href="MSc.html">ماجستير</a>
+            <a href="BSc.html">بكالوريوس</a>
+        </nav>
+    </header>
+
     <!-- Sidebar for Images -->
     <div class="image-sidebar">
         <img src="students3.jpg" alt="صورة 3">
