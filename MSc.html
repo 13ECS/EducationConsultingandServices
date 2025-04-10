@@ -1,174 +1,268 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المطلوب لقبول ماجستير</title>
-     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    <title>المطلوب لقبول الماجستير</title>
+    <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f4;
             color: #000;
-            text-align: right;
-            direction: rtl;
+            display: flex;
+            flex-direction: row-reverse; /* Keeps sidebar on the right */
+            align-items: flex-start;
         }
-        .navbar {
-            text-align: center;
+
+        /* Header Menu */
+        header {
+            width: 100%;
             background-color: #242424;
-            padding: 10px;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
-        .navbar a {
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
         }
-        .navbar a:hover {
-            text-decoration: underline;
+
+        header nav a:hover {
+            background-color: #ffcc00;
+            border-radius: 5px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+
+        /* Sidebar for Images */
+        .image-sidebar {
+            width: 200px;
+            padding: 10px;
+            background-color: #eaeaea;
+            position: sticky;
+            top: 0;
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Adds scrolling if images exceed height */
+        }
+
+        .image-sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
             padding: 20px;
+            margin-top: 60px; /* Offset for fixed header */
         }
-        h2 {
+
+        h1, h2 {
             color: #2835c3;
         }
+
         ol {
-            direction: rtl;
             list-style-type: decimal;
+            padding-left: 20px;
         }
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #f2f4f4;
-            padding: 10px;
-            border-top: 1px solid #ccc;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .contact-info a {
-            color: #003399;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-form {
-            text-align: right;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-        }
-        .contact-form label {
-            display: block;
+
+        ol li {
             margin-bottom: 10px;
         }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-        }
-        .contact-form button {
+
+        footer {
             background-color: #242424;
             color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #444;
-        }
-        footer {
             text-align: center;
             padding: 20px;
-            background-color: #242424;
-            color: white;
+            margin-top: 30px;
         }
-        .image-container {
-            text-align: center;
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form Styles */
+        form {
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 20px;
+            border: 2px solid #4682b4; /* Steel blue border */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #4682b4; /* Steel blue border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #5c9dc8; /* Lighter blue for focus */
+            box-shadow: 0 0 5px #5c9dc8;
+        }
+
+        form button {
+            background-color: #4682b4; /* Steel blue */
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #5c9dc8; /* Lighter steel blue on hover */
+        }
+
+        /* Flexbox for Contact Form and Image */
+        .contact-container {
+            display: flex;
+            flex-direction: row-reverse; /* Ensures image is on the right */
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-container img {
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Thank You Message */
+        .thank-you {
+            display: none; /* Hidden by default */
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
             margin-top: 20px;
+            text-align: center;
         }
     </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = document.querySelector("form");
+            const thankYouMessage = document.querySelector(".thank-you");
+            form.style.display = "none"; // Hide the form
+            thankYouMessage.style.display = "block"; // Show the thank-you message
+        }
+    </script>
 </head>
 <body>
+    <!-- Header Menu -->
+    <header>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="التسجيل.html">التسجيل</a>
+            <a href="Application Form.html">استمارة الطلب</a>
+            <a href="contact.html">اتصال</a>
+            <a href="PhD.html">دكتوراه</a>
+            <a href="BSc.html">بكالوريوس</a>
+        </nav>
+    </header>
 
-    <div class="navbar">
-        <a href="index.html">Home <span>الرئيسية</span></a>
-        <a href="التسجيل.html">Sign UP <span>التسجيل</span></a>
-        <a href="Application Form.html">Application Form <span>استمارة الطلب</span></a>
-        <a href="contact.html" target="_blank">Contact <span>اتصال</span></a>
-        <a href="English.html">English <span>الإنكليزية</span></a>
-        <a href="الأيلتس.html">IELTS <span>الأيلتس</span></a>
-        <a href="BSc.html">BSc <span>بكالوريوس</span></a>
-        <a href="MSc.html">MSc <span>ماجستير</span></a>
-        <a href="PhD.html">PhD <span>دكتوراه</span></a>
-        <a href="News.html">News <span>اخبار</span></a>
-        <a href="Information.html">Information <span>معلومات</span></a>
+    <!-- Sidebar for Images -->
+    <div class="image-sidebar">
+        <img src="Students1.jpg" alt="صورة 1">
+        <img src="Students2.jpg" alt="صورة 2">
+        <img src="Students3.jpg" alt="صورة 3">
+        <img src="Students4.jpg" alt="صورة 4">
+        <img src="Students5.jpg" alt="صورة 5">
+        <img src="Students6.jpg" alt="صورة 6">
+        <img src="Students11.jpg" alt="صورة 11">
+        <img src="Students12.jpg" alt="صورة 12">
+        <img src="Students13.jpg" alt="صورة 13">
     </div>
 
-    <div class="container">
-        <h1>المطلوب لقبول ماجستير</h1>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>المطلوب لقبول الماجستير</h1>
         <ol>
-            <li>نسخة من جواز السفر.</li>
-            <li>شهادة البكالوريوس.</li>
-            <li>كشف درجات البكالوريوس.</li>
-            <li>شهادات اللغة الإنجليزية إذا كانت متوفرة.</li>
-            <li>عدد 2 تزكية أكاديمية.</li>
-            <li>سيرة ذاتية.</li>
-            <li>رسالة دعم مالي إذا كانت متوفرة.</li>
-            <li>شهادة خبرة.</li>
+            <li>نسخة من جواز السفر</li>
+            <li>شهادة البكالوريوس</li>
+            <li>كشف درجات البكالوريوس</li>
+            <li>شهادات اللغة الإنجليزية</li>
+            <li>عدد 2 تزكية أكاديمية</li>
+            <li>سيرة ذاتية</li>
+            <li>رسالة دعم مالي إذا توجد عندك</li>
+            <li>مقترح البحث</li>
         </ol>
-        <h2>القبول المشروط</h2>
-        <p>ما هو القبول المشروط؟</p>
-        <p>يبدأ الطالب بالدراسة الأكاديمية بعد استيفاء جميع الشروط المذكورة في ورقة القبول، مع ملاحظة أن القبول المشروط يعني أن الطالب قد قبل مبدئيًا ولكن يجب عليه تحقيق بعض المتطلبات قبل البدء في الدراسة.</p>
-        <h2>IELTS</h2>
-        <h1>بدون شهادة إيلتس درجة نهاية يكون قبول مشروط</h1>
-    </div>
 
-    <div class="contact-form">
+        <h2>قبول مشروط</h2>
+        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول...</p>
+
+        <!-- Contact Form and Image -->
         <h2>اتصل بنا</h2>
-        <form action="https://formspree.io/f/mnnpokej" method="POST" enctype="multipart/form-data">
-            <label>
-                الاسم:
-                <input type="text" name="name" required>
-            </label>
-            <label>
-                البريد الإلكتروني:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                الملف:
-                <input type="file" name="upload" required>
-            </label>
-            <button type="submit">إرسال</button>
-        </form>
-    </div>
-
-    <div class="contact-info">
-        <p>Email: <a href="mailto:info@education-c-s.com">info@education-c-s.com</a></p>
-        <p>Phone: 02046203041</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>,
-            <a href="https://www.twitter.com" target="_blank">X</a>,
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        </p>
-    </div>
-
-    <div class="image-container">
-        <img src="students.jpg" alt="وصف الصورة" style="max-width: 100%;">
+        <div class="contact-container">
+            <form action="https://formspree.io/f/xkgjkojv" method="POST">
+                <label>
+                    اسمك:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    بريدك الإلكتروني:
+                    <input type="email" name="email" required>
+                </label>
+                <button type="submit">إرسال</button>
+            </form>
+            <img src="students7.jpg" alt="صورة 7">
+        </div>
+        <div class="thank-you">
+            Thank you for filling out the form; we appreciate your submission and will respond to you shortly.
+        </div>
     </div>
 
     <footer>
-        &copy; 2025 Education Consulting and Services
+        <p>&copy; 2025 <a href="https://education-c-s.com">Education Consulting and Services</a></p>
     </footer>
-
 </body>
 </html>
