@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Disallow: /test-page.html
+
+Sitemap: https://education-c-s.com/sitemap.xml
