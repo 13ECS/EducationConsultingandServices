@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Basic Meta Tags -->
+     <!-- Basic Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة. قبول اللغة الإنجليزية، قبول ماجستير، دراسة اللغة الإنجليزية، البكالوريوس">
+<meta name="keywords" content="قبول ماجستير, دراسة الماجستير, استشارات تعليمية, المملكة المتحدة, التعليم العالي, دورات ماجستير, بريطانيا">
+<meta name="author" content="Education Consulting and Services">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="قبول ماجستير">
+<meta property="og:description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة.">
+<meta property="og:image" content="https://example.com/path-to-image.jpg">
+<meta property="og:url" content="https://education-c-s.com/msc">
+<meta property="og:type" content="website">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة. قبول اللغة الإنجليزية، قبول ماجستير، دراسة اللغة الإنجليزية، البكالوريوس">
-    <meta name="keywords" content="قبول ماجستير, دراسة الماجستير, استشارات تعليمية, المملكة المتحدة, التعليم العالي, دورات ماجستير, بريطانيا">
-    <meta name="author" content="Education Consulting and Services">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="قبول ماجستير">
-    <meta property="og:description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة.">
-    <meta property="og:image" content="https://example.com/path-to-image.jpg">
-    <meta property="og:url" content="https://education-c-s.com/msc">
-    <meta property="og:type" content="website">
-
     <title>المطلوب لقبول الماجستير</title>
     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
-
     <style>
         /* General Styles */
         body {
@@ -146,7 +147,8 @@
         }
 
         form input[type="text"],
-        form input[type="email"] {
+        form input[type="email"],
+        form input[type="file"] {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
@@ -176,8 +178,33 @@
         form button:hover {
             background-color: #5c9dc8; /* Lighter steel blue on hover */
         }
-    </style>
 
+        /* Flexbox for Contact Form and Image */
+        .contact-container {
+            display: flex;
+            flex-direction: row-reverse; /* Ensures image is on the right */
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-container img {
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Thank You Message */
+        .thank-you {
+            display: none; /* Hidden by default */
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
     <script>
         function handleSubmit(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -195,10 +222,10 @@
             <a href="index.html">الرئيسية</a>
             <a href="التسجيل.html">التسجيل</a>
             <a href="Application Form.html">استمارة الطلب</a>
-            <a href="PhD.html">دكتوراه</a>
+             <a href="PhD.html">دكتوراه</a>
             <a href="BSc.html">بكالوريوس</a>
-            <a href="Information.html">المعلومات</a>
-            <a href="contact.html">اتصال</a>
+              <a href="Information.html">المعلومات</a>
+            <a href="contact.html">اتصال</a>                            
             <a href="Contact_Form.html">نموذج الاتصال</a>
             <a href="whatsApp.html">واتساب</a>
         </nav>
@@ -206,16 +233,16 @@
 
     <!-- Sidebar for Images -->
     <div class="image-sidebar">
-        <img src="students1.jpg" alt="صورة 1">
-        <img src="students2.jpg" alt="صورة 2">
-        <img src="students3.jpg" alt="صورة 3">
-        <img src="students4.jpg" alt="صورة 4">
-        <img src="students5.jpg" alt="صورة 5">
-        <img src="students6.jpg" alt="صورة 6">
-        <img src="students11.jpg" alt="صورة 11">
-        <img src="students12.jpg" alt="صورة 12">
-        <img src="students13.jpg" alt="صورة 13">
-    </div>
+    <img src="students1.jpg" alt="صورة 1">
+    <img src="students2.jpg" alt="صورة 2">
+    <img src="students3.jpg" alt="صورة 3">
+    <img src="students4.jpg" alt="صورة 4">
+    <img src="students5.jpg" alt="صورة 5">
+    <img src="students6.jpg" alt="صورة 6">
+    <img src="students11.jpg" alt="صورة 11">
+    <img src="students12.jpg" alt="صورة 12">
+    <img src="students13.jpg" alt="صورة 13">
+</div>
 
     <!-- Main Content -->
     <div class="content">
@@ -232,7 +259,7 @@
         </ol>
 
         <h2>قبول مشروط</h2>
-        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول.</p>
+        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول...</p>
 
         <!-- Contact Form and Image -->
         <h2>اتصل بنا</h2>
@@ -250,8 +277,8 @@
             </form>
             <img src="students7.jpg" alt="صورة 7">
         </div>
-        <div class="thank-you" style="display:none;">
-            شكراً لتواصلك معنا. سنقوم بالرد عليك قريباً.
+        <div class="thank-you">
+            Thank you for filling out the form; we appreciate your submission and will respond to you shortly.
         </div>
     </div>
 
