@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-     <!-- Basic Meta Tags -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة. قبول اللغة الإنجليزية، قبول ماجستير، دراسة اللغة الإنجليزية، البكالوريوس">
-<meta name="keywords" content="قبول ماجستير, دراسة الماجستير, استشارات تعليمية, المملكة المتحدة, التعليم العالي, دورات ماجستير, بريطانيا">
-<meta name="author" content="Education Consulting and Services">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="قبول ماجستير">
-<meta property="og:description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة.">
-<meta property="og:image" content="https://example.com/path-to-image.jpg">
-<meta property="og:url" content="https://education-c-s.com/msc">
-<meta property="og:type" content="website">
-    
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة. قبول اللغة الإنجليزية، قبول ماجستير، دراسة اللغة الإنجليزية، البكالوريوس">
+    <meta name="keywords" content="قبول ماجستير, دراسة الماجستير, استشارات تعليمية, المملكة المتحدة, التعليم العالي, دورات ماجستير, بريطانيا">
+    <meta name="author" content="Education Consulting and Services">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="قبول ماجستير">
+    <meta property="og:description" content="استشارات وخدمات تعليمية متميزة للطلاب الدوليين في المملكة المتحدة.">
+    <meta property="og:image" content="https://example.com/path-to-image.jpg">
+    <meta property="og:url" content="https://education-c-s.com/msc">
+    <meta property="og:type" content="website">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="students1.jpg" as="image">
+    <link rel="preload" href="ECS-Word.jpg" as="image">
+
     <title>المطلوب لقبول الماجستير</title>
     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
     <style>
@@ -127,92 +129,16 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Contact Form Styles */
-        form {
-            background-color: #f0f8ff; /* Light blue background */
-            padding: 20px;
-            border: 2px solid #4682b4; /* Steel blue border */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        form input[type="text"],
-        form input[type="email"],
-        form input[type="file"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #4682b4; /* Steel blue border */
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        form input:focus {
-            outline: none;
-            border-color: #5c9dc8; /* Lighter blue for focus */
-            box-shadow: 0 0 5px #5c9dc8;
-        }
-
-        form button {
-            background-color: #4682b4; /* Steel blue */
-            color: #fff;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        form button:hover {
-            background-color: #5c9dc8; /* Lighter steel blue on hover */
-        }
-
-        /* Flexbox for Contact Form and Image */
-        .contact-container {
-            display: flex;
-            flex-direction: row-reverse; /* Ensures image is on the right */
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .contact-container img {
-            width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Thank You Message */
-        .thank-you {
-            display: none; /* Hidden by default */
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
-        }
     </style>
+
     <script>
-        function handleSubmit(event) {
-            event.preventDefault(); // Prevent the default form submission
-            const form = document.querySelector("form");
-            const thankYouMessage = document.querySelector(".thank-you");
-            form.style.display = "none"; // Hide the form
-            thankYouMessage.style.display = "block"; // Show the thank-you message
-        }
+        // Lazy Load Images
+        document.addEventListener("DOMContentLoaded", () => {
+            const lazyImages = document.querySelectorAll("img[loading='lazy']");
+            lazyImages.forEach((img) => {
+                img.src = img.dataset.src;
+            });
+        });
     </script>
 </head>
 <body>
@@ -222,10 +148,10 @@
             <a href="index.html">الرئيسية</a>
             <a href="التسجيل.html">التسجيل</a>
             <a href="Application Form.html">استمارة الطلب</a>
-             <a href="PhD.html">دكتوراه</a>
+            <a href="PhD.html">دكتوراه</a>
             <a href="BSc.html">بكالوريوس</a>
-              <a href="Information.html">المعلومات</a>
-            <a href="contact.html">اتصال</a>                            
+            <a href="Information.html">المعلومات</a>
+            <a href="contact.html">اتصال</a>
             <a href="Contact_Form.html">نموذج الاتصال</a>
             <a href="whatsApp.html">واتساب</a>
         </nav>
@@ -233,16 +159,16 @@
 
     <!-- Sidebar for Images -->
     <div class="image-sidebar">
-    <img src="students1.jpg" alt="صورة 1">
-    <img src="students2.jpg" alt="صورة 2">
-    <img src="students3.jpg" alt="صورة 3">
-    <img src="students4.jpg" alt="صورة 4">
-    <img src="students5.jpg" alt="صورة 5">
-    <img src="students6.jpg" alt="صورة 6">
-    <img src="students11.jpg" alt="صورة 11">
-    <img src="students12.jpg" alt="صورة 12">
-    <img src="students13.jpg" alt="صورة 13">
-</div>
+        <img data-src="students1.jpg" alt="صورة 1" loading="lazy">
+        <img data-src="students2.jpg" alt="صورة 2" loading="lazy">
+        <img data-src="students3.jpg" alt="صورة 3" loading="lazy">
+        <img data-src="students4.jpg" alt="صورة 4" loading="lazy">
+        <img data-src="students5.jpg" alt="صورة 5" loading="lazy">
+        <img data-src="students6.jpg" alt="صورة 6" loading="lazy">
+        <img data-src="students11.jpg" alt="صورة 11" loading="lazy">
+        <img data-src="students12.jpg" alt="صورة 12" loading="lazy">
+        <img data-src="students13.jpg" alt="صورة 13" loading="lazy">
+    </div>
 
     <!-- Main Content -->
     <div class="content">
@@ -259,27 +185,7 @@
         </ol>
 
         <h2>قبول مشروط</h2>
-        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول...</p>
-
-        <!-- Contact Form and Image -->
-        <h2>اتصل بنا</h2>
-        <div class="contact-container">
-            <form action="https://formspree.io/f/xkgjkojv" method="POST">
-                <label>
-                    اسمك:
-                    <input type="text" name="name" required>
-                </label>
-                <label>
-                    بريدك الإلكتروني:
-                    <input type="email" name="email" required>
-                </label>
-                <button type="submit">إرسال</button>
-            </form>
-            <img src="students7.jpg" alt="صورة 7">
-        </div>
-        <div class="thank-you">
-            Thank you for filling out the form; we appreciate your submission and will respond to you shortly.
-        </div>
+        <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول.</p>
     </div>
 
     <footer>
