@@ -19,12 +19,9 @@
     <meta property="og:url" content="https://education-c-s.com/msc">
     <meta property="og:type" content="website">
 
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="students1.jpg" as="image">
-    <link rel="preload" href="ECS-Word.jpg" as="image">
-
     <title>المطلوب لقبول الماجستير</title>
     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+
     <style>
         /* General Styles */
         body {
@@ -129,16 +126,66 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Contact Form Styles */
+        form {
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 20px;
+            border: 2px solid #4682b4; /* Steel blue border */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #4682b4; /* Steel blue border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #5c9dc8; /* Lighter blue for focus */
+            box-shadow: 0 0 5px #5c9dc8;
+        }
+
+        form button {
+            background-color: #4682b4; /* Steel blue */
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #5c9dc8; /* Lighter steel blue on hover */
+        }
     </style>
 
     <script>
-        // Lazy Load Images
-        document.addEventListener("DOMContentLoaded", () => {
-            const lazyImages = document.querySelectorAll("img[loading='lazy']");
-            lazyImages.forEach((img) => {
-                img.src = img.dataset.src;
-            });
-        });
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = document.querySelector("form");
+            const thankYouMessage = document.querySelector(".thank-you");
+            form.style.display = "none"; // Hide the form
+            thankYouMessage.style.display = "block"; // Show the thank-you message
+        }
     </script>
 </head>
 <body>
@@ -159,15 +206,15 @@
 
     <!-- Sidebar for Images -->
     <div class="image-sidebar">
-        <img data-src="students1.jpg" alt="صورة 1" loading="lazy">
-        <img data-src="students2.jpg" alt="صورة 2" loading="lazy">
-        <img data-src="students3.jpg" alt="صورة 3" loading="lazy">
-        <img data-src="students4.jpg" alt="صورة 4" loading="lazy">
-        <img data-src="students5.jpg" alt="صورة 5" loading="lazy">
-        <img data-src="students6.jpg" alt="صورة 6" loading="lazy">
-        <img data-src="students11.jpg" alt="صورة 11" loading="lazy">
-        <img data-src="students12.jpg" alt="صورة 12" loading="lazy">
-        <img data-src="students13.jpg" alt="صورة 13" loading="lazy">
+        <img src="students1.jpg" alt="صورة 1">
+        <img src="students2.jpg" alt="صورة 2">
+        <img src="students3.jpg" alt="صورة 3">
+        <img src="students4.jpg" alt="صورة 4">
+        <img src="students5.jpg" alt="صورة 5">
+        <img src="students6.jpg" alt="صورة 6">
+        <img src="students11.jpg" alt="صورة 11">
+        <img src="students12.jpg" alt="صورة 12">
+        <img src="students13.jpg" alt="صورة 13">
     </div>
 
     <!-- Main Content -->
@@ -186,6 +233,26 @@
 
         <h2>قبول مشروط</h2>
         <p>إذا لا توجد عندك اللغة الإنجليزية أو دعم المالي، سوف يكون قبول مشروط. القبول المشروط هو نوع من القبول.</p>
+
+        <!-- Contact Form and Image -->
+        <h2>اتصل بنا</h2>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/xkgjkojv" method="POST">
+                <label>
+                    اسمك:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    بريدك الإلكتروني:
+                    <input type="email" name="email" required>
+                </label>
+                <button type="submit">إرسال</button>
+            </form>
+            <img src="students7.jpg" alt="صورة 7">
+        </div>
+        <div class="thank-you" style="display:none;">
+            شكراً لتواصلك معنا. سنقوم بالرد عليك قريباً.
+        </div>
     </div>
 
     <footer>
