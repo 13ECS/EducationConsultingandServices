@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Present Perfect</title>
-   <style>
+  <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -13,24 +13,49 @@
         h1 {
             color: #333;
         }
-        .back-home {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            height: 50px;
+        }
+        nav a {
             text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
-            transition: transform 0.2s, box-shadow 0.2s;
+            color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+        }
+        .back-home {
+            background-color: #28a745;
+            color: white;
         }
         .back-home:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.7);
+            background-color: #218838;
         }
     </style>
+</head>
+<body>
+    <div class="topbar">
+        <img src="ESCL.png" alt="Logo" class="logo" />
+        <nav>
+            <a href="تعلم اللغة الإنجليزية مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+        </nav>
+    </div>
 </head>
 <body>
     <a href="index.html" class="back-home"> تعلم اللغة الإنجليزية مجانا </a>
