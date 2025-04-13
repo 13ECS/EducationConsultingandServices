@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -19,6 +20,19 @@
             width: 100%;
             height: 200px;
         }
+        .back-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .back-home:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -27,18 +41,18 @@
     <div class="dropdown">
         <label for="tenses">اختر زمن الفعل:</label>
         <select id="tenses" onchange="location = this.value;">
-             <option value=" اختر زمن الفعل "> اختر زمن الفعل </option>
-            <option value="present_simple.html">المضارع البسيط present simple</option>
-            <option value="present_continuous.html">المضارع المستمر present continuous</option> 
-             <option value="present_perfect.html">زمن المضارع التام present perfect</option>
-            <option value=" present_perfect_continuous .html"> زمن المضارع التام Present perfect continuous </option>
-            <option value="past_simple.html">الماضي البسيط past-simple</option>
-            <option value="past_continuous.html">الزمن المستمر الماضيpast continuous</option>
-            <option value="past_perfect_continuous.html">زمن الماضي التام المستمر Past perfect continuous </option>
-            <option value="future_simple.html">المستقبل البسيط future-simple</option>
-            <option value="future_continuous.html"> الزمن المستمر في المستقبلFuture continuous</option>
-            <option value="future_perfect.html"> المستمر في المستقبل Future perfect</option>
-            <option value="future_perfect_continuous.html"> المستمر في المستقبل Future perfect Continuous</option>
+            <option value="">اختر زمن الفعل</option>
+            <option value="present_simple.html">المضارع البسيط</option>
+            <option value="present_continuous.html">المضارع المستمر</option>
+            <option value="present_perfect.html">زمن المضارع التام</option>
+            <option value="present_perfect_continuous.html">زمن المضارع التام المستمر</option>
+            <option value="past_simple.html">الماضي البسيط</option>
+            <option value="past_continuous.html">الزمن المستمر الماضي</option>
+            <option value="past_perfect_continuous.html">زمن الماضي التام المستمر</option>
+            <option value="future_simple.html">المستقبل البسيط</option>
+            <option value="future_continuous.html">الزمن المستمر في المستقبل</option>
+            <option value="future_perfect.html">المستقبل التام</option>
+            <option value="future_perfect_continuous.html">المستقبل التام المستمر</option>
         </select>
     </div>
     <div class="video-container">
