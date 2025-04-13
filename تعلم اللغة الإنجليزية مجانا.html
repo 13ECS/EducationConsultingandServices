@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دورة قواعد اللغة الإنجليزية الأساسية</title>
-    <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+    <link rel="stylesheet" href="styles.css">
     <style>
         .video-container {
             display: flex;
@@ -12,21 +12,26 @@
             justify-content: space-between;
         }
         .video {
-            margin: 10px;
             width: 30%;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
         }
     </style>
 </head>
 <body>
+    <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
     <h1>تعلم اللغة الإنجليزية مجانا</h1>
     <div class="dropdown">
         <label for="tenses">اختر زمن الفعل:</label>
-        <select id="tenses">
-           <option value="present_simple.html">المضارع البسيط present-simple</option>
-           <option value="present_continuous.html">المضارع المستمر present continuous</option>
-           <option value="present_perfect.html">زمن المضارع التام present perfect</option>
-           <option value="past_simple.html">الماضي البسيط past-simple</option>
-           <option value="future_simple.html">المستقبل البسيط future-simple</option>
+        <select id="tenses" onchange="location = this.value;">
+            <option value="present_simple.html">المضارع البسيط present-simple</option>
+            <option value="present_continuous.html">المضارع المستمر present continuous</option>
+            <option value="present_perfect.html">زمن المضارع التام present perfect</option>
+            <option value="past_simple.html">الماضي البسيط past-simple</option>
+            <option value="future_simple.html">المستقبل البسيط future-simple</option>
         </select>
     </div>
     <div class="video-container">
@@ -128,6 +133,5 @@
           <div class="video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/YaT-Xoxyt8U?si=mjg1lRjhkSafQxl-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
                </div>  
-    </div>
 </body>
 </html>
