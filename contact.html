@@ -1,101 +1,719 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    <title>اتصل بنا - الاستشارات والخدمات التعليمية</title>
+    <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
+        :root {
+            --primary-color: #370a9f;
+            --primary-dark: #280773;
+            --primary-light: #5528c2;
+            --secondary-color: #f8a100;
+            --text-color: #333;
+            --text-light: #666;
+            --text-dark: #111;
+            --white: #fff;
+            --light-bg: #f9f9f9;
+            --border-color: #e1e1e1;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 4px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            color: #000;
+            font-family: 'Tajawal', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
             background-color: #f7f7f4;
-            text-align: right; /* Align text to the right */
+            text-align: right;
+            direction: rtl;
         }
-        table {
+        
+        .container {
             width: 100%;
-            max-width: 1650px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: #f2f4f4;
-            border-collapse: collapse;
+            padding: 0 15px;
         }
-        a {
-            color: #000099;
-            text-decoration: none;
-            margin: 0 15px;
+        
+        /* Header Navigation */
+        .main-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 0;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .contactform {
+        
+        .nav-container {
             display: flex;
-            justify-content: center; /* Center the form */
-            margin: 20px 0;
+            justify-content: space-between;
+            align-items: center;
         }
-        .form-container {
-            text-align: left; /* Align text to the left for contact information */
-            max-width: 400px; /* Set a max width for the contact information */
+        
+        .logo {
+            max-width: 150px;
+            height: auto;
         }
-        .field, .combo {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+        
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .formbutton {
-            padding: 10px 20px;
-            background-color: #000099;
-            color: white;
-            border: none;
+        
+        .main-nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .main-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
             cursor: pointer;
+        }
+        
+        .bar {
+            width: 28px;
+            height: 3px;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+        
+        /* Page Title */
+        .page-title {
+            padding: 40px 0;
+            background: linear-gradient(to left, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .page-title h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Form Section */
+        .contact-section {
+            padding: 60px 0;
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 16px;
+            background-color: var(--white);
+            transition: border-color 0.3s;
+        }
+        
+        .form-select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 16px;
+            min-height: 150px;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+        
+        .form-textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-submit {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .required {
+            color: #dc3545;
+            margin-right: 3px;
+        }
+        
+        .form-message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-right: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 75px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 75px);
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 20px;
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+            
+            .main-nav.active {
+                right: 0;
+            }
+            
+            .main-nav a {
+                width: 100%;
+                padding: 12px;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <table border="1" cellpadding="1" cellspacing="2">
-        <tr>
-            <td>
-                <a href="index.html">Home <span>الرئيسية</span></a>
-                <a href="التسجيل.html"> <span>التسجيل</span></a>
-                <a href="Application Form.html">Application Form <span>استمارة الطلب</span></a>
-                <a href="contact.html">Contact <span>اتصال</span></a>
-                <a href="English.html">English <span>الإنكليزية</span></a>
-                <a href="الأيلتس.html">IELTS <span>الأيلتس</span></a>
-                <a href="BSc.html">BSc <span>بكالوريوس</span></a>
-                <a href="MSc.html">MSc <span>ماجستير</span></a>
-                <a href="PhD.html">PhD <span>دكتوراه</span></a>
-                <a href="News.html">News <span>اخبار</span></a>
-                <a href="Information.html">Information <span>معلومات</span></a>
-            </td>
-        </tr>
-    </table>
-    <div class="contactform">
-        <div class="form-container">
-            <h2>استشارات وخدمات التعليم</h2>
-            <form method="post" action="https://formsubmit.co/education.ecs@yahoo.com">
-                <input type="hidden" name="_subject" value="New Email!">
-                <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
-                <fieldset>
-                    <legend>Contact Information</legend>
-                    <label for="contact_title">Title:</label>
-                    <select name="contact_title" id="contact_title" class="combo">
-                        <option value="choose">Choose:</option>
-                        <option value="mr">Mr</option>
-                        <option value="mrs">Mrs</option>
-                        <option value="miss">Miss</option>
-                        <option value="dr">Dr</option>
-                    </select>
-                    <label for="contact_firstname">First Name:</label>
-                    <input name="contact_firstname" id="contact_firstname" class="field" type="text" required>
-                    <label for="contact_familyname">Surname:</label>
-                    <input name="contact_familyname" id="contact_familyname" class="field" type="text" required>
-                    <label for="contact_email">Email:</label>
-                    <input name="contact_email" id="contact_email" class="field" type="email" required>
-                    <label for="phone">Phone:</label>
-                    <input type="text" name="textPhone" required></p>
-                    <label for="contact_whatsapp">WhatsApp:</label>
-                    <input name="contact_whatsapp" id="contact_whatsapp" class="field" type="text">
-                    <label for="contact_message">Message:</label>
-                    <textarea name="contact_message" id="contact_message" cols="45" rows="10" required></textarea>
-                    <input name="send" class="formbutton" value="Send" type="submit">
-                </fieldset>
-            </form>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="ECS-Word.jpg" alt="شعار الاستشارات والخدمات التعليمية" class="logo">
+            </a>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">الرئيسية</a>
+                <a href="التسجيل.html">التسجيل</a>
+                <a href="Application Form.html">استمارة الطلب</a>
+                <a href="contact.html" class="active">اتصل بنا</a>
+                <a href="English.html">الإنكليزية</a>
+                <a href="الأيلتس.html">الأيلتس</a>
+                <a href="BSc.html">بكالوريوس</a>
+                <a href="MSc.html">ماجستير</a>
+                <a href="PhD.html">دكتوراه</a>
+                <a href="News.html">الأخبار</a>
+                <a href="Information.html">معلومات</a>
+            </nav>
         </div>
-    </div>
+    </header>
+    
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا للإجابة على جميع استفساراتك حول الدراسة في المملكة المتحدة. لا تتردد في التواصل معنا.</p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>العنوان</h4>
+                            <p> كوفنتري، المملكة المتحدة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>الهاتف</h4>
+                            <p>+44 2046203041</p>
+                            <p>+44 7914792205</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>education.ecs@yahoo.com</p>
+                            <p>info@education-c-s.com</p>
+                            <p>offerstudent@yahoo.co.uk</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>ساعات العمل</h4>
+                            <p>الإثنين - الجمعة: 8:30 صباحًا - 8:00 مساءً</p>
+                            <p>السبت: 9:30 صباحًا - 15:00 ظهرًا</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>ارسل لنا رسالة</h3>
+                    
+                    <div id="formMessages"></div>
+                    
+                    <form id="contactForm" method="post" action="https://formsubmit.co/education.ecs@yahoo.com">
+                        <input type="hidden" name="_subject" value="رسالة جديدة من الموقع">
+                        <input type="hidden" name="_next" value="https://education-c-s.com/pages/thankyou.html">
+                        
+                        <div class="form-group">
+                            <label for="contact_title" class="form-label">اللقب:</label>
+                            <select name="contact_title" id="contact_title" class="form-select">
+                                <option value="choose">اختر:</option>
+                                <option value="mr">السيد</option>
+                                <option value="mrs">السيدة</option>
+                                <option value="miss">الآنسة</option>
+                                <option value="dr">الدكتور</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_firstname" class="form-label"><span class="required">*</span> الاسم الأول:</label>
+                            <input name="contact_firstname" id="contact_firstname" class="form-control" type="text" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_familyname" class="form-label"><span class="required">*</span> اسم العائلة:</label>
+                            <input name="contact_familyname" id="contact_familyname" class="form-control" type="text" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_email" class="form-label"><span class="required">*</span> البريد الإلكتروني:</label>
+                            <input name="contact_email" id="contact_email" class="form-control" type="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label"><span class="required">*</span> الهاتف:</label>
+                            <input type="text" name="textPhone" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_whatsapp" class="form-label">واتساب:</label>
+                            <input name="contact_whatsapp" id="contact_whatsapp" class="form-control" type="text">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_message" class="form-label"><span class="required">*</span> الرسالة:</label>
+                            <textarea name="contact_message" id="contact_message" class="form-textarea" cols="45" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>من نحن</h3>
+                    <p>الاستشارات والخدمات التعليمية هي شركة متخصصة في تقديم الاستشارات والخدمات التعليمية للطلاب الراغبين بالدراسة في المملكة المتحدة.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="التسجيل.html">التسجيل</a></li>
+                        <li><a href="Application Form.html">استمارة الطلب</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="Information.html">معلومات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>البرامج</h3>
+                    <ul class="footer-links">
+                        <li><a href="الأيلتس.html">الأيلتس</a></li>
+                        <li><a href="BSc.html">بكالوريوس</a></li>
+                        <li><a href="MSc.html">ماجستير</a></li>
+                        <li><a href="PhD.html">دكتوراه</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 الاستشارات والخدمات التعليمية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                
+                // Transform hamburger to X
+                const bars = this.querySelectorAll('.bar');
+                if (mainNav.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                }
+            });
+            
+            // Form Validation
+            const contactForm = document.getElementById('contactForm');
+            const formMessages = document.getElementById('formMessages');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // FormSubmit.co will handle the form submission
+                    // This is just for client-side validation
+                    
+                    const firstname = document.getElementById('contact_firstname');
+                    const familyname = document.getElementById('contact_familyname');
+                    const email = document.getElementById('contact_email');
+                    const phone = document.getElementById('phone');
+                    const message = document.getElementById('contact_message');
+                    
+                    let isValid = true;
+                    
+                    // Simple validation
+                    if (!firstname.value.trim()) {
+                        isValid = false;
+                        firstname.style.borderColor = '#dc3545';
+                    } else {
+                        firstname.style.borderColor = '';
+                    }
+                    
+                    if (!familyname.value.trim()) {
+                        isValid = false;
+                        familyname.style.borderColor = '#dc3545';
+                    } else {
+                        familyname.style.borderColor = '';
+                    }
+                    
+                    if (!email.value.trim() || !email.value.includes('@')) {
+                        isValid = false;
+                        email.style.borderColor = '#dc3545';
+                    } else {
+                        email.style.borderColor = '';
+                    }
+                    
+                    if (!phone.value.trim()) {
+                        isValid = false;
+                        phone.style.borderColor = '#dc3545';
+                    } else {
+                        phone.style.borderColor = '';
+                    }
+                    
+                    if (!message.value.trim()) {
+                        isValid = false;
+                        message.style.borderColor = '#dc3545';
+                    } else {
+                        message.style.borderColor = '';
+                    }
+                    
+                    if (!isValid) {
+                        e.preventDefault();
+                        formMessages.innerHTML = '<div class="form-message error">يرجى ملء جميع الحقول المطلوبة.</div>';
+                        
+                        // Scroll to the error message
+                        formMessages.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
