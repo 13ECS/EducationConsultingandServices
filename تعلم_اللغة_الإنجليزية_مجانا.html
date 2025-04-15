@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دورة قواعد اللغة الإنجليزية الأساسية</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="تعلم اللغة الإنجليزية مجانا مع إمكانية تحميل الفيديوهات التعليمية">
+    <meta name="keywords" content="تعلم اللغة الإنجليزية, قواعد, دروس, فيديوهات تعليمية, تحميل">
+    <meta name="author" content="ESCL">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="تعلم اللغة الإنجليزية مجانا">
+    <meta property="og:description" content="دورة شاملة لتعلم قواعد اللغة الإنجليزية مع إمكانية تحميل الفيديوهات">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="ESCL.png" type="image/png">
+    
     <style>
-        /* Estilos originales */
+        :root {
+            --primary-color: #370a9f;
+            --secondary-color: #4CAF50;
+            --background-color: #f8f8f8;
+            --text-color: #333;
+            --card-bg-color: #fff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             direction: rtl;
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
             line-height: 1.6;
         }
         
@@ -19,151 +47,235 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #fff;
+            background-color: var(--primary-color);
+            color: white;
             padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px var(--shadow-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .logo {
             height: 50px;
+            transition: transform var(--transition-speed);
         }
         
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        
-        .video {
-            width: 30%;
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .video:hover {
-            transform: translateY(-5px);
-        }
-        
-        iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-        }
-        
-        .video p {
-            padding: 10px;
-            margin: 0;
-            text-align: center;
+        .logo:hover {
+            transform: scale(1.1);
         }
         
         .back-home {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: var(--secondary-color);
             color: white;
             text-decoration: none;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
+            transition: all var(--transition-speed);
         }
         
         .back-home:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         
-        .dropdown {
-            margin: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
             text-align: center;
+            margin: 20px 0;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
         }
         
-        select {
-            border-radius: 50px;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            border: none;
-            cursor: pointer;
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
         }
         
-        select:hover {
-            background-color: #0056b3;
-        }
-        
-        /* Nuevos estilos para la búsqueda y descarga */
+        /* Estilos mejorados para la búsqueda */
         .search-container {
             display: flex;
-            margin: 20px auto;
+            margin: 30px auto;
             max-width: 600px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            border-radius: 50px;
             overflow: hidden;
+            transition: all var(--transition-speed);
+            background-color: var(--card-bg-color);
+        }
+        
+        .search-container:focus-within {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
         }
         
         .search-input {
             flex: 1;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-left: none;
+            padding: 15px 20px;
+            border: none;
             font-size: 16px;
-            border-radius: 0 5px 5px 0;
+            outline: none;
+            background-color: transparent;
         }
         
         .search-button {
-            padding: 12px 20px;
-            background-color: #4CAF50;
+            padding: 15px 30px;
+            background-color: var(--secondary-color);
             color: white;
             border: none;
             cursor: pointer;
             font-size: 16px;
-            border-radius: 5px 0 0 5px;
+            transition: background-color var(--transition-speed);
         }
         
         .search-button:hover {
-            background-color: #45a049;
+            background-color: #3d9c40;
         }
         
         .no-results {
             text-align: center;
             padding: 20px;
-            background-color: #fff;
+            background-color: var(--card-bg-color);
             border-radius: 10px;
             margin: 20px auto;
             max-width: 600px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px var(--shadow-color);
             display: none;
+            animation: fadeIn 0.5s ease;
         }
         
-        .download-btn {
+        /* Menús desplegables mejorados */
+        .filters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        select {
+            border-radius: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: left 10px center;
+            background-size: 20px;
+            padding-left: 40px;
+        }
+        
+        select:hover {
+            background-color: #4e1bb8;
+            transform: translateY(-2px);
+        }
+        
+        /* Contenedor de videos */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            position: relative;
+        }
+        
+        .video:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
             display: block;
+        }
+        
+        .video-info {
+            padding: 15px;
+        }
+        
+        .video p {
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--primary-color);
+            min-height: 50px;
+        }
+        
+        /* Botón de descarga mejorado */
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 90%;
-            margin: 0 auto 10px;
-            padding: 8px 15px;
-            background-color: #4CAF50;
+            margin: 10px auto 15px;
+            padding: 12px;
+            background-color: var(--secondary-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
-            font-size: 14px;
-            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
         }
         
         .download-btn:hover {
-            background-color: #45a049;
+            background-color: #3d9c40;
+            transform: scale(1.05);
         }
         
-        /* Modal para selección de calidad */
+        .download-btn:hover::before {
+            left: 100%;
+        }
+        
+        .download-icon {
+            font-size: 20px;
+        }
+        
+        /* Modal mejorado */
         .modal {
             display: none;
             position: fixed;
@@ -174,28 +286,53 @@
             background-color: rgba(0, 0, 0, 0.7);
             z-index: 1000;
             overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            opacity: 1;
         }
         
         .modal-content {
             position: relative;
-            background-color: #fff;
+            background-color: var(--card-bg-color);
             margin: 10% auto;
-            padding: 25px;
+            padding: 30px;
             width: 90%;
             max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            color: var(--primary-color);
         }
         
         .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+            font-size: 30px;
             color: #aaa;
-            font-size: 28px;
             font-weight: bold;
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: color var(--transition-speed);
         }
         
         .close-modal:hover {
@@ -205,62 +342,165 @@
         .quality-options {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 15px;
         }
         
         .quality-btn {
-            padding: 12px 15px;
+            padding: 15px;
             background-color: #f5f5f5;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             text-align: center;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            transition: all var(--transition-speed);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         
         .quality-btn:hover {
             background-color: #e0e0e0;
+            transform: translateX(-5px);
         }
         
         .quality-btn.best-quality {
-            background-color: #4CAF50;
+            background-color: var(--secondary-color);
             color: white;
         }
         
         .quality-btn.best-quality:hover {
-            background-color: #45a049;
+            background-color: #3d9c40;
         }
         
-        /* Responsive */
+        .quality-info {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fadeIn {
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Tema oscuro */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: transform var(--transition-speed);
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        
+        .dark-mode {
+            --background-color: #121212;
+            --text-color: #f0f0f0;
+            --card-bg-color: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Contador de resultados */
+        .results-counter {
+            text-align: center;
+            margin: 10px 0 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Top button */
+        .top-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            transition: all var(--transition-speed);
+        }
+        
+        .top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Mejoras responsive */
         @media (max-width: 992px) {
-            .video {
-                width: 45%;
+            .video-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
         @media (max-width: 768px) {
-            .video {
+            .topbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+            }
+            
+            .search-container {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+            
+            .search-input {
+                border-radius: 10px 10px 0 0;
+                text-align: center;
+            }
+            
+            .search-button {
+                border-radius: 0 0 10px 10px;
                 width: 100%;
+            }
+            
+            .video-container {
+                grid-template-columns: 1fr;
             }
             
             .modal-content {
                 width: 95%;
                 margin: 20% auto;
+                padding: 20px;
             }
             
-            .search-container {
+            .filters-container {
                 flex-direction: column;
+                align-items: center;
             }
             
-            .search-input {
-                border: 1px solid #ddd;
-                border-radius: 5px 5px 0 0;
-            }
-            
-            .search-button {
-                border-radius: 0 0 5px 5px;
+            select {
+                width: 80%;
             }
         }
     </style>
@@ -268,71 +508,87 @@
 <body>
     <div class="topbar">
         <img src="ESCL.png" alt="Logo" class="logo" />
-        <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+        <div>
+            <button id="theme-toggle" class="theme-toggle" title="تغيير السمة">🌓</button>
+            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+        </div>
     </div>
 
-    <h1>تعلم اللغة الإنجليزية مجانا</h1>
-    
-    <!-- Buscador de videos -->
-    <div class="search-container">
-        <input type="text" id="search-input" class="search-input" placeholder="ابحث عن فيديو...">
-        <button id="search-button" class="search-button">بحث</button>
-    </div>
-    
-    <!-- Mensaje de no resultados (oculto inicialmente) -->
-    <div id="no-results" class="no-results">
-        لم يتم العثور على نتائج للبحث. يرجى تجربة كلمات مختلفة.
-    </div>
-    
-    <div class="dropdown">
-        <select id="tenses" onchange="location = this.value;">
-            <option value="">اختر زمن الفعل</option>
-            <option value="present_simple.html">المضارع البسيط</option>
-            <option value="present_continuous.html">المضارع المستمر</option>
-            <option value="present_perfect.html">زمن المضارع التام</option>
-            <option value="present_perfect_continuous.html">زمن المضارع التام المستمر</option>
-            <option value="past_simple.html">الماضي البسيط</option>
-            <option value="past_continuous.html">الزمن المستمر الماضي</option>
-            <option value="past_perfect_continuous.html">زمن الماضي التام المستمر</option>
-            <option value="future_simple.html">المستقبل البسيط</option>
-            <option value="future_continuous.html">الزمن المستمر في المستقبل</option>
-            <option value="future_perfect.html">المستقبل التام</option>
-            <option value="future_perfect_continuous.html">المستقبل التام المستمر</option>
-        </select>
-
-        <select id="actions" onchange="location = this.value;">
-            <option value=""> English For Beginners </option>  
-            <option value=" beginners.html"> اللغة_الإنجليزية_للمبتدئي</option> 
-        </select>
+    <div class="container">
+        <h1>تعلم اللغة الإنجليزية مجانا</h1>
         
-        <select id="actions" onchange="location = this.value;">
-            <option value=""> الأفعال المساعدة</option>>  
-            <option value="الأفعال_المساعدة.html">الأفعال المساعدة</option> 
-            <option value=" الأفعال_المساعدة_١.html"> الأفعال_المساعدة_١</option>
-        </select>
+        <!-- Buscador de videos mejorado -->
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="ابحث عن عنوان الفيديو أو الموضوع...">
+            <button id="search-button" class="search-button">بحث</button>
+        </div>
         
-        <select id="actions" onchange="location = this.value;">
-            <option value=""> Vocabulary</option>  
-            <option value="vocabulary.html"> المفردات </option> 
-            <option value=" vocabulary1.html"> vocabulary1</option>
-        </select>
-    </div>
-    
-    <div class="video-container" id="video-container">
-        <!-- El contenido de videos se generará dinámicamente desde JavaScript -->
+        <!-- Contador de resultados -->
+        <div id="results-counter" class="results-counter"></div>
+        
+        <!-- Mensaje de no resultados -->
+        <div id="no-results" class="no-results">
+            <p>لم يتم العثور على نتائج للبحث. يرجى تجربة كلمات مختلفة.</p>
+            <button id="reset-search" class="download-btn">عرض جميع الفيديوهات</button>
+        </div>
+        
+        <!-- Filtros mejorados -->
+        <div class="filters-container">
+            <select id="tenses" onchange="location = this.value;">
+                <option value="">اختر زمن الفعل</option>
+                <option value="present_simple.html">المضارع البسيط</option>
+                <option value="present_continuous.html">المضارع المستمر</option>
+                <option value="present_perfect.html">زمن المضارع التام</option>
+                <option value="present_perfect_continuous.html">زمن المضارع التام المستمر</option>
+                <option value="past_simple.html">الماضي البسيط</option>
+                <option value="past_continuous.html">الزمن المستمر الماضي</option>
+                <option value="past_perfect_continuous.html">زمن الماضي التام المستمر</option>
+                <option value="future_simple.html">المستقبل البسيط</option>
+                <option value="future_continuous.html">الزمن المستمر في المستقبل</option>
+                <option value="future_perfect.html">المستقبل التام</option>
+                <option value="future_perfect_continuous.html">المستقبل التام المستمر</option>
+            </select>
+
+            <select id="actions" onchange="location = this.value;">
+                <option value=""> English For Beginners </option>  
+                <option value=" beginners.html"> اللغة_الإنجليزية_للمبتدئي</option> 
+            </select>
+            
+            <select id="actions" onchange="location = this.value;">
+                <option value=""> الأفعال المساعدة</option>>  
+                <option value="الأفعال_المساعدة.html">الأفعال المساعدة</option> 
+                <option value=" الأفعال_المساعدة_١.html"> الأفعال_المساعدة_١</option>
+            </select>
+            
+            <select id="actions" onchange="location = this.value;">
+                <option value=""> Vocabulary</option>  
+                <option value="vocabulary.html"> المفردات </option> 
+                <option value=" vocabulary1.html"> vocabulary1</option>
+            </select>
+        </div>
+        
+        <!-- Contenedor de videos mejorado -->
+        <div class="video-container" id="video-container">
+            <!-- El contenido se generará dinámicamente desde JavaScript -->
+        </div>
     </div>
 
-    <!-- Modal para selección de calidad -->
+    <!-- Botón para subir -->
+    <button id="top-btn" class="top-btn" title="الذهاب للأعلى">↑</button>
+
+    <!-- Modal mejorado para selección de calidad -->
     <div id="quality-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>اختر جودة الفيديو</h3>
+            <div class="modal-header">
+                <h3 class="modal-title">اختر جودة الفيديو</h3>
+                <span class="close-modal">&times;</span>
+            </div>
             <div id="quality-options" class="quality-options"></div>
         </div>
     </div>
 
     <script>
-        // Datos de videos completos de tu página, incluyendo todos los videos
+        // Datos de videos completos
         const videoData = [
             {
                 id: "FI2OKNMWGc4",
@@ -478,31 +734,50 @@
         const searchInput = document.getElementById('search-input');
         const searchButton = document.getElementById('search-button');
         const noResults = document.getElementById('no-results');
+        const resetSearch = document.getElementById('reset-search');
+        const resultsCounter = document.getElementById('results-counter');
+        const themeToggle = document.getElementById('theme-toggle');
+        const topBtn = document.getElementById('top-btn');
 
         // Inicializar la página al cargar
         document.addEventListener('DOMContentLoaded', function() {
             renderVideos(videoData);
             setupEventListeners();
+            
+            // Comprobar si hay tema guardado
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                themeToggle.textContent = '🌞';
+            }
+            
+            // Actualizar contador de resultados
+            updateResultsCounter(videoData.length);
         });
 
         // Configurar event listeners
         function setupEventListeners() {
+            // Cambio de tema
+            themeToggle.addEventListener('click', toggleTheme);
+            
             // Cerrar modal
-            closeModal.addEventListener('click', function() {
-                qualityModal.style.display = 'none';
-            });
+            closeModal.addEventListener('click', closeQualityModal);
             
             // Cerrar modal haciendo clic fuera
             window.addEventListener('click', function(event) {
                 if (event.target === qualityModal) {
-                    qualityModal.style.display = 'none';
+                    closeQualityModal();
+                }
+            });
+            
+            // Escape para cerrar modal
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && qualityModal.style.display === 'block') {
+                    closeQualityModal();
                 }
             });
             
             // Botón de búsqueda
-            searchButton.addEventListener('click', function() {
-                searchVideos();
-            });
+            searchButton.addEventListener('click', searchVideos);
             
             // Búsqueda al presionar Enter
             searchInput.addEventListener('keyup', function(event) {
@@ -510,6 +785,35 @@
                     searchVideos();
                 }
             });
+            
+            // Botón reset búsqueda
+            resetSearch.addEventListener('click', resetSearchResults);
+            
+            // Botón subir arriba
+            window.addEventListener('scroll', toggleTopButton);
+            topBtn.addEventListener('click', scrollToTop);
+        }
+        
+        // Cambiar tema claro/oscuro
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Actualizar icono y guardar preferencia
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.textContent = '🌞';
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                themeToggle.textContent = '🌓';
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+        
+        // Cerrar modal con animación
+        function closeQualityModal() {
+            qualityModal.classList.remove('show');
+            setTimeout(() => {
+                qualityModal.style.display = 'none';
+            }, 300);
         }
         
         // Función de búsqueda de videos
@@ -533,13 +837,52 @@
                 // Mostrar mensaje si no hay resultados
                 if (filteredVideos.length === 0) {
                     noResults.style.display = 'block';
+                    noResults.classList.add('fadeIn');
                 } else {
                     noResults.style.display = 'none';
                 }
             }
             
+            // Actualizar contador de resultados
+            updateResultsCounter(filteredVideos.length);
+            
             // Renderizar los videos filtrados
             renderVideos(filteredVideos);
+        }
+        
+        // Reset de búsqueda
+        function resetSearchResults() {
+            searchInput.value = '';
+            filteredVideos = [...videoData];
+            noResults.style.display = 'none';
+            updateResultsCounter(videoData.length);
+            renderVideos(videoData);
+        }
+        
+        // Actualizar contador de resultados
+        function updateResultsCounter(count) {
+            if (count === videoData.length) {
+                resultsCounter.textContent = `عرض جميع الفيديوهات: ${count} فيديو`;
+            } else {
+                resultsCounter.textContent = `نتائج البحث: ${count} فيديو`;
+            }
+        }
+        
+        // Mostrar/ocultar botón de subir arriba
+        function toggleTopButton() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+        
+        // Scroll al inicio de la página
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         // Renderizar videos en el contenedor
@@ -549,24 +892,25 @@
             videos.forEach((video) => {
                 // Crear elementos para el video
                 const videoItem = document.createElement('div');
-                videoItem.className = 'video';
+                videoItem.className = 'video fadeIn';
                 
                 // Crear el iframe y resto de elementos
                 videoItem.innerHTML = `
                     <iframe 
-                        width="560" 
-                        height="315" 
+                        loading="lazy"
                         src="https://www.youtube.com/embed/${video.id}" 
-                        title="YouTube video player" 
+                        title="${video.title}" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" 
                         allowfullscreen>
                     </iframe>
-                    <p>${video.title}</p>
-                    <button class="download-btn" data-video-id="${video.id}">
-                        ⬇️ تحميل الفيديو
-                    </button>
+                    <div class="video-info">
+                        <p>${video.title}</p>
+                        <button class="download-btn" data-video-id="${video.id}">
+                            <span class="download-icon">⬇️</span> تحميل الفيديو
+                        </button>
+                    </div>
                 `;
                 
                 // Añadir event listener al botón de descarga
@@ -581,14 +925,14 @@
 
         // Mostrar modal para seleccionar calidad
         function showQualityModal(videoId) {
-            // Opciones de calidad predefinidas
+            // Información de calidades
             const qualities = [
-                { name: 'أفضل جودة متاحة', format: 'best', class: 'best-quality' },
-                { name: '1080p جودة عالية', format: '1080p' },
-                { name: '720p HD', format: '720p' },
-                { name: '480p جودة متوسطة', format: '480p' },
-                { name: '360p جودة منخفضة', format: '360p' },
-                { name: '240p جودة منخفضة جدا', format: '240p' }
+                { name: 'أفضل جودة متاحة', format: 'best', class: 'best-quality', info: 'الحجم الأكبر، جودة عالية جدًا' },
+                { name: '1080p جودة عالية', format: '1080p', info: 'Full HD, حجم الملف ~170MB' },
+                { name: '720p HD', format: '720p', info: 'HD, حجم الملف ~80MB' },
+                { name: '480p جودة متوسطة', format: '480p', info: 'SD, حجم الملف ~40MB' },
+                { name: '360p جودة منخفضة', format: '360p', info: 'حجم الملف ~25MB' },
+                { name: '240p جودة منخفضة جدا', format: '240p', info: 'حجم الملف ~15MB' }
             ];
             
             // Limpiar opciones anteriores
@@ -598,18 +942,24 @@
             qualities.forEach(quality => {
                 const button = document.createElement('button');
                 button.className = `quality-btn ${quality.class || ''}`;
-                button.textContent = quality.name;
+                button.innerHTML = `
+                    <span>${quality.name}</span>
+                    <span class="quality-info">${quality.info}</span>
+                `;
                 
                 button.addEventListener('click', function() {
-                    qualityModal.style.display = 'none';
+                    closeQualityModal();
                     startVideoDownload(videoId, quality.format);
                 });
                 
                 qualityOptions.appendChild(button);
             });
             
-            // Mostrar el modal
+            // Mostrar el modal con animación
             qualityModal.style.display = 'block';
+            setTimeout(() => {
+                qualityModal.classList.add('show');
+            }, 10);
         }
 
         // Iniciar descarga de video (redirección a servicio externo)
