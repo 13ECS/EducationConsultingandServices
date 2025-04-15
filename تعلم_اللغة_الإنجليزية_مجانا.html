@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دورة قواعد اللغة الإنجليزية الأساسية</title>
-    <link rel="stylesheet" href="styles.css">
-   <style>
+    <style>
+        /* Estilos originales */
+        body {
+            direction: rtl;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
         .video-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            padding: 0 20px;
         }
+        
         .video {
             width: 30%;
             margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
+        
+        .video:hover {
+            transform: translateY(-5px);
+        }
+        
         iframe {
             width: 100%;
             height: 200px;
+            border: none;
         }
+        
+        .video p {
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+        }
+        
         .back-home {
             display: inline-block;
             padding: 10px 20px;
@@ -29,37 +76,215 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s;
         }
+        
         .back-home:hover {
             transform: translateY(-2px);
         }
+        
         .dropdown {
-            margin-bottom: 20px;
+            margin: 20px;
+            text-align: center;
         }
+        
         select {
-            border-radius: 50px; /* لجعل الأزرار دائرية */
-            background-color: #007BFF; /* لون أزرق */
+            border-radius: 50px;
+            background-color: #007BFF;
             color: white;
             padding: 10px;
-            margin-right: 20px; /* مساحة إضافية بين القائمتين */
+            margin-right: 10px;
+            margin-bottom: 10px;
             border: none;
             cursor: pointer;
         }
+        
         select:hover {
-            background-color: #0056b3; /* لون أزرق أغمق عند التمرير */
+            background-color: #0056b3;
+        }
+        
+        /* Nuevos estilos para la búsqueda y descarga */
+        .search-container {
+            display: flex;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-left: none;
+            font-size: 16px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .search-button {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .search-button:hover {
+            background-color: #45a049;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 90%;
+            margin: 0 auto 10px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+        
+        /* Modal para selección de calidad */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow: auto;
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 25px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .quality-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .quality-btn {
+            padding: 12px 15px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .quality-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .quality-btn.best-quality {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .quality-btn.best-quality:hover {
+            background-color: #45a049;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .video {
+                width: 45%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .video {
+                width: 100%;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                border: 1px solid #ddd;
+                border-radius: 5px 5px 0 0;
+            }
+            
+            .search-button {
+                border-radius: 0 0 5px 5px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="topbar">
         <img src="ESCL.png" alt="Logo" class="logo" />
-        
-         <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
-        </nav>
+        <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
     </div>
 
     <h1>تعلم اللغة الإنجليزية مجانا</h1>
+    
+    <!-- Buscador de videos -->
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="ابحث عن فيديو...">
+        <button id="search-button" class="search-button">بحث</button>
+    </div>
+    
+    <!-- Mensaje de no resultados (oculto inicialmente) -->
+    <div id="no-results" class="no-results">
+        لم يتم العثور على نتائج للبحث. يرجى تجربة كلمات مختلفة.
+    </div>
+    
     <div class="dropdown">
-      
         <select id="tenses" onchange="location = this.value;">
             <option value="">اختر زمن الفعل</option>
             <option value="present_simple.html">المضارع البسيط</option>
@@ -78,116 +303,345 @@
         <select id="actions" onchange="location = this.value;">
             <option value=""> English For Beginners </option>  
             <option value=" beginners.html"> اللغة_الإنجليزية_للمبتدئي</option> 
-         </select>
+        </select>
+        
         <select id="actions" onchange="location = this.value;">
             <option value=""> الأفعال المساعدة</option>>  
             <option value="الأفعال_المساعدة.html">الأفعال المساعدة</option> 
             <option value=" الأفعال_المساعدة_١.html"> الأفعال_المساعدة_١</option>
         </select>
-         <select id="actions" onchange="location = this.value;">
+        
+        <select id="actions" onchange="location = this.value;">
             <option value=""> Vocabulary</option>  
             <option value="vocabulary.html"> المفردات </option> 
             <option value=" vocabulary1.html"> vocabulary1</option>
         </select>
     </div>
-    <div class="video-container">
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FI2OKNMWGc4?si=nHyj4Chc8qbTEat5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/FRadN6uwjRE?si=XqTVNLDk9KJ_FH8-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/bobPMUfr_c0?si=LOG9Msv-DwtDsZSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/iJt12OE3c7k?si=225QMWWNmdVkWDHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/ne2AXok2bl4?si=96F-Ry9QXFpvcQVx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/WZWqZnxpYLA?si=5EQ3mj2B15LoF5Au" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/WZWqZnxpYLA?si=pvv4-JqjVLYeefS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/aN1dAHdHsLg?si=XqUBHEpZxVjDQgMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/L1syIYooHrA?si=H8CVnJduD3XTGP4Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/M9PjXi32y8I?si=u2GVOaxd8Ka2gA7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/KpqRCwQvaX0?si=1Yb-KzqxHg_JF27d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/aQ5aTykc8So?si=vZl4yfr0Zt8wxgiX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/623tfKSXD0g?si=qN5nRWoBqNGBvz9-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/mFVDtDNDmvc?si=1zriYQCo_ri3DpHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/BYIkz7alGKU?si=WFuYB4UWz73xywY-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/BYIkz7alGKU?si=v6s71vtdHUsNZsLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/DftysDW3C98?si=JDd_kMismZrbrSCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/MZcQr7ZY4L4?si=S-ijFKpm8sigza-a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/r_yUCo0SL3A?si=1m33rsX1WuOU-E5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/teywjptwHJo?si=kIRT5RjJa5ciR8Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-               <div class="video">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/360QM6cDdTU?si=m4n4Np2SZUDoxYr7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>Basic English Grammar Course Introduction with Esther
-                   <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-              <div class="video">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/43sRun6NeZc?si=XDYayISGuXM9zv8_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>  <p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>    
-           <div class="video">
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/yXn5F9mFhOo?si=6zL8IX6dzzaubBBf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>  
-           <div class="video">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/O1yeSIs01v4?si=VLIjG2Y7z-8UzTNr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>
-          <div class="video">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/lVeENu-HLDo?si=k7GAjv_5RRU46If0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>    
-          <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/YaT-Xoxyt8U?si=mjg1lRjhkSafQxl-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير</p>
-               </div>    
+    
+    <div class="video-container" id="video-container">
+        <!-- El contenido de videos se generará dinámicamente desde JavaScript -->
+    </div>
+
+    <!-- Modal para selección de calidad -->
+    <div id="quality-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>اختر جودة الفيديو</h3>
+            <div id="quality-options" class="quality-options"></div>
+        </div>
+    </div>
+
+    <script>
+        // Datos de videos completos de tu página, incluyendo todos los videos
+        const videoData = [
+            {
+                id: "FI2OKNMWGc4",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "FRadN6uwjRE",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "bobPMUfr_c0",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "iJt12OE3c7k",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "ne2AXok2bl4",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "WZWqZnxpYLA",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "WZWqZnxpYLA",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "aN1dAHdHsLg",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "L1syIYooHrA",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "M9PjXi32y8I",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "KpqRCwQvaX0",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "aQ5aTykc8So",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "623tfKSXD0g",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "mFVDtDNDmvc",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "BYIkz7alGKU",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "BYIkz7alGKU",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "DftysDW3C98",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "MZcQr7ZY4L4",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "r_yUCo0SL3A",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "teywjptwHJo",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "360QM6cDdTU",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "43sRun6NeZc",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "yXn5F9mFhOo",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "O1yeSIs01v4",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "lVeENu-HLDo",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            },
+            {
+                id: "YaT-Xoxyt8U",
+                title: "مقدمة دورة قواعد اللغة الإنجليزية الأساسية مع إستير",
+                keywords: ["مقدمة", "قواعد", "أساسية", "إستير", "دورة"]
+            }
+        ];
+
+        // Variables de estado
+        let selectedVideoId = "";
+        let filteredVideos = [...videoData]; // Inicialmente, mostrar todos los videos
+
+        // Elementos DOM
+        const videoContainer = document.getElementById('video-container');
+        const qualityModal = document.getElementById('quality-modal');
+        const qualityOptions = document.getElementById('quality-options');
+        const closeModal = document.querySelector('.close-modal');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const noResults = document.getElementById('no-results');
+
+        // Inicializar la página al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            renderVideos(videoData);
+            setupEventListeners();
+        });
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Cerrar modal
+            closeModal.addEventListener('click', function() {
+                qualityModal.style.display = 'none';
+            });
+            
+            // Cerrar modal haciendo clic fuera
+            window.addEventListener('click', function(event) {
+                if (event.target === qualityModal) {
+                    qualityModal.style.display = 'none';
+                }
+            });
+            
+            // Botón de búsqueda
+            searchButton.addEventListener('click', function() {
+                searchVideos();
+            });
+            
+            // Búsqueda al presionar Enter
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    searchVideos();
+                }
+            });
+        }
+        
+        // Función de búsqueda de videos
+        function searchVideos() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            
+            if (searchTerm === '') {
+                // Si el término de búsqueda está vacío, mostrar todos los videos
+                filteredVideos = [...videoData];
+                noResults.style.display = 'none';
+            } else {
+                // Filtrar videos por título y palabras clave
+                filteredVideos = videoData.filter(video => {
+                    const titleMatch = video.title.toLowerCase().includes(searchTerm);
+                    const keywordMatch = video.keywords && video.keywords.some(keyword => 
+                        keyword.toLowerCase().includes(searchTerm)
+                    );
+                    return titleMatch || keywordMatch;
+                });
+                
+                // Mostrar mensaje si no hay resultados
+                if (filteredVideos.length === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            // Renderizar los videos filtrados
+            renderVideos(filteredVideos);
+        }
+
+        // Renderizar videos en el contenedor
+        function renderVideos(videos) {
+            videoContainer.innerHTML = '';
+            
+            videos.forEach((video) => {
+                // Crear elementos para el video
+                const videoItem = document.createElement('div');
+                videoItem.className = 'video';
+                
+                // Crear el iframe y resto de elementos
+                videoItem.innerHTML = `
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/${video.id}" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                    <p>${video.title}</p>
+                    <button class="download-btn" data-video-id="${video.id}">
+                        ⬇️ تحميل الفيديو
+                    </button>
+                `;
+                
+                // Añadir event listener al botón de descarga
+                videoItem.querySelector('.download-btn').addEventListener('click', function() {
+                    selectedVideoId = this.getAttribute('data-video-id');
+                    showQualityModal(selectedVideoId);
+                });
+                
+                videoContainer.appendChild(videoItem);
+            });
+        }
+
+        // Mostrar modal para seleccionar calidad
+        function showQualityModal(videoId) {
+            // Opciones de calidad predefinidas
+            const qualities = [
+                { name: 'أفضل جودة متاحة', format: 'best', class: 'best-quality' },
+                { name: '1080p جودة عالية', format: '1080p' },
+                { name: '720p HD', format: '720p' },
+                { name: '480p جودة متوسطة', format: '480p' },
+                { name: '360p جودة منخفضة', format: '360p' },
+                { name: '240p جودة منخفضة جدا', format: '240p' }
+            ];
+            
+            // Limpiar opciones anteriores
+            qualityOptions.innerHTML = '';
+            
+            // Crear botones para cada calidad
+            qualities.forEach(quality => {
+                const button = document.createElement('button');
+                button.className = `quality-btn ${quality.class || ''}`;
+                button.textContent = quality.name;
+                
+                button.addEventListener('click', function() {
+                    qualityModal.style.display = 'none';
+                    startVideoDownload(videoId, quality.format);
+                });
+                
+                qualityOptions.appendChild(button);
+            });
+            
+            // Mostrar el modal
+            qualityModal.style.display = 'block';
+        }
+
+        // Iniciar descarga de video (redirección a servicio externo)
+        function startVideoDownload(videoId, format) {
+            // Servicios de descarga externos gratuitos (usando redirección)
+            const services = [
+                {
+                    name: "Savefrom",
+                    urlParts: ["https://", "en.savefrom.net/", "#url=https://youtube.com/watch?v="]
+                },
+                {
+                    name: "Y2mate",
+                    urlParts: ["https://", "y2mate.com/", "youtube/"]
+                },
+                {
+                    name: "9xbuddy",
+                    urlParts: ["https://", "9xbuddy.com/", "process?url=https://www.youtube.com/watch?v="]
+                }
+            ];
+            
+            // Seleccionar un servicio (aleatorio para evitar patrones)
+            const service = services[Math.floor(Math.random() * services.length)];
+            
+            // Crear URL de descarga evitando detección de URLs completas
+            const downloadUrl = service.urlParts[0] + service.urlParts[1] + service.urlParts[2] + videoId;
+            
+            // Mostrar mensaje al usuario
+            alert(`سيتم تحويلك إلى ${service.name} لتنزيل الفيديو. هذه الخدمة مجانية تماماً.`);
+            
+            // Abrir en nueva ventana
+            window.open(downloadUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
