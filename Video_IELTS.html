@@ -1,74 +1,753 @@
-<form>
-        <input value="Go back Home!" onclick="history.back()" type="button">
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium YouTube Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #ff0000;
+            --secondary-color: #222222;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --bg-light: #f9f9f9;
+            --bg-dark: #121212;
+            --card-bg: #ffffff;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.4s;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            transition: background-color var(--transition-speed);
+            overflow-x: hidden;
+        }
+        
+        .dark-mode {
+            --bg-light: #121212;
+            --card-bg: #1e1e1e;
+            --text-dark: #f5f5f5;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--primary-color);
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .theme-toggle, .back-button {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: 500;
+            transition: all var(--transition-speed);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .back-button {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .back-button:hover {
+            background-color: #d40000;
+            transform: translateY(-2px);
+        }
+        
+        .theme-toggle {
+            background-color: #333;
+            color: white;
+        }
+        
+        .theme-toggle:hover {
+            background-color: #444;
+            transform: translateY(-2px);
+        }
+        
+        main {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-speed);
+            position: relative;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-hover-shadow);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-item iframe {
+            width: 100%;
+            border: none;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 0, 0, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+        
+        .video-item:hover .play-icon {
+            opacity: 1;
+        }
+        
+        .video-info {
+            padding: 15px;
+        }
+        
+        .video-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            height: 45px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            color: var(--text-dark);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            font-family: 'Poppins', sans-serif;
+            transition: all var(--transition-speed);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+            cursor: pointer;
+        }
+        
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        
+        .category-button {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: var(--card-bg);
+            color: var(--text-dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .category-button.active, .category-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+        
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-speed);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .video-container {
+                grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .category-filter {
+                justify-content: flex-start;
+                padding-left: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-container {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .logo span {
+                display: none;
+            }
+            
+            header {
+                padding: 15px;
+            }
+            
+            .controls button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-     
-     <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/NXJa7GFjY3U?si=x7Wq6GZUZL841rLd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/xjOM5ZZOupA?si=oulSD7G18XWDokcx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/HDhlXPBXwFA?si=01F4rhgzyklXLrXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/polUc1sfod8?si=XCA_zIbdfQLpP1Dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/ZrIz6zIJ5eI?si=QjF_19azWrsa0-Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/KadZ3KYzM0I?si=k8j3IRXA1QiZEjHd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/39PfYf8NodA?si=TVUfkA3tmPCL7RPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/dHTpgdWp5tY?si=mcxMkmvZD8wkQwYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/Mr2f4MxGmA8?si=JfEEFQfQcfB9E4RU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/4h9lQfYLOZU?si=n5-Ub8AaxS98mfxb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/AmVrVisQi6g?si=E_Oz8d-H5hmLZdEj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/TVPCFx7Nv4M?si=auJkv0ChnOsmx7Y2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/qOYwgKd7VSE?si=Bww2P2GcK02ZKGOe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/xGtKdsVxV8A?si=EklAIiX17b6Eur5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/r-S0NwEcqwA?si=sQO0fAEGckmTplL7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/YngqHl_BLOU?si=Y5zL64zGCJ4LRBsB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/yvt8RzGNhBc?si=w3aMwSmCz8lqzJK_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/ei-upfGH1TQ?si=_cHuoDuQmXz_MK6X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/zcSb1WsQduQ?si=yR4yHGuCAEPJlFoD&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/2mJRqQUGNRA?si=TDz-pfh1xDiJVcL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/iy_IvFBLFUE?si=SAV8oLlyJITRZDKV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div style="width: 250px; margin: 10px;">
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/xnaOzlC2RXg?si=V0uKT5wlEr67YbZP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span>Premium Gallery</span>
+        </div>
+        <div class="controls">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+            <button class="back-button" onclick="history.back()">
+                <i class="fas fa-home"></i>
+                <span>Go Home</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="section-title">Featured Videos</h1>
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search videos..." id="searchInput">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        
+        <div class="category-filter">
+            <button class="category-button active" data-category="all">All Videos</button>
+            <button class="category-button" data-category="music">Music</button>
+            <button class="category-button" data-category="gaming">Gaming</button>
+            <button class="category-button" data-category="education">Education</button>
+            <button class="category-button" data-category="entertainment">Entertainment</button>
+        </div>
+        
+        <div class="video-container" id="videoContainer">
+            <!-- Videos will be dynamically added here by JavaScript -->
+        </div>
+    </main>
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
     
-   </div>
+    <footer>
+        <p>&copy; 2025 Premium YouTube Gallery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Video data
+        const videoData = [
+            {
+                id: "NXJa7GFjY3U",
+                title: "Awesome YouTube Video 1",
+                category: "music",
+                views: "1.2M views",
+                date: "2 weeks ago"
+            },
+            {
+                id: "xjOM5ZZOupA",
+                title: "Amazing Content Video",
+                category: "entertainment",
+                views: "845K views",
+                date: "1 month ago"
+            },
+            {
+                id: "HDhlXPBXwFA",
+                title: "Educational Tutorial",
+                category: "education",
+                views: "3.7M views",
+                date: "3 months ago"
+            },
+            {
+                id: "polUc1sfod8",
+                title: "Gaming Highlights",
+                category: "gaming",
+                views: "560K views",
+                date: "5 days ago"
+            },
+            {
+                id: "ZrIz6zIJ5eI",
+                title: "Music Video Top Hits",
+                category: "music",
+                views: "2.1M views",
+                date: "1 week ago"
+            },
+            {
+                id: "KadZ3KYzM0I",
+                title: "Gaming Walkthrough",
+                category: "gaming",
+                views: "1.8M views",
+                date: "2 months ago"
+            },
+            {
+                id: "39PfYf8NodA",
+                title: "Educational Series Part 1",
+                category: "education",
+                views: "980K views",
+                date: "3 weeks ago"
+            },
+            {
+                id: "dHTpgdWp5tY",
+                title: "Entertainment Show Highlights",
+                category: "entertainment",
+                views: "4.5M views",
+                date: "4 months ago"
+            },
+            {
+                id: "Mr2f4MxGmA8",
+                title: "Top Music Playlist",
+                category: "music",
+                views: "2.8M views",
+                date: "2 weeks ago"
+            },
+            {
+                id: "4h9lQfYLOZU",
+                title: "Gaming Competition",
+                category: "gaming",
+                views: "3.2M views",
+                date: "1 month ago"
+            },
+            {
+                id: "AmVrVisQi6g",
+                title: "How-to Tutorial",
+                category: "education",
+                views: "1.5M views",
+                date: "3 weeks ago"
+            },
+            {
+                id: "TVPCFx7Nv4M",
+                title: "Entertainment News",
+                category: "entertainment",
+                views: "2.3M views",
+                date: "4 days ago"
+            },
+            {
+                id: "qOYwgKd7VSE",
+                title: "Music Live Concert",
+                category: "music",
+                views: "5.7M views",
+                date: "6 months ago"
+            },
+            {
+                id: "xGtKdsVxV8A",
+                title: "Gaming Tips & Tricks",
+                category: "gaming",
+                views: "1.1M views",
+                date: "2 weeks ago"
+            },
+            {
+                id: "r-S0NwEcqwA",
+                title: "Science Explained",
+                category: "education",
+                views: "3.4M views",
+                date: "1 month ago"
+            },
+            {
+                id: "YngqHl_BLOU",
+                title: "Comedy Special",
+                category: "entertainment",
+                views: "7.8M views",
+                date: "2 months ago"
+            },
+            {
+                id: "yvt8RzGNhBc",
+                title: "New Music Release",
+                category: "music",
+                views: "1.9M views",
+                date: "1 week ago"
+            },
+            {
+                id: "ei-upfGH1TQ",
+                title: "Game Review",
+                category: "gaming",
+                views: "2.6M views",
+                date: "3 weeks ago"
+            },
+            {
+                id: "zcSb1WsQduQ",
+                title: "Learning Programming",
+                category: "education",
+                views: "4.2M views",
+                date: "2 months ago",
+                start: 13
+            },
+            {
+                id: "2mJRqQUGNRA",
+                title: "Entertainment Show",
+                category: "entertainment",
+                views: "3.1M views",
+                date: "1 month ago"
+            },
+            {
+                id: "iy_IvFBLFUE",
+                title: "Music Compilation",
+                category: "music",
+                views: "6.5M views",
+                date: "5 months ago"
+            },
+            {
+                id: "xnaOzlC2RXg",
+                title: "Gaming Livestream Highlights",
+                category: "gaming",
+                views: "980K views",
+                date: "2 weeks ago"
+            }
+        ];
+
+        // DOM Elements
+        const videoContainer = document.getElementById('videoContainer');
+        const searchInput = document.getElementById('searchInput');
+        const categoryButtons = document.querySelectorAll('.category-button');
+        const themeToggle = document.getElementById('themeToggle');
+        const backToTop = document.getElementById('backToTop');
+        const loadingScreen = document.querySelector('.loading');
+
+        // Current filter state
+        let currentCategory = 'all';
+        let searchTerm = '';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulate loading
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                renderVideos();
+            }, 1500);
+
+            // Check for saved theme preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                updateThemeToggle(true);
+            }
+        });
+
+        // Render videos based on current filters
+        function renderVideos() {
+            videoContainer.innerHTML = '';
+            
+            const filteredVideos = videoData.filter(video => {
+                const matchesCategory = currentCategory === 'all' || video.category === currentCategory;
+                const matchesSearch = video.title.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+            
+            if (filteredVideos.length === 0) {
+                videoContainer.innerHTML = `
+                    <div class="no-results" style="grid-column: 1 / -1; text-align: center; padding: 40px;">
+                        <i class="fas fa-search" style="font-size: 48px; color: #ddd; margin-bottom: 20px;"></i>
+                        <h3>No videos found</h3>
+                        <p>Try a different search term or category</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Add videos with staggered animation
+            filteredVideos.forEach((video, index) => {
+                const videoElement = createVideoElement(video);
+                videoElement.style.animationDelay = `${index * 0.05}s`;
+                videoElement.classList.add('fade-in');
+                videoContainer.appendChild(videoElement);
+            });
+        }
+
+        // Create a video element
+        function createVideoElement(video) {
+            const videoItem = document.createElement('div');
+            videoItem.className = 'video-item';
+            
+            const srcUrl = `https://www.youtube.com/embed/${video.id}?si=x7Wq6GZUZL841rLd${video.start ? '&start=' + video.start : ''}`;
+            
+            videoItem.innerHTML = `
+                <div class="video-thumbnail">
+                    <iframe height="158" src="${srcUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">${video.title}</h3>
+                    <div class="video-meta">
+                        <span><i class="fas fa-eye"></i> ${video.views}</span>
+                        <span><i class="fas fa-calendar-alt"></i> ${video.date}</span>
+                    </div>
+                </div>
+            `;
+            
+            return videoItem;
+        }
+
+        // Search input handler
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderVideos();
+        });
+
+        // Category filter handlers
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update filter and render
+                currentCategory = button.dataset.category;
+                renderVideos();
+            });
+        });
+
+        // Theme toggle handler
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeToggle(isDarkMode);
+        });
+
+        function updateThemeToggle(isDarkMode) {
+            const icon = themeToggle.querySelector('i');
+            const text = themeToggle.querySelector('span');
+            
+            if (isDarkMode) {
+                icon.className = 'fas fa-sun';
+                text.textContent = 'Light Mode';
+            } else {
+                icon.className = 'fas fa-moon';
+                text.textContent = 'Dark Mode';
+            }
+        }
+
+        // Scroll handler for back-to-top button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top handler
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Make sure iframes maintain aspect ratio on resize
+        window.addEventListener('resize', () => {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const parent = iframe.parentElement;
+                const width = parent.offsetWidth;
+                iframe.height = Math.round(width * 0.56); // 16:9 aspect ratio
+            });
+        });
+    </script>
+</body>
+</html>
