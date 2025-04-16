@@ -1,169 +1,1283 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موارد تعليمية</title>
-     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #2835c3;
+            --secondary-color: #0a1172;
+            --accent-color: #4e57c9;
+            --background-color: #f7f7f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --navbar-bg: #161b45;
+            --sidebar-bg: #e6f3ff;
+            --footer-bg: #0f1433;
+            --border-color: #e0e0e0;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f7f7f4;
-            color: #000;
+            box-sizing: border-box;
         }
-        .navbar {
-            text-align: center;
-            background-color: #242424;
-            padding: 10px;
+        
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
         }
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: -1;
         }
-        .navbar a:hover {
-            text-decoration: underline;
+        
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+        
+        .main-content {
+            flex: 1;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .nav-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-menu a i {
+            font-size: 1.2rem;
+        }
+        
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .nav-menu a span {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2835c3, #4e57c9);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 50px 0;
+        }
+        
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: var(--sidebar-bg);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .sidebar-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .sidebar-list {
+            list-style-type: none;
+        }
+        
+        .sidebar-list li {
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .sidebar-list li:hover {
+            transform: translateX(-5px);
+        }
+        
+        .sidebar-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .sidebar-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .sidebar-list a i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Resources Section */
+        .resources {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .resources-header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .resources-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .resources-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 70%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .resources-description {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .resource-category {
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .resource-category h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        
+        .resource-category i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid var(--border-color);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-image {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .resource-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .resource-card:hover .resource-image img {
+            transform: scale(1.1);
+        }
+        
+        .resource-info {
             padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
-        h2 {
-            color: #2835c3;
+        
+        .resource-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
         }
+        
+        .resource-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+        
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+        
+        .resource-link:hover {
+            gap: 10px;
+        }
+        
         .resource-list {
             list-style-type: none;
-            padding: 0;
-        }
-        .resource-list li {
-            margin: 10px 0;
-        }
-        .resource-list a {
-            color: #003399;
-            text-decoration: none;
-        }
-        .resource-list a:hover {
-            text-decoration: underline;
-        }
-        .sidebar {
-            background-color: #99ffff;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .sidebar dd {
-            margin: 10px 0;
-        }
-        .sidebar dd a {
-            color: #003399;
-            text-decoration: none;
-        }
-        .sidebar dd a:hover {
-            text-decoration: underline;
-        }
-        .contact-info {
-            text-align: center;
             margin-top: 20px;
-            background-color: #f2f4f4;
-            padding: 10px;
-            border-top: 1px solid #ccc;
         }
-        .contact-info p {
-            margin: 5px 0;
+        
+        .resource-list li {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
-        .contact-info a {
-            color: #003399;
+        
+        .resource-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-list li .icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            min-width: 30px;
+        }
+        
+        .resource-list a {
+            color: var(--text-color);
             text-decoration: none;
+            display: block;
+            font-weight: 500;
         }
-        .contact-info a:hover {
+        
+        .resource-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .resource-tag {
+            display: inline-block;
+            background-color: rgba(40, 53, 195, 0.1);
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        /* Featured Section */
+        .featured-section {
+            margin: 50px 0;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .featured-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .featured-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .featured-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .featured-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px 5px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #f0f0f0;
+        }
+        
+        .featured-grid::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .featured-grid::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+        
+        .featured-grid::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .featured-item {
+            min-width: 280px;
+            scroll-snap-align: start;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .featured-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-image {
+            height: 160px;
+            overflow: hidden;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .featured-item:hover .featured-image img {
+            transform: scale(1.1);
+        }
+        
+        .featured-info {
+            padding: 20px;
+        }
+        
+        .featured-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .featured-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .featured-link:hover {
+            gap: 10px;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            min-width: 200px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(40, 53, 195, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-text {
+            font-weight: 500;
+        }
+        
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
             text-decoration: underline;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #242424;
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(40, 53, 195, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
             color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: var(--footer-bg);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            min-width: 200px;
+            flex: 1;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style-type: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .footer-links a i {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-bottom: 30px;
+            }
+            
+            .sidebar-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 80px);
+                background-color: var(--navbar-bg);
+                flex-direction: column;
+                padding: 20px;
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu a {
+                padding: 12px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-item {
+                min-width: 240px;
+            }
+            
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-column {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <a href="index.html">Home <span>الرئيسية</span></a>
-        <a href="التسجيل.html">Sign UP <span>التسجيل</span></a>
-        <a href="Application Form.html">Application Form <span>استمارة الطلب</span></a>
-        <a href="contact.html" target="_blank">Contact <span>اتصال</span></a>
-        <a href="English.html">English <span>الإنكليزية</span></a>
-        <a href="الأيلتس.html">IELTS <span>الأيلتس</span></a>
-        <a href="BSc.html">BSc <span>بكالوريوس</span></a>
-        <a href="MSc.html">MSc <span>ماجستير</span></a>
-        <a href="PhD.html">PhD <span>دكتوراه</span></a>
-        <a href="News.html">News <span>اخبار</span></a>
-        <a href="Information.html">Information <span>معلومات</span></a>
-    </div>
-
-    <div class="container">
-        <h2>Education Consulting and Services</h2>
-
-        <div class="sidebar">
-            <dl>
-                <dd><strong>مواقع تهم الطالب</strong></dd>
-                <dd><a href="https://www.bl.uk/" target="_blank">المكتبة البريطانية</a></dd>
-                <dd><a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-students" target="_blank">مدارس اللغة المعتمدة من الهوم أوفيس</a></dd>
-                <dd><a href="http://www.rae.ac.uk/" target="_blank">تصنيف الجامعات البريطانية</a></dd>
-                <dd><a href="https://tfl.gov.uk/plan-a-journey/" target="_blank">مواصلات لندن</a></dd>
-                <dd><a href="http://www.heathrow.com/" target="_blank">مطار هيثرو</a></dd>
-                <dd><a href="https://www.birminghamairport.co.uk/" target="_blank">مطار برمينغهام</a></dd>
-                <dd><a href="https://www.ucas.com/ucas/undergraduate/choosing-course/how-choose-between-undergraduate-courses-and-unis" target="_blank">مواقع الجامعات البريطانية</a></dd>
-                <dd><a href="https://www.rafmuseum.org.uk/london/" target="_blank">متاحف مجانية في لندن</a></dd>
-                <dd><a href="https://tfl.gov.uk/maps/bus" target="_blank">خريطة حافلة لندن</a></dd>
-                <dd><a href="https://youtu.be/TK9H0sI4wiw?t=5" target="_blank">متحف لندن للعلوم</a></dd>
-                <dd><a href="http://ntclibya.org.uk/" target="_blank">سفارة ليبيا – لندن</a></dd>
-                <dd><a href="http://ntclibya.org.uk/co/" target="_blank">الشؤون القنصلية – لندن</a></dd>
-                <dd><a href="http://culturalaffairs.libyanembassy.org/ar/" target="_blank">الملحقية الثقافية – لندن</a></dd>
-                <dd><a href="http://cadublin.libyanembassy.org/" target="_blank">الملحقية الثقافية – دبلن</a></dd>
-                <dd><a href="http://highereducation.gov.ly/" target="_blank">وزارة التعليم العالى و البحث العلمى</a></dd>
-                <dd><a href="http://www.tve.gov.ly/ar/index.aspx" target="_blank">الهيئة الوطنية للتعليم التقني والفني</a></dd>
-                <dd><a href="https://www.virgintrains.co.uk/" target="_blank">قطارات فيرجن</a></dd>
-                <dd><a href="https://alison.com/" target="_blank">دورة تعليمية في مجالات مختلفة</a></dd>
-                <dd><a href="http://www.jurn.org/#gsc.tab=0" target="_blank">ملايين المقالات البحثية والرسائل الكاملة في مختلف التخصصات</a></dd>
-                <dd><a href="http://www.urop.uci.edu/frame_surp_sample_proposals.html" target="_blank">صفحة تعرض امثلة لبعض المقترحات البحثية الجاهزة</a></dd>
-            </dl>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png" alt="شعار الموقع">
+                        <div class="logo-text">Education Consulting</div>
+                    </div>
+                    
+                    <button class="nav-toggle" id="navToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html"><i class="fas fa-home"></i> <span>الرئيسية</span></a>
+                        <a href="التسجيل.html"><i class="fas fa-user-plus"></i> <span>التسجيل</span></a>
+                        <a href="Application Form.html"><i class="fas fa-file-alt"></i> <span>استمارة الطلب</span></a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> <span>اتصال</span></a>
+                        <a href="English.html"><i class="fas fa-language"></i> <span>الإنكليزية</span></a>
+                        <a href="الأيلتس.html"><i class="fas fa-award"></i> <span>الأيلتس</span></a>
+                        <a href="BSc.html"><i class="fas fa-user-graduate"></i> <span>بكالوريوس</span></a>
+                        <a href="MSc.html"><i class="fas fa-microscope"></i> <span>ماجستير</span></a>
+                        <a href="PhD.html"><i class="fas fa-book-reader"></i> <span>دكتوراه</span></a>
+                        <a href="News.html"><i class="fas fa-newspaper"></i> <span>اخبار</span></a>
+                        <a href="Information.html"><i class="fas fa-info-circle"></i> <span>معلومات</span></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>تعلم وابتكر مع أفضل الموارد التعليمية</h1>
+                <p>مجموعة متنوعة من الموارد التعليمية المميزة التي تساعدك على تطوير مهاراتك وتحقيق أهدافك الأكاديمية</p>
+                <a href="#resources" class="hero-btn">استكشف الموارد <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </section>
+        
+        <div class="main-content">
+            <main class="main">
+                <div class="container">
+                    <div class="main-container">
+                        <!-- Sidebar -->
+                        <aside class="sidebar">
+                            <h3 class="sidebar-title">مواقع تهم الطالب</h3>
+                            <ul class="sidebar-list">
+                                <li><a href="https://www.bl.uk/" target="_blank"><i class="fas fa-book"></i> المكتبة البريطانية</a></li>
+                                <li><a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-students" target="_blank"><i class="fas fa-school"></i> مدارس اللغة المعتمدة من الهوم أوفيس</a></li>
+                                <li><a href="http://www.rae.ac.uk/" target="_blank"><i class="fas fa-university"></i> تصنيف الجامعات البريطانية</a></li>
+                                <li><a href="https://tfl.gov.uk/plan-a-journey/" target="_blank"><i class="fas fa-bus"></i> مواصلات لندن</a></li>
+                                <li><a href="http://www.heathrow.com/" target="_blank"><i class="fas fa-plane"></i> مطار هيثرو</a></li>
+                                <li><a href="https://www.birminghamairport.co.uk/" target="_blank"><i class="fas fa-plane-departure"></i> مطار برمينغهام</a></li>
+                                <li><a href="https://www.ucas.com/ucas/undergraduate/choosing-course/how-choose-between-undergraduate-courses-and-unis" target="_blank"><i class="fas fa-graduation-cap"></i> مواقع الجامعات البريطانية</a></li>
+                                <li><a href="https://www.rafmuseum.org.uk/london/" target="_blank"><i class="fas fa-landmark"></i> متاحف مجانية في لندن</a></li>
+                                <li><a href="https://tfl.gov.uk/maps/bus" target="_blank"><i class="fas fa-map"></i> خريطة حافلة لندن</a></li>
+                                <li><a href="https://youtu.be/TK9H0sI4wiw?t=5" target="_blank"><i class="fas fa-flask"></i> متحف لندن للعلوم</a></li>
+                            </ul>
+                        </aside>
+                        
+                        <!-- Main Resources -->
+                        <div id="resources" class="resources">
+                            <div class="resources-header">
+                                <h2 class="resources-title">موارد تعليمية مفيدة</h2>
+                                <p class="resources-description">اكتشف مجموعة متنوعة من المصادر التعليمية التي تساعدك في رحلتك الأكاديمية والتعليمية</p>
+                            </div>
+                            
+                            <div class="resource-category">
+                                <i class="fas fa-search"></i>
+                                <h3>محركات البحث العلمية</h3>
+                            </div>
+                            
+                            <div class="resource-grid">
+                                <div class="resource-card">
+                                    <div class="resource-image">
+                                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3" alt="محرك بحث">
+                                    </div>
+                                    <div class="resource-info">
+                                        <h4>Paperity</h4>
+                                        <p>محرك رائع يبحث في أكثر من مليون ورقة بحثية وآلاف المجلات العلمية المحكمة</p>
+                                        <a href="http://paperity.org/" class="resource-link" target="_blank">استكشف الموقع <i class="fas fa-arrow-left"></i></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="resource-card">
+                                    <div class="resource-image">
+                                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="رسائل علمية">
+                                    </div>
+                                    <div class="resource-info">
+                                        <h4>Manaraa</h4>
+                                        <p>موقع لتحميل رسائل الماجستير والدكتوراه بصيغة PDF مجاناً</p>
+                                        <a href="https://manaraa.com/post/2182" class="resource-link" target="_blank">استكشف الموقع <i class="fas fa-arrow-left"></i></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="resource-card">
+                                    <div class="resource-image">
+                                        <img src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="بحث علمي">
+                                    </div>
+                                    <div class="resource-info">
+                                        <h4>RefSeek</h4>
+                                        <p>محرك بحث مفيد يبحث في أكثر من مليار وثيقة علمية من مختلف المجالات</p>
+                                        <a href="https://www.refseek.com/" class="resource-link" target="_blank">استكشف الموقع <i class="fas fa-arrow-left"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-category">
+                                <i class="fas fa-language"></i>
+                                <h3>تعلم اللغات</h3>
+                            </div>
+                            
+                            <div class="resource-grid">
+                                <div class="resource-card">
+                                    <div class="resource-image">
+                                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3" alt="تعلم اللغة">
+                                    </div>
+                                    <div class="resource-info">
+                                        <h4>ELLLO</h4>
+                                        <p>أحد أفضل المواقع لتعلم مهارة الاستماع في اللغة الإنجليزية وزيادة المفردات</p>
+                                        <a href="http://elllo.org/" class="resource-link" target="_blank">استكشف الموقع <i class="fas fa-arrow-left"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-category">
+                                <i class="fas fa-tools"></i>
+                                <h3>أدوات تعليمية</h3>
+                            </div>
+                            
+                            <ul class="resource-list">
+                                <li>
+                                    <div class="icon"><i class="fas fa-file-pdf"></i></div>
+                                    <div>
+                                        <a href="https://www.pdfescape.com/windows/" target="_blank">PDFEscape - موقع متخصص في تعديل ملفات PDF</a>
+                                        <span class="resource-tag">أداة</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-users"></i></div>
+                                    <div>
+                                        <a href="https://www.edmodo.com/" target="_blank">Edmodo - أفضل وسيلة للتعاون الافتراضي الذي يجعل الشبكات الاجتماعية مفيدة للأغراض التربوية</a>
+                                        <span class="resource-tag">منصة تعليمية</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-globe"></i></div>
+                                    <div>
+                                        <a href="https://education.weebly.com/" target="_blank">Weebly - أداة رقمية مجانية تمكن المدرسين من إنشاء مدونات لفصولهم الدراسية ومواقع الكترونية</a>
+                                        <span class="resource-tag">بناء مواقع</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-plane"></i></div>
+                                    <div>
+                                        <a href="http://www.besttimetogo.com/" target="_blank">Best Time To Go - موقع يخبرك افضل وقت لزيارة اي بلد أو مدينة ترغب في السفر لها وحالة طقسها بالتفصيل</a>
+                                        <span class="resource-tag">سفر</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-calculator"></i></div>
+                                    <div>
+                                        <a href="https://www.firstinmath.com/" target="_blank">First In Math - برنامج لتعلم الرياضيات عن بعد وبطريقة مشوقة</a>
+                                        <span class="resource-tag">رياضيات</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-chart-bar"></i></div>
+                                    <div>
+                                        <a href="http://rawgraphs.io/" target="_blank">Raw Graphs - موقع رائع يحول أي ملف اكسل إلى رسوم بيانية</a>
+                                        <span class="resource-tag">تحليل بيانات</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fas fa-check-double"></i></div>
+                                    <div>
+                                        <a href="https://www.checkforplagiarism.net/free-checking" target="_blank">Check for Plagiarism - موقع مهم للكشف عن الانتحال العلمي</a>
+                                        <span class="resource-tag">بحث علمي</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Resources -->
+                    <section class="featured-section">
+                        <div class="featured-header">
+                            <h2 class="featured-title">موارد مميزة</h2>
+                        </div>
+                        
+                        <div class="featured-grid">
+                            <div class="featured-item">
+                                <div class="featured-image">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="الملحقية الثقافية">
+                                </div>
+                                <div class="featured-info">
+                                    <h4>الملحقية الثقافية - لندن</h4>
+                                    <p>خدمات للطلاب الدارسين في المملكة المتحدة</p>
+                                    <a href="http://culturalaffairs.libyanembassy.org/ar/" class="featured-link" target="_blank">زيارة الموقع <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="featured-item">
+                                <div class="featured-image">
+                                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3" alt="وزارة التعليم">
+                                </div>
+                                <div class="featured-info">
+                                    <h4>وزارة التعليم العالي</h4>
+                                    <p>موقع وزارة التعليم العالي والبحث العلمي</p>
+                                    <a href="http://highereducation.gov.ly/" class="featured-link" target="_blank">زيارة الموقع <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="featured-item">
+                                <div class="featured-image">
+                                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="تعليم تقني">
+                                </div>
+                                <div class="featured-info">
+                                    <h4>التعليم التقني والفني</h4>
+                                    <p>الهيئة الوطنية للتعليم التقني والفني</p>
+                                    <a href="http://www.tve.gov.ly/ar/index.aspx" class="featured-link" target="_blank">زيارة الموقع <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="featured-item">
+                                <div class="featured-image">
+                                    <img src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" alt="دورات تعليمية">
+                                </div>
+                                <div class="featured-info">
+                                    <h4>دورات تعليمية متنوعة</h4>
+                                    <p>دورات مجانية في مختلف المجالات</p>
+                                    <a href="https://alison.com/" class="featured-link" target="_blank">زيارة الموقع <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="featured-item">
+                                <div class="featured-image">
+                                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3" alt="مقالات بحثية">
+                                </div>
+                                <div class="featured-info">
+                                    <h4>مقالات بحثية</h4>
+                                    <p>ملايين المقالات البحثية والرسائل الكاملة</p>
+                                    <a href="http://www.jurn.org/#gsc.tab=0" class="featured-link" target="_blank">زيارة الموقع <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Contact Info -->
+                    <section class="contact-info">
+                        <h2 class="contact-title">تواصل معنا</h2>
+                        <p>يمكنك التواصل معنا عبر عدة وسائل للحصول على المساعدة والاستفسارات</p>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">البريد الإلكتروني</div>
+                                <a href="mailto:info@education-c-s.com" class="contact-link">info@education-c-s.com</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">رقم الهاتف</div>
+                                <a href="tel:02046203041" class="contact-link">02046203041</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">العنوان</div>
+                                <span>London, United Kingdom</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.facebook.com" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </section>
+                </div>
+            </main>
         </div>
-
-        <h1>موارد تعليمية مفيدة</h1>
-        <ul class="resource-list">
-            <li><a href="http://paperity.org/">محرك رائع يبحث في 1,104,024 ورقة بحثية و3,022 مجلة</a></li>
-            <li><a href="https://manaraa.com/post/2182">مجاناً تحميل رسائل ماجستير ودكتوراه PDF</a></li>
-            <li><a href="http://elllo.org/">لتعلم اللغة الانجليزية , أحد أفضل المواقع لتعلم مهارة الاستماع وزيادة المفردات</a></li>
-            <li><a href="https://www.pdfescape.com/windows/">موقع متخصص في تعديل ملفات ، إذا كان لديك ملف تريد إعادة تدويره أو قص وترتيب صفحاته</a></li>
-            <li><a href="https://www.edmodo.com/">أحسن وسيلة للتعاون الافتراضي الذي يجعل الشبكات الاجتماعية مفيدة للأغراض التربوية</a></li>
-            <li><a href="https://education.weebly.com/">هو أداة رقمية مجانية تمكن المدرسين من إنشاء مدونات لفصولهم الدراسية ومواقع الكترونية</a></li>
-            <li><a href="http://www.besttimetogo.com/">موقع يخبرك افضل وقت لزيارة اي بلد أو مدينة ترغب في السفر لها وحالة طقسها بالتفصيل</a></li>
-            <li><a href="https://www.ntu.ac.uk/research/find-a-phd-project/projects/architecture-design-built-environment/smart-preservation-of-archaeological-heritage-in-the-middle-east">تمويل مشاريع الدكتوراه</a></li>
-            <li><a href="https://www.firstinmath.com/">برنامج آخر لتعلم الرياضيات عن بعد و بطريقة مشوقة</a></li>
-            <li><a href="http://rawgraphs.io/">موقع رائع يحول أي ملف اكسل إلى رسوم بيانية</a></li>
-            <li><a href="https://www.refseek.com/">محرك بحث مفيد يبحث في أكثر من مليار وثيقة علمية</a></li>
-            <li><a href="https://www.checkforplagiarism.net/free-checking">موقع مهم للكشف عن الانتحال العلمي</a></li>
-        </ul>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3 class="footer-title">حول الموقع</h3>
+                        <p>موقع استشارات تعليمية وخدمات طلابية متخصص في تقديم الاستشارات والموارد التعليمية للطلاب في مختلف المراحل الدراسية.</p>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">روابط مهمة</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-left"></i> الصفحة الرئيسية</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                            <li><a href="الأيلتس.html"><i class="fas fa-chevron-left"></i> الأيلتس</a></li>
+                            <li><a href="Information.html"><i class="fas fa-chevron-left"></i> معلومات</a></li>
+                            <li><a href="News.html"><i class="fas fa-chevron-left"></i> الأخبار</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">الخدمات</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-left"></i> استشارات تعليمية</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i> دورات تدريبية</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i> إرشاد أكاديمي</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i> خدمات البحث العلمي</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i> مراجعة المستندات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 جميع الحقوق محفوظة - Education Consulting and Services</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Back to top button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
     </div>
-
-    <div class="contact-info">
-        <p>Email: <a href="mailto:info@education-c-s.com">info@education-c-s.com</a></p>
-        <p>Phone: 02046203041</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>,
-            <a href="https://www.twitter.com" target="_blank">X</a>,
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        </p>
-    </div>
-
-    <footer>
-        &copy; 2025 Education Consulting and Services
-    </footer>
-
+    
+    <script>
+        // Mobile Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
