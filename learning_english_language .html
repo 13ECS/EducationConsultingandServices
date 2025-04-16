@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>تعلم اللغة الإنجليزية خطوة بخطوة - الاستشارات التعليمية والخدمة</title>
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- English Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-dark: #3a0ca3;
+            --primary-light: #7209b7;
+            --secondary-color: #f72585;
+            --accent-color: #4cc9f0;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #fff;
+            --light-bg: #f9f9f9;
+            --light-blue: #f0f8ff;
+            --dark-bg: #1d1e42;
+            --gray-bg: #f7f7f4;
+            --border-color: #e1e1e1;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --border-radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+        
+        .english-text {
+            font-family: 'Poppins', sans-serif;
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+            color: var(--primary-color);
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+            font-size: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-links a.active {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(67, 97, 238, 0.8), rgba(114, 9, 183, 0.8));
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(247, 37, 133, 0.3);
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        
+        .cta-btn:hover {
+            background-color: var(--white);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(247, 37, 133, 0.4);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-box {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-blue);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+        
+        .feature-box:hover .feature-icon {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .feature-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* Learning Path Section */
+        .learning-path {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .levels-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .level-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .level-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .level-header {
+            padding: 20px;
+            background: linear-gradient(to left, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .level-title {
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .level-title i {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .level-badge {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .level-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .level-card.active .level-content {
+            max-height: 2000px;
+        }
+        
+        .level-inner {
+            padding: 20px;
+        }
+        
+        .level-description {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .lessons-list {
+            list-style: none;
+        }
+        
+        .lesson-item {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-item:hover {
+            background-color: var(--light-blue);
+        }
+        
+        .lesson-icon {
+            color: var(--primary-color);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .lesson-title {
+            flex-grow: 1;
+        }
+        
+        .lesson-duration {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 5rem;
+            color: rgba(67, 97, 238, 0.1);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--text-light);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 15px;
+            object-fit: cover;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 3px;
+        }
+        
+        .author-title {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-title {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .courses-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .course-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-title {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .course-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .course-lessons, .course-students {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-meta i {
+            margin-left: 5px;
+            color: var(--primary-color);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            max-width: 900px;
+            width: 90%;
+            margin: 50px auto;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: modalFadeIn 0.4s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            padding: 20px;
+            background: linear-gradient(to left, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--secondary-color);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .lesson-details {
+            margin-bottom: 30px;
+        }
+        
+        .lesson-details-title {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .lesson-details-content {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .lesson-video {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .vocabulary-section {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+        
+        .vocabulary-title {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .vocabulary-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .vocabulary-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .vocabulary-english {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+        
+        .practice-section {
+            margin-top: 30px;
+        }
+        
+        .practice-title {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .practice-questions {
+            margin-top: 20px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .question:last-child {
+            border-bottom: none;
+        }
+        
+        .question-text {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .option:hover {
+            background-color: var(--light-blue);
+        }
+        
+        .option.correct {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-color: #4CAF50;
+        }
+        
+        .option.incorrect {
+            background-color: rgba(244, 67, 54, 0.1);
+            border-color: #F44336;
+        }
+        
+        .option input {
+            margin-left: 10px;
+        }
+        
+        .option-text {
+            flex-grow: 1;
+        }
+        
+        .check-answer-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .check-answer-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .feedback {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+        
+        .feedback.incorrect {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+            border: 1px solid #F44336;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        /* Progress indicator */
+        .progress-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: var(--secondary-color);
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-link {
+            margin-bottom: 10px;
+        }
+        
+        .footer-link a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-link a i {
+            margin-left: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .footer-link a:hover {
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--white);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-subscribe {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .footer-subscribe input {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-family: 'Tajawal', Arial, sans-serif;
+        }
+        
+        .footer-subscribe button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .footer-subscribe button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .vocabulary-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .feature-box, .course-card, .testimonial-card {
+                min-width: 100%;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 30px auto;
+            }
+            
+            .footer-section {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator" id="progress-indicator"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="english-text">Education Consulting and Service</span> | الاستشارات التعليمية والخدمة
+                </a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#features">ميزاتنا</a></li>
+                    <li><a href="#learning-path">مسار التعلم</a></li>
+                    <li><a href="#courses">الدورات</a></li>
+                    <li><a href="#testimonials">آراء الطلاب</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">تعلم اللغة الإنجليزية عبر الإنترنت</h1>
+            <p class="hero-subtitle">منصة تعليمية متكاملة من الاستشارات التعليمية والخدمة - كوفنتري، المملكة المتحدة</p>
+            <a href="#learning-path" class="cta-btn">ابدأ التعلم الآن</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا تختارنا؟</h2>
+                <p class="section-subtitle">نقدم تجربة تعليمية فريدة مع ميزات مصممة لتسهيل تعلم اللغة الإنجليزية وتحقيق أقصى استفادة</p>
+            </div>
+            
+            <div class="features-container">
+                <div class="feature-box animate-fadeIn" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title">دروس تفاعلية</h3>
+                    <p class="feature-description">محتوى تعليمي تفاعلي ومتنوع يناسب جميع المستويات، مع تمارين عملية ودروس صوتية ومرئية</p>
+                </div>
+                
+                <div class="feature-box animate-fadeIn" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-headphones-alt"></i>
+                    </div>
+                    <h3 class="feature-title">تحسين النطق</h3>
+                    <p class="feature-description">تدريبات مخصصة لتحسين مهارات النطق والاستماع، مع تسجيلات صوتية من متحدثين أصليين للغة</p>
+                </div>
+                
+                <div class="feature-box animate-fadeIn" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">تتبع التقدم</h3>
+                    <p class="feature-description">أدوات تتبع مستوى التقدم وإحصائيات مفصلة لمساعدتك على معرفة نقاط القوة والضعف وتحسين أدائك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section class="learning-path" id="learning-path">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مسار التعلم</h2>
+                <p class="section-subtitle">خطة منهجية لتعلم اللغة الإنجليزية بشكل تدريجي من المستوى المبتدئ حتى المتقدم</p>
+            </div>
+            
+            <div class="levels-container">
+                <!-- Level 1 -->
+                <div class="level-card active">
+                    <div class="level-header" onclick="toggleLevel(this.parentElement)">
+                        <h3 class="level-title">
+                            <i class="fas fa-flag-checkered"></i>
+                            المستوى الأول: المبتدئ
+                        </h3>
+                        <span class="level-badge">10 دروس</span>
+                    </div>
+                    
+                    <div class="level-content">
+                        <div class="level-inner">
+                            <p class="level-description">تعلم أساسيات اللغة الإنجليزية والتعرف على المفردات والقواعد البسيطة وتكوين الجمل الأساسية.</p>
+                            
+                            <ul class="lessons-list">
+                                <li class="lesson-item" onclick="openLessonModal('الحروف الإنجليزية والنطق', 'level1-lesson1')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الأول: الحروف الإنجليزية والنطق</span>
+                                    <span class="lesson-duration">15 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('التحية والتعارف', 'level1-lesson2')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثاني: التحية والتعارف</span>
+                                    <span class="lesson-duration">20 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الأرقام والعد', 'level1-lesson3')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثالث: الأرقام والعد</span>
+                                    <span class="lesson-duration">18 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الألوان والأشكال', 'level1-lesson4')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الرابع: الألوان والأشكال</span>
+                                    <span class="lesson-duration">22 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('أيام الأسبوع والشهور', 'level1-lesson5')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الخامس: أيام الأسبوع والشهور</span>
+                                    <span class="lesson-duration">25 دقيقة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Level 2 -->
+                <div class="level-card">
+                    <div class="level-header" onclick="toggleLevel(this.parentElement)">
+                        <h3 class="level-title">
+                            <i class="fas fa-star-half-alt"></i>
+                            المستوى الثاني: ما قبل المتوسط
+                        </h3>
+                        <span class="level-badge">8 دروس</span>
+                    </div>
+                    
+                    <div class="level-content">
+                        <div class="level-inner">
+                            <p class="level-description">تطوير المهارات اللغوية الأساسية وتعلم التعبير عن الأفكار البسيطة والتفاعل في المواقف اليومية.</p>
+                            
+                            <ul class="lessons-list">
+                                <li class="lesson-item" onclick="openLessonModal('الأفعال الأساسية', 'level2-lesson1')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الأول: الأفعال الأساسية</span>
+                                    <span class="lesson-duration">25 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الوصف والصفات', 'level2-lesson2')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثاني: الوصف والصفات</span>
+                                    <span class="lesson-duration">22 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الطعام والمطاعم', 'level2-lesson3')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثالث: الطعام والمطاعم</span>
+                                    <span class="lesson-duration">30 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('التسوق والملابس', 'level2-lesson4')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الرابع: التسوق والملابس</span>
+                                    <span class="lesson-duration">28 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('زمن المضارع البسيط', 'level2-lesson5')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الخامس: زمن المضارع البسيط</span>
+                                    <span class="lesson-duration">35 دقيقة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Level 3 -->
+                <div class="level-card">
+                    <div class="level-header" onclick="toggleLevel(this.parentElement)">
+                        <h3 class="level-title">
+                            <i class="fas fa-star"></i>
+                            المستوى الثالث: المتوسط
+                        </h3>
+                        <span class="level-badge">12 درس</span>
+                    </div>
+                    
+                    <div class="level-content">
+                        <div class="level-inner">
+                            <p class="level-description">تعزيز المهارات اللغوية وتطوير القدرة على التواصل بطلاقة أكبر في مواضيع متنوعة واستخدام قواعد لغوية متقدمة.</p>
+                            
+                            <ul class="lessons-list">
+                                <li class="lesson-item" onclick="openLessonModal('المحادثات اليومية', 'level3-lesson1')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الأول: المحادثات اليومية</span>
+                                    <span class="lesson-duration">30 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('السفر والسياحة', 'level3-lesson2')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثاني: السفر والسياحة</span>
+                                    <span class="lesson-duration">35 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('العمل والمهن', 'level3-lesson3')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الثالث: العمل والمهن</span>
+                                    <span class="lesson-duration">28 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الأزمنة المختلفة', 'level3-lesson4')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الرابع: الأزمنة المختلفة</span>
+                                    <span class="lesson-duration">40 دقيقة</span>
+                                </li>
+                                <li class="lesson-item" onclick="openLessonModal('الجمل الشرطية', 'level3-lesson5')">
+                                    <i class="fas fa-play-circle lesson-icon"></i>
+                                    <span class="lesson-title">الدرس الخامس: الجمل الشرطية</span>
+                                    <span class="lesson-duration">38 دقيقة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">دوراتنا المتميزة</h2>
+                <p class="section-subtitle">اكتشف دوراتنا المتخصصة في تطوير مهارات اللغة الإنجليزية المختلفة</p>
+            </div>
+            
+            <div class="courses-container">
+                <div class="course-card animate-fadeIn" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1560439514-e960a3ef5019?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="المحادثة والتحدث" class="course-image">
+                    <span class="course-badge">الأكثر شعبية</span>
+                    <div class="course-content">
+                        <h3 class="course-title">مهارات المحادثة والتحدث</h3>
+                        <p class="course-description">تطوير القدرة على التحدث بطلاقة وثقة من خلال تمارين عملية ومحادثات واقعية مع متحدثين أصليين.</p>
+                        <div class="course-meta">
+                            <span class="course-lessons"><i class="fas fa-book"></i> 24 درس</span>
+                            <span class="course-students"><i class="fas fa-user-graduate"></i> 1240 طالب</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card animate-fadeIn" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1456081101716-74e616ab23d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="القواعد الإنجليزية" class="course-image">
+                    <div class="course-content">
+                        <h3 class="course-title">قواعد اللغة الإنجليزية</h3>
+                        <p class="course-description">شرح مفصل لقواعد اللغة الإنجليزية بطريقة سلسة وسهلة، مع تمارين تطبيقية ونصائح لتجنب الأخطاء الشائعة.</p>
+                        <div class="course-meta">
+                            <span class="course-lessons"><i class="fas fa-book"></i> 30 درس</span>
+                            <span class="course-students"><i class="fas fa-user-graduate"></i> 980 طالب</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card animate-fadeIn" style="animation-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الاستماع والفهم" class="course-image">
+                    <div class="course-content">
+                        <h3 class="course-title">مهارات الاستماع والفهم</h3>
+                        <p class="course-description">تحسين القدرة على فهم اللغة الإنجليزية المحكية من خلال تمارين استماع متنوعة ومقاطع صوتية واقعية.</p>
+                        <div class="course-meta">
+                            <span class="course-lessons"><i class="fas fa-book"></i> 18 درس</span>
+                            <span class="course-students"><i class="fas fa-user-graduate"></i> 750 طالب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آراء طلابنا</h2>
+                <p class="section-subtitle">اقرأ قصص نجاح وتجارب طلابنا مع منصة تعلم اللغة الإنجليزية</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card animate-fadeIn" style="animation-delay: 0.1s;">
+                    <p class="testimonial-content">بعد ثلاثة أشهر من الدراسة المنتظمة على المنصة، تمكنت من إجراء محادثات بسيطة باللغة الإنجليزية. الدروس مرتبة بشكل منطقي والتمارين مفيدة جداً.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="صورة الطالب" class="author-avatar">
+                        <div>
+                            <div class="author-name">أحمد محمد</div>
+                            <div class="author-title">طالب - المستوى المتوسط</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-fadeIn" style="animation-delay: 0.3s;">
+                    <p class="testimonial-content">ساعدتني المنصة كثيراً في تحسين مهارات القراءة والكتابة. الشرح واضح والأمثلة متنوعة. أوصي بشدة بهذه المنصة لمن يرغب في تعلم اللغة الإنجليزية بطريقة فعالة.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="صورة الطالبة" class="author-avatar">
+                        <div>
+                            <div class="author-name">سارة علي</div>
+                            <div class="author-title">طالبة - المستوى المتقدم</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-fadeIn" style="animation-delay: 0.5s;">
+                    <p class="testimonial-content">كنت أجد صعوبة في فهم قواعد اللغة الإنجليزية، لكن بفضل الشرح المبسط والتمارين التفاعلية على المنصة، أصبحت أفهم القواعد بشكل أفضل وبدأت أستخدمها بثقة أكبر.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="صورة الطالب" class="author-avatar">
+                        <div>
+                            <div class="author-name">محمود خالد</div>
+                            <div class="author-title">طالب - المستوى المبتدئ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نسعد بالرد على استفساراتك وتقديم المساعدة التي تحتاجها لتحقيق أهدافك في تعلم اللغة الإنجليزية</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-title">معلومات الاتصال</h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <strong>العنوان:</strong>
+                                <p>كوفنتري، المملكة المتحدة - Coventry, UK</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-laptop contact-icon"></i>
+                            <div>
+                                <strong>خدماتنا:</strong>
+                                <p>تعلم اللغة الإنجليزية عبر الإنترنت</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <strong>البريد الإلكتروني:</strong>
+                                <p>education.ecs@yahoo.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">الاسم</label>
+                        <input type="text" id="name" class="form-control" placeholder="أدخل اسمك">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" id="email" class="form-control" placeholder="أدخل بريدك الإلكتروني">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">الموضوع</label>
+                        <input type="text" id="subject" class="form-control" placeholder="أدخل موضوع رسالتك">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">الرسالة</label>
+                        <textarea id="message" class="form-control" placeholder="اكتب رسالتك هنا"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3 class="footer-title"><span class="english-text">Education Consulting and Service</span></h3>
+                    <p>الاستشارات التعليمية والخدمة - منصة تعليمية متكاملة من كوفنتري، المملكة المتحدة لتعلم اللغة الإنجليزية عبر الإنترنت بطريقة سهلة وفعالة.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> الصفحة الرئيسية</a></li>
+                        <li class="footer-link"><a href="#features"><i class="fas fa-chevron-left"></i> ميزاتنا</a></li>
+                        <li class="footer-link"><a href="#learning-path"><i class="fas fa-chevron-left"></i> مسار التعلم</a></li>
+                        <li class="footer-link"><a href="#courses"><i class="fas fa-chevron-left"></i> الدورات</a></li>
+                        <li class="footer-link"><a href="#testimonials"><i class="fas fa-chevron-left"></i> آراء الطلاب</a></li>
+                        <li class="footer-link"><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">موارد تعليمية</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> المكتبة الصوتية</a></li>
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> قاموس المفردات</a></li>
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> اختبارات تحديد المستوى</a></li>
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> نصائح تعلم اللغة</a></li>
+                        <li class="footer-link"><a href="#"><i class="fas fa-chevron-left"></i> مدونة تعلم الإنجليزية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">النشرة الإخبارية</h3>
+                    <p>اشترك في نشرتنا الإخبارية للحصول على آخر الأخبار والتحديثات والنصائح لتعلم اللغة الإنجليزية.</p>
+                    <div class="footer-subscribe">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span class="english-text">Education Consulting and Service</span> | الاستشارات التعليمية والخدمة - كوفنتري، المملكة المتحدة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lesson Modal -->
+    <div class="modal" id="lesson-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">عنوان الدرس</h2>
+                <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Toggle level accordion
+        function toggleLevel(levelCard) {
+            levelCard.classList.toggle('active');
+        }
+        
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            
+            document.getElementById('progress-indicator').style.width = scrollPercent + '%';
+        });
+        
+        // Scroll reveal animation
+        const animatedElements = document.querySelectorAll('.animate-fadeIn');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Lesson Modal Functions
+        function openLessonModal(title, lessonId) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = getLessonContent(lessonId);
+            document.getElementById('lesson-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('lesson-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal if clicked outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('lesson-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+        
+        // Get lesson content
+        function getLessonContent(lessonId) {
+            // Lesson content mapping
+            const lessonContent = {
+                'level1-lesson1': `
+                    <div class="lesson-details">
+                        <h3 class="lesson-details-title">الحروف الإنجليزية والنطق</h3>
+                        <p class="lesson-details-content">في هذا الدرس سنتعلم الحروف الإنجليزية وكيفية نطقها بشكل صحيح. الحروف الإنجليزية تنقسم إلى حروف ساكنة وحروف متحركة، وسنتعرف على طريقة نطق كل منها.</p>
+                    </div>
+                    <img src="https://www.eslprintables.com/previews/797749_1-English_alphabet_with_pictures.jpg" alt="الحروف الإنجليزية" style="width: 100%; max-width: 600px; margin: 0 auto 30px; display: block;">
+                    <div class="video-container">
+                        <iframe class="lesson-video" width="100%" height="400" src="https://www.youtube.com/embed/jANerjPKC9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="vocabulary-section">
+                        <h3 class="vocabulary-title">المفردات الأساسية</h3>
+                        <div class="vocabulary-list">
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">A - Apple</span>
+                                <span class="vocabulary-arabic">تفاحة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">B - Book</span>
+                                <span class="vocabulary-arabic">كتاب</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">C - Cat</span>
+                                <span class="vocabulary-arabic">قطة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">D - Dog</span>
+                                <span class="vocabulary-arabic">كلب</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">E - Elephant</span>
+                                <span class="vocabulary-arabic">فيل</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">F - Fish</span>
+                                <span class="vocabulary-arabic">سمكة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">G - Goat</span>
+                                <span class="vocabulary-arabic">ماعز</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">H - Horse</span>
+                                <span class="vocabulary-arabic">حصان</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-section">
+                        <h3 class="practice-title">تمارين تطبيقية</h3>
+                        <p>حاول الإجابة على الأسئلة التالية لاختبار فهمك للدرس:</p>
+                        
+                        <div class="practice-questions">
+                            <div class="question">
+                                <p class="question-text">ما هو عدد الحروف في اللغة الإنجليزية؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="a">
+                                        <span class="option-text">22 حرف</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="b">
+                                        <span class="option-text">24 حرف</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="c">
+                                        <span class="option-text">26 حرف</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="d">
+                                        <span class="option-text">28 حرف</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p class="question-text">أي من الحروف التالية يعتبر من الحروف المتحركة (Vowels)؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="a">
+                                        <span class="option-text">B, C, D</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="b">
+                                        <span class="option-text">A, E, I</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="c">
+                                        <span class="option-text">M, N, L</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="d">
+                                        <span class="option-text">X, Y, Z</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="check-answer-btn" onclick="checkAnswers('level1-lesson1')">التحقق من الإجابات</button>
+                        <div id="feedback" class="feedback"></div>
+                    </div>
+                `,
+                'level1-lesson2': `
+                    <div class="lesson-details">
+                        <h3 class="lesson-details-title">التحية والتعارف</h3>
+                        <p class="lesson-details-content">في هذا الدرس سنتعلم العبارات الأساسية للتحية والتعارف باللغة الإنجليزية، وكيفية تقديم نفسك للآخرين والرد على التحيات بطريقة مناسبة.</p>
+                    </div>
+                    <img src="https://ielanguages.com/blog/wp-content/uploads/2015/06/Greeting-language-common-phrases.jpg" alt="التحية والتعارف" style="width: 100%; max-width: 600px; margin: 0 auto 30px; display: block;">
+                    <div class="video-container">
+                        <iframe class="lesson-video" width="100%" height="400" src="https://www.youtube.com/embed/ZkyfT-Ldj-g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="vocabulary-section">
+                        <h3 class="vocabulary-title">عبارات التحية الأساسية</h3>
+                        <div class="vocabulary-list">
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Hello</span>
+                                <span class="vocabulary-arabic">مرحباً</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Hi</span>
+                                <span class="vocabulary-arabic">أهلاً</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Good morning</span>
+                                <span class="vocabulary-arabic">صباح الخير</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Good afternoon</span>
+                                <span class="vocabulary-arabic">مساء الخير (بعد الظهر)</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Good evening</span>
+                                <span class="vocabulary-arabic">مساء الخير</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">How are you?</span>
+                                <span class="vocabulary-arabic">كيف حالك؟</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">I'm fine, thank you</span>
+                                <span class="vocabulary-arabic">أنا بخير، شكراً لك</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Nice to meet you</span>
+                                <span class="vocabulary-arabic">سعيد بلقائك</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-section">
+                        <h3 class="practice-title">تمارين تطبيقية</h3>
+                        <p>حاول الإجابة على الأسئلة التالية لاختبار فهمك للدرس:</p>
+                        
+                        <div class="practice-questions">
+                            <div class="question">
+                                <p class="question-text">ما هو الرد المناسب على "How are you?"؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="a">
+                                        <span class="option-text">Good morning</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="b">
+                                        <span class="option-text">I'm fine, thank you</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="c">
+                                        <span class="option-text">Nice to meet you</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="d">
+                                        <span class="option-text">See you later</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p class="question-text">أي من العبارات التالية تستخدم عند التعرف على شخص لأول مرة؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="a">
+                                        <span class="option-text">Good night</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="b">
+                                        <span class="option-text">How are you doing?</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="c">
+                                        <span class="option-text">Nice to meet you</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="d">
+                                        <span class="option-text">Have a nice day</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="check-answer-btn" onclick="checkAnswers('level1-lesson2')">التحقق من الإجابات</button>
+                        <div id="feedback" class="feedback"></div>
+                    </div>
+                `,
+                'level1-lesson3': `
+                    <div class="lesson-details">
+                        <h3 class="lesson-details-title">الأرقام والعد</h3>
+                        <p class="lesson-details-content">في هذا الدرس سنتعلم الأرقام باللغة الإنجليزية وكيفية العد بشكل صحيح. سنتناول الأرقام من 1 إلى 100، بالإضافة إلى الأرقام الترتيبية.</p>
+                    </div>
+                    <img src="https://www.eslprintables.com/previews/667310_1-Numbers_1_100.jpg" alt="الأرقام والعد" style="width: 100%; max-width: 600px; margin: 0 auto 30px; display: block;">
+                    <div class="video-container">
+                        <iframe class="lesson-video" width="100%" height="400" src="https://www.youtube.com/embed/e0dJWfQHF8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="vocabulary-section">
+                        <h3 class="vocabulary-title">الأرقام الأساسية</h3>
+                        <div class="vocabulary-list">
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">One</span>
+                                <span class="vocabulary-arabic">واحد</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Two</span>
+                                <span class="vocabulary-arabic">اثنان</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Three</span>
+                                <span class="vocabulary-arabic">ثلاثة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Four</span>
+                                <span class="vocabulary-arabic">أربعة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Five</span>
+                                <span class="vocabulary-arabic">خمسة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Ten</span>
+                                <span class="vocabulary-arabic">عشرة</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Twenty</span>
+                                <span class="vocabulary-arabic">عشرون</span>
+                            </div>
+                            <div class="vocabulary-item">
+                                <span class="vocabulary-english">Hundred</span>
+                                <span class="vocabulary-arabic">مائة</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-section">
+                        <h3 class="practice-title">تمارين تطبيقية</h3>
+                        <p>حاول الإجابة على الأسئلة التالية لاختبار فهمك للدرس:</p>
+                        
+                        <div class="practice-questions">
+                            <div class="question">
+                                <p class="question-text">كيف تكتب الرقم 15 بالإنجليزية؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="a">
+                                        <span class="option-text">Fiveteen</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="b">
+                                        <span class="option-text">Fifteen</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="c">
+                                        <span class="option-text">Fifty</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="d">
+                                        <span class="option-text">Tenfive</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p class="question-text">ما هو الرقم الترتيبي لـ "Third"؟</p>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="a">
+                                        <span class="option-text">1st</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="b">
+                                        <span class="option-text">2nd</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="c">
+                                        <span class="option-text">3rd</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="d">
+                                        <span class="option-text">4th</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="check-answer-btn" onclick="checkAnswers('level1-lesson3')">التحقق من الإجابات</button>
+                        <div id="feedback" class="feedback"></div>
+                    </div>
+                `
+            };
+            
+            return lessonContent[lessonId] || `<p>محتوى الدرس غير متوفر حالياً.</p>`;
+        }
+        
+        // Check answers function
+        function checkAnswers(lessonId) {
+            let score = 0;
+            let total = 0;
+            let feedback = '';
+            const feedbackElement = document.getElementById('feedback');
+            
+            // Answer key for different lessons
+            const answerKeys = {
+                'level1-lesson1': {
+                    'q1': 'c', // 26 حرف
+                    'q2': 'b'  // A, E, I
+                },
+                'level1-lesson2': {
+                    'q1': 'b', // I'm fine, thank you
+                    'q2': 'c'  // Nice to meet you
+                },
+                'level1-lesson3': {
+                    'q1': 'b', // Fifteen
+                    'q2': 'c'  // 3rd
+                }
+            };
+            
+            const currentAnswerKey = answerKeys[lessonId];
+            
+            if (currentAnswerKey) {
+                // Check each question
+                for (const [question, correctAnswer] of Object.entries(currentAnswerKey)) {
+                    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    total++;
+                    
+                    if (selectedOption) {
+                        const optionContainer = selectedOption.closest('.option');
+                        
+                        // Remove any previous classes
+                        document.querySelectorAll(`input[name="${question}"]`).forEach(option => {
+                            option.closest('.option').classList.remove('correct', 'incorrect');
+                        });
+                        
+                        if (selectedOption.value === correctAnswer) {
+                            score++;
+                            optionContainer.classList.add('correct');
+                        } else {
+                            optionContainer.classList.add('incorrect');
+                            // Highlight the correct answer
+                            document.querySelector(`input[name="${question}"][value="${correctAnswer}"]`).closest('.option').classList.add('correct');
+                        }
+                    }
+                }
+                
+                // Display feedback
+                if (score === total) {
+                    feedback = `ممتاز! لقد أجبت بشكل صحيح على جميع الأسئلة (${score}/${total}).`;
+                    feedbackElement.className = 'feedback correct';
+                } else {
+                    feedback = `لقد أجبت على ${score} من أصل ${total} أسئلة بشكل صحيح. حاول مراجعة الدرس مرة أخرى.`;
+                    feedbackElement.className = 'feedback incorrect';
+                }
+                
+                feedbackElement.textContent = feedback;
+                feedbackElement.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
