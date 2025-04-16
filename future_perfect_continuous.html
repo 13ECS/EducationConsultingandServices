@@ -1,63 +1,1663 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعلم زمن المستقبل التام المستمر</title>
-     <style>
+    <title>تعلم زمن المستقبل التام المستمر | Future Perfect Continuous Tense</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-light: #7895ff;
+            --primary-dark: #2d4ec9;
+            --secondary-color: #ff9f1c;
+            --secondary-light: #ffbe58;
+            --secondary-dark: #e38400;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            --gray-color: #64748b;
+            --light-gray: #cbd5e1;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --info-color: #0ea5e9;
+            --container-width: 1200px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --border-radius-sm: 0.25rem;
+            --border-radius: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --border-radius-xl: 1rem;
+            --border-radius-full: 9999px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Dark Mode Variables */
+        .dark-mode {
+            --primary-color: #5d76f7;
+            --primary-light: #8a9ef8;
+            --primary-dark: #3d56c7;
+            --secondary-color: #ffaa39;
+            --secondary-light: #ffc575;
+            --secondary-dark: #e69120;
+            --dark-color: #f8fafc;
+            --light-color: #1e293b;
+            --gray-color: #a1aebe;
+            --light-gray: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+            transition: var(--transition);
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Pattern Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%234361ee' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: var(--border-radius-full);
+        }
+
+        .card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: var(--border-radius);
+            border: none;
+            font-weight: 600;
+            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
             text-align: center;
         }
-        h1 {
-            color: #333;
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
         }
-        .topbar {
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+            box-shadow: 0 5px 15px rgba(255, 159, 28, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+        .mb-40 {
+            margin-bottom: 40px;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--light-color);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 12px;
         }
+
         .logo {
             height: 50px;
+            border-radius: var(--border-radius);
         }
-        nav a {
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-menu a {
             text-decoration: none;
-            color: #007bff;
+            color: var(--dark-color);
             padding: 10px 20px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
             position: relative;
-            display: inline-block;
+            z-index: 1;
+            overflow: hidden;
         }
-        nav a:hover {
-            background-color: #007bff;
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: var(--border-radius);
+            z-index: -1;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu a:hover {
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
         }
+
+        .nav-menu a:hover::before {
+            transform: translateY(0);
+        }
+
+        .nav-menu .active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
         .back-home {
-            background-color: #28a745;
+            background-color: var(--success-color);
+            color: white !important;
+        }
+
+        .back-home:hover::before {
+            background-color: var(--success-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--dark-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(255, 159, 28, 0.1));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--gray-color);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s 0.3s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            animation: fadeInUp 1s 0.6s both;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin-top: 40px;
+            animation: fadeIn 1s 0.9s both;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .feature-desc {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+
+        /* Video Gallery */
+        .video-gallery {
+            padding: 80px 0;
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--light-color);
+            animation: fadeIn 0.8s both;
+            animation-delay: calc(var(--order) * 0.2s);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .video-desc {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .video-duration {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 5px 10px;
+            border-radius: var(--border-radius-full);
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        /* Grammar Section */
+        .grammar-section {
+            padding: 80px 0;
+        }
+
+        .grammar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .grammar-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .grammar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .grammar-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+
+        .grammar-content {
+            color: var(--dark-color);
+            line-height: 1.8;
+        }
+
+        .grammar-rule {
+            margin-bottom: 20px;
+        }
+
+        .grammar-rule-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .grammar-example {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: rgba(67, 97, 238, 0.05);
+            border-right: 4px solid var(--primary-color);
+            border-radius: var(--border-radius);
+        }
+
+        .grammar-example-english {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .grammar-example-arabic {
+            color: var(--gray-color);
+        }
+
+        .grammar-note {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 159, 28, 0.1);
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+        }
+
+        .grammar-note-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-dark);
+        }
+
+        .grammar-structure {
+            margin: 30px 0;
+        }
+
+        .structure-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .structure-table th,
+        .structure-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            text-align: right;
+        }
+
+        .structure-table th {
+            background-color: var(--primary-color);
             color: white;
         }
-        .back-home:hover {
-            background-color: #218838;
+
+        .structure-table tr:nth-child(even) {
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--light-gray);
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            margin-right: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin: 40px 0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            right: -14px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item.right::after {
+            left: -14px;
+            right: auto;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--light-color);
+            top: 15px;
+            right: -10px;
+        }
+
+        .timeline-item.right .timeline-content::before {
+            right: auto;
+            left: -10px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--light-color) transparent transparent;
+        }
+
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .timeline-text {
+            color: var(--gray-color);
+        }
+
+        /* Practice Section */
+        .practice-section {
+            padding: 80px 0;
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quiz-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .quiz-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-option {
+            padding: 12px 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(67, 97, 238, 0.1);
+        }
+
+        .quiz-option.correct {
+            border-color: var(--success-color);
+            background-color: rgba(16, 185, 129, 0.1);
+        }
+
+        .quiz-option.wrong {
+            border-color: var(--danger-color);
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+
+        .quiz-feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            display: none;
+        }
+
+        .quiz-feedback.correct {
+            display: block;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+        }
+
+        .quiz-feedback.wrong {
+            display: block;
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--danger-color);
+        }
+
+        .quiz-button {
+            margin-top: 20px;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            padding: 80px 0;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .resource-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .resource-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .resource-desc {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .resource-link {
+            align-self: flex-start;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            right: 0;
+            border-radius: var(--border-radius-full);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-full);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--light-color);
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 99;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu a {
+                width: 80%;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                right: 20px;
+                margin-right: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-right: 60px;
+                padding-left: 20px;
+            }
+
+            .timeline-item.right {
+                left: 0;
+            }
+
+            .timeline-item::after, 
+            .timeline-item.right::after {
+                right: 10px;
+                left: auto;
+            }
+
+            .timeline-content::before,
+            .timeline-item.right .timeline-content::before {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .feature-card, 
+            .video-card, 
+            .grammar-card,
+            .quiz-card {
+                padding: 20px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="topbar">
-        <img src="ESCL.png" alt="Logo" class="logo" />
-        <nav>
-          <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
-            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
-        </nav>
-    </div>
-    <h1>تعلم زمن المستقبل التام المستمر</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/P_EmxKvrSM4?si=JNX6uHcPhw_vpnNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p>تعلم زمن المستقبل التام المستمر | دورة قواعد اللغة الإنجليزية الأساسية</p>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3898/3898150.png" alt="Logo" class="logo" />
+                <div class="logo-text">مركز تعلم اللغة الإنجليزية</div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                <a href="#videos">الفيديوهات التعليمية</a>
+                <a href="#grammar">شرح القواعد</a>
+                <a href="#practice">تمارين</a>
+                <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">تعلم زمن المستقبل التام المستمر</h1>
+                <p class="hero-subtitle">تعرّف على كيفية استخدام زمن المستقبل التام المستمر (Future Perfect Continuous Tense) في اللغة الإنجليزية مع شرح مفصل وأمثلة توضيحية</p>
+                <div class="hero-btns">
+                    <a href="#videos" class="btn btn-primary">شاهد الفيديوهات <i class="fas fa-play-circle"></i></a>
+                    <a href="#grammar" class="btn btn-secondary">تعلم القواعد <i class="fas fa-book"></i></a>
+                </div>
+                
+                <img src="https://cdn-icons-png.flaticon.com/512/2702/2702134.png" alt="Grammar Illustration" class="hero-img" style="max-width: 300px;">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features section">
+        <div class="container">
+            <h2 class="section-title">مميزات هذا الدرس</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="feature-title">فيديوهات تعليمية متنوعة</h3>
+                    <p class="feature-desc">مجموعة من أفضل الفيديوهات التعليمية لشرح زمن المستقبل التام المستمر بطرق مختلفة وأساليب متنوعة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="feature-title">شرح مفصل للقواعد</h3>
+                    <p class="feature-desc">شرح كامل ومفصل لقواعد استخدام زمن المستقبل التام المستمر في اللغة الإنجليزية مع أمثلة توضيحية</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="feature-title">تمارين تفاعلية</h3>
+                    <p class="feature-desc">مجموعة من التمارين التفاعلية لمساعدتك على فهم وتطبيق القواعد بشكل صحيح وترسيخ المعلومات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Gallery -->
+    <section class="video-gallery section" id="videos">
+        <div class="container">
+            <h2 class="section-title">فيديوهات تعليمية</h2>
+            
+            <div class="videos-grid">
+                <div class="video-card" style="--order: 1;">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/P_EmxKvrSM4?si=JNX6uHcPhw_vpnNs" title="Future Perfect Continuous Tense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">تعلم زمن المستقبل التام المستمر</h3>
+                        <p class="video-desc">شرح مفصل لزمن المستقبل التام المستمر (Future Perfect Continuous Tense) ضمن دورة قواعد اللغة الإنجليزية الأساسية</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 15:24</span>
+                    </div>
+                </div>
+                
+                <div class="video-card" style="--order: 2;">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/UDo1tK3mMnc?si=ABmnxONHPeKYY4Ki" title="Future Perfect Continuous Tense Examples" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">أمثلة على زمن المستقبل التام المستمر</h3>
+                        <p class="video-desc">تعرف على أمثلة متنوعة لاستخدام زمن المستقبل التام المستمر في مواقف مختلفة مع شرح كل مثال</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 8:42</span>
+                    </div>
+                </div>
+                
+                <div class="video-card" style="--order: 3;">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KdEA6N2TB3w?si=8FCbK-pAb3EXa7LT" title="Future Perfect Continuous vs Future Perfect" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">الفرق بين المستقبل التام والمستقبل التام المستمر</h3>
+                        <p class="video-desc">شرح الفروق بين زمن المستقبل التام وزمن المستقبل التام المستمر مع أمثلة توضيحية لكل منهما</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 12:18</span>
+                    </div>
+                </div>
+                
+                <div class="video-card" style="--order: 4;">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Txz-4thH9_o?si=UE0_Y4U46TplJxXl" title="Future Tenses in English" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">أزمنة المستقبل في اللغة الإنجليزية</h3>
+                        <p class="video-desc">نظرة عامة على جميع أزمنة المستقبل في اللغة الإنجليزية ومقارنة بينها بما في ذلك زمن المستقبل التام المستمر</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 20:05</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Grammar Section -->
+    <section class="grammar-section section" id="grammar">
+        <div class="container">
+            <h2 class="section-title">شرح زمن المستقبل التام المستمر</h2>
+            
+            <div class="grammar-container">
+                <div class="grammar-card">
+                    <h3 class="grammar-title">تعريف زمن المستقبل التام المستمر</h3>
+                    <div class="grammar-content">
+                        <p class="grammar-rule">
+                            زمن المستقبل التام المستمر (Future Perfect Continuous Tense) هو زمن يستخدم للتعبير عن حدث سيستمر لفترة معينة قبل وقت محدد في المستقبل. هذا يعني أن الحدث سيبدأ في المستقبل ويستمر لفترة، ثم سينتهي قبل وقت آخر في المستقبل.
+                        </p>
+                        
+                        <div class="grammar-example">
+                            <p class="grammar-example-english">By next June, I will have been studying English for 2 years.</p>
+                            <p class="grammar-example-arabic">بحلول شهر يونيو القادم، سأكون قد درست اللغة الإنجليزية لمدة عامين.</p>
+                        </div>
+                        
+                        <div class="grammar-note">
+                            <h4 class="grammar-note-title">ملاحظة مهمة:</h4>
+                            <p>هذا الزمن يركز على استمرارية الحدث واستغراقه لفترة زمنية معينة قبل نقطة محددة في المستقبل.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grammar-card">
+                    <h3 class="grammar-title">تركيب زمن المستقبل التام المستمر</h3>
+                    <div class="grammar-content">
+                        <div class="grammar-structure">
+                            <p>يتكون زمن المستقبل التام المستمر من الآتي:</p>
+                            <p><strong>will + have + been + الفعل بإضافة ing</strong></p>
+                            
+                            <table class="structure-table">
+                                <tr>
+                                    <th>الضمير</th>
+                                    <th>تركيب الجملة المثبتة</th>
+                                    <th>تركيب الجملة المنفية</th>
+                                    <th>تركيب السؤال</th>
+                                </tr>
+                                <tr>
+                                    <td>I</td>
+                                    <td>I will have been working</td>
+                                    <td>I will not have been working</td>
+                                    <td>Will I have been working?</td>
+                                </tr>
+                                <tr>
+                                    <td>You</td>
+                                    <td>You will have been working</td>
+                                    <td>You will not have been working</td>
+                                    <td>Will you have been working?</td>
+                                </tr>
+                                <tr>
+                                    <td>He/She/It</td>
+                                    <td>He will have been working</td>
+                                    <td>He will not have been working</td>
+                                    <td>Will he have been working?</td>
+                                </tr>
+                                <tr>
+                                    <td>We</td>
+                                    <td>We will have been working</td>
+                                    <td>We will not have been working</td>
+                                    <td>Will we have been working?</td>
+                                </tr>
+                                <tr>
+                                    <td>They</td>
+                                    <td>They will have been working</td>
+                                    <td>They will not have been working</td>
+                                    <td>Will they have been working?</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grammar-card">
+                    <h3 class="grammar-title">استخدامات زمن المستقبل التام المستمر</h3>
+                    <div class="grammar-content">
+                        <div class="grammar-rule">
+                            <h4 class="grammar-rule-title">1. التعبير عن استمرار حدث في المستقبل لفترة محددة</h4>
+                            <p>نستخدم هذا الزمن للحديث عن حدث سيستمر لفترة معينة قبل وقت محدد في المستقبل.</p>
+                            
+                            <div class="grammar-example">
+                                <p class="grammar-example-english">By December, he will have been teaching at this school for 20 years.</p>
+                                <p class="grammar-example-arabic">بحلول ديسمبر، سيكون قد أمضى 20 عامًا في التدريس بهذه المدرسة.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grammar-rule">
+                            <h4 class="grammar-rule-title">2. التأكيد على فترة استمرار الحدث وليس نتيجته</h4>
+                            <p>يركز هذا الزمن على استمرارية الحدث نفسه أكثر من نتيجته النهائية.</p>
+                            
+                            <div class="grammar-example">
+                                <p class="grammar-example-english">By the time you arrive, I will have been waiting for 2 hours.</p>
+                                <p class="grammar-example-arabic">عندما تصل، سأكون قد انتظرت لمدة ساعتين.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grammar-rule">
+                            <h4 class="grammar-rule-title">3. التعبير عن سبب أو تأثير حدث في المستقبل</h4>
+                            <p>نستخدم هذا الزمن للإشارة إلى تأثير استمرار حدث لفترة طويلة في المستقبل.</p>
+                            
+                            <div class="grammar-example">
+                                <p class="grammar-example-english">She will be tired because she will have been working all day.</p>
+                                <p class="grammar-example-arabic">ستكون متعبة لأنها ستكون قد عملت طوال اليوم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grammar-card">
+                    <h3 class="grammar-title">الفرق بين زمن المستقبل التام وزمن المستقبل التام المستمر</h3>
+                    <div class="grammar-content">
+                        <p>من المهم فهم الفرق بين زمنين متشابهين: المستقبل التام (Future Perfect) والمستقبل التام المستمر (Future Perfect Continuous).</p>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">المستقبل التام (Future Perfect)</div>
+                                    <h4 class="timeline-title">يركز على اكتمال الحدث</h4>
+                                    <p class="timeline-text">يستخدم للإشارة إلى أن الحدث سيكتمل قبل وقت محدد في المستقبل. يركز على النتيجة النهائية وليس على فترة استمرار الحدث.</p>
+                                    <div class="grammar-example" style="margin-top: 15px;">
+                                        <p class="grammar-example-english">By next week, I will have finished my project.</p>
+                                        <p class="grammar-example-arabic">بحلول الأسبوع القادم، سأكون قد أنهيت مشروعي.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">المستقبل التام المستمر (Future Perfect Continuous)</div>
+                                    <h4 class="timeline-title">يركز على استمرارية الحدث</h4>
+                                    <p class="timeline-text">يستخدم للإشارة إلى أن الحدث سيستمر لفترة معينة قبل وقت محدد في المستقبل. يركز على فترة استمرار الحدث وليس على النتيجة النهائية.</p>
+                                    <div class="grammar-example" style="margin-top: 15px;">
+                                        <p class="grammar-example-english">By next week, I will have been working on my project for a month.</p>
+                                        <p class="grammar-example-arabic">بحلول الأسبوع القادم، سأكون قد عملت على مشروعي لمدة شهر.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Practice Section -->
+    <section class="practice-section section" id="practice">
+        <div class="container">
+            <h2 class="section-title">تمارين تطبيقية</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-card">
+                    <h3 class="quiz-question">اختر الجملة الصحيحة في زمن المستقبل التام المستمر:</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">By next month, she will have been studying medicine for 6 years.</div>
+                        <div class="quiz-option">By next month, she will have studying medicine for 6 years.</div>
+                        <div class="quiz-option">By next month, she will have been study medicine for 6 years.</div>
+                        <div class="quiz-option">By next month, she has been studying medicine for 6 years.</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                    <button class="btn btn-primary quiz-button">تحقق من الإجابة</button>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3 class="quiz-question">أكمل الجملة التالية باستخدام زمن المستقبل التام المستمر:
+                    <br>"By the end of this year, I _______ at this company for 10 years."</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option">will work</div>
+                        <div class="quiz-option">will have worked</div>
+                        <div class="quiz-option" data-correct="true">will have been working</div>
+                        <div class="quiz-option">will be working</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                    <button class="btn btn-primary quiz-button">تحقق من الإجابة</button>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3 class="quiz-question">حول الجملة التالية إلى زمن المستقبل التام المستمر:
+                    <br>"I learn English for many years."</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option">I will have learn English for many years.</div>
+                        <div class="quiz-option" data-correct="true">I will have been learning English for many years.</div>
+                        <div class="quiz-option">I will been learning English for many years.</div>
+                        <div class="quiz-option">I will have been learned English for many years.</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                    <button class="btn btn-primary quiz-button">تحقق من الإجابة</button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-40">
+                <a href="تعلم_اللغة_الإنجليزية_مجانا.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> العودة إلى صفحة تعلم اللغة الإنجليزية
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section class="resources-section section">
+        <div class="container">
+            <h2 class="section-title">مصادر إضافية</h2>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3" alt="English Learning Books" class="resource-img">
+                    <div class="resource-content">
+                        <h3 class="resource-title">كتب قواعد اللغة الإنجليزية</h3>
+                        <p class="resource-desc">استكشف أفضل الكتب لتعلم قواعد اللغة الإنجليزية بشكل شامل، مع التركيز على أزمنة المستقبل المختلفة وكيفية استخدامها.</p>
+                        <a href="#" class="btn btn-outline resource-link">اعرف المزيد</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Practice Exercises" class="resource-img">
+                    <div class="resource-content">
+                        <h3 class="resource-title">تمارين إضافية للممارسة</h3>
+                        <p class="resource-desc">مجموعة من التمارين التطبيقية المتنوعة لمساعدتك على إتقان استخدام زمن المستقبل التام المستمر في مواقف مختلفة.</p>
+                        <a href="#" class="btn btn-outline resource-link">ابدأ التمارين</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Study Group" class="resource-img">
+                    <div class="resource-content">
+                        <h3 class="resource-title">مجموعات دراسية</h3>
+                        <p class="resource-desc">انضم إلى مجموعات دراسية تركز على تعلم قواعد اللغة الإنجليزية وتبادل الخبرات والمعلومات مع متعلمين آخرين.</p>
+                        <a href="#" class="btn btn-outline resource-link">انضم الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3 class="footer-title">مركز تعلم اللغة الإنجليزية</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        نقدم أفضل الدروس والمصادر لتعلم اللغة الإنجليزية بطريقة سهلة وممتعة، مع التركيز على القواعد والمحادثة والمهارات اللغوية المختلفة.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <div class="footer-links">
+                        <a href="index.html">الصفحة الرئيسية</a>
+                        <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                        <a href="#videos">الفيديوهات التعليمية</a>
+                        <a href="#grammar">شرح القواعد</a>
+                        <a href="#practice">تمارين تطبيقية</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">دروس القواعد</h3>
+                    <div class="footer-links">
+                        <a href="#">أزمنة الحاضر</a>
+                        <a href="#">أزمنة الماضي</a>
+                        <a href="#">أزمنة المستقبل</a>
+                        <a href="#">الجمل الشرطية</a>
+                        <a href="#">المبني للمجهول</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>info@englishlearning.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <span>+1234567890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>123 شارع التعليم، مدينة اللغات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 مركز تعلم اللغة الإنجليزية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+        
+        // Quiz Functionality
+        const quizButtons = document.querySelectorAll('.quiz-button');
+        
+        quizButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const quizCard = button.closest('.quiz-card');
+                const options = quizCard.querySelectorAll('.quiz-option');
+                const feedback = quizCard.querySelector('.quiz-feedback');
+                
+                let selectedOption = null;
+                
+                options.forEach(option => {
+                    if (option.classList.contains('selected')) {
+                        selectedOption = option;
+                    }
+                });
+                
+                if (!selectedOption) {
+                    feedback.textContent = 'الرجاء اختيار إجابة';
+                    feedback.className = 'quiz-feedback wrong';
+                    return;
+                }
+                
+                options.forEach(option => {
+                    option.classList.remove('correct', 'wrong');
+                    
+                    if (option.dataset.correct) {
+                        option.classList.add('correct');
+                    } else if (option === selectedOption) {
+                        option.classList.add('wrong');
+                    }
+                });
+                
+                if (selectedOption.dataset.correct) {
+                    feedback.textContent = 'إجابة صحيحة! أحسنت.';
+                    feedback.className = 'quiz-feedback correct';
+                } else {
+                    feedback.textContent = 'إجابة خاطئة. حاول مرة أخرى.';
+                    feedback.className = 'quiz-feedback wrong';
+                }
+                
+                // Disable options after answer
+                options.forEach(option => {
+                    option.style.pointerEvents = 'none';
+                });
+                
+                // Change button text
+                button.textContent = 'تم التحقق';
+                button.disabled = true;
+            });
+        });
+        
+        // Select Quiz Option
+        const quizOptions = document.querySelectorAll('.quiz-option');
+        
+        quizOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const quizCard = option.closest('.quiz-card');
+                const options = quizCard.querySelectorAll('.quiz-option');
+                
+                options.forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                option.classList.add('selected');
+            });
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Animation on Scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.feature-card, .grammar-card, .resource-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Set initial styles
+        const animatedElements = document.querySelectorAll('.feature-card, .grammar-card, .resource-card');
+        animatedElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 </html>
