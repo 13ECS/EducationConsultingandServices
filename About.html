@@ -1,114 +1,1284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
-    <span style="text-decoration: underline;">
-    </span><a style="color: rgb(0, 0, 153);" href="index.html">Home
-    <span style="color: rgb(0, 0, 153);"> الرئيسية</span></a>
-      &nbsp; &nbsp; 
-
-      <span style="text-decoration: underline;">
-      </span><a style="color: rgb(0, 0, 153);" href="Sign UP.html">Sign UP
-        <span style="color: rgb(0, 0, 153);"> التسجيل</span></a>
-        &nbsp; &nbsp; 
-
-        <span style="text-decoration: underline;">
-        </span><a style="color: rgb(0, 0, 153);" href="Application Form.html">Application Form
-          <span style="color: rgb(0, 0, 153);"> استمارة الطلب</span></a>
-          &nbsp; &nbsp; &nbsp;
-
-   </a><a target="_blank" style="color: rgb(0, 0, 153);" 
-    href="contact.html">contact
-    <span style="font-weight: bold;">اتصال</span></a>
-    <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-       &nbsp; &nbsp; &nbsp;
-
-      </span><a style="color: rgb(0, 0, 153);" href="English.html">English
-        <span style="font-weight: bold;">الإنكليزية</span></a>
-        <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-              &nbsp; &nbsp;&nbsp; 
-  </span><a style="color: rgb(0, 0, 153);" href="الأيلتس.html">IELTS
-    <span style="font-weight: bold;">الأيلتس</span></a>
-    <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-          &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-
-  </span><a style="color: rgb(0, 0, 153);" href="BSc.html">BSc
-    <span style="font-weight: bold;"> بكالوريوس </span></a>
-    <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-           
-           &nbsp; &nbsp;&nbsp; 
-
-</span><a style="color: rgb(0, 0, 153);" href="MSc.html">MSc
-<span style="font-weight: bold;">ماجستير</span></a>
-<span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-    
-    &nbsp; &nbsp;&nbsp; 
-
-</span><span style="color: rgb(0, 0, 153);">&nbsp;
-</span><a style="color: rgb(0, 0, 153);" href="PhD.html">PhD</a>
-<span style="font-weight: bold; color: rgb(0, 0, 153);"><a href="PhD.html">دكتوراه</span></a>
-</span><span style="color: rgb(0, 0, 153);">
-
-&nbsp; &nbsp;  
-</span><a style="color: rgb(0, 0, 153);" href="News.html">News
-<span style="font-weight: bold;">اخبار</span></a>
-<span style="color: rgb(0, 0, 153);"> 
-    &nbsp; &nbsp;
-   <a href="Information.html">Informationمعلومات</a>
-   &nbsp; &nbsp; &nbsp;
-</td></p>
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>الدراسة في المملكة المتحدة | Education Consulting and Services</title>
+    <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2835c3;
+            --secondary-color: #0a1172;
+            --accent-color: #4e57c9;
+            --light-color: #e6f0ff;
+            --dark-color: #1a1a35;
+            --background-color: #f7f7f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --navbar-bg: #161b45;
+            --footer-bg: #0f1433;
+            --border-color: #e0e0e0;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Tajawal', 'Almarai', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
         }
-        .content {
-            text-align: justify;
-            margin: 20px;
+        
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
         }
-        .arabic-content {
+        
+        .page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: -1;
+        }
+        
+        .main-content {
+            flex: 1;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .nav-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-menu a i {
+            font-size: 1.2rem;
+        }
+        
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .nav-menu a span {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2835c3, #4e57c9);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 120px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            fill: var(--background-color);
+        }
+        
+        /* About Content */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 450px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        /* Why UK Section */
+        .why-uk-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-uk-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .why-uk-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .why-uk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .why-uk-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .why-uk-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .why-uk-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -40px auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .why-uk-content {
+            padding: 0 25px 25px;
+            text-align: center;
+        }
+        
+        .why-uk-title {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .why-uk-text {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .services-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 450px;
+        }
+        
+        .services-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .services-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .services-content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .services-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .services-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .services-list {
+            list-style-type: none;
+            margin-top: 25px;
+        }
+        
+        .services-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .services-list li i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2835c3, #4e57c9);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
             text-align: right;
-            font-weight: bold;
-            color: rgb(14, 14, 15);
-            margin: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: 'Tajawal', 'Almarai', Arial, sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(40, 53, 195, 0.2);
+        }
+        
+        .btn-form {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Tajawal', 'Almarai', Arial, sans-serif;
+            font-size: 1rem;
+        }
+        
+        .btn-form:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Conclusion Section */
+        .conclusion-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--background-color);
+        }
+        
+        .conclusion-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .conclusion-content::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 120px;
+            line-height: 1;
+            color: rgba(40, 53, 195, 0.1);
+            font-family: Georgia, serif;
+        }
+        
+        .conclusion-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        
+        .conclusion-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: var(--footer-bg);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            min-width: 200px;
+            flex: 1;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style-type: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .footer-links a i {
+            color: var(--primary-color);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .footer-contact i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-container,
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image,
+            .services-image {
+                height: 400px;
+            }
+            
+            .services-image {
+                order: -1;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 80px);
+                background-color: var(--navbar-bg);
+                flex-direction: column;
+                padding: 20px;
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu a {
+                padding: 12px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-image,
+            .services-image {
+                height: 300px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-form {
+                padding: 30px 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .why-uk-icon {
+                width: 60px;
+                height: 60px;
+                margin-top: -30px;
+                font-size: 1.5rem;
+            }
+            
+            .section-title,
+            .cta-title,
+            .about-content h2,
+            .services-content h2,
+            .conclusion-content h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>
-           
-        </p>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png" alt="شعار الموقع">
+                        <div class="logo-text">Education Consulting</div>
+                    </div>
+                    
+                    <button class="nav-toggle" id="navToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html"><i class="fas fa-home"></i> <span>الرئيسية</span></a>
+                        <a href="التسجيل.html"><i class="fas fa-user-plus"></i> <span>التسجيل</span></a>
+                        <a href="Application Form.html"><i class="fas fa-file-alt"></i> <span>استمارة الطلب</span></a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> <span>اتصال</span></a>
+                        <a href="English.html"><i class="fas fa-language"></i> <span>الإنكليزية</span></a>
+                        <a href="الأيلتس.html"><i class="fas fa-award"></i> <span>الأيلتس</span></a>
+                        <a href="BSc.html"><i class="fas fa-user-graduate"></i> <span>بكالوريوس</span></a>
+                        <a href="MSc.html"><i class="fas fa-microscope"></i> <span>ماجستير</span></a>
+                        <a href="PhD.html"><i class="fas fa-book-reader"></i> <span>دكتوراه</span></a>
+                        <a href="News.html"><i class="fas fa-newspaper"></i> <span>اخبار</span></a>
+                        <a href="Information.html"><i class="fas fa-info-circle"></i> <span>معلومات</span></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-subtitle">استشارات وخدمات تعليمية</span>
+                <h1>الطلاب يريدون مستقبلًا أفضل</h1>
+                <p class="hero-description">دور الاستشارات والخدمات التعليمية في تحقيق الحلم البريطاني وفتح أبواب النجاح للطلاب العرب في المؤسسات التعليمية الرائدة</p>
+                <div class="hero-buttons">
+                    <a href="#why-uk" class="btn btn-primary">لماذا المملكة المتحدة؟ <i class="fas fa-arrow-left"></i></a>
+                    <a href="#contact-us" class="btn btn-outline">تواصل معنا <i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill="#f7f7f7" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </section>
+        
+        <div class="main-content">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="container">
+                    <h2 class="section-title">مستقبل أكاديمي واعد</h2>
+                    
+                    <div class="about-container">
+                        <div class="about-image">
+                            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="الدراسة في المملكة المتحدة">
+                            <div class="about-badge">فرص تعليمية متميزة</div>
+                        </div>
+                        
+                        <div class="about-content">
+                            <h2>الطريق نحو التعليم المتميز</h2>
+                            <p>في عالم يتسارع فيه التقدم ويفتح الأبواب لفرص لا حصر لها، يحلم العديد من الطلاب العرب بالحصول على تعليم ذو جودة عالية من مؤسسات رائدة عالميًا. واحدة من الوجهات المفضلة لهؤلاء الطموحين هي المملكة المتحدة.</p>
+                            
+                            <p>إن الاستشارات والخدمات التعليمية تلعب دورًا حاسمًا في تحقيق هذا الحلم. فهي توفر الدعم اللازم للطلاب من مرحلة اختيار الجامعة المناسبة إلى الوصول إلى المملكة المتحدة وبدء حياتهم الأكاديمية بسلاسة ونجاح.</p>
+                            
+                            <p>بفضل هذه الخدمات، يمكن للطلاب العرب تجاوز تحديات الغربة والتكيف بسرعة مع نظام تعليمي مختلف، مما يمكنهم من تحقيق تطلعاتهم الأكاديمية والمهنية.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Why UK Section -->
+            <section id="why-uk" class="why-uk-section">
+                <div class="container why-uk-container">
+                    <h2 class="section-title">لماذا المملكة المتحدة؟</h2>
+                    
+                    <div class="why-uk-grid">
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">جامعات عريقة</h3>
+                                <p class="why-uk-text">المملكة المتحدة موطن لأعرق الجامعات مثل أوكسفورد وكامبريدج، وجامعات أخرى عريقة تتمتع بتاريخ طويل وسمعة ممتازة عالمياً.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">برامج دراسية متنوعة</h3>
+                                <p class="why-uk-text">توفر الجامعات البريطانية برامج دراسية متنوعة تناسب مختلف الاهتمامات والتخصصات، مما يتيح للطلاب اختيار المسار الأكاديمي المناسب.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">أبحاث متقدمة</h3>
+                                <p class="why-uk-text">تعتبر المملكة المتحدة رائدة في مجال البحث العلمي، مما يتيح للطلاب فرصة المشاركة في مشاريع بحثية متقدمة وتطوير مهاراتهم.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">إتقان اللغة الإنجليزية</h3>
+                                <p class="why-uk-text">الدراسة في المملكة المتحدة تتيح فرصة إتقان اللغة الإنجليزية من المتحدثين الأصليين، مما يعزز المهارات اللغوية للطلاب.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">بيئة متعددة الثقافات</h3>
+                                <p class="why-uk-text">تتميز المملكة المتحدة ببيئة متعددة الثقافات، مما يتيح للطلاب التعرف على ثقافات مختلفة وتكوين صداقات وشبكات عالمية.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-uk-item">
+                            <div class="why-uk-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="why-uk-content">
+                                <h3 class="why-uk-title">فرص عمل واعدة</h3>
+                                <p class="why-uk-text">الشهادات البريطانية معترف بها عالمياً، مما يفتح أبواب العمل للخريجين في مختلف أنحاء العالم ويعزز فرصهم في سوق العمل.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Services Section -->
+            <section class="services-section">
+                <div class="container">
+                    <h2 class="section-title">الاستشارات والخدمات التعليمية</h2>
+                    
+                    <div class="services-container">
+                        <div class="services-content">
+                            <h2>دعم لا يقدر بثمن</h2>
+                            <p>تعتبر الاستشارات والخدمات التعليمية الجسر الذي يربط بين الطالب العربي والحلم البريطاني. من خلال توفير الإرشادات والتوجيهات اللازمة، تساعد هذه الخدمات في تحديد الجامعة أو الكلية الأنسب بناءً على التخصص الأكاديمي والرغبات الشخصية للطلاب.</p>
+                            
+                            <p>كما توفر هذه الخدمات الدعم في إجراءات التقديم المعقدة، وإعداد الوثائق المطلوبة، والحصول على التأشيرة الدراسية، وترتيبات السكن وغيرها من الجوانب اللوجستية التي قد تشكل تحديات للطلاب الدوليين.</p>
+                            
+                            <ul class="services-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>توجيه وإرشاد في اختيار البرنامج الدراسي الأنسب والجامعة المناسبة</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>المساعدة في إعداد الوثائق المطلوبة والتقديم للجامعات</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>دعم في إجراءات الحصول على التأشيرة الدراسية</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>المساعدة في ترتيبات السكن والخدمات اللوجستية</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>إعداد استراتيجيات تقديم طلبات القبول وكتابة المقالات الشخصية</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>التوجيه والدعم المستمر خلال فترة الدراسة</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="services-image">
+                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="خدمات تعليمية">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section id="contact-us" class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">هل تفكر في الدراسة في المملكة المتحدة؟</h2>
+                        <p class="cta-description">اذا كنت تفكر في الانضمام إلى أحد البرامج التعليمية في المملكة المتحدة، فالإجراءات قد تكون أكثر يسرًا مما تتخيل. تواصل معنا الآن وسنساعدك في تحقيق حلمك.</p>
+                        
+                        <div class="cta-form">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="name">الاسم الكامل</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="study-level">المستوى الدراسي</label>
+                                    <select id="study-level" name="study-level" class="form-control" required>
+                                        <option value="">اختر المستوى الدراسي</option>
+                                        <option value="english">دورة لغة إنجليزية</option>
+                                        <option value="ielts">دورة تحضيرية للأيلتس</option>
+                                        <option value="bachelor">بكالوريوس</option>
+                                        <option value="master">ماجستير</option>
+                                        <option value="phd">دكتوراه</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">رسالتك</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-form">إرسال الطلب <i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Conclusion Section -->
+            <section class="conclusion-section">
+                <div class="container">
+                    <div class="conclusion-content">
+                        <h2>الختام</h2>
+                        <p>إن الاستشارات والخدمات التعليمية تمثل فرصة جوهرية للطلاب العرب الذين يتطلعون إلى تحسين مستقبلهم الأكاديمي والمهني. من خلال الدعم المتواصل والوسائل الفعالة، يمكن تحقيق حلم الدراسة في الخارج بسهولة ويسر.</p>
+                        
+                        <p>فلا تترددوا، فالجميع يستحق فرصة التعليم المميز في المملكة المتحدة، وتحقيق الطموحات التي ستفتح آفاق المستقبل الواعد. خذ الخطوة الأولى نحو مستقبلك الآن.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3 class="footer-title">من نحن</h3>
+                        <p>نحن مركز متخصص في تقديم الاستشارات والخدمات التعليمية للطلاب الراغبين في الدراسة في المملكة المتحدة، نساعدهم على تحقيق أهدافهم وطموحاتهم الأكاديمية.</p>
+                        
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-left"></i> الصفحة الرئيسية</a></li>
+                            <li><a href="الأيلتس.html"><i class="fas fa-chevron-left"></i> الأيلتس</a></li>
+                            <li><a href="BSc.html"><i class="fas fa-chevron-left"></i> بكالوريوس</a></li>
+                            <li><a href="MSc.html"><i class="fas fa-chevron-left"></i> ماجستير</a></li>
+                            <li><a href="PhD.html"><i class="fas fa-chevron-left"></i> دكتوراه</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">اتصل بنا</h3>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> <span>العنوان: London, United Kingdom</span></p>
+                            <p><i class="fas fa-phone"></i> <span>رقم الهاتف: 02046203041</span></p>
+                            <p><i class="fas fa-envelope"></i> <span>البريد الإلكتروني: info@education-c-s.com</span></p>
+                            <p><i class="fas fa-clock"></i> <span>ساعات العمل: الاثنين - الجمعة، 9 صباحاً - 5 مساءً</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Education Consulting and Services. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Back to top button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
     </div>
-    <div class="arabic-content">
-        <p><h2>الطلاب يريدون مستقبلًا أفضل: دور الاستشارات والخدمات التعليمية في تحقيق الحلم البريطاني
-      </h2>
-في عالم يتسارع فيه التقدم ويفتح الأبواب لفرص لا حصر لها، يحلم العديد من الطلاب العرب بالحصول على تعليم ذو جودة عالية من مؤسسات رائدة عالميًا. واحدة من الوجهات المفضلة لهؤلاء الطموحين هي المملكة المتحدة. إن الاستشارات والخدمات التعليمية تلعب دورًا حاسمًا في تحقيق هذه الأحلام، حيث توفر للطلاب الدعم والفرصة للحصول على عرض من الجامعات والكليات البريطانية.
-    <h2>لماذا المملكة المتحدة؟
-</h2>
-
-المملكة المتحدة ليست فقط موطنًا لأعرق الجامعات مثل أوكسفورد وكامبريدج، وإنما أيضًا مركزًا عالميًا للتعليم العالي بأحدث ما توصل إليه من برامج دراسية وأبحاث. سواء كان الطالب يسعى لتحسين مهاراته في اللغة الإنجليزية من خلال الدورات التدريبية، أو للحصول على درجة البكالوريوس، الماجستير أو حتى الدكتوراه، فإن المملكة المتحدة تقدم مجموعة واسعة من الخيارات التعليمية التي تلبي جميع الاحتياجات الأكاديمية.
-   <h2>الاستشارات والخدمات التعليمية: دعم لا يقدر بثمن
-</h2>
-
-تعتبر الاستشارات والخدمات التعليمية الجسر الذي يربط بين الطالب العربي والحلم البريطاني. من خلال توفير الإرشادات والتوجيهات اللازمة، تساعد هذه الخدمات في تحديد الجامعة أو الكلية الأنسب بناءً على التخصص الأكاديمي والرغبات الشخصية للطلاب. كما توفر هذه الخدمات الدعم في تجهيز المستندات المطلوبة، والتي تتضمن شهادات التعليم السابقة، وبيانات التقديرات، ورسائل التوصية، وبيانات السيرة الذاتية، وغيرها من الوثائق الضرورية.
-
-علاوة على ذلك، تسهم الاستشارات التعليمية في تعزيز فرصة حصول الطالب على عرض القبول من خلال إعداد استراتيجيات تقديم طلبات القبول والتوجيه بشأن كتابة المقالات الشخصية ورسائل الدوافع بطريقة تجذب انتباه لجان القبول.
-<h2>هل أنت تفكر في الدراسة في المملكة المتحدة؟
-</h2>
-
-اذا كنت تفكر في الانضمام إلى أحد البرامج التعليمية في المملكة المتحدة، فالإجراءات قد تكون أكثر يسرًا مما تتخيل. تستطيع البدء بإرسال المستندات الخاصة بك إلى البريد الإلكتروني المذكور، وسيتابع خبراء الاستشارات والخدمات التعليمية معك خطوة بخطوة حتى تتمكن من تحقيق طموحاتك الأكاديمية في المملكة المتحدة.
-<h2>الختام
-</h2>
-
-إن الاستشارات والخدمات التعليمية تمثل فرصة جوهرية للطلاب العرب الذين يتطلعون إلى تحسين مستقبلهم الأكاديمي والمهني. من خلال الدعم المتواصل والوسائل الفعالة، يمكن تحقيق حلم الدراسة في الخارج بسهولة ويسر. فلا تترددوا، فالجميع يستحق فرصة التعليم المميز في المملكة المتحدة الذي يبني المستقبل ويحقق الطموحات.
-</p>
-    </div>
+    
+    <script>
+        // Mobile Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
