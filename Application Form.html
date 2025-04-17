@@ -1,431 +1,1549 @@
-<!DOCTYPE 
-<html><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Consulting and Services - Application Form</title>
     <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
-   <link rel="icon" href="ECS-Word.jpg" type="image/jpg">
-  <tr>
-    <td style="vertical-align: top;">
-      <span style="text-decoration: underline;">
-      </span><a style="color: rgb(0, 0, 153);" href="index.html">Home
-      <span style="color: rgb(0, 0, 153);"> الرئيسية</span></a>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e4d9e;
+            --secondary-color: #f5f5f5;
+            --accent-color: #f0ad4e;
+            --dark-accent: #d9534f;
+            --success-color: #5cb85c;
+            --text-color: #333;
+            --light-text: #777;
+            --border-color: #dee2e6;
+        }
 
-      <span style="text-decoration: underline;">
-      </span><a style="color: rgb(0, 0, 153);" href="Sign UP.html">Sign UP
-        <span style="color: rgb(0, 0, 153);"> التسجيل</span></a>
-        &nbsp; &nbsp; &nbsp;
-                   
-          </a><a target="_blank" style="color: rgb(0, 0, 153);" 
-          href="contact.html">contact
-          <span style="font-weight: bold;">اتصال</span></a>
-          <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-            </span><a style="color: rgb(0, 0, 153);" href="English.html">English
-              <span style="font-weight: bold;">الإنكليزية</span></a>
-              <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        /* Header styling */
+        .header-banner {
+            background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
 
-  
-          </span><a style="color: rgb(0, 0, 153);" href="الأيلتس.html">IELTS
-                <span style="font-weight: bold;">الأيلتس</span></a>
-                <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-                      &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 77, 158, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
 
-        </span><a style="color: rgb(0, 0, 153);" href="BSc.html">BSc
-          <span style="font-weight: bold;"> بكالوريوس </span></a>
-          <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-                 
-                 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        .header-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
 
-   </span><a style="color: rgb(0, 0, 153);" href="MSc.html">MSc
-   <span style="font-weight: bold;">ماجستير</span></a>
-   <span style="font-weight: bold; color: rgb(0, 0, 153);"> 
-          
-          &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-    </span><span style="color: rgb(0, 0, 153);">&nbsp;
-   </span><a style="color: rgb(0, 0, 153);" href="PhD.html">PhD</a>
-   <span style="font-weight: bold; color: rgb(0, 0, 153);"><a href="PhD.html">دكتوراه</span></a>
-   </span><span style="color: rgb(0, 0, 153);">
+        .header-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
-   </span><a style="color: rgb(0, 0, 153);" href="News.html">News
-    <span style="font-weight: bold;">اخبار</span></a>
-    <span style="color: rgb(0, 0, 153);"> 
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
-         <a href="Information.html">Informationمعلومات</a>
-    </td>
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>ApplicationForm</title>
+        /* Navigation */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
 
-  
-</head><body style="color: rgb(0, 0, 0); background-color: rgb(51, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
-<div style="text-align: center;">
-<form method="post" action="#" name="Form2">
-  <h4 style="font-weight: bold; text-decoration: underline; color: rgb(0, 0, 153);">
-    <form> <input value="Go back!" onclick="history.back()" type="button">
-    </form> 
-       <h2>Education Consulting and Services</big></h2>
-  <big style="text-decoration: underline; color: rgb(0, 0, 153);"><span style="font-weight: bold;">Application Form</span></big><br></p>
-  <span style="color: rgb(0, 0, 153);">1-</span><span style="font-weight: bold; text-decoration: underline; color: rgb(0, 0, 153);">
-    Your Personal and Contact details</span><span style="color: rgb(0, 0, 153);"></span></p>
-<br>
-  </p>Title: Mr<input name="Mr" value="Mr" type="radio"> 
-Mrs<input name="Mrs" value="Mrs" type="radio">Miss<input name="Miss" value="Miss" type="radio">
+        .navbar-nav .nav-link {
+            color: var(--primary-color) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
 
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(30, 77, 158, 0.1);
+        }
 
-<br>
-  <br>
-First Name<input name="textFN">&nbsp; Middle Name<input name="textMN">&nbsp;
-Surmane<input name="textSm"></p> Gender:    Male<input name="Male" value="Male" type="radio"> Female<input name="Female" value="Female" type="radio"> 
-D.O.B <input name="DD/MM/YYYY" value="DD/MM/YYYY"><br>
-  <br>
-Country<input name="textCountry">&nbsp; Nationality<input name="textNationality">
-<br>
-  <br>
+        /* Form styling */
+        .application-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
 
-Phone(Home)<input name="textPhone">&nbsp; Personal Email<input name="textPE"></p>
-Home Address<textarea cols="25" rows="5" name="HomeAddress"></textarea>
-<br>
-  <br>
-<br>
-Passport<input name="textPassport">&nbsp;&nbsp; Place of Issue <input name="textPoI">&nbsp;&nbsp; Country of Issue<input name="textCoI">
-<br>
-  <br>
- Date of Issue<input name="textDoI">
-Valid until<input name="textVu"><br>
-  <br>
-<br>
-  <span style="color: rgb(0, 0, 153);">2-</span><span style="font-weight: bold;"><span style="text-decoration: underline; color: rgb(0, 0, 153);">
-    English Language</span><span style="color: rgb(0, 0, 153);"></span>
-</span><br></p>
-1-Do you hold any English language qualifications?  Yes<input name="Yes" value="Yes" type="checkbox">
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
 
- No<input name="No" value="No" type="checkbox"></p>
-<br>
-2-Do you intend to sit an English language qualification beforecoming to study at University? Yes<input name="Yes" value="YES" type="checkbox"> &nbsp;&nbsp; No<input name="No" value="No" type="checkbox"></p>
+        .section-title i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
 
-<br>
-<br>
-English Language :  IELTS<input name="IELTS" value="IELTS" type="checkbox">
-TOEFL<input name="TOEFL" value="TOEFL" type="checkbox"> 
-PTE<input name="PTE" value="PTE" type="checkbox"> 
-  Exam/test Date:<input name="textE/tD" value="DD/MM/YYYY ">  other(please specify)<input name="textother(please specify) ">
-  <br></p>
-  <span style="font-weight: bold;"><br>
-IELTS:</span>
-<br></p>
-Listening:
-  <select name="Listening">
-  <option>4.00</option>
-  <optgroup label="4.5"></optgroup>
-  <option>5.00</option>
-  <optgroup label="5.5"></optgroup><optgroup label="6.00"></optgroup><optgroup label="6.5"></optgroup><optgroup label="7.00"></optgroup><optgroup label="7.5"></optgroup><optgroup label=""></optgroup><optgroup label=""></optgroup>
-  </select>
- Reading:
-  <select name="Reading">
-  <option>4.00</option>
-  <option>4.5</option>
-  <option>5.00</option>
-  <option>5.5</option>
-  <option>6.00</option>
-  <option>6.5</option>
-  <option>7.00</option>
-  <option>7.5</option>
-  <option>8.00</option>
-  <option></option>
-  </select>
- Writing:
-  <select name="Writing">
-  <option>4.00</option>
-  <option>4.5</option>
-  <option>5.00</option>
-  <option>5.5</option>
-  <option>6.00</option>
-  <option>6.5</option>
-  <option>7.00</option>
-  <option>7.5</option>
-  <option>8.00</option>
-  <option></option>
-  </select>
-  <b><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">
-Speaking:
-  <select name="Speaking">
-  <option>4.00</option>
-  <option>4.5</option>
-  <option>5.5</option>
-  <option>6.00</option>
-  <option>6.5</option>
-  <option>7.00</option>
-  <option>7.5</option>
-  <option>8.00</option>
-  <option></option>
-  </select>
- Overall Band ScoreTest Report Form Number</span></b><input name="textTest Report Form Number">
-  <br>
-  <br></p>
+        .form-section {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
 
-  <span style="font-weight: bold;">TOEFL:</span></p>
-                 Date of qualifaction<input name="textDate of qualifaction"><font size="0">
-</font>Which version did you take<font size="-1">(Paper based,computer based, internet based)</font><input name="textWhich version did you take">&nbsp;&nbsp;
-<br></p>
-Result<font size="0">(including individual skill scores)<input name="Result">
-</font><br>
-  <span style="font-weight: bold;"><br>Other English qualification:
-</span><br></p>
+        .form-control, .form-select {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
 
-Awarding organisation<input name="textAwarding organisation">  Award and course title<input name="textAward and course title">  Results(including grade)<input name="textResults">
-<br>
-<br></p>
-Date of award expexted award <input name="textMonth" value="Month"> <input name="textYear" value="Year">
-<br></p>
-  <br>
-  <span style="font-weight: bold; color: rgb(0, 0, 153);"><font style="color: black;" size="+1"></font>
-  Applications for postgraduation course and research
-degrees only 
-<br></p>
-  <span style="font-weight: bold; color: rgb(0, 0, 153);"><font style="color: black;" size="-1">Was English the language of instrution
-for your first degree? &nbsp; &nbsp; &nbsp; Yes<input name="Yes" value="Yes" type="radio">&nbsp; NO<input name="NO" value="NO" type="radio"></font>
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(30, 77, 158, 0.25);
+        }
 
-<br>
-  </span><span style="text-decoration: underline; font-weight: bold; color: rgb(0, 0, 153);"><br>
-  <br>
-3-Criminal Convictions:</span>
-<br></p>
-Do you have any relevant criminal convictions? 
- Yes<input name="Yes" value="Yes" type="radio">
-No<input name="No" value="No" type="radio">
-<br>
-  <br>
-  <br></p>
-  
-  <span style="font-weight: bold; color: rgb(0, 0, 153);">4-<span style="text-decoration: underline;">Details of your proposed programme
-of study</span></span><span style="color: rgb(0, 0, 153);"></span>
-<br>
-  <br>
-Mode of study:    Full time<input name="Full time" value="Full time" type="checkbox">
-Part time<input name="Part time" value="Part time" type="checkbox">
-Distance learning<input name="Distance learning" value="Distance learning" type="checkbox">
-Other<input name="Other" value="Other" type="checkbox">
-<br>
-  <br>
-Proposed start date <input name="MM" value="MM"><input name="Year" value="Year"></p>
-<br>
-Award:&nbsp; CertHE<input name="CertHE" value="CertHE" type="checkbox"> &nbsp; HNC,HND<input name="HNC,HND" value="HNC,HND" type="checkbox">&nbsp;
-BA,BSc,BEng,BSc<input name="BA,BSc,BEng,BSc" value="BA,BSc,BEng,BSc" type="checkbox">&nbsp;
-MBA,MA,MSc,PgDip, PgCert<input name="MBA,MA,MSc,PgDip, PgCert" value="MBA,MA,MSc,PgDip, PgCert" type="checkbox">&nbsp;
-  <input name="Other" value="Other" type="checkbox">Other <font size="-2"><input name="textOther" value="Pleas Specify"></font>&nbsp;
-  <br>
-  <br>
-Course title&nbsp;<input size="40" name="textCourse title">
-<br>
-  <br>Year of entry
-<input name="Year1" value="Year1" type="checkbox">Year
-&nbsp;  <input name="Year2" value="Year2" type="checkbox">Year2 &nbsp; <input name="Year3" value="Year3" type="checkbox">Year3
- <br></p>
-  <span style="font-weight: bold;">Research Programmes only</span>
-<br></p>
-Mode of study&nbsp; Full time<input name="Full time" value="Full time" type="checkbox"> Part
-time<input name="Part time" value="Part time" type="checkbox"> 
- Other<input name="Other" value="Other" type="checkbox">
-<br></p>
-Research start day <input size="10" name="textMonth " value="Month "> <input size="10" name="textYear" value="Year">
+        .form-check-input {
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0.25em;
+            margin-left: -1.5em;
+            border: 1px solid var(--border-color);
+        }
 
-<br>
-  <br>Award&nbsp;
-<input name="MPhil" value="MPhil" type="checkbox">MPhil&nbsp; 
- <input name="PhD" value="PhD" type="checkbox">PhD&nbsp;
-  <input name="DBA,EdD " value="DBA,EdD " type="checkbox">DBA,EdD
-<input name="Other" value="Other" type="checkbox">Other
-<br>
-  <br>
-Proposed title/Subject/area(s) <textarea cols="85" rows="2" name="Proposed title/Subject/area(s)"></textarea>
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
 
-<br>
-  <font size="-1"><span style="color: red; font-weight: bold;">Please
-provide an outline research proposal (1500 words maximum) in seperate
-Doucument</span></font>
- <br>
-  <br>
-  <br></p>
-  <font style="font-weight: bold; color: rgb(0, 0, 153); text-decoration: underline;" size="+1">
-  5-Nationlity</font>
-<br>
-  <br>
-Do yo require a student Visa to study ?&nbsp; Yes<input name="Yes" value="Yes" type="radio">&nbsp; NO<input name="NO" value="NO" type="radio">&nbsp;
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
 
-<br>
-  <br>
-Passport Number<input name="textPassport Number">
-<br></p>
-Have you previously had a Tier4 student Visa for study in the UK?&nbsp; Yes<input name="Yes" value="Yes" type="checkbox">  
- NO<input name="NO" value="NO" type="checkbox">  Don't know<input name="Don't know" value="Don't know" type="checkbox">
- <br>
-  <br></p>
-Course<input size="30" name="textCourse">&nbsp; start<input name="textstart">&nbsp; End<input name="textEnd">
-<br>
-  <br>
-When did you enter the UK?<input name="textWhen did you enter the UK?"></p>
-<br>
-What is your immigration status?<input size="20" name="textWhat is your immigration status?">
-<br></p>
-  <br>
-  <br>
-  <big style="text-decoration: underline; color: rgb(0, 0, 153);"><font size="+1"><big><span style="font-weight: bold;">
+        /* Enhanced file input */
+        .file-upload-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .file-upload-input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            width: 100%;
+            height: 100%;
+        }
+
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-label i {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        .file-upload-container:hover .file-upload-label {
+            background-color: rgba(30, 77, 158, 0.1);
+        }
+
+        /* Step navigation */
+        .application-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .application-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--light-text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .step.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 0 10px rgba(30, 77, 158, 0.5);
+        }
+
+        .step.completed {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            color: white;
+        }
+
+        .step-label {
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .step.active .step-label {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Navigation buttons */
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn-prev, .btn-next, .btn-submit {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-prev {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-prev:hover {
+            background-color: #e9ecef;
+        }
+
+        .btn-next, .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-next:hover, .btn-submit:hover {
+            background-color: #0d3580;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 77, 158, 0.3);
+        }
+
+        /* Features section with images */
+        .features-section {
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .feature-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .feature-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: #0d3580;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links li {
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            color: #343a40;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .application-steps {
+                overflow-x: auto;
+                padding-bottom: 30px;
+            }
+            
+            .step {
+                min-width: 50px;
+            }
+            
+            .header-banner {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="ECS-Word.jpg" alt="ECS Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home / الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sign UP.html">Sign UP / التسجيل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact / اتصال</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="English.html">English / الإنكليزية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="الأيلتس.html">IELTS / الأيلتس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BSc.html">BSc / بكالوريوس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MSc.html">MSc / ماجستير</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PhD.html">PhD / دكتوراه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="News.html">News / اخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Information.html">Information / معلومات</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Education Consulting and Services</h1>
+            <p>Application Form / استمارة الطلب</p>
+            <button class="btn btn-light mt-3" onclick="history.back()">
+                <i class="bi bi-arrow-left"></i> Go back / العودة
+            </button>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <!-- Features Section with Images -->
+        <div class="features-section">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" class="feature-image" alt="Education">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Study Abroad</h3>
+                            <p>Explore opportunities to study at prestigious international universities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" class="feature-image" alt="Consulting">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Expert Guidance</h3>
+                            <p>Receive personalized counseling from our education experts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" class="feature-image" alt="Success">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Career Success</h3>
+                            <p>Build a foundation for your future career with quality education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form Container -->
+        <div class="application-container">
+            <h2 class="text-center mb-4">Application Form / استمارة الطلب</h2>
+            
+            <!-- Step Navigation -->
+            <div class="application-steps">
+                <div class="step active" data-step="1">
+                    1
+                    <div class="step-label">Personal Details</div>
+                </div>
+                <div class="step" data-step="2">
+                    2
+                    <div class="step-label">English Language</div>
+                </div>
+                <div class="step" data-step="3">
+                    3
+                    <div class="step-label">Criminal Convictions</div>
+                </div>
+                <div class="step" data-step="4">
+                    4
+                    <div class="step-label">Program of Study</div>
+                </div>
+                <div class="step" data-step="5">
+                    5
+                    <div class="step-label">Nationality</div>
+                </div>
+                <div class="step" data-step="6">
+                    6
+                    <div class="step-label">Education</div>
+                </div>
+            </div>
+            
+            <form id="applicationForm">
+                <!-- Step 1: Personal Details -->
+                <div class="form-step" id="step1">
+                    <h3 class="section-title">
+                        <i class="bi bi-person-fill"></i> 1. Your Personal and Contact Details
+                    </h3>
+                    
+                    <div class="form-section">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Title</label>
+                                <div class="d-flex">
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="title" id="titleMr" value="Mr">
+                                        <label class="form-check-label" for="titleMr">Mr</label>
+                                    </div>
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="title" id="titleMrs" value="Mrs">
+                                        <label class="form-check-label" for="titleMrs">Mrs</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="title" id="titleMiss" value="Miss">
+                                        <label class="form-check-label" for="titleMiss">Miss</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="middleName" class="form-label">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName" name="middleName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="surname" class="form-label">Surname</label>
+                                    <input type="text" class="form-control" id="surname" name="surname">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Gender</label>
+                                <div class="d-flex">
+                                    <div class="form-check me-4">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+                                        <label class="form-check-label" for="genderMale">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                                        <label class="form-check-label" for="genderFemale">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="dob" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country" name="country">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="nationality" class="form-label">Nationality</label>
+                                    <input type="text" class="form-control" id="nationality" name="nationality">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone (Home)</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Personal Email</label>
+                                    <input type="email" class="form-control" id="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Home Address</label>
+                            <textarea class="form-control" id="address" name="address" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="passport" class="form-label">Passport</label>
+                                    <input type="text" class="form-control" id="passport" name="passport">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="placeOfIssue" class="form-label">Place of Issue</label>
+                                    <input type="text" class="form-control" id="placeOfIssue" name="placeOfIssue">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="countryOfIssue" class="form-label">Country of Issue</label>
+                                    <input type="text" class="form-control" id="countryOfIssue" name="countryOfIssue">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="dateOfIssue" class="form-label">Date of Issue</label>
+                                    <input type="date" class="form-control" id="dateOfIssue" name="dateOfIssue">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="validUntil" class="form-label">Valid Until</label>
+                                    <input type="date" class="form-control" id="validUntil" name="validUntil">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-container">
+                            <label class="file-upload-label">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                Upload Passport Copy
+                            </label>
+                            <input type="file" class="file-upload-input" id="passportUpload" name="passportUpload">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2: English Language -->
+                <div class="form-step d-none" id="step2">
+                    <h3 class="section-title">
+                        <i class="bi bi-translate"></i> 2. English Language
+                    </h3>
+                    
+                    <div class="form-section">
+                        <div class="mb-4">
+                            <label class="form-label">Do you hold any English language qualifications?</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="radio" name="hasEnglishQualification" id="englishQualYes" value="Yes">
+                                    <label class="form-check-label" for="englishQualYes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hasEnglishQualification" id="englishQualNo" value="No">
+                                    <label class="form-check-label" for="englishQualNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Do you intend to sit an English language qualification before coming to study at University?</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="radio" name="willTakeEnglishTest" id="willTakeEnglishYes" value="Yes">
+                                    <label class="form-check-label" for="willTakeEnglishYes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="willTakeEnglishTest" id="willTakeEnglishNo" value="No">
+                                    <label class="form-check-label" for="willTakeEnglishNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">English Language Test</label>
+                            <div class="d-flex flex-wrap">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="testType" id="testIELTS" value="IELTS">
+                                    <label class="form-check-label" for="testIELTS">IELTS</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="testType" id="testTOEFL" value="TOEFL">
+                                    <label class="form-check-label" for="testTOEFL">TOEFL</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="testType" id="testPTE" value="PTE">
+                                    <label class="form-check-label" for="testPTE">PTE</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="examDate" class="form-label">Exam/test Date</label>
+                                    <input type="date" class="form-control" id="examDate" name="examDate">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="otherTest" class="form-label">Other (please specify)</label>
+                                    <input type="text" class="form-control" id="otherTest" name="otherTest">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4 mb-3">IELTS Scores</h4>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="listeningScore" class="form-label">Listening</label>
+                                    <select class="form-select" id="listeningScore" name="listeningScore">
+                                        <option value="">Select</option>
+                                        <option value="4.0">4.0</option>
+                                        <option value="4.5">4.5</option>
+                                        <option value="5.0">5.0</option>
+                                        <option value="5.5">5.5</option>
+                                        <option value="6.0">6.0</option>
+                                        <option value="6.5">6.5</option>
+                                        <option value="7.0">7.0</option>
+                                        <option value="7.5">7.5</option>
+                                        <option value="8.0">8.0</option>
+                                        <option value="8.5">8.5</option>
+                                        <option value="9.0">9.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="readingScore" class="form-label">Reading</label>
+                                    <select class="form-select" id="readingScore" name="readingScore">
+                                        <option value="">Select</option>
+                                        <option value="4.0">4.0</option>
+                                        <option value="4.5">4.5</option>
+                                        <option value="5.0">5.0</option>
+                                        <option value="5.5">5.5</option>
+                                        <option value="6.0">6.0</option>
+                                        <option value="6.5">6.5</option>
+                                        <option value="7.0">7.0</option>
+                                        <option value="7.5">7.5</option>
+                                        <option value="8.0">8.0</option>
+                                        <option value="8.5">8.5</option>
+                                        <option value="9.0">9.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="writingScore" class="form-label">Writing</label>
+                                    <select class="form-select" id="writingScore" name="writingScore">
+                                        <option value="">Select</option>
+                                        <option value="4.0">4.0</option>
+                                        <option value="4.5">4.5</option>
+                                        <option value="5.0">5.0</option>
+                                        <option value="5.5">5.5</option>
+                                        <option value="6.0">6.0</option>
+                                        <option value="6.5">6.5</option>
+                                        <option value="7.0">7.0</option>
+                                        <option value="7.5">7.5</option>
+                                        <option value="8.0">8.0</option>
+                                        <option value="8.5">8.5</option>
+                                        <option value="9.0">9.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="speakingScore" class="form-label">Speaking</label>
+                                    <select class="form-select" id="speakingScore" name="speakingScore">
+                                        <option value="">Select</option>
+                                        <option value="4.0">4.0</option>
+                                        <option value="4.5">4.5</option>
+                                        <option value="5.0">5.0</option>
+                                        <option value="5.5">5.5</option>
+                                        <option value="6.0">6.0</option>
+                                        <option value="6.5">6.5</option>
+                                        <option value="7.0">7.0</option>
+                                        <option value="7.5">7.5</option>
+                                        <option value="8.0">8.0</option>
+                                        <option value="8.5">8.5</option>
+                                        <option value="9.0">9.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="testReportFormNumber" class="form-label">Test Report Form Number</label>
+                            <input type="text" class="form-control" id="testReportFormNumber" name="testReportFormNumber">
+                        </div>
+                        
+                        <h4 class="mt-4 mb-3">TOEFL</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="toeflDate" class="form-label">Date of qualification</label>
+                                    <input type="date" class="form-control" id="toeflDate" name="toeflDate">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="toeflVersion" class="form-label">Which version did you take (Paper based, computer based, internet based)</label>
+                                    <input type="text" class="form-control" id="toeflVersion" name="toeflVersion">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="toeflResult" class="form-label">Result (including individual skill scores)</label>
+                            <input type="text" class="form-control" id="toeflResult" name="toeflResult">
+                        </div>
+                        
+                        <h4 class="mt-4 mb-3">Other English qualification</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="awardingOrganisation" class="form-label">Awarding organisation</label>
+                                    <input type="text" class="form-control" id="awardingOrganisation" name="awardingOrganisation">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="awardTitle" class="form-label">Award and course title</label>
+                                    <input type="text" class="form-control" id="awardTitle" name="awardTitle">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="awardResults" class="form-label">Results (including grade)</label>
+                                    <input type="text" class="form-control" id="awardResults" name="awardResults">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="awardMonth" class="form-label">Month of award/expected award</label>
+                                    <select class="form-select" id="awardMonth" name="awardMonth">
+                                        <option value="">Select</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="awardYear" class="form-label">Year of award/expected award</label>
+                                    <input type="number" class="form-control" id="awardYear" name="awardYear" min="2000" max="2030">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4 mt-4">
+                            <label class="form-label fw-bold">Applications for postgraduate course and research degrees only</label>
+                            <div class="mt-2">
+                                <label class="form-label">Was English the language of instruction for your first degree?</label>
+                                <div class="d-flex">
+                                    <div class="form-check me-4">
+                                        <input class="form-check-input" type="radio" name="englishDegree" id="englishDegreeYes" value="Yes">
+                                        <label class="form-check-label" for="englishDegreeYes">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="englishDegree" id="englishDegreeNo" value="No">
+                                        <label class="form-check-label" for="englishDegreeNo">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Criminal Convictions -->
+                <div class="form-step d-none" id="step3">
+                    <h3 class="section-title">
+                        <i class="bi bi-shield-exclamation"></i> 3. Criminal Convictions
+                    </h3>
+                    
+                    <div class="form-section">
+                        <div class="mb-4">
+                            <label class="form-label">Do you have any relevant criminal convictions?</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="radio" name="criminalConvictions" id="criminalYes" value="Yes">
+                                    <label class="form-check-label" for="criminalYes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="criminalConvictions" id="criminalNo" value="No">
+                                    <label class="form-check-label" for="criminalNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Program of Study -->
+                <div class="form-step d-none" id="step4">
+                    <h3 class="section-title">
+                        <i class="bi bi-book"></i> 4. Details of your proposed programme of study
+                    </h3>
+                    
+                    <div class="form-section">
+                        <div class="mb-4">
+                            <label class="form-label">Mode of study</label>
+                            <div class="d-flex flex-wrap">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="studyMode" id="fullTime" value="Full time">
+                                    <label class="form-check-label" for="fullTime">Full time</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="studyMode" id="partTime" value="Part time">
+                                    <label class="form-check-label" for="partTime">Part time</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="studyMode" id="distanceLearning" value="Distance learning">
+                                    <label class="form-check-label" for="distanceLearning">Distance learning</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="studyMode" id="otherMode" value="Other">
+                                    <label class="form-check-label" for="otherMode">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="startMonth" class="form-label">Proposed start date - Month</label>
+                                    <select class="form-select" id="startMonth" name="startMonth">
+                                        <option value="">Select</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="startYear" class="form-label">Proposed start date - Year</label>
+                                    <input type="number" class="form-control" id="startYear" name="startYear" min="2023" max="2030">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Award</label>
+                            <div class="d-flex flex-wrap">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="award" id="certHE" value="CertHE">
+                                    <label class="form-check-label" for="certHE">CertHE</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="award" id="hncHnd" value="HNC,HND">
+                                    <label class="form-check-label" for="hncHnd">HNC, HND</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="award" id="bachelors" value="BA,BSc,BEng,BSc">
+                                    <label class="form-check-label" for="bachelors">BA, BSc, BEng, BSc</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="award" id="masters" value="MBA,MA,MSc,PgDip,PgCert">
+                                    <label class="form-check-label" for="masters">MBA, MA, MSc, PgDip, PgCert</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="award" id="otherAward" value="Other">
+                                    <label class="form-check-label" for="otherAward">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="otherAwardSpecify" class="form-label">If other, please specify</label>
+                            <input type="text" class="form-control" id="otherAwardSpecify" name="otherAwardSpecify">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="courseTitle" class="form-label">Course title</label>
+                            <input type="text" class="form-control" id="courseTitle" name="courseTitle">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Year of entry</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="yearOfEntry" id="year1" value="Year 1">
+                                    <label class="form-check-label" for="year1">Year 1</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="yearOfEntry" id="year2" value="Year 2">
+                                    <label class="form-check-label" for="year2">Year 2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="yearOfEntry" id="year3" value="Year 3">
+                                    <label class="form-check-label" for="year3">Year 3</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-5 mb-3">Research Programmes only</h4>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Mode of study</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="researchMode" id="researchFullTime" value="Full time">
+                                    <label class="form-check-label" for="researchFullTime">Full time</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="researchMode" id="researchPartTime" value="Part time">
+                                    <label class="form-check-label" for="researchPartTime">Part time</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="researchMode" id="researchOther" value="Other">
+                                    <label class="form-check-label" for="researchOther">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="researchStartMonth" class="form-label">Research start date - Month</label>
+                                    <input type="text" class="form-control" id="researchStartMonth" name="researchStartMonth">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="researchStartYear" class="form-label">Research start date - Year</label>
+                                    <input type="text" class="form-control" id="researchStartYear" name="researchStartYear">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Award</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="researchAward" id="mphil" value="MPhil">
+                                    <label class="form-check-label" for="mphil">MPhil</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="researchAward" id="phd" value="PhD">
+                                    <label class="form-check-label" for="phd">PhD</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="researchAward" id="dbaEdd" value="DBA,EdD">
+                                    <label class="form-check-label" for="dbaEdd">DBA, EdD</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="researchAward" id="researchOtherAward" value="Other">
+                                    <label class="form-check-label" for="researchOtherAward">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="proposedTitle" class="form-label">Proposed title/Subject/area(s)</label>
+                            <textarea class="form-control" id="proposedTitle" name="proposedTitle" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Please provide an outline research proposal (1500 words maximum) in a separate document.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Nationality -->
+                <div class="form-step d-none" id="step5">
+                    <h3 class="section-title">
+                        <i class="bi bi-globe"></i> 5. Nationality
+                    </h3>
+                    
+                    <div class="form-section">
+                        <div class="mb-4">
+                            <label class="form-label">Do you require a student Visa to study?</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="radio" name="requireVisa" id="visaYes" value="Yes">
+                                    <label class="form-check-label" for="visaYes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="requireVisa" id="visaNo" value="No">
+                                    <label class="form-check-label" for="visaNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="passportNumber" class="form-label">Passport Number</label>
+                            <input type="text" class="form-control" id="passportNumber" name="passportNumber">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Have you previously had a Tier4 student Visa for study in the UK?</label>
+                            <div class="d-flex">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="previousTier4" id="previousTier4Yes" value="Yes">
+                                    <label class="form-check-label" for="previousTier4Yes">Yes</label>
+                                </div>
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="checkbox" name="previousTier4" id="previousTier4No" value="No">
+                                    <label class="form-check-label" for="previousTier4No">No</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="previousTier4" id="previousTier4DontKnow" value="Don't know">
+                                    <label class="form-check-label" for="previousTier4DontKnow">Don't know</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="previousCourse" class="form-label">Course</label>
+                                    <input type="text" class="form-control" id="previousCourse" name="previousCourse">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="courseStart" class="form-label">Start</label>
+                                    <input type="date" class="form-control" id="courseStart" name="courseStart">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="courseEnd" class="form-label">End</label>
+                                    <input type="date" class="form-control" id="courseEnd" name="courseEnd">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="ukEntryDate" class="form-label">When did you enter the UK?</label>
+                            <input type="date" class="form-control" id="ukEntryDate" name="ukEntryDate">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="immigrationStatus" class="form-label">What is your immigration status?</label>
+                            <input type="text" class="form-control" id="immigrationStatus" name="immigrationStatus">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 6: Education -->
+                <div class="form-step d-none" id="step6">
+                    <h3 class="section-title">
+                        <i class="bi bi-mortarboard"></i> 6. Education
+                    </h3>
+                    
+                    <div class="form-section">
+                        <p class="mb-4">Please provide details of your educational qualifications.</p>
+                        
+                        <div class="mb-4">
+                            <h5>Qualification 1</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="institution1" class="form-label">Awarding institution</label>
+                                        <input type="text" class="form-control" id="institution1" name="institution1">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="qualTitle1" class="form-label">Award and course title</label>
+                                        <input type="text" class="form-control" id="qualTitle1" name="qualTitle1">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="qualResult1" class="form-label">Results (including grade)</label>
+                                        <input type="text" class="form-control" id="qualResult1" name="qualResult1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="qualStartDate1" class="form-label">Start date</label>
+                                        <input type="date" class="form-control" id="qualStartDate1" name="qualStartDate1">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="qualEndDate1" class="form-label">End date</label>
+                                        <input type="date" class="form-control" id="qualEndDate1" name="qualEndDate1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5>Qualification 2</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="institution2" class="form-label">Awarding institution</label>
+                                        <input type="text" class="form-control" id="institution2" name="institution2">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="qualTitle2" class="form-label">Award and course title</label>
+                                        <input type="text" class="form-control" id="qualTitle2" name="qualTitle2">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="qualResult2" class="form-label">Results (including grade)</label>
+                                        <input type="text" class="form-control" id="qualResult2" name="qualResult2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="qualStartDate2" class="form-label">Start date</label>
+                                        <input type="date" class="form-control" id="qualStartDate2" name="qualStartDate2">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="qualEndDate2" class="form-label">End date</label>
+                                        <input type="date" class="form-control" id="qualEndDate2" name="qualEndDate2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-container">
+                            <label class="file-upload-label">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                Upload educational certificates
+                            </label>
+                            <input type="file" class="file-upload-input" id="certificatesUpload" name="certificatesUpload" multiple>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="confirmInfo" name="confirmInfo">
+                                <label class="form-check-label" for="confirmInfo">
+                                    I confirm that the information provided in this application is true, complete and accurate.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Navigation -->
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev d-none" id="prevBtn">
+                        <i class="bi bi-arrow-left me-2"></i> Previous
+                    </button>
+                    <button type="button" class="btn btn-next" id="nextBtn">
+                        Next <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                    <button type="submit" class="btn btn-submit d-none" id="submitBtn">
+                        <i class="bi bi-check-circle me-2"></i> Submit Application
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
     
-    6-Education</span></big></font></big><span style="color: rgb(0, 0, 153);"></span>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Education Consulting and Services</h4>
+                    <p>Your trusted partner for education consulting and services. We help students achieve their academic goals with expert guidance.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>Contact Us</h4>
+                    <p><i class="bi bi-geo-alt me-2"></i> Coventry, United Kingdom</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@education-c-s.com</p>
+                    <p><i class="bi bi-phone me-2"></i> +44 7914 792205</p>
+                </div>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+            
+            <p class="mt-3">&copy; 2023 Education Consulting and Services. All rights reserved.</p>
+        </div>
+    </div>
 
-<br>
-  <br>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp;
-Awarding institution &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Award and course title&nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Main subjects studied&nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>
-  <textarea cols="30" rows="5" name="Awarding institution"></textarea><textarea cols="30" rows="5" name="Award and course title  ">
-
-  </textarea><textarea cols="30" rows="5" name="Main subjects studied  "></textarea>
-  <br></p>
-Date of award or expected&nbsp;&nbsp; <input size="7" name="textMonth" value="Month"><input size="7" name="textYear" value="Year">
-Mode of attendance<input name="textMode of attendance  ">&nbsp; CATS
-Point(If applicable)<input name="textCATS Point(If applicable)">
-
-  <br>
-  <br>
-  <br>
-  <font style="color: rgb(0, 0, 153);" size="+1"><span style="font-weight: bold;">
-    7-Work experience</span></font>
-<br>
-<br></p>
- Name and address of organisation
-<br>
-  <textarea cols="35" rows="7" name="Name and address of organisation"></textarea>
-
- <br>
-  <br>
-  <br>
-  Job titel and brief summary of responsibilitles/ achievements 
-
-<br>
-  <textarea cols="50" rows="10" name="Job titel and brief summary of responsibilitles/ achievements"></textarea>
-  <br></p>
-Date of employment<input name="textDate of employment " value="From  ">&nbsp;&nbsp; <input name="textDate of employment " value="To">
-
-<br>
-  <br>
-  <br>
-8-<font style="color: rgb(0, 0, 153);" size="+1"><span style="font-style: italic; text-decoration: underline; font-weight: bold;">Further
-information in Suppport of Application.(Please attach additional sheets
-if necessary)</span></font>
-
-<br>
-  <br>
-  <textarea cols="85" rows="20" name="8-Further information in Suppport of Application.(Please attach additional sheets if necessary)   "></textarea>
-    <br>
-  <br>
-  <br></p>
-  <span style="font-weight: bold; color: rgb(0, 0, 153);"><big><font size="+1"><big>9</big></font></big>-<big><font size="+1"><big><span style="text-decoration: underline;">Reference</span></big></font></big></span><span style="color: rgb(0, 0, 153);"></span>
-<br></p>
-1-Reference
-<br></p>
-Full Name<input size="40" name="textFull Name">
-<br></p>
-Position <input size="40" name="textPosition">
-<br></p>
-Email: <input size="40" name="textEmail:">
-<br></p>
-Phone No:<input size="40" name="textPhoneNo:">
-<br></p>
-Fax:  <input size="40" name="textFax:">
-<br></p>
-Company/organisation<input size="45" name="textCompany/organisation">
-<br></p>
-Address
-<br></p>
-  <textarea cols="30" rows="7" name="Address"></textarea>
-  
-<br></p>
-
-2-Reference Full Name<input size="40" name="textFull Name">
-<br></p>
-Position <input size="40" name="textPosition">
-<br></p>
-Email:<input size="40" name="textEmail:">
-<br></p>
-Phone No:<input size="40" name="textPhoneNo:">
-<br></p>
-Fax:  <input size="40" name="textFax:">
-<br></p>
-Company/organisation<input size="45" name="textCompany/organisation">
-<br></p>
-Address
-<br></p>
-  <textarea cols="30" rows="7" name="Address"></textarea>
-  <br>
-  <br>
-  <br>
-  <br></p>
-  <big style="color: rgb(0, 0, 153);"><span style="font-weight: bold; text-decoration: underline;">10-Financial
-Information </span></big>
-<br>
-  <br></p>
-Personal/Family resources:<input name="Personal/Family resources:" value="Personal/Family resources:" type="checkbox">
-
-Employer:<input name="Employer:" value="Employer:" type="checkbox">
-Sponsorship:<input name="Sponsorship:" value="Sponsorship:" type="checkbox"> 
- Goverment body:<input name="Goverment body:" value="Goverment body:" type="checkbox">
-   <br>
-  <br>
-  <big style="color: rgb(0, 0, 153);"><span style="font-weight: bold; text-decoration: underline;">
-    11-Declaration</span></big>
-  <br>
-  <br></p>
-  <div style="text-align: left;">
-  confirm that, to the best of my
-knowledge, the information given in this form is true, complete and
-accurate and no information requested or other material information has
-been omitted. I give my consent to the processing of my data by[
-SACOIE]. I understand that any offer of a place on the above course is
-subject to my acceptance of the University&#8217;s terms and conditions,
-which I have received and read. I understand what they say, and I agree
-to abide by the conditions set out there. I accept that if I do not
-fully comply with these requirements, Sheffield Hallam University
-reserves the right to cancel my application and I shall have no claim
-against [SACOIE] in relation to this application.
-<br>
-  <br></p>
-Applicant's Signature:<input name="textApplicant's Signature:">
-
-Date:<input name="textDate:"><br>
-  <br>
-  <br></p>
-Do you consider yourself to have a disability
-Yes<input name="Yes" value="Yes" type="checkbox">
-NO<input name="NO" value="NO" type="checkbox"><br>
-  <br>
-  <br>
-  <br></p>
-<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;"> 
-  </span></span><input style="color: rgb(0, 0, 153); font-weight: bold;" name="Submit" value="Submit" type="submit"><span style="color: rgb(0, 0, 153); font-weight: bold;">
-
-  </span><span style="font-weight: bold;"></span>
- 
-  <span style="color: red;"><span style="font-weight: bold;"> </span></span><input style="color: red; font-weight: bold;" name="Reset" value="Reset" type="reset"><br>
-  </div>
-  <br>
-</form>
-</div>
-<br>
-
-<form> <input value="Go back!" onclick="history.back()" type="button">
-</form>
-
-</body></html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form navigation
+            const formSteps = document.querySelectorAll('.form-step');
+            const stepIndicators = document.querySelectorAll('.step');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            let currentStep = 0;
+            
+            // Show a specific step
+            function showStep(stepIndex) {
+                formSteps.forEach((step, index) => {
+                    if (index === stepIndex) {
+                        step.classList.remove('d-none');
+                    } else {
+                        step.classList.add('d-none');
+                    }
+                });
+                
+                // Update step indicators
+                stepIndicators.forEach((indicator, index) => {
+                    if (index === stepIndex) {
+                        indicator.classList.add('active');
+                        indicator.classList.remove('completed');
+                    } else if (index < stepIndex) {
+                        indicator.classList.remove('active');
+                        indicator.classList.add('completed');
+                    } else {
+                        indicator.classList.remove('active', 'completed');
+                    }
+                });
+                
+                // Show/hide navigation buttons
+                if (stepIndex === 0) {
+                    prevBtn.classList.add('d-none');
+                } else {
+                    prevBtn.classList.remove('d-none');
+                }
+                
+                if (stepIndex === formSteps.length - 1) {
+                    nextBtn.classList.add('d-none');
+                    submitBtn.classList.remove('d-none');
+                } else {
+                    nextBtn.classList.remove('d-none');
+                    submitBtn.classList.add('d-none');
+                }
+                
+                // Scroll to top of form
+                window.scrollTo({
+                    top: document.querySelector('.application-container').offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Next button click handler
+            nextBtn.addEventListener('click', function() {
+                if (currentStep < formSteps.length - 1) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+            
+            // Previous button click handler
+            prevBtn.addEventListener('click', function() {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+            
+            // Step indicator click handler
+            stepIndicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    // Only allow clicking on completed steps or the next step
+                    if (index <= currentStep + 1) {
+                        currentStep = index;
+                        showStep(currentStep);
+                    }
+                });
+            });
+            
+            // Form submission
+            document.getElementById('applicationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success message
+                alert('Your application has been submitted successfully!');
+                
+                // Reset form
+                this.reset();
+                currentStep = 0;
+                showStep(currentStep);
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // File upload visual feedback
+            document.querySelectorAll('.file-upload-input').forEach(input => {
+                input.addEventListener('change', function() {
+                    const label = this.previousElementSibling;
+                    if (this.files.length > 0) {
+                        if (this.files.length === 1) {
+                            label.innerHTML = `<i class="bi bi-check-circle-fill text-success"></i> ${this.files[0].name}`;
+                        } else {
+                            label.innerHTML = `<i class="bi bi-check-circle-fill text-success"></i> ${this.files.length} files selected`;
+                        }
+                    } else {
+                        if (this.id === 'passportUpload') {
+                            label.innerHTML = `<i class="bi bi-cloud-arrow-up"></i> Upload Passport Copy`;
+                        } else {
+                            label.innerHTML = `<i class="bi bi-cloud-arrow-up"></i> Upload educational certificates`;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
