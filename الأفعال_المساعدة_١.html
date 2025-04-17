@@ -1,73 +1,884 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دروس قواعد اللغة الإنجليزية</title>
+    <title>دروس قواعد اللغة الإنجليزية | Education Consulting Services</title>
+    <link rel="icon" href="ESCL.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1e4d9e;
+            --secondary-color: #f0ad4e;
+            --accent-color: #5cb85c;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: #f5f8fa;
+            color: var(--text-color);
+            line-height: 1.6;
         }
-        h1 {
-            color: #333;
+
+        /* Navigation styling */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        .navbar {
+            padding: 0.7rem 1rem;
         }
-        .logo {
+        
+        .navbar-brand img {
             height: 50px;
+            transition: transform 0.3s ease;
         }
-        nav a {
-            text-decoration: none;
-            color: #007bff;
-            padding: 10px 20px;
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: var(--secondary-color);
+            color: white !important;
+        }
+        
+        .btn-home {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn-home:hover {
+            background-color: #4cae4c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page title */
+        .page-title {
+            background: linear-gradient(135deg, rgba(240, 173, 78, 0.2) 0%, rgba(30, 77, 158, 0.2) 100%);
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .page-title h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .page-title p {
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Video containers */
+        .video-section {
+            padding: 2rem 0;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .video-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .video-header i {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .video-container {
             position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .video-content {
+            padding: 1.5rem;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+        
+        .video-description {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .video-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .video-tag {
+            background-color: rgba(30, 77, 158, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Lesson content */
+        .lesson-content {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .lesson-section {
+            margin-bottom: 2rem;
+        }
+        
+        .lesson-section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .example-box {
+            background-color: rgba(30, 77, 158, 0.05);
+            border-right: 3px solid var(--secondary-color);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .example-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .highlight {
+            background-color: rgba(240, 173, 78, 0.2);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .note-box {
+            background-color: rgba(92, 184, 92, 0.1);
+            border-right: 3px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .note-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .note-title i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar-list {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        .sidebar-list li {
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+        
+        .sidebar-list li::before {
+            content: "\F4FF";
+            font-family: bootstrap-icons;
+            position: absolute;
+            right: 0;
+            color: var(--secondary-color);
+        }
+        
+        .related-video {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .related-video:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .related-video-thumbnail {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-left: 1rem;
+        }
+        
+        .related-video-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        .related-video-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        
+        .related-video-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-btn {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
             display: inline-block;
+            margin-top: 1rem;
         }
-        nav a:hover {
-            background-color: #007bff;
+        
+        .contact-btn:hover {
+            background-color: var(--secondary-color);
             color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-right: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary-color);
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
         }
-        .back-home {
-            background-color: #28a745;
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .back-home:hover {
-            background-color: #218838;
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .sidebar {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background-color: var(--primary-color);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+            }
+            
+            .page-title {
+                padding: 1.5rem 0;
+            }
+            
+            .page-title h1 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .video-tags {
+                justify-content: center;
+            }
+            
+            .related-video {
+                flex-direction: column;
+            }
+            
+            .related-video-thumbnail {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="topbar">
-        <img src="ESCL.png" alt="Logo" class="logo" />
-        <nav>
-             <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
-            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+    <!-- Main Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="ESCL.png" alt="Education Consulting Services Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="الأيلتس.html">الأيلتس</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BSc.html">بكالوريوس</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MSc.html">ماجستير</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PhD.html">دكتوراه</a>
+                        </li>
+                    </ul>
+                    <a href="index.html" class="btn btn-home">
+                        <i class="bi bi-house-fill"></i> العودة للرئيسية
+                    </a>
+                </div>
+            </div>
         </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>دروس قواعد اللغة الإنجليزية</h1>
+            <p>تعلم قواعد اللغة الإنجليزية بطريقة سهلة ومبسطة مع شرح للأفعال المساعدة واستخداماتها الصحيحة</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+                <!-- First Video -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="bi bi-play-circle"></i> الدرس الأول: الأفعال المساعدة Do, Does, Have, Has
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KAxiKa2IvDc?si=WzaokEW1dql-XgG_&amp;start=11" title="Correct Use of Auxiliary Verbs Do, Does, Have, Has in Sentences" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h2 class="video-title">استخدام صحيح للأفعال المساعدة Do و Does و Have و Has في الجمل</h2>
+                        <div class="video-tags">
+                            <span class="video-tag">أفعال مساعدة</span>
+                            <span class="video-tag">قواعد أساسية</span>
+                            <span class="video-tag">Do و Does</span>
+                            <span class="video-tag">Have و Has</span>
+                        </div>
+                        <p class="video-description">
+                            في هذا الدرس، ستتعلم الاستخدام الصحيح للأفعال المساعدة Do و Does و Have و Has في جمل اللغة الإنجليزية. يشرح هذا الفيديو متى وكيف تستخدم هذه الأفعال بشكل صحيح في الجمل المختلفة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- First Lesson Content -->
+                <div class="lesson-content">
+                    <div class="lesson-section">
+                        <h3 class="lesson-section-title">ملخص الدرس الأول</h3>
+                        <p>
+                            الأفعال المساعدة Do و Does و Have و Has مهمة جداً في اللغة الإنجليزية. فهي تستخدم في تكوين الأسئلة، النفي، وبعض الأزمنة. إليك ملخص لاستخداماتها:
+                        </p>
+                        
+                        <h4 class="mt-4 mb-2">Do و Does</h4>
+                        <p>
+                            <strong>Do</strong> يستخدم مع ضمائر المتكلم (I)، المخاطب (you)، والجمع (we, they).
+                            <br>
+                            <strong>Does</strong> يستخدم مع ضمائر الغائب المفرد (he, she, it).
+                        </p>
+                        
+                        <div class="example-box">
+                            <p class="example-title">أمثلة:</p>
+                            <p><span class="highlight">Do</span> you speak English? (هل تتحدث الإنجليزية؟)</p>
+                            <p><span class="highlight">Does</span> she like coffee? (هل تحب القهوة؟)</p>
+                            <p>I <span class="highlight">don't</span> know the answer. (لا أعرف الإجابة)</p>
+                            <p>He <span class="highlight">doesn't</span> work here. (هو لا يعمل هنا)</p>
+                        </div>
+                        
+                        <h4 class="mt-4 mb-2">Have و Has</h4>
+                        <p>
+                            <strong>Have</strong> يستخدم مع ضمائر المتكلم (I)، المخاطب (you)، والجمع (we, they).
+                            <br>
+                            <strong>Has</strong> يستخدم مع ضمائر الغائب المفرد (he, she, it).
+                        </p>
+                        
+                        <div class="example-box">
+                            <p class="example-title">أمثلة:</p>
+                            <p>I <span class="highlight">have</span> a car. (أنا لدي سيارة)</p>
+                            <p>She <span class="highlight">has</span> a cat. (هي لديها قطة)</p>
+                            <p><span class="highlight">Have</span> you finished your homework? (هل انتهيت من واجبك المنزلي؟)</p>
+                            <p><span class="highlight">Has</span> he called you yet? (هل اتصل بك بعد؟)</p>
+                        </div>
+                        
+                        <div class="note-box mt-4">
+                            <div class="note-title">
+                                <i class="bi bi-lightbulb"></i> ملاحظة مهمة
+                            </div>
+                            <p>تذكر أن Do و Does يستخدمان أيضاً لتكوين النفي، حيث نضيف 'not' للفعل المساعد:<br>
+                            - I do not (don't) like spicy food.<br>
+                            - She does not (doesn't) live in London.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Video -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="bi bi-play-circle"></i> الدرس الثاني: الاستخدام الصحيح لـ Has / Have / Had
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qzDwIYUqjd4?si=uVbZCtCKcbmu2F2l&amp;start=46" title="Correct Use of Has / Have / Had" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h2 class="video-title">الاستخدام الصحيح لـ Has / Have / Had في أزمنة اللغة الإنجليزية</h2>
+                        <div class="video-tags">
+                            <span class="video-tag">الأفعال المساعدة</span>
+                            <span class="video-tag">Has و Have و Had</span>
+                            <span class="video-tag">أزمنة اللغة الإنجليزية</span>
+                            <span class="video-tag">Present Perfect</span>
+                        </div>
+                        <p class="video-description">
+                            في هذا الدرس، ستتعلم الاستخدام الصحيح للأفعال المساعدة Has و Have و Had في أزمنة اللغة الإنجليزية المختلفة، وخاصة في زمن المضارع التام (Present Perfect) والماضي التام (Past Perfect).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Second Lesson Content -->
+                <div class="lesson-content">
+                    <div class="lesson-section">
+                        <h3 class="lesson-section-title">ملخص الدرس الثاني</h3>
+                        <p>
+                            تعتبر الأفعال Have و Has و Had من أهم الأفعال المساعدة في اللغة الإنجليزية، حيث تستخدم في صيغة الملكية وفي تكوين الأزمنة التامة. إليك ملخص لاستخداماتها:
+                        </p>
+                        
+                        <h4 class="mt-4 mb-2">للتعبير عن الملكية</h4>
+                        <div class="example-box">
+                            <p class="example-title">زمن المضارع:</p>
+                            <p>I/You/We/They <span class="highlight">have</span> a book. (لديّ/لديك/لدينا/لديهم كتاب)</p>
+                            <p>He/She/It <span class="highlight">has</span> a book. (لديه/لديها/لديه كتاب)</p>
+                        </div>
+                        
+                        <div class="example-box">
+                            <p class="example-title">زمن الماضي:</p>
+                            <p>I/You/He/She/It/We/They <span class="highlight">had</span> a book. (كان لديّ/لديك/لديه/لديها/لديه/لدينا/لديهم كتاب)</p>
+                        </div>
+                        
+                        <h4 class="mt-4 mb-2">في الأزمنة التامة</h4>
+                        <div class="example-box">
+                            <p class="example-title">المضارع التام (Present Perfect):</p>
+                            <p>I/You/We/They <span class="highlight">have</span> studied English for 2 years. (أدرس/تدرس/ندرس/يدرسون الإنجليزية منذ سنتين)</p>
+                            <p>He/She/It <span class="highlight">has</span> studied English for 2 years. (يدرس/تدرس/يدرس الإنجليزية منذ سنتين)</p>
+                        </div>
+                        
+                        <div class="example-box">
+                            <p class="example-title">الماضي التام (Past Perfect):</p>
+                            <p>I/You/He/She/It/We/They <span class="highlight">had</span> finished the work before they arrived. (كنت قد/كنت قد/كان قد/كانت قد/كان قد/كنا قد/كانوا قد أنهيت/أنهوا العمل قبل وصولهم)</p>
+                        </div>
+                        
+                        <div class="note-box mt-4">
+                            <div class="note-title">
+                                <i class="bi bi-lightbulb"></i> ملاحظة مهمة
+                            </div>
+                            <p>عند استخدام Have و Has و Had كأفعال مساعدة في الأزمنة التامة، يجب أن يكون الفعل الرئيسي في صيغة التصريف الثالث (Past Participle):<br>
+                            - We <span class="highlight">have eaten</span> lunch.<br>
+                            - She <span class="highlight">has gone</span> to school.<br>
+                            - They <span class="highlight">had left</span> before I arrived.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practice Exercises -->
+                <div class="lesson-content">
+                    <div class="lesson-section">
+                        <h3 class="lesson-section-title">تمارين تطبيقية</h3>
+                        <p>اختبر فهمك للأفعال المساعدة بحل التمارين التالية:</p>
+                        
+                        <div class="example-box">
+                            <p class="example-title">أكمل الجمل التالية باستخدام Do أو Does:</p>
+                            <p>1. _______ your brother speak English?</p>
+                            <p>2. _______ they live in London?</p>
+                            <p>3. _______ she like chocolate?</p>
+                            <p>4. _______ we need to bring our books?</p>
+                            <p>5. _______ I look tired?</p>
+                        </div>
+                        
+                        <div class="example-box">
+                            <p class="example-title">أكمل الجمل التالية باستخدام Have أو Has:</p>
+                            <p>1. She _______ a new car.</p>
+                            <p>2. They _______ finished their homework.</p>
+                            <p>3. I _______ been to Paris twice.</p>
+                            <p>4. _______ you seen this movie before?</p>
+                            <p>5. He _______ not called me yet.</p>
+                        </div>
+                        
+                        <div class="note-box mt-4">
+                            <div class="note-title">
+                                <i class="bi bi-info-circle"></i> الإجابات
+                            </div>
+                            <p>التمرين الأول: 1. Does  2. Do  3. Does  4. Do  5. Do</p>
+                            <p>التمرين الثاني: 1. has  2. have  3. have  4. Have  5. has</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <!-- Related Videos -->
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">فيديوهات ذات صلة</h3>
+                        
+                        <div class="related-video">
+                            <img src="https://img.youtube.com/vi/LPw_s5H59zc/mqdefault.jpg" alt="English Tenses" class="related-video-thumbnail">
+                            <div>
+                                <h5 class="related-video-title">أزمنة اللغة الإنجليزية بطريقة مبسطة</h5>
+                                <a href="#" class="related-video-link">مشاهدة الفيديو</a>
+                            </div>
+                        </div>
+                        
+                        <div class="related-video">
+                            <img src="https://img.youtube.com/vi/j1ExfbH4Gns/mqdefault.jpg" alt="Question Formation" class="related-video-thumbnail">
+                            <div>
+                                <h5 class="related-video-title">كيفية تكوين الأسئلة في اللغة الإنجليزية</h5>
+                                <a href="#" class="related-video-link">مشاهدة الفيديو</a>
+                            </div>
+                        </div>
+                        
+                        <div class="related-video">
+                            <img src="https://img.youtube.com/vi/ZTgfVL6Bwcs/mqdefault.jpg" alt="Modal Verbs" class="related-video-thumbnail">
+                            <div>
+                                <h5 class="related-video-title">الأفعال الناقصة في اللغة الإنجليزية</h5>
+                                <a href="#" class="related-video-link">مشاهدة الفيديو</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grammar Tips -->
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">نصائح لتعلم قواعد اللغة الإنجليزية</h3>
+                        <ul class="sidebar-list">
+                            <li>استمع إلى النطق الصحيح للأفعال المساعدة</li>
+                            <li>مارس استخدام الأفعال المساعدة في جمل بسيطة</li>
+                            <li>اكتب جملاً تحتوي على الأفعال المساعدة يومياً</li>
+                            <li>استمع إلى محادثات باللغة الإنجليزية وركز على الأفعال المساعدة</li>
+                            <li>قم بتحويل الجمل من المثبتة إلى المنفية والاستفهامية للتدرب</li>
+                            <li>استخدم تطبيقات لتعلم اللغة الإنجليزية مثل Duolingo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="contact-card">
+                        <h3 class="contact-title">هل تحتاج إلى مساعدة؟</h3>
+                        <div class="contact-info">
+                            <p><i class="bi bi-envelope"></i> info@education-c-s.com</p>
+                            <p><i class="bi bi-phone"></i>447914792205+</p>
+                            <p><i class="bi bi-whatsapp"></i>447914792205+</p>
+                        </div>
+                        <a href="contact.html" class="contact-btn">
+                            <i class="bi bi-chat-dots"></i> تواصل معنا
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</head>
-<body>
 
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KAxiKa2IvDc?si=WzaokEW1dql-XgG_&amp;start=11" title="Correct Use of Auxiliary Verbs Do, Does, Have, Has in Sentences - Basic English Grammar Lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p>استخدام صحيح للأفعال المساعدة Do و Does و Have و Has في الجمل - درس قواعد اللغة الإنجليزية الأساسية</p>
-</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Education Consulting Services</h4>
+                    <p>نقدم خدمات استشارية تعليمية متكاملة للطلاب الراغبين في الدراسة في الخارج ونوفر مصادر تعليمية مجانية لمساعدتك في تعلم اللغة الإنجليزية.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">روابط مهمة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a></li>
+                        <li><a href="الأيلتس.html">الأيلتس</a></li>
+                        <li><a href="BSc.html">برامج البكالوريوس</a></li>
+                        <li><a href="MSc.html">برامج الماجستير</a></li>
+                        <li><a href="PhD.html">برامج الدكتوراه</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">معلومات الاتصال</h4>
+                    <p><i class="bi bi-geo-alt me-2"></i> Coventry, United Kingdom</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@education-c-s.com</p>
+                    <p><i class="bi bi-phone me-2"></i> 447914792205+</p>
+                    <p><i class="bi bi-globe me-2"></i> www.education-c-s.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Education Consulting Services. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
 
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qzDwIYUqjd4?si=uVbZCtCKcbmu2F2l&amp;start=46" title="Correct Use of Has / Have / Had | How & When to Use Has / Have / Had | Learn English Grammar Tenses" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p>الاستخدام الصحيح لـ Has / Have / Had | كيفية ومتى نستخدم Has / Have / Had | تعلم أزمنة قواعد اللغة الإنجليزية</p>
-</div>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
