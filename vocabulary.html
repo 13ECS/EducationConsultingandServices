@@ -1,87 +1,1321 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فيديو يوتيوب</title>
+    <title>تعلم المفردات الإنجليزية | Education Consulting Services</title>
+    <link rel="icon" href="ESCL.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1e4d9e;
+            --secondary-color: #f0ad4e;
+            --accent-color: #5cb85c;
+            --danger-color: #d9534f;
+            --info-color: #5bc0de;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: #f5f8fa;
+            color: var(--text-color);
+            line-height: 1.6;
         }
-        h1 {
-            color: #333;
+
+        /* Header styling */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        .navbar {
+            padding: 0.7rem 1rem;
         }
-        .logo {
+        
+        .navbar-brand img {
             height: 50px;
+            transition: transform 0.3s ease;
         }
-        nav a {
-            text-decoration: none;
-            color: #007bff;
-            padding: 10px 20px;
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: var(--secondary-color);
+            color: white !important;
+        }
+        
+        .btn-home {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn-home:hover {
+            background-color: #4cae4c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1920') no-repeat center center;
+            background-size: cover;
+            height: 400px;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 77, 158, 0.85) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
             display: inline-block;
         }
-        nav a:hover {
-            background-color: #007bff;
-            color: white;
+        
+        .hero-btn:hover {
+            background-color: #ec971f;
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
-        }
-        .back-home {
-            background-color: #28a745;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             color: white;
         }
-        .back-home:hover {
-            background-color: #218838;
+
+        /* Section titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
         }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .section-description {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Video card styling */
+        .video-section {
+            padding: 2rem 0;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
         .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .video-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .video-description {
+            margin-bottom: 1.5rem;
+            color: #555;
+            flex-grow: 1;
+        }
+        
+        .video-tags {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
+            margin-bottom: 1rem;
         }
-        .video {
-            margin: 10px;
-            width: 45%;
+        
+        .video-tag {
+            background-color: rgba(30, 77, 158, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Vocabulary section */
+        .vocabulary-section {
+            padding: 3rem 0;
+            background-color: rgba(30, 77, 158, 0.03);
+        }
+        
+        .vocab-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .vocab-category {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .vocab-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .vocab-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .vocab-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .vocab-english {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .vocab-arabic {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .vocab-example {
+            font-style: italic;
+            background-color: rgba(30, 77, 158, 0.05);
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .vocab-pronunciation {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Learning tips section */
+        .learning-tips {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tip-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        
+        .tip-card:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .tip-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(30, 77, 158, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .tip-content {
+            flex: 1;
+        }
+        
+        .tip-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tip-description {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Flashcard section */
+        .flashcard-section {
+            padding: 3rem 0;
+        }
+        
+        .flashcard {
+            perspective: 1000px;
+            height: 300px;
+            margin-bottom: 2rem;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard:hover .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            color: white;
+        }
+        
+        .flashcard-back {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #ec971f 100%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-word {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .flashcard-instruction {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+        
+        .flashcard-meaning {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .flashcard-example {
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        /* Resource section */
+        .resource-section {
+            padding: 3rem 0;
+            background-color: rgba(30, 77, 158, 0.03);
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .resource-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(30, 77, 158, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        
+        .resource-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .resource-description {
+            color: #555;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        .resource-link {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .resource-link:hover {
+            background-color: #0d3580;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-right: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background-color: var(--primary-color);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+            }
+            
+            .hero {
+                height: 350px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 300px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .vocab-english {
+                font-size: 1rem;
+            }
+            
+            .flashcard {
+                height: 250px;
+            }
+            
+            .flashcard-word {
+                font-size: 1.5rem;
+            }
+            
+            .flashcard-meaning {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="topbar">
-        <img src="ESCL.png" alt="Logo" class="logo" />
-        <nav>
-             <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
-            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+    <!-- Main Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="ESCL.png" alt="Education Consulting Services Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="الأيلتس.html">الأيلتس</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BSc.html">بكالوريوس</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MSc.html">ماجستير</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PhD.html">دكتوراه</a>
+                        </li>
+                    </ul>
+                    <a href="index.html" class="btn btn-home">
+                        <i class="bi bi-house-fill"></i> العودة للرئيسية
+                    </a>
+                </div>
+            </div>
         </nav>
-    </div>
+    </header>
 
-    <h1>فيديوهات يوتيوب</h1>
-    <div class="video-container">
-       
-        <div class="video">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/nVph06CxohU" frameborder="0" allowfullscreen></iframe>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">تعلم المفردات الإنجليزية بسهولة</h1>
+            <p class="hero-subtitle">اكتشف طرقاً فعالة لتوسيع حصيلتك اللغوية وإتقان المفردات الإنجليزية</p>
+            <a href="#vocabulary" class="hero-btn">استكشف المفردات <i class="bi bi-arrow-down-circle"></i></a>
         </div>
-        <div class="video">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Am_mXyty_MM" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>فيديوهات تعليمية</h2>
+            </div>
+            <p class="section-description">اكتشف مجموعة من الفيديوهات التعليمية لمساعدتك على تعلم المفردات الإنجليزية وتحسين مهاراتك اللغوية</p>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/nVph06CxohU" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">تعلم 100 كلمة إنجليزية شائعة</h3>
+                            <div class="video-tags">
+                                <span class="video-tag">مفردات أساسية</span>
+                                <span class="video-tag">للمبتدئين</span>
+                            </div>
+                            <p class="video-description">
+                                يقدم هذا الفيديو 100 كلمة إنجليزية شائعة الاستخدام مع النطق الصحيح والترجمة العربية. هذه المفردات مهمة للمحادثة اليومية والتواصل الأساسي.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Am_mXyty_MM" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">مفردات إنجليزية للمحادثة اليومية</h3>
+                            <div class="video-tags">
+                                <span class="video-tag">محادثة</span>
+                                <span class="video-tag">تعبيرات يومية</span>
+                            </div>
+                            <p class="video-description">
+                                تعلم المفردات والتعبيرات الإنجليزية المستخدمة في المحادثات اليومية، مثل التحية، التعارف، التسوق، والمزيد من المواقف الحياتية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/mJCqlJHkG5s" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">كلمات إنجليزية متقدمة للمستوى المتوسط</h3>
+                            <div class="video-tags">
+                                <span class="video-tag">مستوى متوسط</span>
+                                <span class="video-tag">مفردات متقدمة</span>
+                            </div>
+                            <p class="video-description">
+                                يستعرض هذا الفيديو مجموعة من المفردات الإنجليزية المتقدمة التي تساعدك على تحسين مستواك اللغوي والتعبير بطلاقة أكبر في المحادثات والكتابة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/FK9N6SNvPqE?si=99Xe9koLaJFWeDHE&amp;start=9" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">التعبيرات الاصطلاحية في اللغة الإنجليزية</h3>
+                            <div class="video-tags">
+                                <span class="video-tag">تعبيرات اصطلاحية</span>
+                                <span class="video-tag">للمتقدمين</span>
+                            </div>
+                            <p class="video-description">
+                                تعرف على التعبيرات الاصطلاحية (Idioms) الشائعة في اللغة الإنجليزية مع شرح معانيها واستخداماتها في السياقات المختلفة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="video">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/mJCqlJHkG5s" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Vocabulary Section -->
+    <section class="vocabulary-section" id="vocabulary">
+        <div class="container">
+            <div class="section-title">
+                <h2>مفردات إنجليزية أساسية</h2>
+            </div>
+            <p class="section-description">تعلم المفردات الإنجليزية الأساسية مصنفة حسب المواضيع المختلفة مع النطق والأمثلة</p>
+            
+            <div class="row">
+                <!-- Travel Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات السفر</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Airport</p>
+                                <p class="vocab-pronunciation">/ˈeə.pɔːt/</p>
+                                <p class="vocab-arabic">مطار</p>
+                                <p class="vocab-example">We need to be at the airport two hours before the flight.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Passport</p>
+                                <p class="vocab-pronunciation">/ˈpɑːs.pɔːt/</p>
+                                <p class="vocab-arabic">جواز سفر</p>
+                                <p class="vocab-example">Don't forget to bring your passport for international travel.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Hotel</p>
+                                <p class="vocab-pronunciation">/həʊˈtel/</p>
+                                <p class="vocab-arabic">فندق</p>
+                                <p class="vocab-example">We're staying at a five-star hotel near the beach.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Luggage</p>
+                                <p class="vocab-pronunciation">/ˈlʌɡ.ɪdʒ/</p>
+                                <p class="vocab-arabic">أمتعة</p>
+                                <p class="vocab-example">The airline lost my luggage during the connection.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Tourist</p>
+                                <p class="vocab-pronunciation">/ˈtʊə.rɪst/</p>
+                                <p class="vocab-arabic">سائح</p>
+                                <p class="vocab-example">The city is full of tourists during summer.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Food Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات الطعام</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Restaurant</p>
+                                <p class="vocab-pronunciation">/ˈres.trɒnt/</p>
+                                <p class="vocab-arabic">مطعم</p>
+                                <p class="vocab-example">Let's go to the new Italian restaurant downtown.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Menu</p>
+                                <p class="vocab-pronunciation">/ˈmen.juː/</p>
+                                <p class="vocab-arabic">قائمة طعام</p>
+                                <p class="vocab-example">The waiter brought us the menu to order.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Delicious</p>
+                                <p class="vocab-pronunciation">/dɪˈlɪʃ.əs/</p>
+                                <p class="vocab-arabic">لذيذ</p>
+                                <p class="vocab-example">The chocolate cake was absolutely delicious.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Ingredient</p>
+                                <p class="vocab-pronunciation">/ɪnˈɡriː.di.ənt/</p>
+                                <p class="vocab-arabic">مكون</p>
+                                <p class="vocab-example">This recipe requires five main ingredients.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Appetizer</p>
+                                <p class="vocab-pronunciation">/ˈæp.ɪ.taɪ.zər/</p>
+                                <p class="vocab-arabic">مقبلات</p>
+                                <p class="vocab-example">We ordered hummus as an appetizer before the main course.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Business Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات العمل</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Meeting</p>
+                                <p class="vocab-pronunciation">/ˈmiː.tɪŋ/</p>
+                                <p class="vocab-arabic">اجتماع</p>
+                                <p class="vocab-example">We have an important meeting with clients tomorrow.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Deadline</p>
+                                <p class="vocab-pronunciation">/ˈded.laɪn/</p>
+                                <p class="vocab-arabic">الموعد النهائي</p>
+                                <p class="vocab-example">The project deadline is next Friday.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Colleague</p>
+                                <p class="vocab-pronunciation">/ˈkɒl.iːɡ/</p>
+                                <p class="vocab-arabic">زميل</p>
+                                <p class="vocab-example">My colleague helped me finish the report on time.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Resume</p>
+                                <p class="vocab-pronunciation">/rɪˈzjuːm/</p>
+                                <p class="vocab-arabic">السيرة الذاتية</p>
+                                <p class="vocab-example">I updated my resume before applying for the new position.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Negotiation</p>
+                                <p class="vocab-pronunciation">/nɪˌɡəʊ.ʃiˈeɪ.ʃən/</p>
+                                <p class="vocab-arabic">مفاوضات</p>
+                                <p class="vocab-example">The negotiation process took several weeks to complete.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Everyday Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات الحياة اليومية</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Weather</p>
+                                <p class="vocab-pronunciation">/ˈweð.ər/</p>
+                                <p class="vocab-arabic">الطقس</p>
+                                <p class="vocab-example">The weather forecast predicts rain for tomorrow.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Shopping</p>
+                                <p class="vocab-pronunciation">/ˈʃɒp.ɪŋ/</p>
+                                <p class="vocab-arabic">التسوق</p>
+                                <p class="vocab-example">I'm going shopping for new clothes this weekend.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Traffic</p>
+                                <p class="vocab-pronunciation">/ˈtræf.ɪk/</p>
+                                <p class="vocab-arabic">حركة المرور</p>
+                                <p class="vocab-example">I was late because of heavy traffic on the highway.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Apartment</p>
+                                <p class="vocab-pronunciation">/əˈpɑːt.mənt/</p>
+                                <p class="vocab-arabic">شقة</p>
+                                <p class="vocab-example">We're renting an apartment in the city center.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Neighbor</p>
+                                <p class="vocab-pronunciation">/ˈneɪ.bər/</p>
+                                <p class="vocab-arabic">جار</p>
+                                <p class="vocab-example">Our new neighbors invited us for dinner.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Academic Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات أكاديمية</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Research</p>
+                                <p class="vocab-pronunciation">/rɪˈsɜːtʃ/</p>
+                                <p class="vocab-arabic">بحث</p>
+                                <p class="vocab-example">The professor is conducting research on climate change.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Assignment</p>
+                                <p class="vocab-pronunciation">/əˈsaɪn.mənt/</p>
+                                <p class="vocab-arabic">واجب دراسي</p>
+                                <p class="vocab-example">I need to finish my assignment before the deadline.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Lecture</p>
+                                <p class="vocab-pronunciation">/ˈlek.tʃər/</p>
+                                <p class="vocab-arabic">محاضرة</p>
+                                <p class="vocab-example">The professor's lecture on quantum physics was fascinating.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Thesis</p>
+                                <p class="vocab-pronunciation">/ˈθiː.sɪs/</p>
+                                <p class="vocab-arabic">أطروحة</p>
+                                <p class="vocab-example">She's writing her doctoral thesis on artificial intelligence.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Bibliography</p>
+                                <p class="vocab-pronunciation">/ˌbɪb.liˈɒɡ.rə.fi/</p>
+                                <p class="vocab-arabic">قائمة المراجع</p>
+                                <p class="vocab-example">Don't forget to include a bibliography at the end of your paper.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Technology Vocabulary -->
+                <div class="col-md-4 mb-4">
+                    <div class="vocab-card">
+                        <h3 class="vocab-category">مفردات التكنولوجيا</h3>
+                        <ul class="vocab-list">
+                            <li class="vocab-item">
+                                <p class="vocab-english">Software</p>
+                                <p class="vocab-pronunciation">/ˈsɒft.weər/</p>
+                                <p class="vocab-arabic">برمجيات</p>
+                                <p class="vocab-example">The company released a new software update yesterday.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Download</p>
+                                <p class="vocab-pronunciation">/ˌdaʊnˈləʊd/</p>
+                                <p class="vocab-arabic">تنزيل</p>
+                                <p class="vocab-example">I need to download the app on my phone.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Password</p>
+                                <p class="vocab-pronunciation">/ˈpɑːs.wɜːd/</p>
+                                <p class="vocab-arabic">كلمة المرور</p>
+                                <p class="vocab-example">Make sure to use a strong password for your account.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Wireless</p>
+                                <p class="vocab-pronunciation">/ˈwaɪə.ləs/</p>
+                                <p class="vocab-arabic">لاسلكي</p>
+                                <p class="vocab-example">The office has wireless internet throughout the building.</p>
+                            </li>
+                            <li class="vocab-item">
+                                <p class="vocab-english">Cybersecurity</p>
+                                <p class="vocab-pronunciation">/ˌsaɪ.bəˈsekjʊərəti/</p>
+                                <p class="vocab-arabic">الأمن السيبراني</p>
+                                <p class="vocab-example">Companies invest heavily in cybersecurity to protect their data.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-         <div class="video">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FK9N6SNvPqE?si=99Xe9koLaJFWeDHE&amp;start=9" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Vocabulary Learning Tips -->
+    <section class="container">
+        <div class="section-title">
+            <h2>نصائح لتعلم المفردات</h2>
         </div>
-    </div>
+        <p class="section-description">استراتيجيات فعالة تساعدك على تعلم وتذكر المفردات الإنجليزية الجديدة</p>
+        
+        <div class="learning-tips">
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="bi bi-repeat"></i>
+                </div>
+                <div class="tip-content">
+                    <h4 class="tip-title">التكرار المنتظم</h4>
+                    <p class="tip-description">
+                        كرر المفردات الجديدة على فترات منتظمة لترسيخها في الذاكرة طويلة المدى. استخدم طريقة التكرار المتباعد (Spaced Repetition) حيث تراجع الكلمات الجديدة بعد ساعة، ثم بعد يوم، ثم بعد أسبوع.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+                <div class="tip-content">
+                    <h4 class="tip-title">التعلم في سياق</h4>
+                    <p class="tip-description">
+                        تعلم المفردات ضمن جمل وسياقات تساعد على فهم معناها واستخدامها الصحيح. اقرأ كتباً وقصصاً باللغة الإنجليزية، واستمع إلى أغانٍ ومشاهدة أفلام لتعلم المفردات في سياقاتها الطبيعية.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="bi bi-card-image"></i>
+                </div>
+                <div class="tip-content">
+                    <h4 class="tip-title">الربط البصري</h4>
+                    <p class="tip-description">
+                        اربط المفردات الجديدة بصور ذهنية أو مرئية. يمكنك رسم صور بسيطة أو استخدام تطبيقات البطاقات التعليمية التي تحتوي على صور توضيحية للمفردات.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="bi bi-mic"></i>
+                </div>
+                <div class="tip-content">
+                    <h4 class="tip-title">الممارسة الشفهية</h4>
+                    <p class="tip-description">
+                        تحدث باستخدام المفردات الجديدة. اقرأ الكلمات بصوت عالٍ وحاول تكوين جمل تحتوي عليها. التطبيق العملي للمفردات يساعد على تذكرها بشكل أفضل.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="bi bi-card-checklist"></i>
+                </div>
+                <div class="tip-content">
+                    <h4 class="tip-title">استخدام البطاقات التعليمية</h4>
+                    <p class="tip-description">
+                        اصنع بطاقات تعليمية (Flashcards) للكلمات الجديدة مع معانيها وأمثلة على استخدامها. راجع هذه البطاقات يومياً أثناء وقت الفراغ أو استخدم تطبيقات مثل Anki أو Quizlet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flashcards Section -->
+    <section class="flashcard-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>بطاقات تعليمية تفاعلية</h2>
+            </div>
+            <p class="section-description">مرّر مؤشر الفأرة فوق البطاقة لترى معنى الكلمة ومثال على استخدامها</p>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h3 class="flashcard-word">Ambitious</h3>
+                                <p class="flashcard-instruction">مرّر المؤشر لمعرفة المعنى</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h4 class="flashcard-meaning">طموح</h4>
+                                <p class="flashcard-example">She is an ambitious student who wants to become a doctor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h3 class="flashcard-word">Convenient</h3>
+                                <p class="flashcard-instruction">مرّر المؤشر لمعرفة المعنى</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h4 class="flashcard-meaning">ملائم</h4>
+                                <p class="flashcard-example">The store's location is very convenient for me.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h3 class="flashcard-word">Postpone</h3>
+                                <p class="flashcard-instruction">مرّر المؤشر لمعرفة المعنى</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h4 class="flashcard-meaning">يؤجل</h4>
+                                <p class="flashcard-example">We had to postpone the meeting due to bad weather.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources -->
+    <section class="resource-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>موارد لتعلم المفردات</h2>
+            </div>
+            <p class="section-description">استكشف هذه الموارد لمساعدتك على تعلم المفردات الإنجليزية بطرق فعالة</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h3 class="resource-title">مواقع تعليمية</h3>
+                        <p class="resource-description">
+                            مواقع متخصصة لتعلم المفردات الإنجليزية مع تمارين تفاعلية ودروس منظمة حسب المستوى والموضوع.
+                        </p>
+                        <a href="#" class="resource-link">استكشف المواقع التعليمية</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3 class="resource-title">تطبيقات الهاتف</h3>
+                        <p class="resource-description">
+                            تطبيقات محمولة لتعلم المفردات في أي وقت ومكان، مع ميزات مثل البطاقات التعليمية والألعاب اللغوية.
+                        </p>
+                        <a href="#" class="resource-link">اكتشف التطبيقات المفيدة</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="bi bi-file-earmark-pdf"></i>
+                        </div>
+                        <h3 class="resource-title">ملفات قابلة للتنزيل</h3>
+                        <p class="resource-description">
+                            مواد PDF تحتوي على قوائم المفردات الأساسية والمتقدمة، مع تمارين وأنشطة للتطبيق العملي.
+                        </p>
+                        <a href="#" class="resource-link">تنزيل الملفات التعليمية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Education Consulting Services</h4>
+                    <p>نقدم خدمات استشارية تعليمية متكاملة للطلاب الراغبين في الدراسة في الخارج ونوفر مصادر تعليمية مجانية لمساعدتك في تعلم اللغة الإنجليزية.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">روابط مهمة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a></li>
+                        <li><a href="الأيلتس.html">الأيلتس</a></li>
+                        <li><a href="BSc.html">برامج البكالوريوس</a></li>
+                        <li><a href="MSc.html">برامج الماجستير</a></li>
+                        <li><a href="PhD.html">برامج الدكتوراه</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">معلومات الاتصال</h4>
+                    <p><i class="bi bi-geo-alt me-2"></i> Coventry, United Kingdom</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@education-c-s.com</p>
+                    <p><i class="bi bi-phone me-2"></i> 447914792205+</p>
+                    <p><i class="bi bi-globe me-2"></i> www.education-c-s.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Education Consulting Services. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
