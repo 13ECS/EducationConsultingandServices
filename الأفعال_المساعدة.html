@@ -1,64 +1,1190 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فيديو يوتيوب</title>
-     <style>
+    <title>الأفعال المساعدة في اللغة الإنجليزية | Education Consulting Services</title>
+    <link rel="icon" href="ESCL.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e4d9e;
+            --secondary-color: #f0ad4e;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
-        }
-        h1 {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f5f8fa;
             color: #333;
+            line-height: 1.6;
         }
-        .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        /* Header & Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.7rem 1rem;
         }
-        .logo {
+        
+        .navbar-brand img {
             height: 50px;
+            transition: transform 0.3s ease;
         }
-        nav a {
-            text-decoration: none;
-            color: #007bff;
-            padding: 10px 20px;
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: all 0.3s ease;
-            position: relative;
-            display: inline-block;
+            margin: 0 5px;
         }
-        nav a:hover {
-            background-color: #007bff;
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+        
+        .btn-home {
+            background-color: var(--success-color);
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
-        .back-home {
-            background-color: #28a745;
-            color: white;
-        }
-        .back-home:hover {
+        
+        .btn-home:hover {
             background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Main Content */
+        .content-wrapper {
+            padding: 2rem 0;
+        }
+        
+        .lesson-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-right: 4px solid var(--secondary-color);
+            padding-right: 15px;
+        }
+        
+        .lesson-subtitle {
+            color: var(--gray-color);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 2rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .content-card h3 i {
+            margin-left: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .content-card p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        /* Tabs */
+        .nav-tabs {
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .nav-tabs .nav-link {
+            border: none;
+            color: var(--gray-color);
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-tabs .nav-link:hover {
+            background-color: rgba(30, 77, 158, 0.1);
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+        }
+        
+        /* Verb Cards */
+        .verb-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .verb-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .verb-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .verb-card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .verb-card-body {
+            padding: 1.5rem;
+        }
+        
+        .verb-example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-right: 3px solid var(--secondary-color);
+        }
+        
+        /* Examples and Exercises */
+        .example {
+            background-color: rgba(30, 77, 158, 0.05);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-right: 3px solid var(--secondary-color);
+        }
+        
+        .example-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background-color: rgba(240, 173, 78, 0.2);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        /* Exercise section */
+        .exercise {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .exercise-question {
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .exercise-options {
+            margin-bottom: 15px;
+        }
+        
+        .exercise-options label {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .exercise-options label:hover {
+            background-color: #e9ecef;
+        }
+        
+        .exercise-options input[type="radio"] {
+            margin-left: 10px;
+        }
+        
+        /* Related content */
+        .related-content {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .related-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .related-video {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .related-video:hover {
+            transform: translateY(-5px);
+        }
+        
+        .related-video img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .related-video h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        /* Resources */
+        .resource-link {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        
+        .resource-link:hover {
+            background-color: rgba(30, 77, 158, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        .resource-link i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Notes & Tips */
+        .note-box {
+            background-color: rgba(23, 162, 184, 0.1);
+            border-right: 4px solid var(--info-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .note-box .note-title {
+            display: flex;
+            align-items: center;
+            color: var(--info-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .note-box .note-title i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .tip-box {
+            background-color: rgba(40, 167, 69, 0.1);
+            border-right: 4px solid var(--success-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .tip-box .tip-title {
+            display: flex;
+            align-items: center;
+            color: var(--success-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .tip-box .tip-title i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 193, 7, 0.1);
+            border-right: 4px solid var(--warning-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .warning-box .warning-title {
+            display: flex;
+            align-items: center;
+            color: var(--warning-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box .warning-title i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3580 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-title {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-right: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-left: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            width: 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                background-color: var(--primary-color);
+                border-radius: 10px;
+                padding: 15px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .verb-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .related-content {
+                margin-top: 2rem;
+            }
+            
+            .lesson-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .scroll-top.show {
+            opacity: 1;
+        }
+        
+        .scroll-top:hover {
+            background-color: #0d3580;
+            transform: translateY(-3px);
+        }
+        
+        /* Print styles */
+        @media print {
+            .navbar, .related-content, .footer, .scroll-top, .nav-tabs, .video-container {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                background-color: white;
+            }
+            
+            .content-card, .verb-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            
+            .note-box, .tip-box, .warning-box {
+                border: 1px solid #ddd;
+                background-color: white !important;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="topbar">
-        <img src="ESCL.png" alt="Logo" class="logo" />
-        <nav>
-             <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
-            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
-        </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="ESCL.png" alt="Education Consulting Services Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="الأيلتس.html">الأيلتس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BSc.html">بكالوريوس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MSc.html">ماجستير</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PhD.html">دكتوراه</a>
+                    </li>
+                </ul>
+                <a href="index.html" class="btn btn-home">
+                    <i class="bi bi-house-fill"></i> العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress bar -->
+    <div class="container mt-4">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
     </div>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/36wG9pSYu7Q?si=JQg4kJhY8ut4TP0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h2>الأفعال المساعدة: كل ما تحتاج لمعرفته حول CAN، COULD، MAY، MIGHT، MUST، SHOULD، SHALL، WILL و WOULD</h2>
+
+    <!-- Main Content -->
+    <div class="container content-wrapper">
+        <div class="row">
+            <!-- Left Content Column -->
+            <div class="col-lg-8">
+                <h1 class="lesson-title">الأفعال المساعدة في اللغة الإنجليزية</h1>
+                <p class="lesson-subtitle">كل ما تحتاج لمعرفته حول CAN، COULD، MAY، MIGHT، MUST، SHOULD، SHALL، WILL و WOULD</p>
+                
+                <!-- Video Container -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/36wG9pSYu7Q?si=JQg4kJhY8ut4TP0c" title="الأفعال المساعدة في اللغة الإنجليزية" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Introduction -->
+                <div class="content-card">
+                    <h3><i class="bi bi-info-circle"></i> مقدمة عن الأفعال المساعدة</h3>
+                    <p>الأفعال المساعدة (Modal Verbs) هي أفعال مهمة في اللغة الإنجليزية تضاف إلى الفعل الرئيسي لتعبر عن معانٍ مختلفة مثل القدرة، الإمكانية، الاحتمال، الإلزام، النصيحة والعرض. تعتبر إتقان هذه الأفعال خطوة أساسية في تعلم اللغة الإنجليزية.</p>
+                    <p>الأفعال المساعدة الرئيسية التي سنتعلمها في هذا الدرس هي:</p>
+                    <ul>
+                        <li><strong>Can / Could</strong> - للتعبير عن القدرة والإمكانية</li>
+                        <li><strong>May / Might</strong> - للتعبير عن الإذن والاحتمال</li>
+                        <li><strong>Must / Should</strong> - للتعبير عن الضرورة والنصيحة</li>
+                        <li><strong>Will / Would</strong> - للتعبير عن المستقبل والعرض</li>
+                        <li><strong>Shall</strong> - للتعبير عن العرض والاقتراح</li>
+                    </ul>
+                </div>
+                
+                <!-- Tabs for Main Sections -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="verbs-tab" data-bs-toggle="tab" data-bs-target="#verbs" type="button" role="tab" aria-selected="true">الأفعال المساعدة</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="examples-tab" data-bs-toggle="tab" data-bs-target="#examples" type="button" role="tab" aria-selected="false">أمثلة واستخدامات</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="exercises-tab" data-bs-toggle="tab" data-bs-target="#exercises" type="button" role="tab" aria-selected="false">تمارين</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" role="tab" aria-selected="false">موارد إضافية</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="myTabContent">
+                    <!-- Verbs Section -->
+                    <div class="tab-pane fade show active" id="verbs" role="tabpanel" aria-labelledby="verbs-tab">
+                        <div class="verb-cards">
+                            <!-- Can / Could -->
+                            <div class="verb-card">
+                                <div class="verb-card-header">
+                                    Can / Could
+                                </div>
+                                <div class="verb-card-body">
+                                    <p><strong>المعنى:</strong> القدرة، الإمكانية، الإذن</p>
+                                    <p><strong>الاستخدام:</strong> يستخدم Can للتعبير عن القدرة في الزمن الحاضر، بينما Could للتعبير عن القدرة في الماضي أو لطلب شيء بطريقة مهذبة.</p>
+                                    <div class="verb-example">
+                                        <p>I <span class="highlight">can</span> speak three languages. (القدرة)</p>
+                                        <p>When I was young, I <span class="highlight">could</span> run very fast. (القدرة في الماضي)</p>
+                                        <p><span class="highlight">Can</span> I open the window? (طلب إذن)</p>
+                                        <p><span class="highlight">Could</span> you help me, please? (طلب مهذب)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- May / Might -->
+                            <div class="verb-card">
+                                <div class="verb-card-header">
+                                    May / Might
+                                </div>
+                                <div class="verb-card-body">
+                                    <p><strong>المعنى:</strong> الإذن، الاحتمالية</p>
+                                    <p><strong>الاستخدام:</strong> يستخدم May للحصول على إذن بطريقة رسمية، أو للتعبير عن احتمال حدوث شيء. يستخدم Might للتعبير عن احتمال أقل.</p>
+                                    <div class="verb-example">
+                                        <p><span class="highlight">May</span> I come in? (طلب إذن رسمي)</p>
+                                        <p>It <span class="highlight">may</span> rain tomorrow. (احتمال)</p>
+                                        <p>She <span class="highlight">might</span> be late. (احتمال أقل)</p>
+                                        <p>I <span class="highlight">might</span> go to the beach this weekend. (احتمال غير مؤكد)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Must / Should -->
+                            <div class="verb-card">
+                                <div class="verb-card-header">
+                                    Must / Should
+                                </div>
+                                <div class="verb-card-body">
+                                    <p><strong>المعنى:</strong> الضرورة، الإلزام، النصيحة</p>
+                                    <p><strong>الاستخدام:</strong> يستخدم Must للتعبير عن الضرورة والإلزام، بينما يستخدم Should للتعبير عن النصيحة.</p>
+                                    <div class="verb-example">
+                                        <p>You <span class="highlight">must</span> stop at a red light. (إلزام)</p>
+                                        <p>I <span class="highlight">must</span> finish this report today. (ضرورة)</p>
+                                        <p>You <span class="highlight">should</span> eat more vegetables. (نصيحة)</p>
+                                        <p>She <span class="highlight">should</span> apply for that job. (اقتراح)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Will / Would -->
+                            <div class="verb-card">
+                                <div class="verb-card-header">
+                                    Will / Would
+                                </div>
+                                <div class="verb-card-body">
+                                    <p><strong>المعنى:</strong> المستقبل، العرض، الرغبة، العادة في الماضي</p>
+                                    <p><strong>الاستخدام:</strong> يستخدم Will للتعبير عن المستقبل أو للوعد، بينما يستخدم Would للتعبير عن العادة في الماضي أو لطلب شيء بطريقة مهذبة.</p>
+                                    <div class="verb-example">
+                                        <p>I <span class="highlight">will</span> call you tomorrow. (وعد)</p>
+                                        <p>She <span class="highlight">will</span> be 30 next month. (مستقبل)</p>
+                                        <p>When I was a child, I <span class="highlight">would</span> visit my grandparents every weekend. (عادة في الماضي)</p>
+                                        <p><span class="highlight">Would</span> you like some tea? (عرض مهذب)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Shall -->
+                            <div class="verb-card">
+                                <div class="verb-card-header">
+                                    Shall
+                                </div>
+                                <div class="verb-card-body">
+                                    <p><strong>المعنى:</strong> عرض، اقتراح، ترتيب مستقبلي</p>
+                                    <p><strong>الاستخدام:</strong> يستخدم عادة مع ضمائر المتكلم (I, We) للتعبير عن العرض أو الاقتراح أو السؤال عن رأي.</p>
+                                    <div class="verb-example">
+                                        <p><span class="highlight">Shall</span> we go to the cinema tonight? (اقتراح)</p>
+                                        <p><span class="highlight">Shall</span> I open the window for you? (عرض المساعدة)</p>
+                                        <p>What <span class="highlight">shall</span> we do this evening? (طلب اقتراح)</p>
+                                        <p>We <span class="highlight">shall</span> overcome these difficulties. (تعبير رسمي عن المستقبل)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Note Box -->
+                        <div class="note-box">
+                            <div class="note-title">
+                                <i class="bi bi-info-circle"></i> ملاحظة هامة
+                            </div>
+                            <p>الأفعال المساعدة في اللغة الإنجليزية لها خصائص مشتركة:</p>
+                            <ul>
+                                <li>لا تتغير مع تغير الضمائر (I, you, he, she, it, we, they).</li>
+                                <li>لا تحتاج إلى فعل مساعد في السؤال أو النفي.</li>
+                                <li>يتبعها الفعل الرئيسي في صيغته الأساسية دون إضافة to.</li>
+                                <li>تأتي قبل الفعل الرئيسي مباشرة، وتشكل معه معنى متكاملاً.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Examples Section -->
+                    <div class="tab-pane fade" id="examples" role="tabpanel" aria-labelledby="examples-tab">
+                        <div class="content-card">
+                            <h3><i class="bi bi-chat-quote"></i> أمثلة في سياقات مختلفة</h3>
+                            
+                            <h4 class="mt-4">1. استخدام الأفعال المساعدة للتعبير عن القدرة</h4>
+                            <div class="example">
+                                <p class="example-title">الحاضر:</p>
+                                <p>She <span class="highlight">can</span> play the piano very well.</p>
+                                <p>هي تستطيع العزف على البيانو بشكل جيد.</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">الماضي:</p>
+                                <p>When I was younger, I <span class="highlight">could</span> run 10 kilometers without getting tired.</p>
+                                <p>عندما كنت أصغر، كنت أستطيع الجري لمسافة 10 كيلومترات دون أن أتعب.</p>
+                            </div>
+                            
+                            <h4 class="mt-4">2. استخدام الأفعال المساعدة للتعبير عن الاحتمال</h4>
+                            <div class="example">
+                                <p class="example-title">احتمال كبير:</p>
+                                <p>It <span class="highlight">must</span> be raining; everyone is coming in with wet umbrellas.</p>
+                                <p>لابد أنها تمطر؛ الجميع يدخلون بمظلات مبللة.</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">احتمال متوسط:</p>
+                                <p>He <span class="highlight">may</span> come to the party tonight.</p>
+                                <p>قد يأتي إلى الحفلة الليلة.</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">احتمال ضعيف:</p>
+                                <p>She <span class="highlight">might</span> change her mind, but I doubt it.</p>
+                                <p>قد تغير رأيها، لكنني أشك في ذلك.</p>
+                            </div>
+                            
+                            <h4 class="mt-4">3. استخدام الأفعال المساعدة للتعبير عن الإلزام والنصيحة</h4>
+                            <div class="example">
+                                <p class="example-title">إلزام:</p>
+                                <p>Students <span class="highlight">must</span> wear uniforms at this school.</p>
+                                <p>يجب على الطلاب ارتداء الزي المدرسي في هذه المدرسة.</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">نصيحة:</p>
+                                <p>You <span class="highlight">should</span> see a doctor about that cough.</p>
+                                <p>يجب أن تراجع الطبيب بخصوص هذا السعال.</p>
+                            </div>
+                            
+                            <h4 class="mt-4">4. استخدام الأفعال المساعدة للتعبير عن العرض والطلب</h4>
+                            <div class="example">
+                                <p class="example-title">عرض:</p>
+                                <p><span class="highlight">Shall</span> I help you with your bags?</p>
+                                <p>هل أساعدك في حمل حقائبك؟</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">طلب مهذب:</p>
+                                <p><span class="highlight">Could</span> you please open the window?</p>
+                                <p>هل يمكنك من فضلك فتح النافذة؟</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-title">اقتراح:</p>
+                                <p><span class="highlight">Shall</span> we go for a walk?</p>
+                                <p>هل نذهب للتنزه؟</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Common Mistakes -->
+                        <div class="content-card">
+                            <h3><i class="bi bi-exclamation-triangle"></i> أخطاء شائعة في استخدام الأفعال المساعدة</h3>
+                            
+                            <div class="warning-box">
+                                <div class="warning-title">
+                                    <i class="bi bi-exclamation-circle"></i> خطأ شائع #1: إضافة "to" بعد الفعل المساعد
+                                </div>
+                                <p><strong>خطأ:</strong> I must <span class="text-danger">to</span> go now.</p>
+                                <p><strong>صحيح:</strong> I must go now.</p>
+                                <p>الأفعال المساعدة يتبعها الفعل الرئيسي مباشرة دون "to".</p>
+                            </div>
+                            
+                            <div class="warning-box">
+                                <div class="warning-title">
+                                    <i class="bi bi-exclamation-circle"></i> خطأ شائع #2: تغيير الفعل المساعد مع الضمائر المختلفة
+                                </div>
+                                <p><strong>خطأ:</strong> He <span class="text-danger">cans</span> swim.</p>
+                                <p><strong>صحيح:</strong> He can swim.</p>
+                                <p>الأفعال المساعدة لا تتغير مع تغير الضمائر.</p>
+                            </div>
+                            
+                            <div class="warning-box">
+                                <div class="warning-title">
+                                    <i class="bi bi-exclamation-circle"></i> خطأ شائع #3: استخدام "do" مع الأفعال المساعدة في النفي أو السؤال
+                                </div>
+                                <p><strong>خطأ:</strong> <span class="text-danger">Do</span> you can speak English?</p>
+                                <p><strong>صحيح:</strong> Can you speak English?</p>
+                                <p>الأفعال المساعدة لا تحتاج إلى فعل مساعد آخر في السؤال أو النفي.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Tip Box -->
+                        <div class="tip-box">
+                            <div class="tip-title">
+                                <i class="bi bi-lightbulb"></i> نصيحة لتحسين استخدام الأفعال المساعدة
+                            </div>
+                            <p>أفضل طريقة لإتقان الأفعال المساعدة هي ممارستها في سياقات حقيقية:</p>
+                            <ul>
+                                <li>استمع إلى محادثات باللغة الإنجليزية وانتبه لاستخدام الأفعال المساعدة.</li>
+                                <li>حاول استخدام أفعال مساعدة مختلفة في جملك اليومية.</li>
+                                <li>تدرب على تحويل الجمل من الإيجابية إلى النفي والاستفهام باستخدام الأفعال المساعدة.</li>
+                                <li>لاحظ الفروق الدقيقة في المعنى بين الأفعال المساعدة المختلفة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Exercises Section -->
+                    <div class="tab-pane fade" id="exercises" role="tabpanel" aria-labelledby="exercises-tab">
+                        <div class="content-card">
+                            <h3><i class="bi bi-pencil-square"></i> تمارين تطبيقية على الأفعال المساعدة</h3>
+                            <p>اختبر معرفتك بالأفعال المساعدة من خلال حل التمارين التالية:</p>
+                            
+                            <div class="exercise">
+                                <p class="exercise-question">1. أي من الأفعال المساعدة التالية يناسب الفراغ؟<br>She ________ be at home now, I can see the lights are on.</p>
+                                <div class="exercise-options">
+                                    <label><input type="radio" name="q1" value="a"> A) might</label>
+                                    <label><input type="radio" name="q1" value="b"> B) would</label>
+                                    <label><input type="radio" name="q1" value="c"> C) must</label>
+                                    <label><input type="radio" name="q1" value="d"> D) should</label>
+                                </div>
+                                <div class="answer-feedback" id="feedback1" style="display:none;"></div>
+                            </div>
+                            
+                            <div class="exercise">
+                                <p class="exercise-question">2. أكمل الجملة بالفعل المساعد المناسب للتعبير عن النصيحة:<br>You ________ drink more water during hot weather.</p>
+                                <div class="exercise-options">
+                                    <label><input type="radio" name="q2" value="a"> A) must</label>
+                                    <label><input type="radio" name="q2" value="b"> B) should</label>
+                                    <label><input type="radio" name="q2" value="c"> C) could</label>
+                                    <label><input type="radio" name="q2" value="d"> D) will</label>
+                                </div>
+                                <div class="answer-feedback" id="feedback2" style="display:none;"></div>
+                            </div>
+                            
+                            <div class="exercise">
+                                <p class="exercise-question">3. اختر الفعل المساعد المناسب للتعبير عن القدرة في الماضي:<br>When I was a child, I ________ swim across the lake.</p>
+                                <div class="exercise-options">
+                                    <label><input type="radio" name="q3" value="a"> A) can</label>
+                                    <label><input type="radio" name="q3" value="b"> B) may</label>
+                                    <label><input type="radio" name="q3" value="c"> C) could</label>
+                                    <label><input type="radio" name="q3" value="d"> D) will</label>
+                                </div>
+                                <div class="answer-feedback" id="feedback3" style="display:none;"></div>
+                            </div>
+                            
+                            <div class="exercise">
+                                <p class="exercise-question">4. أي فعل مساعد يناسب الطلب المهذب؟<br>________ you help me with this problem, please?</p>
+                                <div class="exercise-options">
+                                    <label><input type="radio" name="q4" value="a"> A) Must</label>
+                                    <label><input type="radio" name="q4" value="b"> B) Shall</label>
+                                    <label><input type="radio" name="q4" value="c"> C) Will</label>
+                                    <label><input type="radio" name="q4" value="d"> D) Could</label>
+                                </div>
+                                <div class="answer-feedback" id="feedback4" style="display:none;"></div>
+                            </div>
+                            
+                            <div class="exercise">
+                                <p class="exercise-question">5. أكمل الجملة بالفعل المساعد المناسب للتعبير عن احتمال ضعيف:<br>We ________ go to the beach this weekend, but it depends on the weather.</p>
+                                <div class="exercise-options">
+                                    <label><input type="radio" name="q5" value="a"> A) will</label>
+                                    <label><input type="radio" name="q5" value="b"> B) would</label>
+                                    <label><input type="radio" name="q5" value="c"> C) might</label>
+                                    <label><input type="radio" name="q5" value="d"> D) can</label>
+                                </div>
+                                <div class="answer-feedback" id="feedback5" style="display:none;"></div>
+                            </div>
+                            
+                            <button class="btn btn-primary mt-4" id="checkAnswers">تحقق من إجاباتك</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources Section -->
+                    <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+                        <div class="content-card">
+                            <h3><i class="bi bi-file-earmark-text"></i> موارد إضافية لتعلم الأفعال المساعدة</h3>
+                            
+                            <h4 class="mt-4">مواقع مفيدة</h4>
+                            <a href="https://learnenglish.britishcouncil.org/english-grammar-reference/modal-verbs" target="_blank" class="resource-link">
+                                <i class="bi bi-link-45deg"></i> British Council: Modal Verbs
+                            </a>
+                            <a href="https://www.grammarly.com/blog/modal-verbs/" target="_blank" class="resource-link">
+                                <i class="bi bi-link-45deg"></i> Grammarly: Modal Verbs Guide
+                            </a>
+                            <a href="https://www.perfect-english-grammar.com/modal-verbs.html" target="_blank" class="resource-link">
+                                <i class="bi bi-link-45deg"></i> Perfect English Grammar: Modal Verbs
+                            </a>
+                            
+                            <h4 class="mt-4">كتب ومراجع</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">English Grammar in Use</h5>
+                                            <p class="card-text">كتاب من تأليف Raymond Murphy، يحتوي على شرح مفصل وتمارين على الأفعال المساعدة وقواعد اللغة الإنجليزية.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Practical English Usage</h5>
+                                            <p class="card-text">كتاب من تأليف Michael Swan، مرجع شامل لقواعد اللغة الإنجليزية مع شرح مفصل للأفعال المساعدة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mt-4">تطبيقات مفيدة</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Duolingo</h5>
+                                            <p class="card-text">تطبيق مجاني لتعلم اللغات يحتوي على تمارين متنوعة على الأفعال المساعدة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Babbel</h5>
+                                            <p class="card-text">تطبيق لتعلم اللغة الإنجليزية مع دروس مخصصة للقواعد والأفعال المساعدة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">English Grammar in Use</h5>
+                                            <p class="card-text">تطبيق يحتوي على شرح وتمارين من كتاب Raymond Murphy الشهير.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mt-4">ملفات قابلة للتنزيل</h4>
+                            <a href="#" class="resource-link">
+                                <i class="bi bi-file-earmark-pdf"></i> ملخص الأفعال المساعدة (PDF)
+                            </a>
+                            <a href="#" class="resource-link">
+                                <i class="bi bi-file-earmark-text"></i> تمارين إضافية على الأفعال المساعدة (PDF)
+                            </a>
+                            <a href="#" class="resource-link">
+                                <i class="bi bi-file-earmark-word"></i> جدول ملخص للأفعال المساعدة وحالاتها (DOCX)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Sidebar Column -->
+            <div class="col-lg-4">
+                <div class="related-content">
+                    <h3 class="related-title">فيديوهات ذات صلة</h3>
+                    
+                    <div class="related-video">
+                        <img src="https://img.youtube.com/vi/raZS60oqn3s/maxresdefault.jpg" alt="English Tenses" class="img-fluid">
+                        <h5>أزمنة اللغة الإنجليزية - شرح مفصل</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">مشاهدة الفيديو</a>
+                    </div>
+                    
+                    <div class="related-video">
+                        <img src="https://img.youtube.com/vi/t4yWEt0OSpg/maxresdefault.jpg" alt="English Conditionals" class="img-fluid">
+                        <h5>الجمل الشرطية في اللغة الإنجليزية</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">مشاهدة الفيديو</a>
+                    </div>
+                    
+                    <div class="related-video">
+                        <img src="https://img.youtube.com/vi/Kx35Jwjoofk/maxresdefault.jpg" alt="Passive Voice" class="img-fluid">
+                        <h5>المبني للمجهول في اللغة الإنجليزية</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">مشاهدة الفيديو</a>
+                    </div>
+                </div>
+                
+                <div class="related-content">
+                    <h3 class="related-title">ملاحظات هامة</h3>
+                    
+                    <div class="note-box mb-3">
+                        <div class="note-title">
+                            <i class="bi bi-lightbulb"></i> نصيحة للدراسة
+                        </div>
+                        <p>حاول ممارسة استخدام الأفعال المساعدة في محادثات يومية. كلما استخدمت هذه الأفعال أكثر، كلما أصبحت أكثر طبيعية بالنسبة لك.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">
+                            <i class="bi bi-check-circle"></i> تلخيص سريع
+                        </div>
+                        <ul>
+                            <li><strong>Can/Could</strong> - القدرة والإمكانية</li>
+                            <li><strong>May/Might</strong> - الإذن والاحتمال</li>
+                            <li><strong>Must/Should</strong> - الضرورة والنصيحة</li>
+                            <li><strong>Will/Would</strong> - المستقبل والعرض</li>
+                            <li><strong>Shall</strong> - العرض والاقتراح</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Education Consulting Services</h4>
+                    <p>نحن نقدم خدمات استشارية تعليمية متكاملة للطلاب الراغبين في الدراسة في الخارج ونوفر مصادر تعليمية مجانية لمساعدتك في تعلم اللغة الإنجليزية.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a></li>
+                        <li><a href="الأيلتس.html">الأيلتس</a></li>
+                        <li><a href="BSc.html">بكالوريوس</a></li>
+                        <li><a href="MSc.html">ماجستير</a></li>
+                        <li><a href="PhD.html">دكتوراه</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">معلومات الاتصال</h4>
+                    <p><i class="bi bi-geo-alt me-2"></i> Coventry, United Kingdom</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@education-c-s.com</p>
+                    <p><i class="bi bi-phone me-2"></i> 447914792205+</p>
+                    <p><i class="bi bi-globe me-2"></i> www.education-c-s.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Education Consulting Services. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Progress bar
+            const progressBar = document.getElementById('progressBar');
+            
+            function updateProgressBar() {
+                const totalHeight = document.body.scrollHeight - window.innerHeight;
+                const progress = (window.pageYOffset / totalHeight) * 100;
+                progressBar.style.width = progress + '%';
+            }
+            
+            window.addEventListener('scroll', updateProgressBar);
+            updateProgressBar();
+            
+            // Scroll to top button
+            const scrollTopButton = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.classList.add('show');
+                } else {
+                    scrollTopButton.classList.remove('show');
+                }
+            });
+            
+            scrollTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Exercise check answers
+            const checkAnswersButton = document.getElementById('checkAnswers');
+            
+            checkAnswersButton.addEventListener('click', function() {
+                const correctAnswers = {
+                    q1: 'c', // must
+                    q2: 'b', // should
+                    q3: 'c', // could
+                    q4: 'd', // could
+                    q5: 'c'  // might
+                };
+                
+                let score = 0;
+                
+                // Check each question
+                for (let i = 1; i <= 5; i++) {
+                    const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                    const feedbackElement = document.getElementById(`feedback${i}`);
+                    
+                    feedbackElement.style.display = 'block';
+                    
+                    if (!selectedAnswer) {
+                        feedbackElement.innerHTML = 'لم تختر إجابة بعد.';
+                        feedbackElement.className = 'alert alert-warning mt-2';
+                    } else if (selectedAnswer.value === correctAnswers[`q${i}`]) {
+                        feedbackElement.innerHTML = 'إجابة صحيحة! 👍';
+                        feedbackElement.className = 'alert alert-success mt-2';
+                        score++;
+                    } else {
+                        feedbackElement.innerHTML = 'إجابة خاطئة. حاول مرة أخرى.';
+                        feedbackElement.className = 'alert alert-danger mt-2';
+                    }
+                }
+                
+                // Show final score alert
+                const scoreAlert = document.createElement('div');
+                scoreAlert.className = score >= 4 ? 'alert alert-success mt-4' : (score >= 2 ? 'alert alert-warning mt-4' : 'alert alert-danger mt-4');
+                scoreAlert.innerHTML = `<strong>النتيجة النهائية:</strong> ${score} من 5 إجابات صحيحة.`;
+                
+                // Insert after the button
+                checkAnswersButton.insertAdjacentElement('afterend', scoreAlert);
+                
+                // Scroll to score
+                scoreAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
 </body>
 </html>
