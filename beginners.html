@@ -1,94 +1,1815 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> اللغة الإنجليزية للمبتدئين </title>
+    <title>اللغة الإنجليزية للمبتدئين - EC&S</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #002145;
+            --accent-color: #C8102E;
+            --gold-color: #D4AF37;
+            --light-color: #f8f9fa;
+            --dark-color: #1a2a36;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        h1 {
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f5f7fa;
+            line-height: 1.6;
             color: #333;
         }
-        .topbar {
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        header {
+            background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
         .logo {
-            height: 50px;
+            height: 60px;
+            transition: var(--transition);
         }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        
         nav a {
             text-decoration: none;
-            color: #007bff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            position: relative;
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
             display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
         nav a:hover {
-            background-color: #007bff;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
         }
+        
         .back-home {
-            background-color: #28a745;
+            background-color: var(--accent-color);
             color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(200, 16, 46, 0.2);
         }
+        
         .back-home:hover {
-            background-color: #218838;
+            background-color: #a50d24;
+            box-shadow: 0 6px 12px rgba(200, 16, 46, 0.3);
         }
+        
+        /* Hero section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop') no-repeat center;
+            background-size: cover;
+            height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 33, 69, 0.8));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 900;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+        }
+        
+        /* Main content section */
+        .main-content {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        /* Info boxes section */
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .info-box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+        
+        .info-box i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .info-box h3 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .info-box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .info-box .learn-more {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            margin-top: auto;
+        }
+        
+        .info-box .learn-more:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Video section */
+        .videos-section {
+            margin-bottom: 50px;
+        }
+        
         .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-card .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-card .video-info {
+            padding: 20px;
+        }
+        
+        .video-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .video-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .video-card .video-duration {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        
+        /* Vocabulary section */
+        .vocabulary-section {
+            margin-bottom: 50px;
+        }
+        
+        .vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .vocabulary-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .vocabulary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .vocabulary-card .vocabulary-image {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vocabulary-card .vocabulary-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .vocabulary-card:hover .vocabulary-image img {
+            transform: scale(1.1);
+        }
+        
+        .vocabulary-card .word-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.7), transparent);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .vocabulary-card .word-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .vocabulary-card .word-overlay p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .vocabulary-card .vocabulary-details {
+            padding: 15px;
+        }
+        
+        .vocabulary-card .vocabulary-details .pronunciation {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+        
+        .vocabulary-card .vocabulary-details .meaning {
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .vocabulary-card .vocabulary-details .example {
+            color: #666;
+            font-style: italic;
+            padding-right: 10px;
+            border-right: 3px solid var(--accent-color);
+        }
+        
+        /* Funny pictures section */
+        .funny-pictures-section {
+            margin-bottom: 50px;
+        }
+        
+        .funny-pictures-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .funny-picture-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .funny-picture-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .funny-picture-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .funny-picture-card .funny-content {
+            padding: 15px;
+        }
+        
+        .funny-picture-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .funny-picture-card p {
+            color: #666;
+        }
+        
+        /* Exercises section */
+        .exercises-section {
+            margin-bottom: 50px;
+        }
+        
+        .exercise-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .exercise {
+            margin-bottom: 40px;
+        }
+        
+        .exercise:last-child {
+            margin-bottom: 0;
+        }
+        
+        .exercise-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .matching-game {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .matching-item {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .matching-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .matching-item.selected {
+            background-color: rgba(0, 51, 102, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .fill-blanks-question {
+            margin-bottom: 20px;
+        }
+        
+        .fill-blanks-question:last-child {
+            margin-bottom: 0;
+        }
+        
+        .fill-blanks-question p {
+            margin-bottom: 10px;
+        }
+        
+        .fill-blanks-options {
             display: flex;
             flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .fill-blanks-option {
+            background-color: #f0f4f8;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .fill-blanks-option:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .quiz-question {
+            margin-bottom: 25px;
+        }
+        
+        .quiz-question:last-child {
+            margin-bottom: 0;
+        }
+        
+        .quiz-question p {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .quiz-option {
+            padding: 10px 15px;
+            background-color: #f0f4f8;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .quiz-option:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .buttons-container {
+            display: flex;
             justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        
+        .button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: bold;
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+        
+        .check-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .check-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reset-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .reset-btn:hover {
+            background-color: #5a6268;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Learning path section */
+        .learning-path {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 50px;
+        }
+        
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+        }
+        
+        .step-container::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #e0e0e0;
+            z-index: -1;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 150px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .step-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Resources section */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .resource-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .resource-info {
+            padding: 20px;
+        }
+        
+        .resource-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .resource-info p {
+            color: #666;
+            margin-bottom: 15px;
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .resource-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ section */
+        .faq {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 50px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+        
+        .faq-answer {
+            color: #666;
+        }
+        
+        /* Footer styles */
+        footer {
+            background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li a i {
+            margin-left: 8px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
             margin-top: 20px;
         }
-        .video {
-            margin: 10px;
-            width: 45%;
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
         }
-        iframe {
-            width: 100%;
-            height: auto;
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .step-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .step-container::before {
+                display: none;
+            }
+            
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                height: 250px;
+            }
+            
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .info-boxes, .resources {
+                grid-template-columns: 1fr;
+            }
+            
+            .faq, .learning-path {
+                padding: 20px;
+            }
+            
+            .vocabulary-container,
+            .funny-pictures-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-   <div class="topbar">
-        <img src="ESCL.png" alt="Logo" class="logo" />
-        <nav>
-             <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
-            <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
-        </nav>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <!-- EC&S Logo SVG -->
+                <svg width="120" height="60" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="logo">
+                    <!-- Shield background with subtle shadow -->
+                    <defs>
+                        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f8f8f8"/>
+                            <stop offset="100%" stop-color="#e0e0e0"/>
+                        </linearGradient>
+                        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#004c99"/>
+                            <stop offset="100%" stop-color="#002952"/>
+                        </linearGradient>
+                        <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#e61e25"/>
+                            <stop offset="100%" stop-color="#b30000"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <path d="M200,40 L320,85 C320,85 340,280 200,350 C60,280 80,85 80,85 L200,40" fill="url(#bgGradient)" stroke="#ccc" stroke-width="2" />
+                    
+                    <!-- Blue header strip across the top -->
+                    <path d="M200,40 L320,85 L80,85 L200,40" fill="url(#blueGradient)" />
+                    <text x="200" y="72" font-family="'Arial', sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">EDUCATION</text>
+                    
+                    <!-- Red bottom section -->
+                    <path d="M80,290 C80,290 200,350 320,290 L320,330 C320,330 200,380 80,330 L80,290" fill="url(#redGradient)" />
+                    
+                    <!-- Main logo section with graduation cap and book -->
+                    <g transform="translate(200, 190)">
+                        <!-- Open Book with glossy effect -->
+                        <g transform="scale(1.2)">
+                            <path d="M-70,-20 C-60,-30 -30,-35 0,-35 C30,-35 60,-30 70,-20 L70,15 C60,5 30,0 0,0 C-30,0 -60,5 -70,15 Z" fill="#ffffff" stroke="#003366" stroke-width="2"/>
+                            <path d="M-70,-20 C-60,-30 -30,-35 0,-35 C30,-35 60,-30 70,-20 L70,15 C60,5 30,0 0,0 C-30,0 -60,5 -70,15 Z" fill="rgba(255,255,255,0.3)" stroke="none"/>
+                            <path d="M0,-35 L0,0" stroke="#003366" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Graduation Cap with dimensional effect -->
+                        <g transform="translate(0, -80)">
+                            <rect x="-40" y="15" width="80" height="10" fill="#002952" stroke="#001a33" stroke-width="0.5"/>
+                            <polygon points="0,-15 -45,15 45,15" fill="#002952" stroke="#001a33" stroke-width="0.5"/>
+                            
+                            <!-- Tassel -->
+                            <path d="M15,15 C15,20 20,40 30,50" stroke="#C8102E" stroke-width="2.5" fill="none"/>
+                            <circle cx="30" cy="50" r="5" fill="#C8102E"/>
+                        </g>
+                    </g>
+                    
+                    <!-- EC&S text with 3D effect -->
+                    <g transform="translate(200, 260)">
+                        <text x="0" y="5" font-family="'Arial', sans-serif" font-size="42" font-weight="bold" fill="rgba(0,0,0,0.2)" text-anchor="middle">EC&S</text>
+                        <text x="0" y="2" font-family="'Arial', sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">EC&S</text>
+                    </g>
+                </svg>
+            </div>
+            
+            <nav>
+                <a href="تعلم_اللغة_الإنجليزية_مجانا.html">تعلم اللغة الإنجليزية مجانا</a>
+                <a href="#">كورسات متقدمة</a>
+                <a href="#">المحادثة</a>
+                <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>اللغة الإنجليزية للمبتدئين</h1>
+            <p>ابدأ رحلتك في تعلم اللغة الإنجليزية مع أفضل الموارد التعليمية المجانية</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Info Boxes Section -->
+        <section>
+            <h2 class="section-title">لماذا تعلم اللغة الإنجليزية؟</h2>
+            
+            <div class="info-boxes">
+                <div class="info-box">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>لغة عالمية</h3>
+                    <p>تُعد اللغة الإنجليزية اللغة الأكثر استخداماً في العالم، حيث يتحدث بها أكثر من 1.5 مليار شخص.</p>
+                    <a href="#" class="learn-more">اقرأ المزيد</a>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>فرص وظيفية أفضل</h3>
+                    <p>تفتح إجادة اللغة الإنجليزية أمامك أبواب فرص عمل أكثر وأفضل، محلياً وعالمياً.</p>
+                    <a href="#" class="learn-more">اقرأ المزيد</a>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-laptop"></i>
+                    <h3>الوصول للمعرفة</h3>
+                    <p>معظم المحتوى على الإنترنت متوفر باللغة الإنجليزية، مما يسمح لك بالوصول إلى كم هائل من المعلومات.</p>
+                    <a href="#" class="learn-more">اقرأ المزيد</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vocabulary Section with Pictures -->
+        <section class="vocabulary-section">
+            <h2 class="section-title">مفردات إنجليزية للمبتدئين</h2>
+            
+            <div class="vocabulary-container">
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1740&auto=format&fit=crop" alt="Apple">
+                        <div class="word-overlay">
+                            <h3>Apple</h3>
+                            <p>تفاحة</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/ˈæp.əl/</div>
+                        <div class="meaning">فاكهة مستديرة ذات قشرة حمراء أو خضراء أو صفراء.</div>
+                        <div class="example">Example: I eat an apple every day.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?q=80&w=1736&auto=format&fit=crop" alt="Cat">
+                        <div class="word-overlay">
+                            <h3>Cat</h3>
+                            <p>قطة</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/kæt/</div>
+                        <div class="meaning">حيوان أليف صغير له فرو ناعم ومخالب وشوارب.</div>
+                        <div class="example">Example: My cat likes to sleep on my bed.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1601599561213-832382fd07ba?q=80&w=1376&auto=format&fit=crop" alt="House">
+                        <div class="word-overlay">
+                            <h3>House</h3>
+                            <p>منزل</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/haʊs/</div>
+                        <div class="meaning">مبنى يعيش فيه الأشخاص، عادة ما يكون لعائلة واحدة.</div>
+                        <div class="example">Example: I live in a small house with a garden.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1602980075313-9cb30155b10c?q=80&w=1770&auto=format&fit=crop" alt="Car">
+                        <div class="word-overlay">
+                            <h3>Car</h3>
+                            <p>سيارة</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/kɑːr/</div>
+                        <div class="meaning">مركبة ذات أربع عجلات تعمل بالمحرك وتستخدم لنقل الأشخاص.</div>
+                        <div class="example">Example: I drive a blue car to work every day.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?q=80&w=1740&auto=format&fit=crop" alt="Book">
+                        <div class="word-overlay">
+                            <h3>Book</h3>
+                            <p>كتاب</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/bʊk/</div>
+                        <div class="meaning">مجموعة من الأوراق المطبوعة والمربوطة معًا في غلاف، تحتوي على معلومات أو قصص.</div>
+                        <div class="example">Example: I'm reading an interesting book about history.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1674574124340-c00cc2dae99c?q=80&w=1740&auto=format&fit=crop" alt="Water">
+                        <div class="word-overlay">
+                            <h3>Water</h3>
+                            <p>ماء</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/ˈwɔː.tər/</div>
+                        <div class="meaning">سائل شفاف بلا لون أو طعم، ضروري للحياة.</div>
+                        <div class="example">Example: You should drink 8 glasses of water every day.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1615559108290-b5ef568fc181?q=80&w=1748&auto=format&fit=crop" alt="Phone">
+                        <div class="word-overlay">
+                            <h3>Phone</h3>
+                            <p>هاتف</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/foʊn/</div>
+                        <div class="meaning">جهاز يستخدم للتحدث مع شخص في مكان آخر.</div>
+                        <div class="example">Example: I need to buy a new phone because my old one is broken.</div>
+                    </div>
+                </div>
+                
+                <div class="vocabulary-card">
+                    <div class="vocabulary-image">
+                        <img src="https://images.unsplash.com/photo-1530530824905-661c3c22bdfe?q=80&w=1748&auto=format&fit=crop" alt="Tree">
+                        <div class="word-overlay">
+                            <h3>Tree</h3>
+                            <p>شجرة</p>
+                        </div>
+                    </div>
+                    <div class="vocabulary-details">
+                        <div class="pronunciation">/triː/</div>
+                        <div class="meaning">نبات كبير له جذع وأغصان وأوراق.</div>
+                        <div class="example">Example: There are many trees in the park.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funny Pictures with Words Section -->
+        <section class="funny-pictures-section">
+            <h2 class="section-title">تعلم الإنجليزية بطريقة مرحة</h2>
+            
+            <div class="funny-pictures-container">
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1605979257913-1704eb7b6246?q=80&w=1740&auto=format&fit=crop" alt="Funny Dog">
+                    <div class="funny-content">
+                        <h3>I'm tired!</h3>
+                        <p>أنا متعب!</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1610841135048-b1fe724723e7?q=80&w=1716&auto=format&fit=crop" alt="Funny Cat">
+                    <div class="funny-content">
+                        <h3>What's happening?</h3>
+                        <p>ماذا يحدث؟</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1610893403690-647e96cf5ece?q=80&w=1740&auto=format&fit=crop" alt="Surprised Kid">
+                    <div class="funny-content">
+                        <h3>Oh, really?</h3>
+                        <p>أوه، حقًا؟</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=1741&auto=format&fit=crop" alt="Surprised Cat">
+                    <div class="funny-content">
+                        <h3>I can't believe it!</h3>
+                        <p>لا أستطيع تصديق ذلك!</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1607274134639-043342384438?q=80&w=1740&auto=format&fit=crop" alt="Laughing Kid">
+                    <div class="funny-content">
+                        <h3>That's funny!</h3>
+                        <p>هذا مضحك!</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?q=80&w=1325&auto=format&fit=crop" alt="Sleeping Fox">
+                    <div class="funny-content">
+                        <h3>Good night!</h3>
+                        <p>تصبح على خير!</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1635&auto=format&fit=crop" alt="Dog with Glasses">
+                    <div class="funny-content">
+                        <h3>I'm so smart!</h3>
+                        <p>أنا ذكي جدًا!</p>
+                    </div>
+                </div>
+                
+                <div class="funny-picture-card">
+                    <img src="https://images.unsplash.com/photo-1578952701098-2850be5422f9?q=80&w=1740&auto=format&fit=crop" alt="Bird">
+                    <div class="funny-content">
+                        <h3>Hello there!</h3>
+                        <p>مرحبًا!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercises Section -->
+        <section class="exercises-section">
+            <h2 class="section-title">تمارين تفاعلية</h2>
+            
+            <div class="exercise-container">
+                <!-- Exercise 1: Matching Game -->
+                <div class="exercise">
+                    <h3 class="exercise-title">تمرين 1: لعبة المطابقة (الكلمات مع معانيها)</h3>
+                    
+                    <div class="matching-game">
+                        <div class="matching-item" data-pair="1">Dog</div>
+                        <div class="matching-item" data-pair="1">كلب</div>
+                        <div class="matching-item" data-pair="2">School</div>
+                        <div class="matching-item" data-pair="2">مدرسة</div>
+                        <div class="matching-item" data-pair="3">Sun</div>
+                        <div class="matching-item" data-pair="3">شمس</div>
+                        <div class="matching-item" data-pair="4">Door</div>
+                        <div class="matching-item" data-pair="4">باب</div>
+                        <div class="matching-item" data-pair="5">Friend</div>
+                        <div class="matching-item" data-pair="5">صديق</div>
+                        <div class="matching-item" data-pair="6">Table</div>
+                        <div class="matching-item" data-pair="6">طاولة</div>
+                    </div>
+                </div>
+                
+                <!-- Exercise 2: Fill in the Blanks -->
+                <div class="exercise">
+                    <h3 class="exercise-title">تمرين 2: املأ الفراغات</h3>
+                    
+                    <div class="fill-blanks-question">
+                        <p>1. I _____ a student. (am/is/are)</p>
+                        <div class="fill-blanks-options">
+                            <div class="fill-blanks-option">am</div>
+                            <div class="fill-blanks-option">is</div>
+                            <div class="fill-blanks-option">are</div>
+                        </div>
+                    </div>
+                    
+                    <div class="fill-blanks-question">
+                        <p>2. She _____ TV every evening. (watch/watches/watching)</p>
+                        <div class="fill-blanks-options">
+                            <div class="fill-blanks-option">watch</div>
+                            <div class="fill-blanks-option">watches</div>
+                            <div class="fill-blanks-option">watching</div>
+                        </div>
+                    </div>
+                    
+                    <div class="fill-blanks-question">
+                        <p>3. They _____ to the park yesterday. (go/goes/went)</p>
+                        <div class="fill-blanks-options">
+                            <div class="fill-blanks-option">go</div>
+                            <div class="fill-blanks-option">goes</div>
+                            <div class="fill-blanks-option">went</div>
+                        </div>
+                    </div>
+                    
+                    <div class="fill-blanks-question">
+                        <p>4. We have _____ food in the fridge. (many/much/any)</p>
+                        <div class="fill-blanks-options">
+                            <div class="fill-blanks-option">many</div>
+                            <div class="fill-blanks-option">much</div>
+                            <div class="fill-blanks-option">any</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exercise 3: Multiple Choice Quiz -->
+                <div class="exercise">
+                    <h3 class="exercise-title">تمرين 3: اختبار الاختيار من متعدد</h3>
+                    
+                    <div class="quiz-question">
+                        <p>1. What is the opposite of "hot"?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Warm</div>
+                            <div class="quiz-option">Cold</div>
+                            <div class="quiz-option">Wet</div>
+                            <div class="quiz-option">Dry</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <p>2. How do you say "مرحباً" in English?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Goodbye</div>
+                            <div class="quiz-option">Thank you</div>
+                            <div class="quiz-option">Hello</div>
+                            <div class="quiz-option">Sorry</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <p>3. Which of these is a color?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Cat</div>
+                            <div class="quiz-option">Blue</div>
+                            <div class="quiz-option">Table</div>
+                            <div class="quiz-option">Book</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="button check-btn">تحقق من إجاباتك</button>
+                    <button class="button reset-btn">إعادة ضبط</button>
+                </div>
+            </div>
+        </section>
+<!-- Videos Section (Extended) -->
+<section class="videos-section">
+    <h2 class="section-title">فيديوهات تعليمية</h2>
+    
+    <div class="video-container">
+        <!-- Original videos -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/pPdZ1mVLJwk?si=sGAjbIkl9G4qOCG6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>ممارسة المحادثة لتحسين مهاراتك في اللغة الإنجليزية</h3>
+                <p>تعلم كيفية التحدث باللغة الإنجليزية بطلاقة من خلال تمارين محادثة عملية وأمثلة واقعية.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 45 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/ZkufDavCEYo?si=DveJntcCtAC-NKfo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>100 سؤال وجواب يومي للأطفال</h3>
+                <p>تعليم الأطفال اللغة الإنجليزية من خلال 100 سؤال وجواب شائع يستخدم في الحياة اليومية.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 30 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/jW6uB7KmB8s?si=-kliBzSPkRP3r8um" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>أسئلة وأجوبة يومية للأطفال</h3>
+                <p>تعلم المزيد من الأسئلة والأجوبة اليومية التي يمكن للأطفال استخدامها في المدرسة والحياة اليومية.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 25 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Io-Pn38Rt8s?si=IDgHiA4Vo3hwJlAi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>أهم 100 محادثة في اللغة الإنجليزية</h3>
+                <p>تعلم أهم 100 محادثة شائعة في اللغة الإنجليزية لمساعدتك على التحدث بطلاقة في مختلف المواقف.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 50 دقيقة</span>
+            </div>
+        </div>
+        
+        <!-- Previously provided videos -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/mP1viG7l3bA?si=DlErEgZ-jgDBBddH" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>كورس تعلم اللغة الانجليزية للمبتدئين مع نتالي - أساسيات - 1</h3>
+                <p>تعلم النطق الصحيح للحروف الإنجليزية مع دروس أساسية للمبتدئين.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 35 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/m-5hOKIcQ8I?si=VlnU6Og0jvXRZFfE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>الأفعال الأساسية في اللغة الإنجليزية</h3>
+                <p>تعلم أهم الأفعال المستخدمة في اللغة الإنجليزية وكيفية استخدامها في جمل مفيدة.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 40 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/INGlvMm9Gp8?si=dBf4g8VB6KzqXqEu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>الصفات وأضدادها في اللغة الإنجليزية</h3>
+                <p>تعلم أهم الصفات المستخدمة في اللغة الإنجليزية وأضدادها مع أمثلة توضيحية.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 22 دقيقة</span>
+            </div>
+        </div>
+        
+        <!-- Newly provided videos -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/iF-G7Fo9Hfs?si=WUv64F6DmjxeTE1h" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>العبارات والجمل المستخدمة يومياً باللغة الإنجليزية</h3>
+                <p>تعلم أهم العبارات والجمل المستخدمة في الحياة اليومية باللغة الإنجليزية.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 20 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/rW6mKfMQ_Js?si=KTNlbUbOZH6NgNOW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>تعلم المحادثة باللغة الإنجليزية</h3>
+                <p>دروس تفاعلية لتحسين مهارات المحادثة باللغة الإنجليزية للمبتدئين.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 25 دقيقة</span>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/QNU5_Y9n_rU?si=oMCeJhLqRt08xeZF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>تعلم أساسيات النحو في اللغة الإنجليزية</h3>
+                <p>شرح مبسط لقواعد النحو الأساسية في اللغة الإنجليزية للمبتدئين.</p>
+                <span class="video-duration"><i class="far fa-clock"></i> 30 دقيقة</span>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Learning Path Section -->
+        <section>
+            <h2 class="section-title">مسار التعلم للمبتدئين</h2>
+            
+            <div class="learning-path">
+                <div class="step-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-title">الحروف والأصوات</div>
+                        <div class="step-desc">تعلم الحروف الإنجليزية ونطقها الصحيح</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-title">المفردات الأساسية</div>
+                        <div class="step-desc">تعلم أهم 500 كلمة مستخدمة في الحياة اليومية</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-title">القواعد البسيطة</div>
+                        <div class="step-desc">تعلم أساسيات قواعد اللغة الإنجليزية</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-title">المحادثة</div>
+                        <div class="step-desc">ممارسة المحادثة اليومية بالإنجليزية</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section>
+            <h2 class="section-title">موارد تعليمية مفيدة</h2>
+            
+            <div class="resources">
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1546521343-4eb2c01aa44b?q=80&w=1375&auto=format&fit=crop" alt="كتب تعليمية">
+                    <div class="resource-info">
+                        <h3>كتب مجانية</h3>
+                        <p>أفضل الكتب المجانية لتعلم اللغة الإنجليزية للمبتدئين بطريقة سهلة ومبسطة.</p>
+                        <a href="#" class="resource-link">تحميل الكتب</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1526398977052-654221a252b1?q=80&w=1470&auto=format&fit=crop" alt="تطبيقات تعليمية">
+                    <div class="resource-info">
+                        <h3>تطبيقات تعليمية</h3>
+                        <p>أفضل التطبيقات لتعلم اللغة الإنجليزية على الهاتف المحمول بطريقة تفاعلية ومسلية.</p>
+                        <a href="#" class="resource-link">استكشف التطبيقات</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=1374&auto=format&fit=crop" alt="اختبارات تقييم">
+                    <div class="resource-info">
+                        <h3>اختبارات تقييم</h3>
+                        <p>اختبارات مجانية لتقييم مستواك في اللغة الإنجليزية ومعرفة نقاط القوة والضعف لديك.</p>
+                        <a href="#" class="resource-link">ابدأ الاختبار</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section>
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        كم من الوقت يحتاج المبتدئ لتعلم اللغة الإنجليزية؟
+                    </div>
+                    <div class="faq-answer">
+                        يختلف الوقت اللازم لتعلم اللغة الإنجليزية من شخص لآخر، ولكن بشكل عام إذا كنت تدرس بانتظام لمدة ساعة يومياً، يمكنك الوصول إلى مستوى متوسط خلال 6-12 شهراً.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        هل يمكنني تعلم اللغة الإنجليزية بمفردي دون معلم؟
+                    </div>
+                    <div class="faq-answer">
+                        نعم، يمكنك تعلم اللغة الإنجليزية ذاتياً باستخدام الموارد المتاحة عبر الإنترنت مثل الدورات المجانية والفيديوهات التعليمية والتطبيقات. ومع ذلك، قد يساعد وجود معلم في تصحيح الأخطاء وتوجيهك بشكل أفضل.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        ما هي أفضل طريقة لتحسين النطق باللغة الإنجليزية؟
+                    </div>
+                    <div class="faq-answer">
+                        أفضل طريقة لتحسين النطق هي الاستماع كثيراً للناطقين الأصليين ومحاولة تقليدهم. يمكنك مشاهدة الأفلام والمسلسلات بالإنجليزية، والاستماع إلى الأغاني، والتدرب على القراءة بصوت عالٍ، واستخدام تطبيقات التعرف على الصوت للتحقق من نطقك.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        كيف يمكنني زيادة حصيلتي من المفردات الإنجليزية؟
+                    </div>
+                    <div class="faq-answer">
+                        هناك عدة طرق لزيادة حصيلتك من المفردات مثل: القراءة المنتظمة، حفظ كلمة أو كلمتين جديدتين يومياً، استخدام تطبيقات بطاقات الذاكرة، مشاهدة المحتوى الإنجليزي مع الترجمة، وممارسة الكلمات الجديدة في جمل.
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <h1> اللغة الإنجليزية للمبتدئين </h1>
-    <div class="video-container">
-        <div class="video">
-            <h3>ممارسة المحادثة لتحسين مهاراتك في اللغة الإنجليزية</h3>
-            <iframe src="https://www.youtube.com/embed/pPdZ1mVLJwk?si=sGAjbIkl9G4qOCG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن EC&S</h3>
+                    <p>نحن شركة متخصصة في الاستشارات التعليمية وخدمات تعلم اللغة الإنجليزية للطلاب الراغبين في الدراسة في المملكة المتحدة.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> الصفحة الرئيسية</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> دورات اللغة الإنجليزية</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> الدراسة في المملكة المتحدة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> education.ecs@yahoo.com</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +123 456 7890</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> لندن، المملكة المتحدة</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 EC&S - Education Consulting and Services. جميع الحقوق محفوظة.
+            </div>
         </div>
-        <div class="video">
-            <h3>100 سؤال وجواب يومي للأطفال</h3>
-            <iframe src="https://www.youtube.com/embed/ZkufDavCEYo?si=DveJntcCtAC-NKfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <h3>أسئلة وأجوبة يومية للأطفال</h3>
-            <iframe src="https://www.youtube.com/embed/jW6uB7KmB8s?si=-kliBzSPkRP3r8um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <h3>أهم 100 محادثة في اللغة الإنجليزية</h3>
-            <iframe src="https://www.youtube.com/embed/Io-Pn38Rt8s?si=IDgHiA4Vo3hwJlAi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
+    </footer>
+
+    <script>
+        // Make sure videos load properly
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix video aspect ratio on window resize
+            function adjustVideoHeight() {
+                const videoWrappers = document.querySelectorAll('.video-wrapper');
+                videoWrappers.forEach(wrapper => {
+                    const width = wrapper.offsetWidth;
+                    wrapper.style.height = (width * 0.5625) + 'px'; // 16:9 aspect ratio
+                });
+            }
+            
+            // Initial adjustment and resize listener
+            adjustVideoHeight();
+            window.addEventListener('resize', adjustVideoHeight);
+            
+            // Variables for matching game
+            let selectedItems = [];
+            const matchingItems = document.querySelectorAll('.matching-item');
+            
+            // Matching game functionality
+            matchingItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // If already matched, do nothing
+                    if (this.classList.contains('matched')) {
+                        return;
+                    }
+                    
+                    // Toggle selection
+                    this.classList.toggle('selected');
+                    
+                    // If selected, add to array
+                    if (this.classList.contains('selected')) {
+                        selectedItems.push(this);
+                    } else {
+                        // If deselected, remove from array
+                        selectedItems = selectedItems.filter(selected => selected !== this);
+                    }
+                    
+                    // If we have 2 selections, check for match
+                    if (selectedItems.length === 2) {
+                        const firstPair = selectedItems[0].getAttribute('data-pair');
+                        const secondPair = selectedItems[1].getAttribute('data-pair');
+                        
+                        if (firstPair === secondPair) {
+                            // Match found
+                            selectedItems.forEach(item => {
+                                item.classList.remove('selected');
+                                item.classList.add('matched');
+                                item.style.backgroundColor = '#d4edda';
+                                item.style.borderColor = '#28a745';
+                            });
+                        } else {
+                            // No match
+                            setTimeout(() => {
+                                selectedItems.forEach(item => {
+                                    item.classList.remove('selected');
+                                });
+                            }, 1000);
+                        }
+                        
+                        // Reset selections
+                        selectedItems = [];
+                    }
+                });
+            });
+            
+            // Fill in the blanks functionality
+            const blankOptions = document.querySelectorAll('.fill-blanks-option');
+            
+            blankOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from siblings
+                    const siblings = this.parentElement.querySelectorAll('.fill-blanks-option');
+                    siblings.forEach(sib => {
+                        sib.classList.remove('selected');
+                        sib.style.backgroundColor = '';
+                        sib.style.color = '';
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    this.style.backgroundColor = '#003366';
+                    this.style.color = 'white';
+                });
+            });
+            
+            // Quiz options functionality
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from siblings
+                    const siblings = this.parentElement.querySelectorAll('.quiz-option');
+                    siblings.forEach(sib => {
+                        sib.classList.remove('selected');
+                        sib.style.backgroundColor = '';
+                        sib.style.color = '';
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    this.style.backgroundColor = '#003366';
+                    this.style.color = 'white';
+                });
+            });
+            
+            // Check button functionality
+            const checkBtn = document.querySelector('.check-btn');
+            
+            checkBtn.addEventListener('click', function() {
+                // Define correct answers
+                const correctFillBlanks = ['am', 'watches', 'went', 'much'];
+                const correctQuizAnswers = ['Cold', 'Hello', 'Blue'];
+                
+                // Check fill in the blanks
+                const fillBlankQuestions = document.querySelectorAll('.fill-blanks-question');
+                fillBlankQuestions.forEach((question, index) => {
+                    const selectedOption = question.querySelector('.fill-blanks-option.selected');
+                    if (selectedOption) {
+                        if (selectedOption.textContent === correctFillBlanks[index]) {
+                            selectedOption.style.backgroundColor = '#28a745';
+                        } else {
+                            selectedOption.style.backgroundColor = '#dc3545';
+                        }
+                    }
+                });
+                
+                // Check quiz answers
+                const quizQuestions = document.querySelectorAll('.quiz-question');
+                quizQuestions.forEach((question, index) => {
+                    const selectedOption = question.querySelector('.quiz-option.selected');
+                    if (selectedOption) {
+                        if (selectedOption.textContent === correctQuizAnswers[index]) {
+                            selectedOption.style.backgroundColor = '#28a745';
+                        } else {
+                            selectedOption.style.backgroundColor = '#dc3545';
+                        }
+                    }
+                });
+            });
+            
+            // Reset button functionality
+            const resetBtn = document.querySelector('.reset-btn');
+            
+            resetBtn.addEventListener('click', function() {
+                // Reset matching game
+                matchingItems.forEach(item => {
+                    item.classList.remove('selected', 'matched');
+                    item.style.backgroundColor = '';
+                    item.style.borderColor = '';
+                });
+                selectedItems = [];
+                
+                // Reset fill in the blanks
+                blankOptions.forEach(option => {
+                    option.classList.remove('selected');
+                    option.style.backgroundColor = '';
+                    option.style.color = '';
+                });
+                
+                // Reset quiz
+                quizOptions.forEach(option => {
+                    option.classList.remove('selected');
+                    option.style.backgroundColor = '';
+                    option.style.color = '';
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
