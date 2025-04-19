@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .video {
+            background-color: white;
+            border-radius: 15px; /* Increased border radius for a rounder look */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a 3D effect */
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .video:hover {
+            transform: scale(1.05);
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px; /* Added border radius to iframe for a cohesive look */
+            border: 5px solid #007BFF; /* Blue border for the iframe */
+        }
+        p {
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin: 20px 0;
+            transform: perspective(1000px) rotateY(10deg);
+            border: 5px solid blue; /* Added blue border around the info box */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Retained shadow for 3D effect */
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="window.location.href='englishhh.html'">Back Home</button>
+    <div class="info-box">
+        <p>Improving your English speaking skills involves consistent practice and engagement.</p>
+        <p>Firstly, frequent speaking is essential; immerse yourself in conversations daily.</p>
+        <p>Next, reflect on your discussions to identify areas needing improvement.</p>
+        <p>Listening to native speakers and reading diverse materials enhances your comprehension and fluency.</p>
+        <p>Creating cheat sheets with useful phrases can serve as handy references during conversations.</p>
+        <p>Don't hesitate to pick up the phone; conversing with others boosts confidence and articulation.</p>
+        <p>Recording your voice allows you to track your progress and refine your pronunciation.</p>
+        <p>Instead of memorizing individual words, focus on learning useful phrases for practical application.</p>
+        <p>Lastly, ensure your practice is enjoyable; a positive attitude fosters better learning outcomes.</p>
+        <p>By incorporating these strategies, you will notice significant improvements in your English speaking abilities.</p>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/HsHMaxP_WEg?si=bXbpxoc5ZaLsI8Du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Everyday British English Conversations (Cafe) | British Accent Training</p>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/OaXoaRRe4T4?si=NF7_0Mdsvj-g8pMR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Everyday British English Conversations (Airport) | British Accent Training</p>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/Nk7cJVbMkas?si=9aNZi0AB6Oj8RiQb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Everyday British English Conversations (Job Interview) | British Accent Training</p>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/jg9oBwllEgU?si=BvsWnc_gMwMKDndZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>British English Speaking Practice (Clothes Shop) | British Accent Training</p>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/8-nMitpJaqA?si=RONNHzLpv7mp8DRV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>British English Speaking Practice (Supermarket) | British Accent Practice</p>
+        </div>
+    </div>
+</body>
+</html>

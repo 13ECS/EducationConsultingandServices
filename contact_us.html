@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+   
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: #0056b3;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .emoji {
+            font-size: 24px;
+        }
+        .back-home {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .back-home-middle {
+            margin-top: 20px;
+        }
+        .funny-message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2>Contact Us 😊</h2>
+        <form id="contactForm">
+            <input type="text" name="first_name" placeholder="First Name 🌟" required>
+            <input type="text" name="surname" placeholder="Surname 🌟" required>
+            <input type="email" name="email" placeholder="Email 📧" required>
+            <input type="text" name="country" placeholder="Country 🌍" required>
+            <textarea name="message" placeholder="Message ✍️" rows="4" required></textarea>
+            <button type="submit">Send Message 📬</button>
+        </form>
+        <button class="back-home back-home-middle" onclick="window.location.href='englishhh.html'">🏠 Back Home</button>
+        <div class="funny-message">"Why did the student eat his homework? Because the teacher said it was a piece of cake!" 🎂</div>
+    </div>
+
+    <img src="students7.jpg" alt="students" width="260" height="145">
+    
+  
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            // Replace with your actual email sending service API
+            fetch('https://your-email-sending-service.com/send-email', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: 'education.ecs@yahoo.com',
+                    ...data
+                }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert('Message sent successfully!');
+                this.reset(); // Reset the form
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your message: ' + error.message);
+            });
+        });
+    </script>
+
+</body>
+</html>

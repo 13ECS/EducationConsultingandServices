@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإنجليزية للمبتدئين | EC&S</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #002145;
+            --accent-color: #C8102E;
+            --gold-color: #D4AF37;
+            --light-color: #f8f9fa;
+            --dark-color: #1a2a36;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f5f7fa;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Free banner */
+        .free-banner {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .free-banner::before {
+            content: '100% FREE';
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 20px;
+            transform: rotate(-45deg);
+            top: 5px;
+            left: -20px;
+            font-size: 0.8rem;
+        }
+        
+        .free-banner::after {
+            content: 'NO SIGNUP';
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 20px;
+            transform: rotate(-45deg);
+            top: 5px;
+            right: -25px;
+            font-size: 0.8rem;
+        }
+        
+        .attention {
+            animation: pulse 2s infinite;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Header styles */
+        header {
+            background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .active {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+        }
+        
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(200, 16, 46, 0.2);
+        }
+        
+        .contact-btn:hover {
+            background-color: #a50d24;
+            box-shadow: 0 6px 12px rgba(200, 16, 46, 0.3);
+        }
+        
+        /* Hero section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80') no-repeat center;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 33, 69, 0.9));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 900;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .primary-btn {
+            background-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(200, 16, 46, 0.3);
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
+        }
+        
+        .secondary-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .secondary-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Section Styles */
+        .section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Two Column Layout */
+        .two-columns {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        /* Alphabet Section */
+        .alphabet-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .alphabet-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .alphabet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .letter {
+            font-size: 4rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1;
+            transition: var(--transition);
+        }
+        
+        .alphabet-card:hover .letter {
+            transform: scale(1.1);
+            color: var(--accent-color);
+        }
+        
+        .letter-name {
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .pronunciation {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .example {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f4f8;
+            padding: 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        .example-word {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .example-translation {
+            color: #555;
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
+        
+        /* Vocabulary Section */
+        .vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .vocabulary-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .vocabulary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .vocabulary-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .vocabulary-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .vocabulary-card:hover .vocabulary-image img {
+            transform: scale(1.05);
+        }
+        
+        .vocabulary-content {
+            padding: 20px;
+        }
+        
+        .vocabulary-category {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: rgba(0, 51, 102, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .vocabulary-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .vocabulary-list {
+            list-style: none;
+        }
+        
+        .vocabulary-item {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .vocabulary-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        /* Video Section */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            padding: 15px 20px;
+            margin-bottom: 0;
+            background-color: rgba(0, 51, 102, 0.05);
+            border-bottom: 1px solid rgba(0, 51, 102, 0.1);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .two-columns {
+                flex-direction: column;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="free-banner">
+        <div class="container">
+            تعلم اللغة الإنجليزية <span class="attention">مجاناً</span> مع دورة شاملة للمبتدئين
+        </div>
+        
+    </div>
+    
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/150x60?text=EC&S" alt="EC&S Logo" class="logo">
+            </div>
+            <nav>
+                <a href="index (1).html" class="active">الرئيسية</a>
+                <a href="alph.html">الأبجدية</a>
+                <a href="vocabulary.html">المفردات</a>
+                <a href="grammar.html">القواعد</a>
+                <a href="speaking.html">المحادثة</a>
+                <a href="contact_us.html" class="contact-btn">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>اللغة الإنجليزية للمبتدئين</h1>
+            <p>كل ما تحتاج لبدء رحلتك مع اللغة الإنجليزية في مكان واحد. تعلم بسهولة وبدون تعقيد!</p>
+            <div class="hero-buttons">
+                <a href="#" class="hero-btn primary-btn">ابدأ التعلم الآن</a>
+                <a href="#" class="hero-btn secondary-btn">تعرف علينا</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add a demo AI text section -->
+    
+    
+    <!-- Video Lessons Section -->
+    <section class="section" id="video-lessons">
+        <div class="container">
+            <h2 class="section-title">دروس الفيديو</h2>
+            <p class="section-subtitle">شاهد دروس فيديو تفاعلية لتعلم اللغة الإنجليزية بطريقة ممتعة وفعالة</p>
+            
+            <div class="video-container">
+                <div class="video-card">
+                    <h3 class="video-title">مقدمة في اللغة الإنجليزية للمبتدئين</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CbPy_CjJR90?si=jFSJzJ18vAYGB4zG&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <h3 class="video-title">الأبجدية الإنجليزية</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EgzHCuzVKb8?si=R6boQNGOugT4uhPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <h3 class="video-title">المفردات الأساسية للمبتدئين</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oOZLPVG9-9I?si=c3pksLEAXY3APR79" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <h3 class="video-title">المضارع البسيط في اللغة الإنجليزية</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FqmiLz29f9E?si=TxcGf6hRr_4A5a2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3 class="video-title"> كلمة إنجليزية للحياة اليومية </h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nVph06CxohU?si=O8zfC_exDdGA10bY&amp;start=52" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">الأبجدية الإنجليزية</h2>
+            <p class="section-subtitle">تعلم حروف اللغة الإنجليزية وطريقة نطقها بشكل صحيح مع أمثلة توضيحية</p>
+            
+            <div class="alphabet-container">
+                <!-- A -->
+                <div class="alphabet-card">
+                    <div class="letter">A</div>
+                    <div class="letter-name">آي - كبتل</div>
+                    <div class="pronunciation">/eɪ/</div>
+                    <div class="example">
+                        <span class="example-word">Apple</span>
+                        <span class="example-translation">(تفاحة)</span>
+                    </div>
+                </div>
+                
+                <!-- B -->
+                <div class="alphabet-card">
+                    <div class="letter">B</div>
+                    <div class="letter-name">بي</div>
+                    <div class="pronunciation">/biː/</div>
+                    <div class="example">
+                        <span class="example-word">Book</span>
+                        <span class="example-translation">(كتاب)</span>
+                    </div>
+                </div>
+                
+                <!-- C -->
+                <div class="alphabet-card">
+                    <div class="letter">C</div>
+                    <div class="letter-name">سي</div>
+                    <div class="pronunciation">/siː/</div>
+                    <div class="example">
+                        <span class="example-word">Cat</span>
+                        <span class="example-translation">(قطة)</span>
+                    </div>
+                </div>
+                
+                <!-- D -->
+                <div class="alphabet-card">
+                    <div class="letter">D</div>
+                    <div class="letter-name">دي</div>
+                    <div class="pronunciation">/diː/</div>
+                    <div class="example">
+                        <span class="example-word">Dog</span>
+                        <span class="example-translation">(كلب)</span>
+                    </div>
+                </div>
+                
+                <!-- E -->
+                <div class="alphabet-card">
+                    <div class="letter">E</div>
+                    <div class="letter-name">إي</div>
+                    <div class="pronunciation">/iː/</div>
+                    <div class="example">
+                        <span class="example-word">Egg</span>
+                        <span class="example-translation">(بيضة)</span>
+                    </div>
+                </div>
+                
+                <!-- F -->
+                <div class="alphabet-card">
+                    <div class="letter">F</div>
+                    <div class="letter-name">إف</div>
+                    <div class="pronunciation">/ɛf/</div>
+                    <div class="example">
+                        <span class="example-word">Fish</span>
+                        <span class="example-translation">(سمكة)</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3 class="video-title"> English Alphabet Pronunciation | English Alphabet for Beginners </h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/um3YrKRfsr0?si=Hpy0z7LGSn9XbAYK&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                </div>
+                <div class="video-card">
+                    <h3 class="video-title">Pronunciation - 44 Phonics Sounds </h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/hq0NpbQbtXY?si=Ca2ILqqe6nG34k2q&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+       
+    <footer style="background-color: var(--primary-color); color: white; padding: 40px 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.5rem;">EC&S</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">نحن نقدم دورات مجانية لتعلم اللغة الإنجليزية للمبتدئين من العرب بأسلوب بسيط وسهل.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.2rem;">روابط سريعة</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">الرئيسية</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">الأبجدية</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">المفردات</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">القواعد</a></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.2rem;">تواصل معنا</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">لأي استفسارات أو اقتراحات، يرجى التواصل معنا عبر:</p>
+                    <p>Email:  education.ecs@yahoo.com</p>
+                    <p>WhatsApp: 00447914792205</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.facebook.com/share/1GNfAnLfcQ/?mibextid=wwXIfr" style="color: white; text-decoration: none; margin-left: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/offerstudent1" style="color: white; text-decoration: none; margin-left: 15px; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/tawfig5011/" style="color: white; text-decoration: none; margin-left: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Tawfig-Tamer" style="color: white; text-decoration: none; margin-left: 15px; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 40px; text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="color: rgba(255, 255, 255, 0.7);">© 2023 EC&S - English for Communication & Skills. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+      
+    </footer>
+
+    <!-- Script to replace "AI" with "doncky" -->
+    <script>
+        // Function to replace "AI" with "doncky" in text content
+        function replaceAIWithDoncky() {
+            // Get all text nodes in the document
+            const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+
+            // Walk through all text nodes
+            let node;
+            while (node = walker.nextNode()) {
+                // Replace "AI" with "doncky" (case insensitive)
+                node.textContent = node.textContent.replace(/\bAI\b/gi, 'doncky');
+            }
+        }
+        
+        // Run the function when the page loads
+        window.addEventListener('load', replaceAIWithDoncky);
+    </script>
+    
+</body>
+</html>
