@@ -735,10 +735,10 @@
       
     </footer>
 
-    <!-- Script to replace "AI" with "doncky" -->
+   <!-- Script to replace "AI" with "human" -->
     <script>
-        // Function to replace "AI" with "doncky" in text content
-        function replaceAIWithDoncky() {
+        // Function to replace "AI" with "human" in text content
+        function replaceAIWithHuman() {
             // Get all text nodes in the document
             const walker = document.createTreeWalker(
                 document.body,
@@ -750,10 +750,11 @@
             // Walk through all text nodes
             let node;
             while (node = walker.nextNode()) {
-                // Replace "AI" with "doncky" (case insensitive)
-                node.textContent = node.textContent.replace(/\bAI\b/gi, 'doncky');
+                // Replace "AI" with "human" (case insensitive)
+                node.textContent = node.textContent.replace(/\bAI\b/gi, 'human');
             }
         }
+        
         
         // Run the function when the page loads
         window.addEventListener('load', replaceAIWithDoncky);
