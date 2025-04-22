@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grammar Check</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 700px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  span.prompt {
+    width: 270px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  /* Changed input from square (100x100) to rectangle 300x40 */
+  input.answer {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  button.check-button, button.show-button {
+    margin-left: 15px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+  }
+  button.check-button {
+    background-color: #28a745;
+    color: white;
+  }
+  button.check-button:hover {
+    background-color: #218838;
+  }
+  button.show-button {
+    background-color: #007bff;
+    color: white;
+  }
+  button.show-button:hover {
+    background-color: #0056b3;
+  }
+  span.correct-answer {
+    display: none;
+    margin-left: 15px;
+    font-style: italic;
+    color: #555;
+    max-width: 280px;
+  }
+  .back-home {
+            display: block; /* Changed to block for centering */
+            margin: 20px auto; /* Centered button */
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transform: perspective(500px) translateZ(0);
+            transition: transform 0.2s;
+            text-align: center; /* Center text in button */
+            width: 200px; /* Fixed width for button */
+        }
+        .back-home:hover {
+            transform: perspective(500px) translateZ(10px);
+        }
+</style>
+</head>
+<body>
+  <button class="back-home" onclick="window.location.href='english.html'">Back to Home</button>
+<h1>Present Simple Positive with other verbs</h1></p>
+<h2>Make positive present simple sentences.</h2>
+
+<ul>
+  <li class="task">
+    <span class="prompt">(he / go to school every day)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(He goes to school every day.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(I / like swimming)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(I like swimming.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(you / play badminton on Saturdays)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(You play badminton on Saturdays.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(the class / begin at 9 am)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(The class begins at 9am.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(they / sometimes go to the cinema)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(They sometimes go to the cinema.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(she / love chocolate)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(She loves chocolate.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(we / study French)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(We study French.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(they / live in London)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(They live in London.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(he / work in a restaurant)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(He works in a restaurant.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(Lucy / play the guitar)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(Lucy plays the guitar.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(we / cook every day)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(We cook every day.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(he / clean the house at the weekends)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(He cleans the house at the weekends.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(I / like reading detective stories)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(I like reading detective stories.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(you / come from France)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(You come from France.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(John and David / often go to restaurants)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(John and David often go to restaurants.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(Susie / study English every night)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(Susie studies English every night.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(the train / leave at 6 pm)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(The train leaves at 6pm.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(we / go to the park on Sundays)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(We go to the park on Sundays.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(he / like taking photographs)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(He likes taking photographs.)</span>
+  </li>
+  <li class="task">
+    <span class="prompt">(the moon / go round the earth)</span>
+    <input type="text" class="answer" />
+    <button class="check-button">CHECK</button>
+    <button class="show-button">SHOW</button>
+    <span class="correct-answer">(The moon goes round the earth.)</span>
+  </li>
+</ul>
+
+<script>
+  // SHOW button toggles correct answer visibility
+  document.querySelectorAll('.show-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const answerSpan = button.nextElementSibling;
+      answerSpan.style.display = (answerSpan.style.display === 'inline') ? 'none' : 'inline';
+    });
+  });
+
+  // CHECK button compares input to answer text
+  document.querySelectorAll('.check-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const listItem = button.closest('li.task');
+      if (!listItem) return; 
+
+      // Get input box in this task
+      const input = listItem.querySelector('input.answer');
+      // Get corresponding answer span in this task
+      const answerSpan = listItem.querySelector('span.correct-answer');
+
+      if (!input || !answerSpan) return;
+
+      // Clean correct answer: remove parentheses and trailing period, and lowercase
+      let correctAnswer = answerSpan.textContent.trim()
+        .replace(/^\(/, '')
+        .replace(/\)$/, '')
+        .replace(/\.$/, '')
+        .toLowerCase();
+
+      // Clean user input: trim, remove trailing period, lowercase
+      let userAnswer = input.value.trim()
+        .replace(/\.$/, '')
+        .toLowerCase();
+
+      if (userAnswer === correctAnswer) {
+        alert('Correct!');
+      } else {
+        alert('Incorrect, try again!');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
