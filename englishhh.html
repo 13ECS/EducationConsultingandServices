@@ -524,6 +524,29 @@
                 font-size: 2.2rem;
             }
         }
+            @media screen and (max-width: 768px) {
+     /* Styles for screens smaller than 768px (e.g., mobile devices) */
+     body {
+       font-size: 16px; /* Smaller font size for mobile */
+     }
+     #navigation {
+       display: block; /* Make navigation a block element for mobile */
+     }
+   }
+       #container {
+     display: flex; /* Use flexbox for layout */
+     flex-wrap: wrap; /* Allow elements to wrap onto the next line */
+   }
+   #sidebar {
+     width: 30%; /* Sidebar takes up 30% of the container width */
+   }
+   #main {
+     width: 70%; /* Main content takes up 70% of the container width */
+   }     
+      img {
+     max-width: 100%;
+     height: auto;
+   }      
     </style>
 </head>
 
