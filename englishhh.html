@@ -554,24 +554,28 @@
     
     <div class="free-banner">
         <div class="container">
+         <div class="logo-container">
+                <img src="ESCL.png" alt="ESCL" class="logo">
+              
             تعلم اللغة الإنجليزية <span class="attention">مجاناً</span> مع دورة شاملة للمبتدئين
-        </div>
-        
+        </div>  
+         </div>
     </div>
     
     <header>
         <div class="container header-container">
-            <div class="logo-container">
-                <img src="ESCL.png" alt="ESCL" class="logo">
-            </div>
-            <nav>
+            
+           <nav>
                 <a href="index.html" class="active">الرئيسية</a>
                 <a href="alph.html">الأبجدية</a>
                 <a href="vocabulary.html">المفردات</a>
                 <a href="grammar.html">القواعد</a>
                 <a href="speaking.html">المحادثة</a>
-                <a href="Exercise1.html">تمرين-1</a>
-                <a href="Exercise2.html">تمرين-2</a>
+                <select id="actions" onchange="location = this.value;">
+                    <option value="#">التمارين</option> 
+                    <option value="Exercise1.html ">>تمرين-1</option> 
+                    <option value="Exercise2.html"> >تمرين-2</option>
+                </select>
                 <a href="contact_us.html" class="contact-btn">اتصل بنا</a>
             </nav>
         </div>
