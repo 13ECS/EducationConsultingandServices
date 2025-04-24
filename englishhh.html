@@ -768,31 +768,6 @@
         </div>
       
     </footer>
-
-   <!-- Script to replace "AI" with "human" -->
-    <script>
-        // Function to replace "AI" with "human" in text content
-        function replaceAIWithHuman() {
-            // Get all text nodes in the document
-            const walker = document.createTreeWalker(
-                document.body,
-                NodeFilter.SHOW_TEXT,
-                null,
-                false
-            );
-
-            // Walk through all text nodes
-            let node;
-            while (node = walker.nextNode()) {
-                // Replace "AI" with "human" (case insensitive)
-                node.textContent = node.textContent.replace(/\bAI\b/gi, 'human');
-            }
-        }
-        
-        
-        // Run the function when the page loads
-        window.addEventListener('load', replaceAIWithDoncky);
-    </script>
-    
+   
 </body>
 </html>
