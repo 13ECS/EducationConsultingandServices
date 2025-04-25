@@ -1158,6 +1158,28 @@
                     </div>
                 </div>
             </section>
+             <?php
+// send_email.php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $study_level = $_POST['study-level'];
+    $message = $_POST['message'];
+
+    $to = "education.ecs@yahoo.com";
+    $subject = "نموذج الاتصال من $name";
+    $body = "الاسم: $name\nالبريد الإلكتروني: $email\nرقم الهاتف: $phone\nالمستوى الدراسي: $study_level\n\nالرسالة:\n$message";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "تم إرسال الرسالة بنجاح.";
+    } else {
+        echo "فشل في إرسال الرسالة.";
+    }
+}
+?>
+
             
             <!-- Conclusion Section -->
             <section class="conclusion-section">
